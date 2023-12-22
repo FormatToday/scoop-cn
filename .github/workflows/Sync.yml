@@ -12,6 +12,11 @@ jobs:
     name: Excavate
     runs-on: windows-latest
     steps:
+    - name: Update Timezone
+        shell: pwsh
+        run: |
+          Set-TimeZone -Id  "China Standard Time"
+          echo "设置时区为中国" >log
       - uses: actions/checkout@v3
         with:
           fetch-depth: 1
@@ -74,11 +79,12 @@ jobs:
         shell: pwsh
         run: |
           .\update.ps1
-          echo "Updated on $(Get-Date -Format "yyyy-MM-dd HH:mm K")" >log
+          $now = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
+          echo "自动更新：$now" >log
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add --all
-          git commit -m "Updated on $(Get-Date -Format "yyyy-MM-dd HH:mm K")"
+          git commit -m "自动更新：$now"
           git push -f origin master
       - name: 删除旧 Actions
         uses: Mattraks/delete-workflow-runs@v2.0.3
