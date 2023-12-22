@@ -3,7 +3,7 @@ name: Schedule Update
 on:
   push:
     branches:
-      - "main"
+      - "master"
   schedule:
     - cron: "0 * * * *"
 
@@ -79,4 +79,4 @@ jobs:
           git config user.email github-actions@github.com
           git add --all
           git commit -m "Updated on $(Get-Date -Format "yyyy-MM-dd HH:mm K")"
-          git push -f origin main
+          git push -f origin master
