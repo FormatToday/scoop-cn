@@ -80,3 +80,10 @@ jobs:
           git add --all
           git commit -m "Updated on $(Get-Date -Format "yyyy-MM-dd HH:mm K")"
           git push -f origin master
+      - name: 删除旧 Actions
+        uses: Mattraks/delete-workflow-runs@v2.0.3
+        with:
+          token: ${{ secrets.TOKEN }}
+          repository: ${{ github.repository }}
+          retain_days: 1
+          keep_minimum_runs: 2
