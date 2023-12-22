@@ -1,11 +1,8 @@
 {
-    "version": "2.2.1-rev0",
-    "description": "Multimedia framework developed for research and academic purposes",
-    "homepage": "https://gpac.wp.imt.fr/",
-    "license": "LGPL-2.1-or-later",
-    "suggest": {
-        "vcredist": "scoop-cn/vcredist2022"
-    },
+    "homepage": "http://gpac.io",
+    "description": "Modular Multimedia framework for packaging, streaming and playing your favorite content.",
+    "version": "2.2.1",
+    "license": "LGPL-2.1-only",
     "architecture": {
         "64bit": {
             "url": "https://download.tsi.telecom-paristech.fr/gpac/release/2.2.1/gpac-2.2.1-rev0-gb34e3851-release-2.2-x64.exe#/dl.7z",
@@ -16,29 +13,32 @@
             "hash": "f8166be45b93113f94814c3747eef900be7c216087fb56e1234f101dd1e784d7"
         }
     },
-    "pre_install": [
-        "Remove-Item \"$dir\\`$*\", \"$dir\\uninstall.exe\" -Force -Recurse",
-        "if (!(Test-Path \"$persist_dir\\GPAC.cfg\")) {New-Item \"$dir\\GPAC.cfg\" -ItemType File | Out-Null}"
-    ],
     "bin": [
-        "gpac.exe",
-        "mp4box.exe"
+        "mp4box.exe",
+        "gpac.exe"
     ],
-    "persist": [
-        "Storage",
-        "GPAC.cfg"
+    "shortcuts": [
+        [
+            "mp4client.exe",
+            "MP4Client"
+        ]
+    ],
+    "post_install": [
+        "@('$PLUGINSDIR', '$TEMP', 'uninstall.exe') | ForEach-Object {",
+        "    Remove-Item \"$dir\\$_\" -Recurse -Force",
+        "}"
     ],
     "checkver": {
         "url": "https://gpac.wp.imt.fr/downloads/",
-        "regex": "gpac-([\\w.-]+)-(?<commit>\\w+)-release-([\\w.-]+)-x64\\.exe"
+        "regex": "gpac-([\\d.]+)-(?<revision>rev\\d-[0-9a-z]+)-"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://download.tsi.telecom-paristech.fr/gpac/release/$matchHead/gpac-$version-$matchCommit-release-$majorVersion.$minorVersion-x64.exe#/dl.7z"
+                "url": "https://download.tsi.telecom-paristech.fr/gpac/release/$matchHead/gpac-$version-$matchRevision-release-$majorVersion.$minorVersion-x64.exe#/dl.7z"
             },
             "32bit": {
-                "url": "https://download.tsi.telecom-paristech.fr/gpac/release/$matchHead/gpac-$version-$matchCommit-release-$majorVersion.$minorVersion-win32.exe#/dl.7z"
+                "url": "https://download.tsi.telecom-paristech.fr/gpac/release/$matchHead/gpac-$version-$matchRevision-release-$majorVersion.$minorVersion-win32.exe#/dl.7z"
             }
         }
     }
