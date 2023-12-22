@@ -16,7 +16,6 @@ jobs:
         shell: pwsh
         run: |
           Set-TimeZone -Id "China Standard Time"
-          echo "设置时区为中国" > log
       - uses: actions/checkout@v3
         with:
           fetch-depth: 1
@@ -79,12 +78,10 @@ jobs:
         shell: pwsh
         run: |
           .\update.ps1
-          $now = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
-          echo "自动更新：$now" >log
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add --all
-          git commit -m "自动更新：$now"
+          git commit -m "自动更新：$(Get-Date -Format "yyyy-MM-dd HH:mm:ss")"
           git push -f origin master
       - name: 删除旧 Actions
         uses: Mattraks/delete-workflow-runs@v2.0.3
