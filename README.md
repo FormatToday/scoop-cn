@@ -30,9 +30,11 @@ Scoop 是一个很优秀的软件包管理工具，官方的安装说明也简�
 特性有：
 
 1. 本应用库包含 Scoop 的安装脚本，用于国内用户初次下载安装 Scoop。
-2. 本应用库同时包含了 Scoop 官方的十个应用库：main、extras、versions、nirsoft、sysinternals、php、nerd-fonts、nonportable、java、games（可使用命令 `scoop bucket known` 查看），用一个库包含了各家的库，用户不用在多个地方搜索应用。
-3. 本应用库把应用的下载地址替换成了国内可加速访问的地址，真正做到能更快更方便地下载和安装应用。
-4. 本应用库每天自动更新一次
+2. 本应用库同时包含了 Scoop 官方的十个应用库：main、extras、versions、nirsoft、sysinternals、php、nerd-fonts、nonportable、java、games
+（可使用命令 `scoop bucket known` 查看），用一个库包含了各家的库，用户不用在多个地方搜索应用。
+3. Fork 额外添加： ` https://github.com/chawyehsu/dorado`库
+4. 本应用库把应用的下载地址替换成了国内可加速访问的地址，真正做到能更快更方便地下载和安装应用。
+5. 本应用库每小时自动更新一次
 
 ## 前提条件
 
@@ -53,13 +55,13 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 此方法会把安装 Scoop 过程中的地址都换成中国可快速访问的地址，并设置好 Scoop，添加本仓库。打开 PowerShell，输入以下命令下载安装 Scoop：
 
 ```powershell
-irm https://mirror.ghproxy.com/https://raw.githubusercontent.com/duzyn/scoop-cn/master/install.ps1 | iex
+irm https://mirror.ghproxy.com/https://raw.githubusercontent.com/FormatToday/scoop-cn/master/install.ps1 | iex
 ```
 
 或使用 jsDelivr 的地址：
 
 ```powershell
-irm https://cdn.jsdelivr.net/gh/duzyn/scoop-cn/install.ps1 | iex
+irm https://cdn.jsdelivr.net/gh/FormatToday/scoop-cn/install.ps1 | iex
 ```
 
 安装成功后，会提示“scoop and scoop-cn was installed successfully!”
@@ -71,7 +73,7 @@ irm https://cdn.jsdelivr.net/gh/duzyn/scoop-cn/install.ps1 | iex
 1. 添加本仓库，运行命令
 
     ```powershell
-    scoop bucket add scoop-cn https://mirror.ghproxy.com/https://github.com/duzyn/scoop-cn
+    scoop bucket add scoop-cn https://mirror.ghproxy.com/https://github.com/FormatToday/scoop-cn
     ```
 
 2. 把已经安装的 app 改为使用 scoop-cn 来更新。每个 app 安装后在 app 的 current 路径下有个 install.json，里面的 bucket 项的值改为 scoop-cn，这样就把已安装的 app 换到 scoop-cn 了。可以运行 scoop list 来检查替换成功。如果要批量修改，可以借助 grepWin 来写个正则表达式搜索替换这个值。

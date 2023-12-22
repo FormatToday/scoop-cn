@@ -1,9 +1,11 @@
+name: Schedule Update
+
 on:
   push:
     branches:
-      - "master"
+      - "main"
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "0 * * * *"
 
 jobs:
   excavate:
@@ -63,6 +65,11 @@ jobs:
           repository: "niheaven/scoop-sysinternals"
           fetch-depth: 1
           path: "scoop-sysinternals"
+      - uses: actions/checkout@v3
+        with:
+          repository: "chawyehsu/dorado"
+          fetch-depth: 1
+          path: "dorado"
       - name: Update buckets
         shell: pwsh
         run: |
@@ -72,4 +79,4 @@ jobs:
           git config user.email github-actions@github.com
           git add --all
           git commit -m "Updated on $(Get-Date -Format "yyyy-MM-dd HH:mm K")"
-          git push -f origin master
+          git push -f origin main

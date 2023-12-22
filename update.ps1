@@ -25,6 +25,8 @@ Copy-Item -Path ".\scoop-nerd-fonts\bucket\*"   -Destination ".\bucket"  -Recurs
 Copy-Item -Path ".\scoop-games\bucket\*"        -Destination ".\bucket"  -Recurse -Force
 Copy-Item -Path ".\scoop-games\scripts\*"       -Destination ".\scripts" -Recurse -Force
 Copy-Item -Path ".\scoop-sysinternals\bucket\*" -Destination ".\bucket"  -Recurse -Force
+Copy-Item -Path ".\dorado\bucket\*"        -Destination ".\bucket"  -Recurse -Force
+Copy-Item -Path ".\dorado\scripts\*"       -Destination ".\scripts" -Recurse -Force
 
 # 复制完后，删掉克隆的文件夹
 Remove-Item -Path .\Main               -Recurse -Force
@@ -37,6 +39,7 @@ Remove-Item -Path .\scoop-nirsoft      -Recurse -Force
 Remove-Item -Path .\scoop-nerd-fonts   -Recurse -Force
 Remove-Item -Path .\scoop-games        -Recurse -Force
 Remove-Item -Path .\scoop-sysinternals -Recurse -Force
+Remove-Item -Path .\dorado -Recurse -Force
 
 Get-ChildItem -Recurse -Path .\bucket | ForEach-Object -Process {
     # GitHub Releases
