@@ -13,10 +13,10 @@ jobs:
     runs-on: windows-latest
     steps:
     - name: Update Timezone
-        shell: pwsh
-        run: |
-          Set-TimeZone -Id  "China Standard Time"
-          echo "设置时区为中国" >log
+      shell: pwsh
+      run: |
+        Set-TimeZone -Id "China Standard Time"
+        echo "设置时区为中国" > log
       - uses: actions/checkout@v3
         with:
           fetch-depth: 1
