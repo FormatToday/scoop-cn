@@ -1,4 +1,8 @@
+
+[![当前状态](https://github.com/FormatToday/scoop-cn/actions/workflows/Sync.yml/badge.svg)](https://github.com/FormatToday/scoop-cn/actions/workflows/Sync.yml)
+
 <!-- omit in toc -->
+
 # Scoop 应用库中国加速
 
 - [Scoop 在中国使用的问题](#scoop-在中国使用的问题)
