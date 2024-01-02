@@ -5,7 +5,7 @@
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://downloads.sourceforge.net/projects/redpanda-cpp/files/2.25/RedPanda.C%2B%2B.2.25.1.win64.No.Compiler.Portable.7z",
+            "url": "https://jaist.dl.sourceforge.net/projects/redpanda-cpp/files/2.25/RedPanda.C%2B%2B.2.25.1.win64.No.Compiler.Portable.7z",
             "hash": "sha1:199e871aeffb4c1df09d55411c64f655faf63e67"
         }
     },
@@ -24,7 +24,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://downloads.sourceforge.net/projects/redpanda-cpp/files/$majorVersion.$minorVersion/RedPanda.C%2B%2B.$version.win64.No.Compiler.Portable.7z"
+                "url": "https://jaist.dl.sourceforge.net/projects/redpanda-cpp/files/$majorVersion.$minorVersion/RedPanda.C%2B%2B.$version.win64.No.Compiler.Portable.7z"
             }
         }
     }
