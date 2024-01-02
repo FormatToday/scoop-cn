@@ -9,72 +9,84 @@ on:
 
 jobs:
   excavate:
-    name: Excavate
+    name: 执行更新
     runs-on: windows-latest
     steps:
-      - name: Update Timezone
+      - name: 更新时区
         shell: pwsh
         run: |
           Set-TimeZone -Id "China Standard Time"
-      - uses: actions/checkout@v3
+      - name: 更新本仓库
+        uses: actions/checkout@v3
         with:
           fetch-depth: 1
-      - uses: actions/checkout@v3
+      - name: 更新Main仓库
+        uses: actions/checkout@v3
         with:
           repository: "ScoopInstaller/Main"
           fetch-depth: 1
           path: "Main"
-      - uses: actions/checkout@v3
+      - name: 更新Extras仓库
+        uses: actions/checkout@v3
         with:
           repository: "ScoopInstaller/Extras"
           fetch-depth: 1
           path: "Extras"
-      - uses: actions/checkout@v3
+      - name: 更新Versions仓库
+        uses: actions/checkout@v3
         with:
           repository: "ScoopInstaller/Versions"
           fetch-depth: 1
           path: "Versions"
-      - uses: actions/checkout@v3
+      - name: 更新scoop-nirsoft仓库
+        uses: actions/checkout@v3
         with:
           repository: "kodybrown/scoop-nirsoft"
           fetch-depth: 1
           path: "scoop-nirsoft"
-      - uses: actions/checkout@v3
+      - name: 更新PHP仓库
+        uses: actions/checkout@v3
         with:
           repository: "ScoopInstaller/PHP"
           fetch-depth: 1
           path: "PHP"
-      - uses: actions/checkout@v3
+      - name: 更新nerd-fonts仓库
+        uses: actions/checkout@v3
         with:
           repository: "matthewjberger/scoop-nerd-fonts"
           fetch-depth: 1
           path: "scoop-nerd-fonts"
-      - uses: actions/checkout@v3
+      - name: 更新Non-portable仓库
+        uses: actions/checkout@v3
         with:
           repository: "ScoopInstaller/Nonportable"
           fetch-depth: 1
           path: "Nonportable"
-      - uses: actions/checkout@v3
+      - name: 更新Java仓库
+        uses: actions/checkout@v3
         with:
           repository: "ScoopInstaller/Java"
           fetch-depth: 1
           path: "Java"
-      - uses: actions/checkout@v3
+      - name: 更新games仓库
+        uses: actions/checkout@v3
         with:
           repository: "Calinou/scoop-games"
           fetch-depth: 1
           path: "scoop-games"
-      - uses: actions/checkout@v3
+      - name: 更新sysinternals仓库
+        uses: actions/checkout@v3
         with:
           repository: "niheaven/scoop-sysinternals"
           fetch-depth: 1
           path: "scoop-sysinternals"
-      - uses: actions/checkout@v3
+      - name: 更新dorado仓库
+        uses: actions/checkout@v3
         with:
           repository: "chawyehsu/dorado"
           fetch-depth: 1
           path: "dorado"
-      - name: Update buckets
+      - name: 处理 buckets
         shell: pwsh
         run: |
           .\update.ps1
