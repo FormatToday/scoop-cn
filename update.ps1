@@ -43,7 +43,7 @@ Remove-Item -Path .\dorado             -Recurse -Force
 
 Get-ChildItem -Recurse -Path .\bucket | ForEach-Object -Process {
     # GitHub Releases
-    (Get-Content $_.FullName) -replace '(github\.com/.+/releases/*download)', 'mirror.ghproxy.com/https://$1' | Set-Content -Path $_.FullName
+    (Get-Content $_.FullName) -replace '(github\.com/.+/releases/.*download)', 'mirror.ghproxy.com/https://$1' | Set-Content -Path $_.FullName
 
     # GitHub Archive
     (Get-Content $_.FullName) -replace '(github\.com/.+/archive/)', 'mirror.ghproxy.com/https://$1' | Set-Content -Path $_.FullName
