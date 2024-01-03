@@ -1,0 +1,33 @@
+{
+    "version": "5.7.8",
+    "description": "Helps Symfony developers manage projects, from local code to remote infrastructure",
+    "homepage": "https://symfony.com",
+    "license": "AGPL-3.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://mirror.ghproxy.com/https://github.com/symfony-cli/symfony-cli/releases/download/v5.7.8/symfony-cli_windows_amd64.zip",
+            "hash": "6ad180e480bb73530ea3c5775f24e982e31f122a73d77cf313c8496605f0bf1f"
+        },
+        "32bit": {
+            "url": "https://mirror.ghproxy.com/https://github.com/symfony-cli/symfony-cli/releases/download/v5.7.8/symfony-cli_windows_386.zip",
+            "hash": "20f981e3c1a76d77e5eef7f5dc7e0e91ed5031b2823caa18d4cdba3776480439"
+        }
+    },
+    "bin": "symfony.exe",
+    "checkver": {
+        "github": "https://github.com/symfony-cli/symfony-cli"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://mirror.ghproxy.com/https://github.com/symfony-cli/symfony-cli/releases/download/v$version/symfony-cli_windows_amd64.zip"
+            },
+            "32bit": {
+                "url": "https://mirror.ghproxy.com/https://github.com/symfony-cli/symfony-cli/releases/download/v$version/symfony-cli_windows_386.zip"
+            }
+        },
+        "hash": {
+            "url": "https://mirror.ghproxy.com/https://github.com/symfony-cli/symfony-cli/releases/download/v$version/checksums.txt"
+        }
+    }
+}

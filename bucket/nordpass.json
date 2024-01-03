@@ -1,0 +1,38 @@
+{
+    "version": "5.11.19",
+    "homepage": "https://nordpass.com/",
+    "description": "A password manager and generator app with an encrypted vault for secure passwords, created by the developers of NordVPN.",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://my.nordaccount.com/legal/terms-of-service/nordpass/"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://downloads.npass.app/windows/NordPassSetup.exe#/dl.7z",
+            "hash": "sha512:e006b12b7e3bcf655ce856e3c138af702b327c37fb65c20b6ae71ecfb31200787a2ef90d7db955555b0f4b151be38b081de4800be478f19e74815fc80b51e4f3",
+            "pre_install": "Expand-7zipArchive \"$dir\\app-64.7z\" $dir -Removal"
+        }
+    },
+    "extract_dir": "$PLUGINSDIR",
+    "shortcuts": [
+        [
+            "NordPass.exe",
+            "NordPass"
+        ]
+    ],
+    "checkver": {
+        "url": "https://downloads.npass.app/windows/latest.yml",
+        "regex": "version:\\s([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://downloads.npass.app/windows/NordPassSetup.exe#/dl.7z",
+                "hash": {
+                    "url": "$baseurl/latest.yml",
+                    "regex": "sha512:\\s$base64"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "version": "3.8.28",
+    "description": "Dependency analysis tool. Supports license & vulnerability scanning. Language-agnostic; integrates with 20+ build systems.",
+    "homepage": "https://github.com/fossas/fossa-cli",
+    "license": "MPL-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://mirror.ghproxy.com/https://github.com/fossas/fossa-cli/releases/download/v3.8.28/fossa_3.8.28_windows_amd64.zip",
+            "hash": "89cc18d9a703e13c8bebec79af431a61522ad12ebe61eb2a648b10a65d08b4b3"
+        }
+    },
+    "bin": "fossa.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://mirror.ghproxy.com/https://github.com/fossas/fossa-cli/releases/download/v$version/fossa_$version_windows_amd64.zip",
+                "hash": {
+                    "url": "$url.sha256"
+                }
+            }
+        }
+    }
+}
