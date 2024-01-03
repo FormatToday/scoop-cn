@@ -15,17 +15,17 @@ New-Item -ItemType "directory" -Path "$env:USERPROFILE\scoop\buckets\scoop-cn\bu
 New-Item -ItemType "directory" -Path "$env:USERPROFILE\scoop\buckets\scoop-cn\scripts\7-zip"
 New-Item -ItemType "directory" -Path "$env:USERPROFILE\scoop\buckets\scoop-cn\scripts\git"
 
-Invoke-RestMethod -Uri https://mirror.ghproxy.com/https://raw.githubusercontent.com/duzyn/scoop-cn/master/bucket/7zip.json -OutFile "$env:USERPROFILE\scoop\buckets\scoop-cn\bucket\7zip.json"
-Invoke-RestMethod -Uri https://mirror.ghproxy.com/https://raw.githubusercontent.com/duzyn/scoop-cn/master/scripts/7-zip/install-context.reg -OutFile "$env:USERPROFILE\scoop\buckets\scoop-cn\scripts\7-zip\install-context.reg"
-Invoke-RestMethod -Uri https://mirror.ghproxy.com/https://raw.githubusercontent.com/duzyn/scoop-cn/master/scripts/7-zip/uninstall-context.reg -OutFile "$env:USERPROFILE\scoop\buckets\scoop-cn\scripts\7-zip\uninstall-context.reg"
+Invoke-RestMethod -Uri https://mirror.ghproxy.com/https://raw.githubusercontent.com/FormatToday/scoop-cn/master/bucket/7zip.json -OutFile "$env:USERPROFILE\scoop\buckets\scoop-cn\bucket\7zip.json"
+Invoke-RestMethod -Uri https://mirror.ghproxy.com/https://raw.githubusercontent.com/FormatToday/scoop-cn/master/scripts/7-zip/install-context.reg -OutFile "$env:USERPROFILE\scoop\buckets\scoop-cn\scripts\7-zip\install-context.reg"
+Invoke-RestMethod -Uri https://mirror.ghproxy.com/https://raw.githubusercontent.com/FormatToday/scoop-cn/master/scripts/7-zip/uninstall-context.reg -OutFile "$env:USERPROFILE\scoop\buckets\scoop-cn\scripts\7-zip\uninstall-context.reg"
 
-Invoke-RestMethod -Uri https://mirror.ghproxy.com/https://raw.githubusercontent.com/duzyn/scoop-cn/master/bucket/git.json -OutFile "$env:USERPROFILE\scoop\buckets\scoop-cn\bucket\git.json"
-Invoke-RestMethod -Uri https://mirror.ghproxy.com/https://raw.githubusercontent.com/duzyn/scoop-cn/master/scripts/git/install-context.reg -OutFile "$env:USERPROFILE\scoop\buckets\scoop-cn\scripts\git\install-context.reg"
-Invoke-RestMethod -Uri https://mirror.ghproxy.com/https://raw.githubusercontent.com/duzyn/scoop-cn/master/scripts/git/uninstall-context.reg -OutFile "$env:USERPROFILE\scoop\buckets\scoop-cn\scripts\git\uninstall-context.reg"
-Invoke-RestMethod -Uri https://mirror.ghproxy.com/https://raw.githubusercontent.com/duzyn/scoop-cn/master/scripts/git/install-file-associations.reg -OutFile "$env:USERPROFILE\scoop\buckets\scoop-cn\scripts\git\install-file-associations.reg"
-Invoke-RestMethod -Uri https://mirror.ghproxy.com/https://raw.githubusercontent.com/duzyn/scoop-cn/master/scripts/git/uninstall-file-associations.reg -OutFile "$env:USERPROFILE\scoop\buckets\scoop-cn\scripts\git\uninstall-file-associations.reg"
+Invoke-RestMethod -Uri https://mirror.ghproxy.com/https://raw.githubusercontent.com/FormatToday/scoop-cn/master/bucket/git.json -OutFile "$env:USERPROFILE\scoop\buckets\scoop-cn\bucket\git.json"
+Invoke-RestMethod -Uri https://mirror.ghproxy.com/https://raw.githubusercontent.com/FormatToday/scoop-cn/master/scripts/git/install-context.reg -OutFile "$env:USERPROFILE\scoop\buckets\scoop-cn\scripts\git\install-context.reg"
+Invoke-RestMethod -Uri https://mirror.ghproxy.com/https://raw.githubusercontent.com/FormatToday/scoop-cn/master/scripts/git/uninstall-context.reg -OutFile "$env:USERPROFILE\scoop\buckets\scoop-cn\scripts\git\uninstall-context.reg"
+Invoke-RestMethod -Uri https://mirror.ghproxy.com/https://raw.githubusercontent.com/FormatToday/scoop-cn/master/scripts/git/install-file-associations.reg -OutFile "$env:USERPROFILE\scoop\buckets\scoop-cn\scripts\git\install-file-associations.reg"
+Invoke-RestMethod -Uri https://mirror.ghproxy.com/https://raw.githubusercontent.com/FormatToday/scoop-cn/master/scripts/git/uninstall-file-associations.reg -OutFile "$env:USERPROFILE\scoop\buckets\scoop-cn\scripts\git\uninstall-file-associations.reg"
 
-# Invoke-RestMethod -Uri https://mirror.ghproxy.com/https://raw.githubusercontent.com/duzyn/scoop-cn/master/bucket/aria2.json -OutFile "$env:USERPROFILE\scoop\buckets\scoop-cn\bucket\aria2.json"
+# Invoke-RestMethod -Uri https://mirror.ghproxy.com/https://raw.githubusercontent.com/FormatToday/scoop-cn/master/bucket/aria2.json -OutFile "$env:USERPROFILE\scoop\buckets\scoop-cn\bucket\aria2.json"
 
 # 安装时注意顺序是 7-Zip, Git, Aria2
 scoop install scoop-cn/7zip
@@ -37,7 +37,7 @@ if (Test-Path -Path "$env:USERPROFILE\scoop\buckets\scoop-cn") {
     scoop bucket rm scoop-cn
 }
 Write-Host "Adding scoop-cn bucket..."
-scoop bucket add scoop-cn https://mirror.ghproxy.com/https://github.com/duzyn/scoop-cn
+scoop bucket add scoop-cn https://mirror.ghproxy.com/https://github.com/FormatToday/scoop-cn
 
 # 删除 Scoop 的 main 仓库
 if (Test-Path -Path "$env:USERPROFILE\scoop\buckets\main") {
