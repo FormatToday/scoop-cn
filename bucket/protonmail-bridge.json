@@ -1,0 +1,38 @@
+{
+    "version": "3.6.1",
+    "description": "Bridge app that allows to users to use their preferred desktop mail client (e.g. Microsoft Outlook, Apple Mail, Mozilla Thunderbird), while benefiting from Proton Mail’s end-to-end encryption.",
+    "homepage": "https://proton.me/mail/bridge",
+    "license": "GPL-3.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://mirror.ghproxy.com/https://github.com/ProtonMail/proton-bridge/releases/download/v3.6.1/Bridge-Installer.exe#/dl.exe",
+            "hash": "9c6ad01b1cee0e323c6c18df17a17155a63cd9994373e3b74f027b4e1cd5805d"
+        }
+    },
+    "pre_install": [
+        "Invoke-ExternalCommand \"$dir\\dl.exe\" -ArgumentList ('/extract') | Out-Null",
+        "Expand-MsiArchive \"$dir\\Bridge-Installer.msi\" \"$dir\" | Out-Null",
+        "if (get_config USE_LESSMSI $false) {",
+        "    Move-Item \"$dir\\APPDIR\\*\" \"$dir\\\"",
+        "    Remove-Item \"$dir\\APPDIR\"",
+        "}",
+        "Remove-Item \"$dir\\dl.exe\", \"$dir\\Bridge-Installer.msi\", \"$dir\\Bridge-Installer.aiui\", \"$dir\\Bridge-Installer*.cab\" -Force -Recurse"
+    ],
+    "pre_uninstall": "Stop-Process -Name 'proton-bridge' -ErrorAction SilentlyContinue",
+    "shortcuts": [
+        [
+            "Desktop-Bridge.exe",
+            "ProtonMail Bridge"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/ProtonMail/proton-bridge"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://mirror.ghproxy.com/https://github.com/ProtonMail/proton-bridge/releases/download/v$version/Bridge-Installer.exe#/dl.exe"
+            }
+        }
+    }
+}

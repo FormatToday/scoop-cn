@@ -1,0 +1,45 @@
+{
+    "description": "Amazon Corretto is a no-cost, multiplatform, production-ready distribution of the Open Java Development Kit (OpenJDK)",
+    "homepage": "https://aws.amazon.com/corretto/",
+    "version": "8.392.08.1",
+    "license": "GPL-2.0-only WITH Classpath-exception-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://corretto.aws/downloads/resources/8.392.08.1/amazon-corretto-8.392.08.1-windows-x64-jdk.zip",
+            "hash": "c771169e909459d6f6c3cf68e3a4200af420ae3313cf27423395eb3c0e811016"
+        },
+        "32bit": {
+            "url": "https://corretto.aws/downloads/resources/8.392.08.1/amazon-corretto-8.392.08.1-windows-x86-jdk.zip",
+            "hash": "47b9fa69716dcc651b538428d1ed60c6a7683164a6b4c23687c7af960e2f876b"
+        }
+    },
+    "extract_dir": "jdk1.8.0_392",
+    "env_add_path": "bin",
+    "env_set": {
+        "JAVA_HOME": "$dir"
+    },
+    "checkver": {
+        "url": "https://mirror.ghproxy.com/https://github.com/corretto/corretto-downloads/raw/main/latest_links/indexmap_with_checksum.json",
+        "jsonpath": "$.windows.x64.jdk.8.zip.resource",
+        "regex": "/([\\d.]+)/"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://corretto.aws/downloads/resources/$version/amazon-corretto-$version-windows-x64-jdk.zip",
+                "hash": {
+                    "url": "https://mirror.ghproxy.com/https://github.com/corretto/corretto-downloads/raw/main/latest_links/indexmap_with_checksum.json",
+                    "jsonpath": "$.windows.x64.jdk.8.zip.checksum_sha256"
+                }
+            },
+            "32bit": {
+                "url": "https://corretto.aws/downloads/resources/$version/amazon-corretto-$version-windows-x86-jdk.zip",
+                "hash": {
+                    "url": "https://mirror.ghproxy.com/https://github.com/corretto/corretto-downloads/raw/main/latest_links/indexmap_with_checksum.json",
+                    "jsonpath": "$.windows.x86.jdk.8.zip.checksum_sha256"
+                }
+            }
+        },
+        "extract_dir": "jdk1.8.0_$minorVersion"
+    }
+}

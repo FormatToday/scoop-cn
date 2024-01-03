@@ -1,0 +1,46 @@
+{
+    "version": "7.0-0cf9b65",
+    "description": "An open source Minecraft launcher with the ability to manage multiple instances, accounts and mods. Focused on user freedom and free redistributability.",
+    "homepage": "https://prismlauncher.org/",
+    "license": "GPL-3.0-only",
+    "notes": "To add Prism Launcher file association options for .ZIPs and .MRPACKS, run this: \"$dir\\install-associations.reg\"",
+    "architecture": {
+        "64bit": {
+            "url": "https://nightly.link/PrismLauncher/PrismLauncher/workflows/trigger_builds/develop/PrismLauncher-Windows-MSVC-0cf9b65-Debug.zip",
+            "hash": "05110d9df741e5dedbb847c314ecaa2b6c5aefb7689491d0da9928a7195a3e13"
+        }
+    },
+    "suggest": {
+        "vcredist": "scoop-cn/vcredist2022"
+    },
+    "post_install": [
+        "'install-associations', 'uninstall-associations' | ForEach-Object {",
+        "    if (Test-Path \"$bucketsdir\\scoop-cn\\scripts\\prismlauncher-git\\$_.reg\") {",
+        "        $exePath = \"$dir\\prismlauncher.exe\".Replace('\\', '\\\\')",
+        "        $content = (Get-Content \"$bucketsdir\\scoop-cn\\scripts\\prismlauncher-git\\$_.reg\").Replace('$EXEPATH', $exePath)",
+        "        if ($global) { $content = $content.Replace('HKEY_CURRENT_USER', 'HKEY_LOCAL_MACHINE') }",
+        "        Set-Content \"$dir\\$_.reg\" $content -Encoding Ascii -Force",
+        "    }",
+        "}"
+    ],
+    "bin": "prismlauncher.exe",
+    "shortcuts": [
+        [
+            "prismlauncher.exe",
+            "Prism Launcher"
+        ]
+    ],
+    "checkver": {
+        "url": "https://api.github.com/repositories/553135896/actions/workflows/trigger_builds.yml/runs?branch=develop&status=success",
+        "jsonpath": "$.workflow_runs[0].head_sha",
+        "regex": "(?<sha>\\A[a-f\\d]{0,7})",
+        "replace": "7.0-${sha}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://nightly.link/PrismLauncher/PrismLauncher/workflows/trigger_builds/develop/PrismLauncher-Windows-MSVC-$matchSha-Debug.zip"
+            }
+        }
+    }
+}

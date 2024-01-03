@@ -1,0 +1,31 @@
+{
+    "version": "113171",
+    "description": "A complete, cross-platform solution to record, convert and stream audio and video.",
+    "homepage": "https://ffmpeg.org",
+    "license": "GPL-3.0-or-later",
+    "architecture": {
+        "64bit": {
+            "url": "https://mirror.ghproxy.com/https://github.com/BtbN/FFmpeg-Builds/releases/download/autobuild-2024-01-02-12-54/ffmpeg-N-113171-g85b8d59ec7-win64-gpl-shared.zip",
+            "hash": "e2e3509fff66ce145476bc0ae19a503d01f993dab85d398fffb461031d5bcaae",
+            "extract_dir": "ffmpeg-N-113171-g85b8d59ec7-win64-gpl-shared"
+        }
+    },
+    "bin": [
+        "bin\\ffmpeg.exe",
+        "bin\\ffplay.exe",
+        "bin\\ffprobe.exe"
+    ],
+    "checkver": {
+        "url": "https://api.github.com/repositories/292087234/releases",
+        "jsonpath": "$..browser_download_url",
+        "regex": "autobuild-(?<time>[\\d-]+)/ffmpeg-N-(\\d+)-g(?<hash>[a-z\\d]+)-win64-gpl-shared\\.zip"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://mirror.ghproxy.com/https://github.com/BtbN/FFmpeg-Builds/releases/download/autobuild-$matchTime/ffmpeg-N-$version-g$matchHash-win64-gpl-shared.zip",
+                "extract_dir": "ffmpeg-N-$version-g$matchHash-win64-gpl-shared"
+            }
+        }
+    }
+}

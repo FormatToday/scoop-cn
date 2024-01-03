@@ -1,0 +1,55 @@
+{
+    "version": "1.21.5",
+    "description": "An open source programming language that makes it easy to build simple, reliable, and efficient software.",
+    "homepage": "https://golang.org",
+    "license": "BSD-3-Clause",
+    "notes": [
+        "Your GOROOT has been set to: $dir",
+        "Your GOPATH has been set to: $dir\\global_path",
+        "Your GOPROXY has been set to: \"https://goproxy.io,direct\"",
+        "You can run 'go env GOROOT' to view this at any time.",
+        "\"$dir\\global_path\\bin\" has been added to your PATH, and been persisted."
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://golang.google.cn/dl/go1.21.5.windows-amd64.zip",
+            "hash": "bbe603cde7c9dee658f45164b4d06de1eff6e6e6b800100824e7c00d56a9a92f"
+        },
+        "32bit": {
+            "url": "https://golang.google.cn/dl/go1.21.5.windows-386.zip",
+            "hash": "6da2418889dfb37763d0eb149c4a8d728c029e12f0cd54fbca0a31ae547e2d34"
+        }
+    },
+    "extract_dir": "go",
+    "env_add_path": "global_path\\bin",
+    "bin": [
+        "bin\\go.exe",
+        "bin\\gofmt.exe"
+    ],
+    "env_set": {
+        "GOROOT": "$dir",
+        "GOPATH": "$dir\\global_path",
+        "GOPROXY": "https://goproxy.io,direct"
+    },
+    "persist": "global_path",
+    "checkver": {
+        "url": "https://golang.google.cn/dl/",
+        "regex": "go([\\d.]+)\\.windows-"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://golang.google.cn/dl/go$version.windows-amd64.zip",
+                "hash": {
+                    "url": "https://mirrors.aliyun.com/golang/go$version.windows-amd64.zip.sha256"
+                }
+            },
+            "32bit": {
+                "url": "https://golang.google.cn/dl/go$version.windows-386.zip",
+                "hash": {
+                    "url": "https://mirrors.aliyun.com/golang/go$version.windows-386.zip.sha256"
+                }
+            }
+        }
+    }
+}
