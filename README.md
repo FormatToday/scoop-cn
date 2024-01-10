@@ -96,7 +96,12 @@ scoop search APPNAME
 scoop install scoop-cn/APPNAME
 ```
 
-如果不想每次添加scoop-cn，可以删除官方main bucket `scoop bucket rm main`，后果自负（其实没啥，不行可以使用`scoop bucket add main`还原）
+如果不想每次输入都带 scoop-cn/，可以把已包含的十个库删掉，例如：
+
+```powershell
+scoop bucket rm main
+scoop bucket rm extras
+```
 
 ## 查看帮助
 
