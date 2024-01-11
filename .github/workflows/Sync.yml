@@ -20,72 +20,78 @@ jobs:
         uses: actions/checkout@v3
         with:
           fetch-depth: 1
-      - name: 更新Main仓库
+      - name: 更新 Main 仓库
         uses: actions/checkout@v3
         with:
           repository: "ScoopInstaller/Main"
           fetch-depth: 1
           path: "Main"
-      - name: 更新Extras仓库
+      - name: 更新 Extras 仓库
         uses: actions/checkout@v3
         with:
           repository: "ScoopInstaller/Extras"
           fetch-depth: 1
           path: "Extras"
-      - name: 更新Versions仓库
+      - name: 更新 Versions 仓库
         uses: actions/checkout@v3
         with:
           repository: "ScoopInstaller/Versions"
           fetch-depth: 1
           path: "Versions"
-      - name: 更新scoop-nirsoft仓库
+      - name: 更新 scoop-nirsoft 仓库
         uses: actions/checkout@v3
         with:
           repository: "kodybrown/scoop-nirsoft"
           fetch-depth: 1
           path: "scoop-nirsoft"
-      - name: 更新PHP仓库
+      - name: 更新 PHP 仓库
         uses: actions/checkout@v3
         with:
           repository: "ScoopInstaller/PHP"
           fetch-depth: 1
           path: "PHP"
-      - name: 更新nerd-fonts仓库
+      - name: 更新 nerd-fonts 仓库
         uses: actions/checkout@v3
         with:
           repository: "matthewjberger/scoop-nerd-fonts"
           fetch-depth: 1
           path: "scoop-nerd-fonts"
-      - name: 更新Non-portable仓库
+      - name: 更新 Non-portable 仓库
         uses: actions/checkout@v3
         with:
           repository: "ScoopInstaller/Nonportable"
           fetch-depth: 1
           path: "Nonportable"
-      - name: 更新Java仓库
+      - name: 更新 Java 仓库
         uses: actions/checkout@v3
         with:
           repository: "ScoopInstaller/Java"
           fetch-depth: 1
           path: "Java"
-      - name: 更新games仓库
+      - name: 更新 scoop-games 仓库
         uses: actions/checkout@v3
         with:
           repository: "Calinou/scoop-games"
           fetch-depth: 1
           path: "scoop-games"
-      - name: 更新sysinternals仓库
+      - name: 更新 sysinternals 仓库
         uses: actions/checkout@v3
         with:
           repository: "niheaven/scoop-sysinternals"
           fetch-depth: 1
           path: "scoop-sysinternals"
-      - name: 更新dorado仓库
+      - name: 更新 dorado 仓库
         uses: actions/checkout@v3
         with:
           repository: "chawyehsu/dorado"
           fetch-depth: 1
           path: "dorado"
+      -   name: 更新 Scoop-Gaming 仓库
+          uses: actions/checkout@v3
+          with:
+              repository: "starise/Scoop-Gaming"
+              fetch-depth: 1
+              path: "Scoop-Gaming"
       - name: 处理 buckets
         shell: pwsh
         run: |

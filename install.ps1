@@ -30,6 +30,8 @@ Invoke-RestMethod -Uri https://mirror.ghproxy.com/https://raw.githubusercontent.
 # 安装时注意顺序是 7-Zip, Git, Aria2
 scoop install scoop-cn/7zip
 scoop install scoop-cn/git
+scoop install scoop-cn/sudo
+scoop install scoop-cn/scoop-search
 # scoop install scoop-cn/aria2
 
 # scoop-cn 库还不是 Git 仓库，删掉后，重新添加 Git 仓库
