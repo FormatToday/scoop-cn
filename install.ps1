@@ -49,4 +49,5 @@ if (Test-Path -Path "$env:USERPROFILE\scoop\buckets\main") {
 # Set-Location "$env:USERPROFILE\scoop\buckets\scoop-cn"
 # git config pull.rebase true
 
+scoop config aria2-warning-enabled false
 Write-Host "scoop and scoop-cn was installed successfully!"
