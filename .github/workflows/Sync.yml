@@ -18,89 +18,89 @@ jobs:
           Set-TimeZone -Id "China Standard Time"
 
       - name: 更新本仓库
-        uses: actions/checkout@v4
+        uses: actions/checkout@main
         with:
           fetch-depth: 1
 
       - name: 更新 Main 仓库
-        uses: actions/checkout@v4
+        uses: actions/checkout@main
         with:
           repository: "ScoopInstaller/Main"
           fetch-depth: 1
           path: "Main"
 
       - name: 更新 Extras 仓库
-        uses: actions/checkout@v4
+        uses: actions/checkout@main
         with:
           repository: "ScoopInstaller/Extras"
           fetch-depth: 1
           path: "Extras"
 
       - name: 更新 Versions 仓库
-        uses: actions/checkout@v4
+        uses: actions/checkout@main
         with:
           repository: "ScoopInstaller/Versions"
           fetch-depth: 1
           path: "Versions"
 
       - name: 更新 scoop-nirsoft 仓库
-        uses: actions/checkout@v4
+        uses: actions/checkout@main
         with:
           repository: "kodybrown/scoop-nirsoft"
           fetch-depth: 1
           path: "scoop-nirsoft"
 
       - name: 更新 PHP 仓库
-        uses: actions/checkout@v4
+        uses: actions/checkout@main
         with:
           repository: "ScoopInstaller/PHP"
           fetch-depth: 1
           path: "PHP"
 
       - name: 更新 nerd-fonts 仓库
-        uses: actions/checkout@v4
+        uses: actions/checkout@main
         with:
           repository: "matthewjberger/scoop-nerd-fonts"
           fetch-depth: 1
           path: "scoop-nerd-fonts"
 
       - name: 更新 Non-portable 仓库
-        uses: actions/checkout@v4
+        uses: actions/checkout@main
         with:
           repository: "ScoopInstaller/Nonportable"
           fetch-depth: 1
           path: "Nonportable"
 
       - name: 更新 Java 仓库
-        uses: actions/checkout@v4
+        uses: actions/checkout@main
         with:
           repository: "ScoopInstaller/Java"
           fetch-depth: 1
           path: "Java"
 
       - name: 更新 scoop-games 仓库
-        uses: actions/checkout@v4
+        uses: actions/checkout@main
         with:
           repository: "Calinou/scoop-games"
           fetch-depth: 1
           path: "scoop-games"
 
       - name: 更新 sysinternals 仓库
-        uses: actions/checkout@v4
+        uses: actions/checkout@main
         with:
           repository: "niheaven/scoop-sysinternals"
           fetch-depth: 1
           path: "scoop-sysinternals"
 
       - name: 更新 dorado 仓库
-        uses: actions/checkout@v4
+        uses: actions/checkout@main
         with:
           repository: "chawyehsu/dorado"
           fetch-depth: 1
           path: "dorado"
 
       - name: 更新 Scoop-Gaming 仓库
-        uses: actions/checkout@v4
+        uses: actions/checkout@main
         with:
           repository: "starise/Scoop-Gaming"
           fetch-depth: 1
@@ -117,7 +117,7 @@ jobs:
           git push -f origin master
 
       - name: 删除旧 Actions
-        uses: Mattraks/delete-workflow-runs@v2
+        uses: Mattraks/delete-workflow-runs@main
         with:
           token: ${{ github.token }}
           repository: ${{ github.repository }}
