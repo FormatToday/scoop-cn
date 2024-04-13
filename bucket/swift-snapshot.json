@@ -9,7 +9,7 @@
             "hash": "fbce1a1baf2b795ce26d46500506104edd500b75f7fcc4767929f019ec24337b"
         }
     },
-    "depends": "scoop-cn/dorado/wix",
+    "depends": "scoop-cn/main/wixtoolset",
     "suggest": {
         "python39": "scoop-cn/python39",
         "vcredist": "scoop-cn/vcredist2022"
