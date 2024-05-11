@@ -3,7 +3,7 @@
     "description": "HFS is a free, one single executable file Http File Server software.",
     "license": "GPL-2.0-only",
     "version": "2.3m",
-    "url": "https://jaist.dl.sourceforge.net/project/hfs/HFS/2.3m/hfs2.3m.zip",
+    "url": "https://downloads.sourceforge.net/project/hfs/HFS/2.3m/hfs2.3m.zip",
     "hash": "sha1:adec3861661cba9d04c214223aaa078b4f4d35dd",
     "bin": "hfs.exe",
     "shortcuts": [
@@ -17,6 +17,6 @@
         "regex": "(?sm)Latest version: <b>([\\w\\d.]+)"
     },
     "autoupdate": {
-        "url": "https://jaist.dl.sourceforge.net/project/hfs/HFS/$version/hfs$version.zip"
+        "url": "https://downloads.sourceforge.net/project/hfs/HFS/$version/hfs$version.zip"
     }
 }

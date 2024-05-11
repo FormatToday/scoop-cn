@@ -12,11 +12,11 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://jaist.dl.sourceforge.net/project/mpv-player-windows/64bit/mpv-x86_64-20240505-git-c4b6d0d.7z",
+            "url": "https://downloads.sourceforge.net/project/mpv-player-windows/64bit/mpv-x86_64-20240505-git-c4b6d0d.7z",
             "hash": "sha1:27a66920455d66bbd7494c4aa0310bf22e16c2d1"
         },
         "32bit": {
-            "url": "https://jaist.dl.sourceforge.net/project/mpv-player-windows/32bit/mpv-i686-20240505-git-c4b6d0d.7z",
+            "url": "https://downloads.sourceforge.net/project/mpv-player-windows/32bit/mpv-i686-20240505-git-c4b6d0d.7z",
             "hash": "sha1:5f0a318b2db4e851fe4d0caec9d18e250f81d006"
         }
     },
@@ -36,10 +36,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://jaist.dl.sourceforge.net/project/mpv-player-windows/64bit/mpv-x86_64-$version-git-$matchCommit.7z"
+                "url": "https://downloads.sourceforge.net/project/mpv-player-windows/64bit/mpv-x86_64-$version-git-$matchCommit.7z"
             },
             "32bit": {
-                "url": "https://jaist.dl.sourceforge.net/project/mpv-player-windows/32bit/mpv-i686-$version-git-$matchCommit.7z"
+                "url": "https://downloads.sourceforge.net/project/mpv-player-windows/32bit/mpv-i686-$version-git-$matchCommit.7z"
             }
         }
     }

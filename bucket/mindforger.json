@@ -5,7 +5,7 @@
     "license": "GPL-2.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://jaist.dl.sourceforge.net/project/mindforger/2.0.0/windows-installer-mindforger-2.0.1-20365ac5-qt5152.exe",
+            "url": "https://downloads.sourceforge.net/project/mindforger/2.0.0/windows-installer-mindforger-2.0.1-20365ac5-qt5152.exe",
             "hash": "sha1:ec7d13312cef6780e235b6ed2343c5ee000767ad"
         }
     },
@@ -25,7 +25,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://jaist.dl.sourceforge.net/project/mindforger/$version/windows-installer-mindforger-$version-$match2-qt$matchQt.exe"
+                "url": "https://downloads.sourceforge.net/project/mindforger/$version/windows-installer-mindforger-$version-$match2-qt$matchQt.exe"
             }
         }
     }

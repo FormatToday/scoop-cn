@@ -6,7 +6,7 @@
     "notes": "For 32bit, please install 'versions/winpython3741'",
     "architecture": {
         "64bit": {
-            "url": "https://jaist.dl.sourceforge.net/project/winpython/WinPython_3.12/3.12.3.0/Winpython64-3.12.3.0.exe#/dl.7z",
+            "url": "https://downloads.sourceforge.net/project/winpython/WinPython_3.12/3.12.3.0/Winpython64-3.12.3.0.exe#/dl.7z",
             "hash": "45d5ab340920f291a3497be30f05bb059d05ca15f5882f58fa943abf956de1ea",
             "extract_dir": "WPy64-31230"
         }
@@ -107,7 +107,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://jaist.dl.sourceforge.net/project/winpython/WinPython_$majorVersion.$minorVersion/$version/Winpython64-$version.exe#/dl.7z",
+                "url": "https://downloads.sourceforge.net/project/winpython/WinPython_$majorVersion.$minorVersion/$version/Winpython64-$version.exe#/dl.7z",
                 "extract_dir": "WPy64-$cleanVersion"
             }
         },

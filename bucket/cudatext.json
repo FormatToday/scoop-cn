@@ -5,11 +5,11 @@
     "license": "MPL-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://jaist.dl.sourceforge.net/project/cudatext/release/1.214.5.0/cudatext-windows-amd64-1.214.5.0.zip",
+            "url": "https://sourceforge.net/projects/cudatext/files/release/1.214.5.0/cudatext-windows-amd64-1.214.5.0.zip",
             "hash": "sha1:16f2efc8d33a52dccb408d85987b16af35893147"
         },
         "32bit": {
-            "url": "https://jaist.dl.sourceforge.net/project/cudatext/release/1.214.5.0/cudatext-windows-i386-1.214.5.0.zip",
+            "url": "https://sourceforge.net/projects/cudatext/files/release/1.214.5.0/cudatext-windows-i386-1.214.5.0.zip",
             "hash": "sha1:4f348641481cb68ecee342166c5a70c0eba0c69b"
         }
     },
@@ -28,10 +28,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://jaist.dl.sourceforge.net/project/cudatext/release/$version/cudatext-windows-amd64-$version.zip"
+                "url": "https://sourceforge.net/projects/cudatext/files/release/$version/cudatext-windows-amd64-$version.zip"
             },
             "32bit": {
-                "url": "https://jaist.dl.sourceforge.net/project/cudatext/release/$version/cudatext-windows-i386-$version.zip"
+                "url": "https://sourceforge.net/projects/cudatext/files/release/$version/cudatext-windows-i386-$version.zip"
             }
         }
     }

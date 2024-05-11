@@ -5,11 +5,11 @@
     "license": "zlib-acknowledgement",
     "architecture": {
         "64bit": {
-            "url": "https://jaist.dl.sourceforge.net/project/cc65/cc65-snapshot-win64.zip",
+            "url": "https://downloads.sourceforge.net/project/cc65/cc65-snapshot-win64.zip",
             "hash": "sha1:701a9cc179bdcb789348c3dda27f2c6bf6888e64"
         },
         "32bit": {
-            "url": "https://jaist.dl.sourceforge.net/project/cc65/cc65-snapshot-win32.zip",
+            "url": "https://downloads.sourceforge.net/project/cc65/cc65-snapshot-win32.zip",
             "hash": "sha1:e5cf779d02c4d086f2aa5f482b292c732f5836cb"
         }
     },
@@ -39,10 +39,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://jaist.dl.sourceforge.net/project/cc65/cc65-snapshot-win64.zip"
+                "url": "https://downloads.sourceforge.net/project/cc65/cc65-snapshot-win64.zip"
             },
             "32bit": {
-                "url": "https://jaist.dl.sourceforge.net/project/cc65/cc65-snapshot-win32.zip"
+                "url": "https://downloads.sourceforge.net/project/cc65/cc65-snapshot-win32.zip"
             }
         }
     }

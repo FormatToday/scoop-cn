@@ -8,11 +8,11 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://mirrors.kodi.tv/nightlies/windows/win64/Omega/KodiSetup-20240509-a4d836c3-Omega-x64.exe#/dl.7z",
+            "url": "https://mirrors.tuna.tsinghua.edu.cn/kodi/nightlies/windows/win64/Omega/KodiSetup-20240509-a4d836c3-Omega-x64.exe#/dl.7z",
             "hash": "a9341e8d362e2578680bff3d7d0d8959859477280bc64b00ff039d4e60eef61c"
         },
         "32bit": {
-            "url": "https://mirrors.kodi.tv/nightlies/windows/win32/Omega/KodiSetup-20240507-78d534f4-Omega-x86.exe#/dl.7z",
+            "url": "https://mirrors.tuna.tsinghua.edu.cn/kodi/nightlies/windows/win32/Omega/KodiSetup-20240507-78d534f4-Omega-x86.exe#/dl.7z",
             "hash": "27dcba833c91ad858db4327c8e919e5b3269e4b6f67c356c9f2d2b5eaae18cc6"
         }
     },
@@ -33,7 +33,7 @@
             "$script_ver = ''",
             "$urls =  @()",
             "foreach ($build in $builds) {",
-            "   $base_url = 'https://mirrors.kodi.tv/nightlies/windows/'+ $build + '/' + $name + '/'",
+            "   $base_url = 'https://mirrors.tuna.tsinghua.edu.cn/kodi/nightlies/windows/'+ $build + '/' + $name + '/'",
             "   $dl_page = Invoke-WebRequest $base_url -UseBasicParsing",
             "   $full_version = $dl_page.links | Where-Object href -match '\\.exe$' | Select-Object -first 1 -expand href",
             "   $script_ver = $full_version -split '-' | Select-Object -Skip 1 | Select-Object -First 1",
@@ -47,10 +47,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://mirrors.kodi.tv/nightlies/windows/win64/$matchWin64bit#/dl.7z"
+                "url": "https://mirrors.tuna.tsinghua.edu.cn/kodi/nightlies/windows/win64/$matchWin64bit#/dl.7z"
             },
             "32bit": {
-                "url": "https://mirrors.kodi.tv/nightlies/windows/win32/$matchWin32bit#/dl.7z"
+                "url": "https://mirrors.tuna.tsinghua.edu.cn/kodi/nightlies/windows/win32/$matchWin32bit#/dl.7z"
             }
         },
         "hash": {

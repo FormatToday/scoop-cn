@@ -8,11 +8,11 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://mirrors.kodi.tv/nightlies/windows/win64/master/KodiSetup-20240509-e56e40c7-master-x64.exe#/dl.7z",
+            "url": "https://mirrors.tuna.tsinghua.edu.cn/kodi/nightlies/windows/win64/master/KodiSetup-20240509-e56e40c7-master-x64.exe#/dl.7z",
             "hash": "c94e2112a8636a6c240125ec5ebff31107a28617e370b1c41d1a99b3de5e17c9"
         },
         "32bit": {
-            "url": "https://mirrors.kodi.tv/nightlies/windows/win32/master/KodiSetup-20240509-e56e40c7-master-x86.exe#/dl.7z",
+            "url": "https://mirrors.tuna.tsinghua.edu.cn/kodi/nightlies/windows/win32/master/KodiSetup-20240509-e56e40c7-master-x86.exe#/dl.7z",
             "hash": "44242b5017bb22ef1ad0c7b619cda06d9ce86d942b18c76867178301d36c5880"
         }
     },
@@ -31,7 +31,7 @@
             "$script_ver = ''",
             "$urls =  @()",
             "foreach ($build in $builds) {",
-            "   $base_url = 'https://mirrors.kodi.tv/nightlies/windows/'+ $build + '/master/'",
+            "   $base_url = 'https://mirrors.tuna.tsinghua.edu.cn/kodi/nightlies/windows/'+ $build + '/master/'",
             "   $dl_page = Invoke-WebRequest $base_url -UseBasicParsing",
             "   $full_version = $dl_page.links | Where-Object href -match '\\.exe$' | Select-Object -first 1 -expand href",
             "   $script_ver = $full_version -split '-' | Select-Object -Skip 1 | Select-Object -First 1",
@@ -44,10 +44,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://mirrors.kodi.tv/nightlies/windows/win64/master/$matchWin64bit#/dl.7z"
+                "url": "https://mirrors.tuna.tsinghua.edu.cn/kodi/nightlies/windows/win64/master/$matchWin64bit#/dl.7z"
             },
             "32bit": {
-                "url": "https://mirrors.kodi.tv/nightlies/windows/win32/master/$matchWin32bit#/dl.7z"
+                "url": "https://mirrors.tuna.tsinghua.edu.cn/kodi/nightlies/windows/win32/master/$matchWin32bit#/dl.7z"
             }
         },
         "hash": {
