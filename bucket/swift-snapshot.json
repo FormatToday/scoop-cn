@@ -13,7 +13,7 @@
             "hash": "037bdbf9d1a1a99d7156584948870a8a958fd27cc4ff5711691cc0a76f2e88f5"
         }
     },
-    "depends": "scoop-cn/main/wixtoolset",
+    "depends": "scoop-cn/wixtoolset",
     "suggest": {
         "python39": "scoop-cn/python39",
         "vcredist": "scoop-cn/vcredist2022"
