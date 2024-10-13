@@ -1,11 +1,18 @@
 {
-    "version": "004.01",
-    "description": "Free CJK font maintained by Japanese government agency. It covers a large set of characters.",
-    "homepage": "https://moji.or.jp/ipafont/",
-    "license": "IPA",
-    "url": "https://moji.or.jp/wp-content/ipafont/IPAexfont/ipaexm00401.zip",
-    "hash": "9604c77067396b4d2ab49816b3e18db741a70c8b1d43eb28669ae75cd1ce5237",
-    "extract_dir": "ipaexm00401",
+    "version": "1.501",
+    "description": "An open-source Simplified Chinese font derived from Fontworks' Klee One. 一款基于 FONTWORKS 出品字体 Klee One 改造的开源简体中文字体。",
+    "homepage": "https://github.com/lxgw/LxgwWenkaiGB",
+    "license": "OFL-1.1",
+    "url": [
+        "https://mirror.ghproxy.com/https://github.com/lxgw/LxgwWenkaiGB/releases/download/v1.501/LXGWWenKaiMonoGB-Light.ttf",
+        "https://mirror.ghproxy.com/https://github.com/lxgw/LxgwWenkaiGB/releases/download/v1.501/LXGWWenKaiMonoGB-Regular.ttf",
+        "https://mirror.ghproxy.com/https://github.com/lxgw/LxgwWenkaiGB/releases/download/v1.501/LXGWWenKaiMonoGB-Medium.ttf"
+    ],
+    "hash": [
+        "39303a14ae68da69cdc4baa8fb99c670191e10847d9e494c681e12464cefbb1f",
+        "82e3615c9c1949b051ded686f0939dd1f725db64f6310e83f36d31df98b12be0",
+        "dfdcc1818f4e41715ddd45b0ef8effb0f7700c7160522fc8857623c3f3d9e474"
+    ],
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",
@@ -82,15 +89,16 @@
             "    Remove-Item \"$fontInstallDir\\$($_.Name)\" -Force -ErrorAction SilentlyContinue",
             "}",
             "if ($cmd -eq \"uninstall\") {",
-            "    Write-Host \"Font 'IPAex Mincho' has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta",
+            "    Write-Host \"Font family '$app' has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta",
             "}"
         ]
     },
-    "checkver": {
-        "regex": "Ver\\.(\\d{3}\\.\\d{2}).*</span>"
-    },
+    "checkver": "github",
     "autoupdate": {
-        "url": "https://moji.or.jp/wp-content/ipafont/IPAexfont/ipaexm$cleanVersion.zip",
-        "extract_dir": "ipaexm$cleanVersion"
+        "url": [
+            "https://mirror.ghproxy.com/https://github.com/lxgw/LxgwWenkaiGB/releases/download/v$version/LXGWWenKaiMonoGB-Light.ttf",
+            "https://mirror.ghproxy.com/https://github.com/lxgw/LxgwWenkaiGB/releases/download/v$version/LXGWWenKaiMonoGB-Regular.ttf",
+            "https://mirror.ghproxy.com/https://github.com/lxgw/LxgwWenkaiGB/releases/download/v$version/LXGWWenKaiMonoGB-Medium.ttf"
+        ]
     }
 }
