@@ -5,12 +5,12 @@
     "license": "GPL-2.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://mirror.ghproxy.com/https://github.com/enzo1982/freac/releases/download/continuous/freac-continuous-windows-x64.zip",
+            "url": "https://ghp.ci/https://github.com/enzo1982/freac/releases/download/continuous/freac-continuous-windows-x64.zip",
             "hash": "f819b800bd081f13617069634a6d13921b7946cbe82c62a2dac76182e031ffd4",
             "extract_dir": "freac-continuous-windows-x64"
         },
         "32bit": {
-            "url": "https://mirror.ghproxy.com/https://github.com/enzo1982/freac/releases/download/continuous/freac-continuous-windows.zip",
+            "url": "https://ghp.ci/https://github.com/enzo1982/freac/releases/download/continuous/freac-continuous-windows.zip",
             "hash": "88f4c175de019494589433562f227b121a9ef5b48681842087f90a49e444ee30",
             "extract_dir": "freac-continuous-windows"
         }
@@ -37,10 +37,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://mirror.ghproxy.com/https://github.com/enzo1982/freac/releases/download/continuous/freac-continuous-windows-x64.zip"
+                "url": "https://ghp.ci/https://github.com/enzo1982/freac/releases/download/continuous/freac-continuous-windows-x64.zip"
             },
             "32bit": {
-                "url": "https://mirror.ghproxy.com/https://github.com/enzo1982/freac/releases/download/continuous/freac-continuous-windows.zip"
+                "url": "https://ghp.ci/https://github.com/enzo1982/freac/releases/download/continuous/freac-continuous-windows.zip"
             }
         }
     }
