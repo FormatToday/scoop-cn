@@ -112,9 +112,9 @@ jobs:
           .\update.ps1
           git config user.name github-actions
           git config user.email github-actions@github.com
-            git config --global i18n.commitencoding utf-8
             git config --global i18n.logoutputencoding utf-8
             git config --global gui.encoding utf-8
+            git config --global i18n.commit.encoding utf-8
           git add --all
           git commit -m "自动更新：$(Get-Date -Format "yyyy-MM-dd HH:mm:ss")"
           git push -f origin master
