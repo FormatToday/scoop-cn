@@ -1,12 +1,12 @@
 {
-    "version": "1.120.0",
+    "version": "1.122.0",
     "description": "A community-led hyper-hackable text editor",
     "homepage": "https://pulsar-edit.dev",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://mirror.ghproxy.com/https://github.com/pulsar-edit/pulsar/releases/download/v1.120.0/Windows.Pulsar-1.120.0-win.zip",
-            "hash": "a6183442c423119a512db866b6a04734b3378785b2104fa52b69f0f372bd3e03"
+            "url": "https://mirror.ghproxy.com/https://github.com/pulsar-edit/pulsar/releases/download/v1.122.0/Windows.Pulsar-1.122.0-win.zip",
+            "hash": "50b1e907e4f4eb42822f5edefa6e6810cb14e76bc21085fb4281b80f2dfe5d10"
         }
     },
     "extract_to": "pulsar",

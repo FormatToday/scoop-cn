@@ -1,5 +1,5 @@
 {
-    "version": "9.56.1",
+    "version": "9.59.1",
     "description": "A small program to prevent system Shutdown, Stand By, Turn Off, Restart, Hibernate.",
     "homepage": "https://www.softwareok.com/?Download=DontSleep",
     "license": {
@@ -9,7 +9,7 @@
     "architecture": {
         "64bit": {
             "url": "https://www.softwareok.com/Download/DontSleep_x64.zip",
-            "hash": "e4a17724f68acbe9b1b13b7f06bc103476b90bd74e087ec0c938239d37c9b8b4",
+            "hash": "5d82055d3a4520c15ce94e40c2a578532d6bcbe5ac76c426a163227aa97302f9",
             "shortcuts": [
                 [
                     "DontSleep_x64.exe",
@@ -19,7 +19,7 @@
         },
         "32bit": {
             "url": "https://www.softwareok.com/Download/DontSleep.zip",
-            "hash": "72dbafe1d91de0d0d3c2a50b4f385b760de79e675f686e80be5bf97d58a15a7d",
+            "hash": "fd997feb78a1049c6efb58d0e83bff9b7352d688b770e89f023323af3151c83e",
             "shortcuts": [
                 [
                     "DontSleep.exe",

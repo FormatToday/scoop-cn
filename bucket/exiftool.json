@@ -1,18 +1,18 @@
 {
-    "version": "12.93",
+    "version": "13.00",
     "description": "A command-line application for reading, writing and editing meta information in a wide variety of files.",
     "homepage": "https://exiftool.org",
     "license": "GPL-1.0-or-later|Artistic-1.0-Perl",
     "architecture": {
         "64bit": {
-            "url": "https://exiftool.org/exiftool-12.93_64.zip",
-            "hash": "3d91b55c643490230c77308fb1b562c5dd5adbbb513a9740a300acdf72a46c31",
-            "extract_dir": "exiftool-12.93_64"
+            "url": "https://exiftool.org/exiftool-13.00_64.zip",
+            "hash": "bca1292b39200c15728d4e111b6ca8a8f411bc15d7e0bf1786904cbd240cddc9",
+            "extract_dir": "exiftool-13.00_64"
         },
         "32bit": {
-            "url": "https://exiftool.org/exiftool-12.93_32.zip",
-            "hash": "e45da52ff1c35e2a999b0d0afaf7aede4f3100a88adbb12c4e938b8b3499f7ab",
-            "extract_dir": "exiftool-12.93_32"
+            "url": "https://exiftool.org/exiftool-13.00_32.zip",
+            "hash": "9ce7103ba4a7ca932aedb956ebfa8f61404f6fb5c26fb809ffcddcea15ad55d0",
+            "extract_dir": "exiftool-13.00_32"
         }
     },
     "pre_install": "Copy-Item \"$dir\\exiftool(-k).exe\" \"$dir\\exiftool.exe\"",

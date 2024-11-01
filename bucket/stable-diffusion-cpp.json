@@ -1,12 +1,12 @@
 {
-    "version": "snapshot-8847114",
+    "version": "snapshot-ac54e00",
     "description": "Stable Diffusion in pure C/C++ (AVX2)",
     "homepage": "https://github.com/leejet/stable-diffusion.cpp",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://mirror.ghproxy.com/https://github.com/leejet/stable-diffusion.cpp/releases/download/master-8847114/sd-master-8847114-bin-win-avx2-x64.zip",
-            "hash": "3d3e515315fcb6ad66c9645954a8dae5e9b04b86025872e8aa8fb24539bf2163"
+            "url": "https://mirror.ghproxy.com/https://github.com/leejet/stable-diffusion.cpp/releases/download/master-ac54e00/sd-master-ac54e00-bin-win-avx2-x64.zip",
+            "hash": "a64462c83add14d967d00a15883dc8e9d6b2fa8ece5e0be912c9606991b7b37d"
         }
     },
     "bin": "sd.exe",

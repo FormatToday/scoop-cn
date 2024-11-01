@@ -1,16 +1,16 @@
 {
-    "version": "1.77.8",
+    "version": "1.80.5",
     "description": "The primary implementation of Sass, written in Dart.",
     "homepage": "https://sass-lang.com/dart-sass",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://mirror.ghproxy.com/https://github.com/sass/dart-sass/releases/download/1.77.8/dart-sass-1.77.8-windows-x64.zip",
-            "hash": "307b9729582b977ac9571cf5e38a3fb31af95002aff7c72cfee5e2f3c270d6e7"
+            "url": "https://mirror.ghproxy.com/https://github.com/sass/dart-sass/releases/download/1.80.5/dart-sass-1.80.5-windows-x64.zip",
+            "hash": "83c6d1c0fbbb62d9d06f73eb60817c3ef704228b1ee0c1bf96de9a9d6d1d6f6d"
         },
         "32bit": {
-            "url": "https://mirror.ghproxy.com/https://github.com/sass/dart-sass/releases/download/1.77.8/dart-sass-1.77.8-windows-ia32.zip",
-            "hash": "1c65924094bf4154bdfd605c4ad9bf72b8ae0681382e7519bd3d41bb95384c59"
+            "url": "https://mirror.ghproxy.com/https://github.com/sass/dart-sass/releases/download/1.80.5/dart-sass-1.80.5-windows-ia32.zip",
+            "hash": "8bd7ac4bac3010f660ed2f63fddedcfceb8baef56693411713bda3c35b9383c0"
         }
     },
     "extract_dir": "dart-sass",

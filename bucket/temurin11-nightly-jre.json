@@ -1,16 +1,16 @@
 {
     "description": "Eclipse Temurin is a runtime provided by Eclipse Adoptium for general use across the Java ecosystem",
     "homepage": "https://adoptium.net",
-    "version": "11.0.25-4.0.ea",
+    "version": "11.0.25-8.0.ea",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://mirror.ghproxy.com/https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.25+4-ea-beta/OpenJDK11U-jre_x64_windows_hotspot_11.0.25_4-ea.zip",
-            "hash": "11241503c30094c0b84da61a4dc1b2b53f39ee430b0460b377caacfb053e9ce9"
+            "url": "https://mirror.ghproxy.com/https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.25+8-ea-beta/OpenJDK11U-jre_x64_windows_hotspot_11.0.25_8-ea.zip",
+            "hash": "a064b7fcdfe6ad5a3cbd9e9c2bf21c5be14ec0e887072d6ccdc69914cc0fdf18"
         },
         "32bit": {
-            "url": "https://mirror.ghproxy.com/https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.25+4-ea-beta/OpenJDK11U-jre_x86-32_windows_hotspot_11.0.25_4-ea.zip",
-            "hash": "7a670a76f390b5dade16bb2e0cdfce09051e2648c068a130bf62a074b3bf968a"
+            "url": "https://mirror.ghproxy.com/https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.25+8-ea-beta/OpenJDK11U-jre_x86-32_windows_hotspot_11.0.25_8-ea.zip",
+            "hash": "105b730b7122f4f305b468e96fc8716e69a3e85b52e75cf3be21a0c4b8054231"
         }
     },
     "extract_to": "tmp",

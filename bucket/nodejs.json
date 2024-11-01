@@ -1,23 +1,18 @@
 {
-    "version": "22.7.0",
+    "version": "23.1.0",
     "description": "An asynchronous event driven JavaScript runtime designed to build scalable network applications.",
     "homepage": "https://nodejs.org",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://npmmirror.com/mirrors/node/v22.7.0/node-v22.7.0-win-x64.7z",
-            "hash": "07e9c84399c665f64057fa4fe2305e051ef6030941f4283d156670877a9ca629",
-            "extract_dir": "node-v22.7.0-win-x64"
-        },
-        "32bit": {
-            "url": "https://npmmirror.com/mirrors/node/v22.7.0/node-v22.7.0-win-x86.7z",
-            "hash": "f2a6a93ea0a77ff755aa45b0691e9a9ed26ca5296bf7ab5f553b08cfff110c1d",
-            "extract_dir": "node-v22.7.0-win-x86"
+            "url": "https://npmmirror.com/mirrors/node/v23.1.0/node-v23.1.0-win-x64.7z",
+            "hash": "3af98fb098d8801a93cc178a95cee2bb828cdac5f680413b7e43fd9a42824a73",
+            "extract_dir": "node-v23.1.0-win-x64"
         },
         "arm64": {
-            "url": "https://npmmirror.com/mirrors/node/v22.7.0/node-v22.7.0-win-arm64.7z",
-            "hash": "630f12b83016ef1077f52c8ec3bcf967fcd4225cc44a9a8c938b6493db4f0a52",
-            "extract_dir": "node-v22.7.0-win-arm64"
+            "url": "https://npmmirror.com/mirrors/node/v23.1.0/node-v23.1.0-win-arm64.7z",
+            "hash": "7d4132d56bb852ddb2e85f51dbd10f8f2b0da363f992ef60a094dd88954c0a46",
+            "extract_dir": "node-v23.1.0-win-arm64"
         }
     },
     "persist": [
@@ -34,7 +29,7 @@
     ],
     "checkver": {
         "url": "https://npmmirror.com/mirrors/node/index.json",
-        "jsonpath": "$..version",
+        "jsonpath": "$[0].version",
         "regex": "v([\\d.]+)"
     },
     "autoupdate": {
@@ -42,10 +37,6 @@
             "64bit": {
                 "url": "https://npmmirror.com/mirrors/node/v$version/node-v$version-win-x64.7z",
                 "extract_dir": "node-v$version-win-x64"
-            },
-            "32bit": {
-                "url": "https://npmmirror.com/mirrors/node/v$version/node-v$version-win-x86.7z",
-                "extract_dir": "node-v$version-win-x86"
             },
             "arm64": {
                 "url": "https://npmmirror.com/mirrors/node/v$version/node-v$version-win-arm64.7z",

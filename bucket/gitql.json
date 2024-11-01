@@ -1,16 +1,16 @@
 {
-    "version": "0.26.0",
+    "version": "0.29.1",
     "description": "SQL like lanuage to perform queries on .git files",
     "homepage": "https://github.com/amrdeveloper/gql",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://mirror.ghproxy.com/https://github.com/AmrDeveloper/GQL/releases/download/0.26.0/gql-x86_64-windows.exe#/gitql.exe",
-            "hash": "be347530216dd7b26b637c7f261705b0d37afe0d9ba19c18f0aab61d5236a221"
+            "url": "https://mirror.ghproxy.com/https://github.com/AmrDeveloper/GQL/releases/download/0.29.1/gql-x86_64-windows.exe#/gitql.exe",
+            "hash": "6c9a24eca87960c2bcac92f1e472100b8540f94244dc05a8568a8c81bd8fbd94"
         },
         "32bit": {
-            "url": "https://mirror.ghproxy.com/https://github.com/AmrDeveloper/GQL/releases/download/0.26.0/gql-x86-windows.exe#/gitql.exe",
-            "hash": "1379f54d200d7878106b8b96204e9e98da2311dbf658e2140d19d03af24e0d5d"
+            "url": "https://mirror.ghproxy.com/https://github.com/AmrDeveloper/GQL/releases/download/0.29.1/gql-x86-windows.exe#/gitql.exe",
+            "hash": "6d47876e11fef9fdb1d60a04d68a545ba75949261254e1d60684ffa63bf484e9"
         }
     },
     "bin": "gitql.exe",

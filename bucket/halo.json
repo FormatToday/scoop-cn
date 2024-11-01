@@ -1,13 +1,13 @@
 {
-    "version": "2.18.0",
+    "version": "2.20.8",
     "description": "A modern personal independent blog system.",
     "homepage": "https://halo.run",
     "license": "GPL-3.0-or-later",
     "suggest": {
         "JDK": "scoop-cn/openjdk"
     },
-    "url": "https://mirror.ghproxy.com/https://github.com/halo-dev/halo/releases/download/v2.18.0/halo-2.18.0.jar#/halo.jar",
-    "hash": "5c557e71daad049203fecd08dd9e9305f7b2ccdfdef5eb94a105535b2eb83583",
+    "url": "https://mirror.ghproxy.com/https://github.com/halo-dev/halo/releases/download/v2.20.8/halo-2.20.8.jar#/halo.jar",
+    "hash": "955a772a6c3f149d659334f7873ebf671897a6bfe79288a45a879f7929890c56",
     "bin": "halo.jar",
     "checkver": {
         "github": "https://github.com/halo-dev/halo"

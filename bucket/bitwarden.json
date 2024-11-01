@@ -1,10 +1,10 @@
 {
-    "version": "2024.8.0",
+    "version": "2024.10.2",
     "description": "Password management solutions for individuals, teams, and business organizations",
     "homepage": "https://bitwarden.com",
     "license": "GPL-3.0-or-later",
-    "url": "https://mirror.ghproxy.com/https://github.com/bitwarden/clients/releases/download/desktop-v2024.8.0/Bitwarden-Portable-2024.8.0.exe",
-    "hash": "1fcca2e2046e8ffafc3d8da6a9acb69a946e9bf2647536c2f0b04b8c957fac08",
+    "url": "https://mirror.ghproxy.com/https://github.com/bitwarden/clients/releases/download/desktop-v2024.10.2/Bitwarden-Portable-2024.10.2.exe",
+    "hash": "9ccf9db126b8b81f3bb8d0551cdc49243b652c8a9e16990368ed4ca36d3d0b19",
     "pre_install": [
         "Rename-Item \"$dir\\Bitwarden-Portable-$version.exe\" 'Bitwarden.exe'",
         "# copy config from non-portable version",

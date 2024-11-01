@@ -1,12 +1,12 @@
 {
-    "version": "1104",
+    "version": "1153",
     "description": "A user-friendly Internet Relay Chat (IRC) client by KDE",
     "homepage": "https://konversation.kde.org",
     "license": "GPL-2.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://cdn.kde.org/ci-builds/network/konversation/master/windows/konversation-master-1104-windows-cl-msvc2022-x86_64.7z",
-            "hash": "62ec06ad152bde99fee651a96450acb601adca705cecc60c62e6cb19864d7a6f"
+            "url": "https://cdn.kde.org/ci-builds/network/konversation/master/windows/konversation-master-1153-windows-cl-msvc2022-x86_64.7z",
+            "hash": "c7bbfa4af9ad861ab95d8f76c5cf3bbba3e6c1f301b1cee7561ade3ea171ccff"
         }
     },
     "bin": "bin\\konversation.exe",

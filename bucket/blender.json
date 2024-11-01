@@ -1,13 +1,13 @@
 {
-    "version": "4.2.1",
+    "version": "4.2.3",
     "description": "3D creation suite",
     "homepage": "https://www.blender.org",
     "license": "GPL-3.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://mirrors.aliyun.com/blender/release/Blender4.2/blender-4.2.1-windows-x64.zip",
-            "hash": "46b9d27c2406454c68842d1790515732be385719e844f6b283e3c78186f9ffce",
-            "extract_dir": "blender-4.2.1-windows-x64"
+            "url": "https://mirrors.aliyun.com/blender/release/Blender4.2/blender-4.2.3-windows-x64.zip",
+            "hash": "7f8be9b1dc904e7689b3112659791c29cc9ed9d46ce57c4ea5b31a0621489b3a",
+            "extract_dir": "blender-4.2.3-windows-x64"
         }
     },
     "bin": "blender.exe",

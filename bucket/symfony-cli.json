@@ -1,16 +1,16 @@
 {
-    "version": "5.10.2",
+    "version": "5.10.4",
     "description": "Helps Symfony developers manage projects, from local code to remote infrastructure",
     "homepage": "https://symfony.com",
     "license": "AGPL-3.0",
     "architecture": {
         "64bit": {
-            "url": "https://mirror.ghproxy.com/https://github.com/symfony-cli/symfony-cli/releases/download/v5.10.2/symfony-cli_windows_amd64.zip",
-            "hash": "1eb1f95da5157aae60969cc91e5e0d628bc6fb30f00eaf40e297f6032edda932"
+            "url": "https://mirror.ghproxy.com/https://github.com/symfony-cli/symfony-cli/releases/download/v5.10.4/symfony-cli_windows_amd64.zip",
+            "hash": "cc95f8a4e83f04b9acbb440094dae6720f9c84d4534a298a6a71b912dc7aa098"
         },
         "32bit": {
-            "url": "https://mirror.ghproxy.com/https://github.com/symfony-cli/symfony-cli/releases/download/v5.10.2/symfony-cli_windows_386.zip",
-            "hash": "958978bb2cd537dc4cf6a75bf0b8bc9d1c181e7683cbb5d9d5120fafcd6c8691"
+            "url": "https://mirror.ghproxy.com/https://github.com/symfony-cli/symfony-cli/releases/download/v5.10.4/symfony-cli_windows_386.zip",
+            "hash": "c2f68585335b4385b481298988377329209e57111b78e1af6032b399121ac2d4"
         }
     },
     "bin": "symfony.exe",

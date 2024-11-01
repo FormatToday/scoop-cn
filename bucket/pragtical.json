@@ -1,16 +1,16 @@
 {
-    "version": "3.4.3",
+    "version": "3.5.1",
     "description": "The practical and pragmatic code editor.",
     "homepage": "https://pragtical.dev/",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://mirror.ghproxy.com/https://github.com/pragtical/pragtical/releases/download/v3.4.3/pragtical-v3.4.3-windows-x86_64.zip",
-            "hash": "c67b2a858a5bf6b65e473f75684a2ba42b093ba0e1040d54675f5849229a877c"
+            "url": "https://mirror.ghproxy.com/https://github.com/pragtical/pragtical/releases/download/v3.5.1/pragtical-v3.5.1-windows-x86_64.zip",
+            "hash": "0690427c0b2c553b0e81923236081dbc8586628494946e3e3150970e673b3528"
         },
         "32bit": {
-            "url": "https://mirror.ghproxy.com/https://github.com/pragtical/pragtical/releases/download/v3.4.3/pragtical-v3.4.3-windows-i686.zip",
-            "hash": "71608f78b17aa2e14856f7a9cddb7bd906306d19baa1be919531cd448b7d6326"
+            "url": "https://mirror.ghproxy.com/https://github.com/pragtical/pragtical/releases/download/v3.5.1/pragtical-v3.5.1-windows-i686.zip",
+            "hash": "153a99b4cd3956060c542c96bbe241a7655e9e973b781000513903141c9f6c14"
         }
     },
     "extract_dir": "pragtical",
