@@ -22,9 +22,6 @@
         "regex": "tag/([\\w.-]+)"
     },
     "autoupdate": {
-        "url": "https://ghp.ci/https://github.com/GoldenGnu/jeveassets/releases/download/$version/$version.zip",
-        "hash": {
-            "mode": "download"
-        }
+        "url": "https://ghp.ci/https://github.com/GoldenGnu/jeveassets/releases/download/$version/$version.zip"
     }
 }
