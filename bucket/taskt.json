@@ -23,7 +23,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/saucepleez/taskt/releases/download/v$version/taskt.$version.zip"
+                "url": "https://ghp.ci/https://github.com/saucepleez/taskt/releases/download/v$version/taskt.v$version.zip"
             }
         }
     }
