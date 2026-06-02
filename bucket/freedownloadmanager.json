@@ -6,7 +6,7 @@
   "architecture": {
     "64bit": {
       "url": "https://files2.freedownloadmanager.org/6/latest/fdm_x64_setup.exe",
-      "hash": "7f7991b95c4b3351f3cbbacc22977638a421c159930dd471ef87f83d0e7bec6a"
+      "hash": "f6c59e51cd972480559e4076f4ae07e25969aaa076789c5f88155527848b5821"
     },
     "32bit": {
       "url": "https://files2.freedownloadmanager.org/fdm6_qt5/fdm_x86_setup.exe",
