@@ -5,7 +5,7 @@
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/google/perfetto/releases/download/v56.1/windows-amd64.zip",
+            "url": "https://gh-proxy.org/https://github.com/google/perfetto/releases/download/v56.1/windows-amd64.zip",
             "hash": "dd4f6c2d5cc9bd5f4fea32ea1c3402fa2291626fc4dd6501dfcaf8b406c8fdbb",
             "extract_dir": "windows-amd64"
         }
@@ -22,7 +22,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/google/perfetto/releases/download/v$version/windows-amd64.zip"
+                "url": "https://gh-proxy.org/https://github.com/google/perfetto/releases/download/v$version/windows-amd64.zip"
             }
         }
     }

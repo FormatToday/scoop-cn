@@ -5,7 +5,7 @@
     "license": "GPL-3.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://www.gyan.dev/ffmpeg/builds/packages/ffmpeg-2026-06-26-git-d66e84695b-full_build.7z",
+            "url": "https://gh-proxy.org/https://github.com/GyanD/codexffmpeg/releases/download/2026-06-26-git-d66e84695b/ffmpeg-2026-06-26-git-d66e84695b-full_build.7z",
             "hash": "510834df0eb369e0d7a071935f30eee8e376a1a1c669a233a7916f9a04357361",
             "extract_dir": "ffmpeg-2026-06-26-git-d66e84695b-full_build"
         }
@@ -26,9 +26,9 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://www.gyan.dev/ffmpeg/builds/packages/ffmpeg-$version-git-$matchCommit-full_build.7z",
+                "url": "https://gh-proxy.org/https://github.com/GyanD/codexffmpeg/releases/download/$version-git-$matchCommit/ffmpeg-$version-git-$matchCommit-full_build.7z",
                 "hash": {
-                    "url": "https://www.gyan.dev/ffmpeg/builds/packages/ffmpeg-$version-git-$matchCommit-full_build.7z.sha256"
+                    "url": "https://gh-proxy.org/https://github.com/GyanD/codexffmpeg/releases/download/$version-git-$matchCommit/ffmpeg-$version-git-$matchCommit-full_build.7z.sha256"
                 },
                 "extract_dir": "ffmpeg-$version-git-$matchCommit-full_build"
             }

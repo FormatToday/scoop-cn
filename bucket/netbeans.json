@@ -4,8 +4,8 @@
     "homepage": "https://netbeans.apache.org",
     "license": "Apache-2.0",
     "suggest": {
-        "JDK11": "scoop-cn/openjdk11",
-        "JDK17": "scoop-cn/openjdk17"
+        "JDK11": "openjdk11",
+        "JDK17": "openjdk17"
     },
     "url": "https://archive.apache.org/dist/netbeans/netbeans/30/netbeans-30-bin.zip",
     "hash": "sha512:18df3504f8e75e563669b2442e2a3940136e3f7f4892d319c5e11ef03b76a1d52b46b104ff1c6b54f5b46b3c99199b1b75fe09cf1b2dd6ba8b491137a4bba7f7",

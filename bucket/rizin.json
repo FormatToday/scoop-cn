@@ -5,11 +5,11 @@
     "license": "LGPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/rizinorg/rizin/releases/download/v0.9.0/rizin_installer-v0.9.0-x86_64.exe",
+            "url": "https://gh-proxy.org/https://github.com/rizinorg/rizin/releases/download/v0.9.0/rizin_installer-v0.9.0-x86_64.exe",
             "hash": "928d6e65cc72743bece653030a5c2effcf409399559ded5d53245146b967a1b8"
         },
         "32bit": {
-            "url": "https://ghp.ci/https://github.com/rizinorg/rizin/releases/download/v0.9.0/rizin_installer-v0.9.0-x86.exe",
+            "url": "https://gh-proxy.org/https://github.com/rizinorg/rizin/releases/download/v0.9.0/rizin_installer-v0.9.0-x86.exe",
             "hash": "3ac32a47f62e1c63d7c9a281e5fecfaa3a941505182bf2e5b21adbc281649990"
         }
     },
@@ -33,10 +33,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/rizinorg/rizin/releases/download/v$version/rizin_installer-v$version-x86_64.exe"
+                "url": "https://gh-proxy.org/https://github.com/rizinorg/rizin/releases/download/v$version/rizin_installer-v$version-x86_64.exe"
             },
             "32bit": {
-                "url": "https://ghp.ci/https://github.com/rizinorg/rizin/releases/download/v$version/rizin_installer-v$version-x86.exe"
+                "url": "https://gh-proxy.org/https://github.com/rizinorg/rizin/releases/download/v$version/rizin_installer-v$version-x86.exe"
             }
         }
     }

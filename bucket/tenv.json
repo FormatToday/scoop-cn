@@ -5,15 +5,15 @@
     "license": "Apache-2.0",
     "architecture": {
         "32bit": {
-            "url": "https://ghp.ci/https://github.com/tofuutils/tenv/releases/download/v4.14.8/tenv_v4.14.8_Windows_i386.zip",
+            "url": "https://gh-proxy.org/https://github.com/tofuutils/tenv/releases/download/v4.14.8/tenv_v4.14.8_Windows_i386.zip",
             "hash": "201ea1ce12dd681db1c143a378578f7d7c57603dca8d2706f665ccf00185a357"
         },
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/tofuutils/tenv/releases/download/v4.14.8/tenv_v4.14.8_Windows_x86_64.zip",
+            "url": "https://gh-proxy.org/https://github.com/tofuutils/tenv/releases/download/v4.14.8/tenv_v4.14.8_Windows_x86_64.zip",
             "hash": "6bafb4e2ccb4498b47659b8b39a0a644f44985fc63641fd2e43a1d12b89c7882"
         },
         "arm64": {
-            "url": "https://ghp.ci/https://github.com/tofuutils/tenv/releases/download/v4.14.8/tenv_v4.14.8_Windows_arm64.zip",
+            "url": "https://gh-proxy.org/https://github.com/tofuutils/tenv/releases/download/v4.14.8/tenv_v4.14.8_Windows_arm64.zip",
             "hash": "5fe0c13786409ce6641f3781b3c64461e837b69a6e7256e2d2715bcb1ecbdc6c"
         }
     },
@@ -31,13 +31,13 @@
     "autoupdate": {
         "architecture": {
             "32bit": {
-                "url": "https://ghp.ci/https://github.com/tofuutils/tenv/releases/download/v$version/tenv_v$version_Windows_i386.zip"
+                "url": "https://gh-proxy.org/https://github.com/tofuutils/tenv/releases/download/v$version/tenv_v$version_Windows_i386.zip"
             },
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/tofuutils/tenv/releases/download/v$version/tenv_v$version_Windows_x86_64.zip"
+                "url": "https://gh-proxy.org/https://github.com/tofuutils/tenv/releases/download/v$version/tenv_v$version_Windows_x86_64.zip"
             },
             "arm64": {
-                "url": "https://ghp.ci/https://github.com/tofuutils/tenv/releases/download/v$version/tenv_v$version_Windows_arm64.zip"
+                "url": "https://gh-proxy.org/https://github.com/tofuutils/tenv/releases/download/v$version/tenv_v$version_Windows_arm64.zip"
             }
         },
         "hash": {

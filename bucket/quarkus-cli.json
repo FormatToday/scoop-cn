@@ -4,9 +4,9 @@
     "homepage": "https://quarkus.io/",
     "license": "Apache-2.0",
     "suggest": {
-        "JDK": "scoop-cn/openjdk"
+        "JDK": "openjdk"
     },
-    "url": "https://ghp.ci/https://github.com/quarkusio/quarkus/releases/download/3.37.0/quarkus-cli-3.37.0.zip",
+    "url": "https://gh-proxy.org/https://github.com/quarkusio/quarkus/releases/download/3.37.0/quarkus-cli-3.37.0.zip",
     "extract_dir": "quarkus-cli-3.37.0",
     "hash": "5ed89d4b7f90d45558ad304439add8c297f9d905884812aa1916fa0ff7d12093",
     "bin": "bin\\quarkus.bat",
@@ -16,7 +16,7 @@
         "regex": "([\\d+\\.]+)"
     },
     "autoupdate": {
-        "url": "https://ghp.ci/https://github.com/quarkusio/quarkus/releases/download/$version/quarkus-cli-$version.zip",
+        "url": "https://gh-proxy.org/https://github.com/quarkusio/quarkus/releases/download/$version/quarkus-cli-$version.zip",
         "extract_dir": "quarkus-cli-$version",
         "hash": {
             "url": "$baseurl/checksums_sha256.txt"

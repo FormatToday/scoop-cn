@@ -4,15 +4,15 @@
     "homepage": "https://github.com/AsamK/signal-cli",
     "license": "GPL-3.0-only",
     "suggest": {
-        "JDK": "scoop-cn/openjdk"
+        "JDK": "openjdk"
     },
-    "url": "https://ghp.ci/https://github.com/AsamK/signal-cli/releases/download/v0.14.5/signal-cli-0.14.5.tar.gz",
+    "url": "https://gh-proxy.org/https://github.com/AsamK/signal-cli/releases/download/v0.14.5/signal-cli-0.14.5.tar.gz",
     "hash": "62d38ebfef3988d78f437e7328183b75ee549d111382e66c1af70d3ebd3cd7a7",
     "extract_dir": "signal-cli-0.14.5",
     "bin": "bin\\signal-cli.bat",
     "checkver": "github",
     "autoupdate": {
-        "url": "https://ghp.ci/https://github.com/AsamK/signal-cli/releases/download/v$version/signal-cli-$version.tar.gz",
+        "url": "https://gh-proxy.org/https://github.com/AsamK/signal-cli/releases/download/v$version/signal-cli-$version.tar.gz",
         "extract_dir": "signal-cli-$version"
     }
 }

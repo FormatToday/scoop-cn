@@ -11,15 +11,15 @@
         "reg import \"$dir\\install-associations.reg\""
     ],
     "suggest": {
-        "vcredist": "scoop-cn/vcredist2022"
+        "vcredist": "vcredist2022"
     },
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/LibreCAD/LibreCAD/releases/download/v2.2.1.5/LibreCAD-v2.2.1.5-win64-msvc.exe#/dl.7z",
+            "url": "https://gh-proxy.org/https://github.com/LibreCAD/LibreCAD/releases/download/v2.2.1.5/LibreCAD-v2.2.1.5-win64-msvc.exe#/dl.7z",
             "hash": "738912fea40aca934689444af9c5cd281572417983cc081c204fe6c779f6941d"
         },
         "32bit": {
-            "url": "https://ghp.ci/https://github.com/LibreCAD/LibreCAD/releases/download/v2.2.1.5/LibreCAD-v2.2.1.5-msvc.exe#/dl.7z",
+            "url": "https://gh-proxy.org/https://github.com/LibreCAD/LibreCAD/releases/download/v2.2.1.5/LibreCAD-v2.2.1.5-msvc.exe#/dl.7z",
             "hash": "7af37e61badaa4b9215f182cc843e0075cb976eb79d2ac59bf9dd77d56516261"
         }
     },
@@ -30,7 +30,7 @@
     ],
     "post_install": [
         "$librecad_dir = $dir -replace '\\\\', '\\\\'",
-        "Get-ChildItem -Path \"$bucketsdir\\scoop-cn\\scripts\\$app\" -Filter '*.reg' -File | ForEach-Object {",
+        "Get-ChildItem -Path \"$bucketsdir\\main\\scripts\\$app\" -Filter '*.reg' -File | ForEach-Object {",
         "    $content = Get-Content -Path $_.FullName -Encoding utf8",
         "    if ($global) { $content = $content -replace 'HKEY_CURRENT_USER', 'HKEY_LOCAL_MACHINE' }",
         "    $content -replace '{{librecad_dir}}', $librecad_dir | Set-Content -Path \"$dir\\$($_.Name)\" -Encoding unicode",
@@ -61,10 +61,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/LibreCAD/LibreCAD/releases/download/$matchTag/LibreCAD-$matchString-win64-msvc.exe#/dl.7z"
+                "url": "https://gh-proxy.org/https://github.com/LibreCAD/LibreCAD/releases/download/$matchTag/LibreCAD-$matchString-win64-msvc.exe#/dl.7z"
             },
             "32bit": {
-                "url": "https://ghp.ci/https://github.com/LibreCAD/LibreCAD/releases/download/$matchTag/LibreCAD-$matchString-msvc.exe#/dl.7z"
+                "url": "https://gh-proxy.org/https://github.com/LibreCAD/LibreCAD/releases/download/$matchTag/LibreCAD-$matchString-msvc.exe#/dl.7z"
             }
         }
     }

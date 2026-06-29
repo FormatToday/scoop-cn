@@ -5,14 +5,14 @@
     "license": "Apache-2.0",
     "suggest": {
         "java": [
-            "scoop-cn/oraclejdk",
-            "scoop-cn/oraclejre8",
-            "scoop-cn/openjdk11"
+            "oraclejdk",
+            "oraclejre8",
+            "openjdk11"
         ]
     },
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/dbeaver/dbeaver/releases/download/ea/dbeaver-ce-25.3.5-win32.win32.x86_64.zip",
+            "url": "https://dbeaver.io/files/ea/dbeaver-ce-25.3.5-win32.win32.x86_64.zip",
             "hash": "5723b743ab608f05561b166ea6724e9292e81008d797ac7ee58f1eb2d0ea8504"
         }
     },
@@ -34,14 +34,14 @@
         ]
     ],
     "checkver": {
-        "url": "https://ghp.ci/https://github.com/dbeaver/dbeaver/releases/download/ea/",
+        "url": "https://dbeaver.io/files/ea/",
         "regex": "href=\"dbeaver-ce-(?<ver>[\\d.]+)-win32.win32.x86_64.zip\".*</td><td>(?<date>\\d{4}-\\d{2}-\\d{2}) \\d{2}:\\d{2}:\\d{2}</td>",
         "replace": "${ver}-${date}"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/dbeaver/dbeaver/releases/download/ea/dbeaver-ce-$matchVer-win32.win32.x86_64.zip"
+                "url": "https://dbeaver.io/files/ea/dbeaver-ce-$matchVer-win32.win32.x86_64.zip"
             }
         }
     }

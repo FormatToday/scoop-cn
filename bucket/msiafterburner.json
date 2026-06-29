@@ -1,24 +1,21 @@
 {
     "version": "4.6.7",
-    "description": "Overclocking utility for graphics cards. GPU/Shader/Memory clock, fan speed and GPU voltage control.",
+    "description": "Overclocking utility for graphics cards. Main features include GPU/Shader/Memory clock adjustment, advanced fan speed and GPU voltage control.",
     "homepage": "https://www.msi.com/page/afterburner",
     "license": {
         "identifier": "Freeware",
         "url": "https://www.msi.com/page/website-terms-of-use"
     },
     "notes": [
-        "The 'RivaTuner Statistics Server' has been moved to its own manifest.",
-        "To install it run 'scoop install gaming/rtss'.",
-        "Profiles will be migrated automatically.",
-        "",
-        "To persist custom skins, copy them to $persist_dir\\Skins\\.",
-        "To persist custom plugins and plugins configurations, copy them to $persist_dir\\Plugins\\."
+        "The 'RivaTuner Statistics Server' has been moved to it's own manifest.",
+        "To install it run 'scoop install extras/rtss'.",
+        "Profiles will be migrated automatically."
     ],
     "suggest": {
-        "vcredist": "scoop-cn/vcredist2022",
-        "RivaTuner Statistics Server": "gaming/rtss",
-        "MSI Kombustor": "scoop-cn/msikombustor",
-        "FurMark": "scoop-cn/furmark"
+        "vcredist": "vcredist2022",
+        "RivaTuner Statistics Server": "rtss",
+        "MSI Kombustor": "msikombustor",
+        "FurMark": "furmark"
     },
     "url": "https://ftp.nluug.nl/pub/games/PC/guru3d/afterburner/%5BGuru3D%5D-MSIAfterburnerSetup467Beta2Build16935.zip",
     "hash": "a3c550f0ce23ac4bc89e72d0a6e73019b0742fdeff3b68d0849d82c5145a9b62",
@@ -42,10 +39,7 @@
             "MSI Afterburner"
         ]
     ],
-    "persist": [
-        "MSIAfterburner.cfg",
-        "Profiles"
-    ],
+    "persist": "Profiles",
     "checkver": {
         "url": "https://www.guru3d.com/download/msi-afterburner-beta-download",
         "script": [

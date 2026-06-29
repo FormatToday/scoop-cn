@@ -5,7 +5,7 @@
     "license": "AGPL-3.0",
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/MaaAssistantArknights/MaaAssistantArknights/releases/download/v6.13.0/MAA-v6.13.0-win-x64.zip",
+            "url": "https://gh-proxy.org/https://github.com/MaaAssistantArknights/MaaAssistantArknights/releases/download/v6.13.0/MAA-v6.13.0-win-x64.zip",
             "hash": "244d3baa2b3fd5077f5b1f7166d8cdbfebd0610c36308bd4e1ca04e4dd5a8df2"
         }
     },
@@ -31,7 +31,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/MaaAssistantArknights/MaaAssistantArknights/releases/download/v$version/MAA-v$version-win-x64.zip"
+                "url": "https://gh-proxy.org/https://github.com/MaaAssistantArknights/MaaAssistantArknights/releases/download/v$version/MAA-v$version-win-x64.zip"
             }
         }
     }

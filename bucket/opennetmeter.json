@@ -4,11 +4,11 @@
     "homepage": "https://github.com/Ashfaaq18/OpenNetMeter",
     "license": "Apache-2.0",
     "suggest": {
-        ".NET Desktop Runtime 8.0": "scoop-cn/windowsdesktop-runtime-8.0"
+        ".NET Desktop Runtime 8.0": "windowsdesktop-runtime-8.0"
     },
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/Ashfaaq18/OpenNetMeter/releases/download/v0.14.3/OpenNetMeter-0.14.3.msi",
+            "url": "https://gh-proxy.org/https://github.com/Ashfaaq18/OpenNetMeter/releases/download/v0.14.3/OpenNetMeter-0.14.3.msi",
             "hash": "c1031bdbc4a60be08492248502963f4a01b02c96a05db8afefa19ed4f43a158c",
             "extract_dir": "PFiles64\\OpenNetMeter"
         }
@@ -23,7 +23,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/Ashfaaq18/OpenNetMeter/releases/download/v$version/OpenNetMeter-$matchHead.msi"
+                "url": "https://gh-proxy.org/https://github.com/Ashfaaq18/OpenNetMeter/releases/download/v$version/OpenNetMeter-$matchHead.msi"
             }
         }
     }

@@ -5,7 +5,7 @@
     "license": "EUPL-1.2",
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/Governikus/AusweisApp/releases/download/2.5.3/AusweisApp-2.5.3.msi",
+            "url": "https://gh-proxy.org/https://github.com/Governikus/AusweisApp/releases/download/2.5.3/AusweisApp-2.5.3.msi",
             "hash": "8e56042ebdb66b9e81fac250b1f215bfa3d8cfd0b12590281a40f757dc3fc3aa",
             "extract_dir": "PFiles64\\AusweisApp"
         }
@@ -22,7 +22,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/Governikus/AusweisApp/releases/download/$version/AusweisApp-$version.msi",
+                "url": "https://gh-proxy.org/https://github.com/Governikus/AusweisApp/releases/download/$version/AusweisApp-$version.msi",
                 "hash": {
                     "url": "$url.sha256"
                 }

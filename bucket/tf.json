@@ -5,11 +5,11 @@
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/dex4er/tf/releases/download/v2.14.0/tf-windows-amd64.exe#/tf.exe",
+            "url": "https://gh-proxy.org/https://github.com/dex4er/tf/releases/download/v2.14.0/tf-windows-amd64.exe#/tf.exe",
             "hash": "ae87dfdd28746033a7845f954abb94a3c86b93252dd9a95d724206412c60e505"
         },
         "arm64": {
-            "url": "https://ghp.ci/https://github.com/dex4er/tf/releases/download/v2.14.0/tf-windows-arm64.exe#/tf.exe",
+            "url": "https://gh-proxy.org/https://github.com/dex4er/tf/releases/download/v2.14.0/tf-windows-arm64.exe#/tf.exe",
             "hash": "e9c1ab5d13a48f453029f0e59fc6e101ead2fe3756de36b19d07f8d8d86eb943"
         }
     },
@@ -18,10 +18,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/dex4er/tf/releases/download/v$version/tf-windows-amd64.exe#/tf.exe"
+                "url": "https://gh-proxy.org/https://github.com/dex4er/tf/releases/download/v$version/tf-windows-amd64.exe#/tf.exe"
             },
             "arm64": {
-                "url": "https://ghp.ci/https://github.com/dex4er/tf/releases/download/v$version/tf-windows-arm64.exe#/tf.exe"
+                "url": "https://gh-proxy.org/https://github.com/dex4er/tf/releases/download/v$version/tf-windows-arm64.exe#/tf.exe"
             }
         },
         "hash": {

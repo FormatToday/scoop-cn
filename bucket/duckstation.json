@@ -12,11 +12,11 @@
         "Learn more at: https://web.archive.org/web/20210620033009/https://www.duckstation.org/wiki/BIOS"
     ],
     "suggest": {
-        "Microsoft Visual C++ Runtime 2022": "scoop-cn/vcredist2022"
+        "Microsoft Visual C++ Runtime 2022": "vcredist2022"
     },
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/stenzek/duckstation/releases/download/latest/duckstation-windows-x64-release.zip",
+            "url": "https://gh-proxy.org/https://github.com/stenzek/duckstation/releases/download/latest/duckstation-windows-x64-release.zip",
             "hash": "c92322d12379fe97eaadda1e07838a0a00e943c19becd412a29512d799a20a74",
             "post_install": [
                 "New-item \"$dir\\portable.txt\" -ItemType File | Out-Null",
@@ -34,7 +34,7 @@
             ]
         },
         "arm64": {
-            "url": "https://ghp.ci/https://github.com/stenzek/duckstation/releases/download/latest/duckstation-windows-ARM64-release.zip",
+            "url": "https://gh-proxy.org/https://github.com/stenzek/duckstation/releases/download/latest/duckstation-windows-ARM64-release.zip",
             "hash": "ba7e54971f939ca516b1020a9c3551ab8fec02a31e104803f049206941f57b4b",
             "post_install": [
                 "New-item \"$dir\\portable.txt\" -ItemType File | Out-Null",
@@ -92,10 +92,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/stenzek/duckstation/releases/download/latest/duckstation-windows-x64-release.zip"
+                "url": "https://gh-proxy.org/https://github.com/stenzek/duckstation/releases/download/latest/duckstation-windows-x64-release.zip"
             },
             "arm64": {
-                "url": "https://ghp.ci/https://github.com/stenzek/duckstation/releases/download/latest/duckstation-windows-ARM64-release.zip"
+                "url": "https://gh-proxy.org/https://github.com/stenzek/duckstation/releases/download/latest/duckstation-windows-ARM64-release.zip"
             }
         }
     }

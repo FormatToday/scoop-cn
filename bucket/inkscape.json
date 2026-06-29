@@ -10,7 +10,7 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://mirrors.nju.edu.cn/inkscape/inkscape-1.4.4_2026-05-05_dcaf3e7-x64_mHK170m.7z",
+            "url": "https://media.inkscape.org/dl/resources/file/inkscape-1.4.4_2026-05-05_dcaf3e7-x64_mHK170m.7z",
             "hash": "c4dbd64a92628abe7d7316c43f9325396e4d48417866027ee3d993d4f5b54c6a"
         }
     },
@@ -43,7 +43,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://mirrors.nju.edu.cn/inkscape/$matchCleanfilename.7z"
+                "url": "https://media.inkscape.org/dl/resources/file/$matchCleanfilename.7z"
             }
         }
     }

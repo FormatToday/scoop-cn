@@ -11,7 +11,7 @@
         "Use 'odbc_install.exe' in Oracle Instant Client's dir to install ODBC.",
         "Use 'odbc_uninstall.exe' in above dir to uninstall it."
     ],
-    "depends": "scoop-cn/oracle-instant-client",
+    "depends": "oracle-instant-client",
     "architecture": {
         "64bit": {
             "url": "https://download.oracle.com/otn_software/nt/instantclient/2326200/instantclient-odbc-windows.x64-23.26.2.0.0.zip",

@@ -6,15 +6,15 @@
     "architecture": {
         "64bit": {
             "hash": "0014aca71654d405f862eed0f7166ab57551b430154c82feffd394f743e938b8",
-            "url": "https://ghp.ci/https://github.com/libvips/build-win64-mxe/releases/download/v8.18.3/vips-dev-x64-all-8.18.3.zip"
+            "url": "https://gh-proxy.org/https://github.com/libvips/build-win64-mxe/releases/download/v8.18.3/vips-dev-x64-all-8.18.3.zip"
         },
         "32bit": {
             "hash": "58c6fbcbe5ff9a8cb990dbb601f8442f82f84b4beac8d0439e839491a9f9bc95",
-            "url": "https://ghp.ci/https://github.com/libvips/build-win64-mxe/releases/download/v8.18.3/vips-dev-x86-all-8.18.3.zip"
+            "url": "https://gh-proxy.org/https://github.com/libvips/build-win64-mxe/releases/download/v8.18.3/vips-dev-x86-all-8.18.3.zip"
         },
         "arm64": {
             "hash": "45a45789696c86179c7cefde6038280fd9c433bce605827ca1bc15c59d87130f",
-            "url": "https://ghp.ci/https://github.com/libvips/build-win64-mxe/releases/download/v8.18.3/vips-dev-arm64-all-8.18.3.zip"
+            "url": "https://gh-proxy.org/https://github.com/libvips/build-win64-mxe/releases/download/v8.18.3/vips-dev-arm64-all-8.18.3.zip"
         }
     },
     "extract_dir": "vips-dev-8.18",
@@ -25,13 +25,13 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/libvips/build-win64-mxe/releases/download/v$version/vips-dev-x64-all-$version.zip"
+                "url": "https://gh-proxy.org/https://github.com/libvips/build-win64-mxe/releases/download/v$version/vips-dev-x64-all-$version.zip"
             },
             "32bit": {
-                "url": "https://ghp.ci/https://github.com/libvips/build-win64-mxe/releases/download/v$version/vips-dev-x86-all-$version.zip"
+                "url": "https://gh-proxy.org/https://github.com/libvips/build-win64-mxe/releases/download/v$version/vips-dev-x86-all-$version.zip"
             },
             "arm64": {
-                "url": "https://ghp.ci/https://github.com/libvips/build-win64-mxe/releases/download/v$version/vips-dev-arm64-all-$version.zip"
+                "url": "https://gh-proxy.org/https://github.com/libvips/build-win64-mxe/releases/download/v$version/vips-dev-arm64-all-$version.zip"
             }
         },
         "extract_dir": "vips-dev-$majorVersion.$minorVersion"

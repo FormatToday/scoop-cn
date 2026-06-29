@@ -4,11 +4,11 @@
     "homepage": "https://github.com/rvben/rumdl",
     "license": "MIT",
     "suggest": {
-        "vcredist": "scoop-cn/vcredist2022"
+        "vcredist": "vcredist2022"
     },
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/rvben/rumdl/releases/download/v0.2.25/rumdl-v0.2.25-x86_64-pc-windows-msvc.zip",
+            "url": "https://gh-proxy.org/https://github.com/rvben/rumdl/releases/download/v0.2.25/rumdl-v0.2.25-x86_64-pc-windows-msvc.zip",
             "hash": "b69ab1731d3a801b1e5185c2b7dac8ed461f35a8e1d8cb8b1ec0da912f120fc3"
         }
     },
@@ -19,7 +19,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/rvben/rumdl/releases/download/v$version/rumdl-v$version-x86_64-pc-windows-msvc.zip"
+                "url": "https://gh-proxy.org/https://github.com/rvben/rumdl/releases/download/v$version/rumdl-v$version-x86_64-pc-windows-msvc.zip"
             }
         },
         "hash": {

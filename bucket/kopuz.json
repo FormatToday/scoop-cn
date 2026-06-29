@@ -5,7 +5,7 @@
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/Kopuz-org/kopuz/releases/download/v0.8.0/Kopuz_0.8.0_x64.msi",
+            "url": "https://gh-proxy.org/https://github.com/Kopuz-org/kopuz/releases/download/v0.8.0/Kopuz_0.8.0_x64.msi",
             "hash": "4b9a59112a7f30ec032d7d58e9e8138fc14f57f12f0d560eca34b1cef15c2d40"
         }
     },
@@ -23,7 +23,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/Kopuz-org/kopuz/releases/download/v$version/Kopuz_$version_x64.msi"
+                "url": "https://gh-proxy.org/https://github.com/Kopuz-org/kopuz/releases/download/v$version/Kopuz_$version_x64.msi"
             }
         }
     }

@@ -5,7 +5,7 @@
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/microsoft/apm/releases/download/v0.23.0/apm-windows-x86_64.zip",
+            "url": "https://gh-proxy.org/https://github.com/microsoft/apm/releases/download/v0.23.0/apm-windows-x86_64.zip",
             "hash": "ea38a47a91da640b871774c2463b6ec25eb7726278ef6cb105f23dac22cb48f5",
             "extract_dir": "apm-windows-x86_64"
         }
@@ -17,7 +17,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/microsoft/apm/releases/download/v$version/apm-windows-x86_64.zip",
+                "url": "https://gh-proxy.org/https://github.com/microsoft/apm/releases/download/v$version/apm-windows-x86_64.zip",
                 "hash": {
                     "url": "$url.sha256"
                 }

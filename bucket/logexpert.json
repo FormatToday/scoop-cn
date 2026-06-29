@@ -4,11 +4,11 @@
     "homepage": "https://github.com/LogExperts/LogExpert",
     "license": "MIT",
     "suggest": {
-        ".NET Desktop Runtime 10.0": "scoop-cn/windowsdesktop-runtime-10.0"
+        ".NET Desktop Runtime 10.0": "windowsdesktop-runtime-10.0"
     },
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/LogExperts/LogExpert/releases/download/v1.40.6/LogExpert.1.40.6.zip",
+            "url": "https://gh-proxy.org/https://github.com/LogExperts/LogExpert/releases/download/v1.40.6/LogExpert.1.40.6.zip",
             "hash": "defb3612fab25c751fb99d7b707f93455d465687798b9dee5ceedbc48c43fd4f"
         }
     },
@@ -27,7 +27,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/LogExperts/LogExpert/releases/download/v$matchTag/LogExpert.$version.zip"
+                "url": "https://gh-proxy.org/https://github.com/LogExperts/LogExpert/releases/download/v$matchTag/LogExpert.$version.zip"
             }
         }
     }

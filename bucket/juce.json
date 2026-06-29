@@ -8,7 +8,7 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/juce-framework/JUCE/releases/download/8.0.14/juce-8.0.14-windows.zip",
+            "url": "https://gh-proxy.org/https://github.com/juce-framework/JUCE/releases/download/8.0.14/juce-8.0.14-windows.zip",
             "hash": "1b30a65389ffffe4c19d83a136564423c27e4064c48bc5558b45460d847ffe2e"
         }
     },
@@ -26,7 +26,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/juce-framework/JUCE/releases/download/$version/juce-$version-windows.zip"
+                "url": "https://gh-proxy.org/https://github.com/juce-framework/JUCE/releases/download/$version/juce-$version-windows.zip"
             }
         }
     }

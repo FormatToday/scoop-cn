@@ -5,11 +5,11 @@
     "license": "LGPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/zaps166/QMPlay2/releases/download/26.06.27/QMPlay2-Win64-26.06.27.exe#/dl.7z",
+            "url": "https://gh-proxy.org/https://github.com/zaps166/QMPlay2/releases/download/26.06.27/QMPlay2-Win64-26.06.27.exe#/dl.7z",
             "hash": "1c88ff819751aab5fc62c163ae9d0cbb7d288bd59735210a5791aafcce8747a7"
         },
         "32bit": {
-            "url": "https://ghp.ci/https://github.com/zaps166/QMPlay2/releases/download/26.06.27/QMPlay2-Win32-26.06.27-qt5.exe#/dl.7z",
+            "url": "https://gh-proxy.org/https://github.com/zaps166/QMPlay2/releases/download/26.06.27/QMPlay2-Win32-26.06.27-qt5.exe#/dl.7z",
             "hash": "24490963369c355aa6f34793e8df7e8b6c4a0a5c36e44d09f0d20e87b8917e09"
         }
     },
@@ -28,10 +28,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/zaps166/QMPlay2/releases/download/$version/QMPlay2-Win64-$version.exe#/dl.7z"
+                "url": "https://gh-proxy.org/https://github.com/zaps166/QMPlay2/releases/download/$version/QMPlay2-Win64-$version.exe#/dl.7z"
             },
             "32bit": {
-                "url": "https://ghp.ci/https://github.com/zaps166/QMPlay2/releases/download/$version/QMPlay2-Win32-$version-qt5.exe#/dl.7z"
+                "url": "https://gh-proxy.org/https://github.com/zaps166/QMPlay2/releases/download/$version/QMPlay2-Win32-$version-qt5.exe#/dl.7z"
             }
         },
         "hash": {

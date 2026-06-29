@@ -5,7 +5,7 @@
     "license": "MIT",
     "notes": "Check out this issue to solve HDR problems: https://gitlab.com/es-de/emulationstation-de/-/issues/1880",
     "suggest": {
-        "vcredist": "scoop-cn/vcredist2022"
+        "vcredist": "vcredist2022"
     },
     "architecture": {
         "64bit": {

@@ -5,7 +5,7 @@
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/dropbox/dbxcli/releases/download/v3.5.1/dbxcli_3.5.1_windows_amd64.zip",
+            "url": "https://gh-proxy.org/https://github.com/dropbox/dbxcli/releases/download/v3.5.1/dbxcli_3.5.1_windows_amd64.zip",
             "hash": "ce161dd51b78a4fab28c8ce2e26914b7801ba0ffbb0523a2d3fbf775382eb9f6",
             "extract_dir": "dbxcli_3.5.1_windows_amd64"
         }
@@ -15,7 +15,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/dropbox/dbxcli/releases/download/v$version/dbxcli_$version_windows_amd64.zip",
+                "url": "https://gh-proxy.org/https://github.com/dropbox/dbxcli/releases/download/v$version/dbxcli_$version_windows_amd64.zip",
                 "extract_dir": "dbxcli_$version_windows_amd64"
             }
         },

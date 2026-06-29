@@ -12,7 +12,7 @@
             "deno",
             "nodejs",
             "nodejs-lts",
-            "scoop-cn/nodejs22",
+            "nodejs22",
             "bun",
             "quickjs"
         ],
@@ -20,15 +20,15 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/yt-dlp/yt-dlp/releases/download/2026.06.09/yt-dlp.exe",
+            "url": "https://gh-proxy.org/https://github.com/yt-dlp/yt-dlp/releases/download/2026.06.09/yt-dlp.exe",
             "hash": "3a48cb955d55c8821b60ccbdbbc6f61bc958f2f3d3b7ad5eaf3d83a543293a27"
         },
         "32bit": {
-            "url": "https://ghp.ci/https://github.com/yt-dlp/yt-dlp/releases/download/2026.06.09/yt-dlp_x86.exe#/yt-dlp.exe",
+            "url": "https://gh-proxy.org/https://github.com/yt-dlp/yt-dlp/releases/download/2026.06.09/yt-dlp_x86.exe#/yt-dlp.exe",
             "hash": "5d7ca09feaa0b982523869e4b5511aca83741500975fa65750cfdbad02ac512a"
         },
         "arm64": {
-            "url": "https://ghp.ci/https://github.com/yt-dlp/yt-dlp/releases/download/2026.06.09/yt-dlp_arm64.exe#/yt-dlp.exe",
+            "url": "https://gh-proxy.org/https://github.com/yt-dlp/yt-dlp/releases/download/2026.06.09/yt-dlp_arm64.exe#/yt-dlp.exe",
             "hash": "847583f91bb6d26479c1dc9643c2f4b8857a90b40d619da97b0cfabccb9138d0"
         }
     },
@@ -43,13 +43,13 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/yt-dlp/yt-dlp/releases/download/$version/yt-dlp.exe"
+                "url": "https://gh-proxy.org/https://github.com/yt-dlp/yt-dlp/releases/download/$version/yt-dlp.exe"
             },
             "32bit": {
-                "url": "https://ghp.ci/https://github.com/yt-dlp/yt-dlp/releases/download/$version/yt-dlp_x86.exe#/yt-dlp.exe"
+                "url": "https://gh-proxy.org/https://github.com/yt-dlp/yt-dlp/releases/download/$version/yt-dlp_x86.exe#/yt-dlp.exe"
             },
             "arm64": {
-                "url": "https://ghp.ci/https://github.com/yt-dlp/yt-dlp/releases/download/$version/yt-dlp_arm64.exe#/yt-dlp.exe"
+                "url": "https://gh-proxy.org/https://github.com/yt-dlp/yt-dlp/releases/download/$version/yt-dlp_arm64.exe#/yt-dlp.exe"
             }
         },
         "hash": {

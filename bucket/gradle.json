@@ -4,9 +4,9 @@
     "homepage": "https://gradle.org",
     "license": "Apache-2.0",
     "suggest": {
-        "JDK": "scoop-cn/openjdk"
+        "JDK": "openjdk"
     },
-    "url": "https://services.gradle.org/distributions/gradle-9.6.1-all.zip",
+    "url": "https://mirror.nju.edu.cn/gradle/gradle-9.6.1-all.zip",
     "hash": "61ba77b3ff7167e60962763eb4bae79db7120c189b9544358d0ade3c1e712a83",
     "extract_dir": "gradle-9.6.1",
     "post_install": [
@@ -25,7 +25,7 @@
         "jsonpath": "$.version"
     },
     "autoupdate": {
-        "url": "https://services.gradle.org/distributions/gradle-$version-all.zip",
+        "url": "https://mirror.nju.edu.cn/gradle/gradle-$version-all.zip",
         "hash": {
             "url": "$url.sha256"
         },

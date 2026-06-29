@@ -13,10 +13,10 @@
         "",
         "Guest Additions are located at: \"$env:ProgramW6432\\Oracle\\VirtualBox\\VBoxGuestAdditions.iso\"."
     ],
-    "depends": "scoop-cn/vcredist2022",
+    "depends": "vcredist2022",
     "url": [
-        "https://mirrors.nju.edu.cn/virtualbox/7.2.10/VirtualBox-7.2.10-174163-Win.exe#/setup.exe",
-        "https://mirrors.nju.edu.cn/virtualbox/7.2.10/Oracle_VirtualBox_Extension_Pack-7.2.10.vbox-extpack"
+        "https://mirrors.tuna.tsinghua.edu.cn/virtualbox/7.2.10/VirtualBox-7.2.10-174163-Win.exe#/setup.exe",
+        "https://mirrors.tuna.tsinghua.edu.cn/virtualbox/7.2.10/Oracle_VirtualBox_Extension_Pack-7.2.10.vbox-extpack"
     ],
     "hash": [
         "f4750f6f64c44df03ee2921de77e63c30e84e03a3aad07fd00f292265ff164c7",
@@ -107,11 +107,11 @@
     },
     "autoupdate": {
         "url": [
-            "https://mirrors.nju.edu.cn/virtualbox/$matchHead/VirtualBox-$version-Win.exe#/setup.exe",
-            "https://mirrors.nju.edu.cn/virtualbox/$matchHead/Oracle_VirtualBox_Extension_Pack-$matchHead.vbox-extpack"
+            "https://mirrors.tuna.tsinghua.edu.cn/virtualbox/$matchHead/VirtualBox-$version-Win.exe#/setup.exe",
+            "https://mirrors.tuna.tsinghua.edu.cn/virtualbox/$matchHead/Oracle_VirtualBox_Extension_Pack-$matchHead.vbox-extpack"
         ],
         "hash": {
-            "url": "https://mirrors.nju.edu.cn/virtualbox/$matchHead/SHA256SUMS"
+            "url": "https://mirrors.tuna.tsinghua.edu.cn/virtualbox/$matchHead/SHA256SUMS"
         }
     }
 }

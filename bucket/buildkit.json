@@ -5,11 +5,11 @@
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/moby/buildkit/releases/download/v0.31.1/buildkit-v0.31.1.windows-amd64.tar.gz",
+            "url": "https://gh-proxy.org/https://github.com/moby/buildkit/releases/download/v0.31.1/buildkit-v0.31.1.windows-amd64.tar.gz",
             "hash": "546a4777402c46d116c598f1c3ce5ab63af2d8007f963af5fcc5a20589b16617"
         },
         "arm64": {
-            "url": "https://ghp.ci/https://github.com/moby/buildkit/releases/download/v0.31.1/buildkit-v0.31.1.windows-arm64.tar.gz",
+            "url": "https://gh-proxy.org/https://github.com/moby/buildkit/releases/download/v0.31.1/buildkit-v0.31.1.windows-arm64.tar.gz",
             "hash": "47adac2ae55aae706a4c4cb8315daadddec85892bcfd6cecb922885c2b90a199"
         }
     },
@@ -21,10 +21,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/moby/buildkit/releases/download/v$version/buildkit-v$version.windows-amd64.tar.gz"
+                "url": "https://gh-proxy.org/https://github.com/moby/buildkit/releases/download/v$version/buildkit-v$version.windows-amd64.tar.gz"
             },
             "arm64": {
-                "url": "https://ghp.ci/https://github.com/moby/buildkit/releases/download/v$version/buildkit-v$version.windows-arm64.tar.gz"
+                "url": "https://gh-proxy.org/https://github.com/moby/buildkit/releases/download/v$version/buildkit-v$version.windows-arm64.tar.gz"
             }
         }
     }

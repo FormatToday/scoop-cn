@@ -5,7 +5,7 @@
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/hydralauncher/hydra/releases/download/v4.0.3/hydralauncher-4.0.3-portable.exe#/dl.7z",
+            "url": "https://gh-proxy.org/https://github.com/hydralauncher/hydra/releases/download/v4.0.3/hydralauncher-4.0.3-portable.exe#/dl.7z",
             "hash": "4a4afd38007a7d8d223f604839e11207eb2d18330b8fc098a3e155ac3437430e"
         }
     },
@@ -23,7 +23,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/hydralauncher/hydra/releases/download/v$version/hydralauncher-$version-portable.exe#/dl.7z"
+                "url": "https://gh-proxy.org/https://github.com/hydralauncher/hydra/releases/download/v$version/hydralauncher-$version-portable.exe#/dl.7z"
             }
         }
     }

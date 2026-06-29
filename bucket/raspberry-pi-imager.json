@@ -9,7 +9,7 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/raspberrypi/rpi-imager/releases/download/v2.0.10/imager-v2.0.10.exe",
+            "url": "https://gh-proxy.org/https://github.com/raspberrypi/rpi-imager/releases/download/v2.0.10/imager-v2.0.10.exe",
             "hash": "f5b0bd6f149274d8b92c3dbbdefa274097c9d9098dd4eb08c71b845b58995b2a"
         }
     },
@@ -27,7 +27,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/raspberrypi/rpi-imager/releases/download/v$version/imager-v$version.exe"
+                "url": "https://gh-proxy.org/https://github.com/raspberrypi/rpi-imager/releases/download/v$version/imager-v$version.exe"
             }
         }
     }

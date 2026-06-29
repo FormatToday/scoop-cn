@@ -8,11 +8,11 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/mullvad/mullvadvpn-app/releases/download/2026.3/MullvadVPN-2026.3_x64.exe",
+            "url": "https://gh-proxy.org/https://github.com/mullvad/mullvadvpn-app/releases/download/2026.3/MullvadVPN-2026.3_x64.exe",
             "hash": "e335507b948083100b54f8000ef5bb733e3ee959f8df6a573e9404c506cb139a"
         },
         "arm64": {
-            "url": "https://ghp.ci/https://github.com/mullvad/mullvadvpn-app/releases/download/2026.3/MullvadVPN-2026.3_arm64.exe",
+            "url": "https://gh-proxy.org/https://github.com/mullvad/mullvadvpn-app/releases/download/2026.3/MullvadVPN-2026.3_arm64.exe",
             "hash": "adc84e88313998023ef854cb4c9584d9be0c6771d28a5c5e215261afb77ccee9"
         }
     },
@@ -37,10 +37,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/mullvad/mullvadvpn-app/releases/download/$version/MullvadVPN-$version_x64.exe"
+                "url": "https://gh-proxy.org/https://github.com/mullvad/mullvadvpn-app/releases/download/$version/MullvadVPN-$version_x64.exe"
             },
             "arm64": {
-                "url": "https://ghp.ci/https://github.com/mullvad/mullvadvpn-app/releases/download/$version/MullvadVPN-$version_arm64.exe"
+                "url": "https://gh-proxy.org/https://github.com/mullvad/mullvadvpn-app/releases/download/$version/MullvadVPN-$version_arm64.exe"
             }
         }
     }

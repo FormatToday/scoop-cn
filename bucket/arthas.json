@@ -3,7 +3,7 @@
     "description": "Arthas is a Java Diagnostic tool open sourced by Alibaba.",
     "homepage": "https://github.com/alibaba/arthas",
     "license": "Apache-2.0",
-    "url": "https://ghp.ci/https://github.com/alibaba/arthas/releases/download/arthas-all-4.3.0/arthas-bin.zip",
+    "url": "https://gh-proxy.org/https://github.com/alibaba/arthas/releases/download/arthas-all-4.3.0/arthas-bin.zip",
     "hash": "5d95711e0d932b66fdd10b8215cd83c4d361ab4aa87ed9ce4a4b8b31209ec601",
     "bin": "arthas-boot.jar",
     "checkver": {
@@ -11,6 +11,6 @@
         "regex": "arthas-all-([\\d.]+)"
     },
     "autoupdate": {
-        "url": "https://ghp.ci/https://github.com/alibaba/arthas/releases/download/arthas-all-$version/arthas-bin.zip"
+        "url": "https://gh-proxy.org/https://github.com/alibaba/arthas/releases/download/arthas-all-$version/arthas-bin.zip"
     }
 }

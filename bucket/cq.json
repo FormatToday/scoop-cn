@@ -5,11 +5,11 @@
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/mozilla-ai/cq/releases/download/cli/v0.15.0/cq_Windows_x86_64.zip",
+            "url": "https://gh-proxy.org/https://github.com/mozilla-ai/cq/releases/download/cli/v0.15.0/cq_Windows_x86_64.zip",
             "hash": "931f333d75425199636e42f2c7b1a81222d5ab0caa76c30bbcee48e99959dd36"
         },
         "arm64": {
-            "url": "https://ghp.ci/https://github.com/mozilla-ai/cq/releases/download/cli/v0.15.0/cq_Windows_arm64.zip",
+            "url": "https://gh-proxy.org/https://github.com/mozilla-ai/cq/releases/download/cli/v0.15.0/cq_Windows_arm64.zip",
             "hash": "97791b662f676a76f40cdd908a1c4dc579d72151a2ed7b33ecb590805c925aaf"
         }
     },
@@ -22,14 +22,14 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/mozilla-ai/cq/releases/download/cli/v$version/cq_Windows_x86_64.zip"
+                "url": "https://gh-proxy.org/https://github.com/mozilla-ai/cq/releases/download/cli/v$version/cq_Windows_x86_64.zip"
             },
             "arm64": {
-                "url": "https://ghp.ci/https://github.com/mozilla-ai/cq/releases/download/cli/v$version/cq_Windows_arm64.zip"
+                "url": "https://gh-proxy.org/https://github.com/mozilla-ai/cq/releases/download/cli/v$version/cq_Windows_arm64.zip"
             }
         },
         "hash": {
-            "url": "https://ghp.ci/https://github.com/mozilla-ai/cq/releases/download/cli/v$version/checksums.txt"
+            "url": "https://gh-proxy.org/https://github.com/mozilla-ai/cq/releases/download/cli/v$version/checksums.txt"
         }
     }
 }

@@ -3,7 +3,7 @@
     "description": "A command-line utility that creates projects from project templates.",
     "homepage": "https://github.com/cookiecutter/cookiecutter",
     "license": "BSD-3-Clause",
-    "depends": "scoop-cn/python",
+    "depends": "python",
     "url": "https://files.pythonhosted.org/packages/py3/c/cookiecutter/cookiecutter-2.7.1-py3-none-any.whl",
     "hash": "cee50defc1eaa7ad0071ee9b9893b746c1b3201b66bf4d3686d0f127c8ed6cf9",
     "installer": {

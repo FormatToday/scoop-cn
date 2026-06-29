@@ -6,7 +6,7 @@
     "suggest": {
         "ffmpeg": "ffmpeg"
     },
-    "url": "https://ghp.ci/https://github.com/stashapp/stash/releases/download/latest_develop/stash-win.exe",
+    "url": "https://gh-proxy.org/https://github.com/stashapp/stash/releases/download/latest_develop/stash-win.exe",
     "hash": "cd4e4590669a97158f7f8d55bb0c349ec71f9a2a64ae7770b9941c2b4c711278",
     "bin": [
         [
@@ -26,6 +26,6 @@
         "regex": "Release v([\\w.-]+)"
     },
     "autoupdate": {
-        "url": "https://ghp.ci/https://github.com/stashapp/stash/releases/download/latest_develop/stash-win.exe"
+        "url": "https://gh-proxy.org/https://github.com/stashapp/stash/releases/download/latest_develop/stash-win.exe"
     }
 }

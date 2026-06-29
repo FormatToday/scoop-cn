@@ -5,12 +5,12 @@
     "license": "GPL-3.0-or-later,ZPL-2.1,BSD-2-Clause,...",
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/brechtsanders/winlibs_mingw/releases/download/16.1.0posix-14.0.0-msvcrt-r3/winlibs-x86_64-posix-seh-gcc-16.1.0-mingw-w64msvcrt-14.0.0-r3.7z",
+            "url": "https://gh-proxy.org/https://github.com/brechtsanders/winlibs_mingw/releases/download/16.1.0posix-14.0.0-msvcrt-r3/winlibs-x86_64-posix-seh-gcc-16.1.0-mingw-w64msvcrt-14.0.0-r3.7z",
             "hash": "e6c3309b078199b235274b522a22c814f284e7b3c6af37e0fe7b204c401e93cf",
             "extract_dir": "mingw64"
         },
         "32bit": {
-            "url": "https://ghp.ci/https://github.com/brechtsanders/winlibs_mingw/releases/download/16.1.0posix-14.0.0-msvcrt-r3/winlibs-i686-posix-dwarf-gcc-16.1.0-mingw-w64msvcrt-14.0.0-r3.7z",
+            "url": "https://gh-proxy.org/https://github.com/brechtsanders/winlibs_mingw/releases/download/16.1.0posix-14.0.0-msvcrt-r3/winlibs-i686-posix-dwarf-gcc-16.1.0-mingw-w64msvcrt-14.0.0-r3.7z",
             "hash": "dd0780ce40746d07f51cdf75f5ca19b7a934a7dd14739cf275a025f4b8a7e88b",
             "extract_dir": "mingw32"
         }
@@ -24,10 +24,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/brechtsanders/winlibs_mingw/releases/download/$matchGccposix-$matchMingw-msvcrt-r$matchRelease/winlibs-x86_64-posix-seh-gcc-$matchGcc-mingw-w64msvcrt-$matchMingw-r$matchRelease.7z"
+                "url": "https://gh-proxy.org/https://github.com/brechtsanders/winlibs_mingw/releases/download/$matchGccposix-$matchMingw-msvcrt-r$matchRelease/winlibs-x86_64-posix-seh-gcc-$matchGcc-mingw-w64msvcrt-$matchMingw-r$matchRelease.7z"
             },
             "32bit": {
-                "url": "https://ghp.ci/https://github.com/brechtsanders/winlibs_mingw/releases/download/$matchGccposix-$matchMingw-msvcrt-r$matchRelease/winlibs-i686-posix-dwarf-gcc-$matchGcc-mingw-w64msvcrt-$matchMingw-r$matchRelease.7z"
+                "url": "https://gh-proxy.org/https://github.com/brechtsanders/winlibs_mingw/releases/download/$matchGccposix-$matchMingw-msvcrt-r$matchRelease/winlibs-i686-posix-dwarf-gcc-$matchGcc-mingw-w64msvcrt-$matchMingw-r$matchRelease.7z"
             }
         },
         "hash": {

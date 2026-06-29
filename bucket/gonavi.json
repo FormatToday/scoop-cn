@@ -4,16 +4,16 @@
     "homepage": "https://github.com/Syngnat/GoNavi",
     "license": "Apache-2.0",
     "suggest": {
-        "vcredist": "scoop-cn/vcredist2022",
-        "Microsoft Edge WebView2": "scoop-cn/webview2"
+        "vcredist": "vcredist2022",
+        "Microsoft Edge WebView2": "webview2"
     },
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/Syngnat/GoNavi/releases/download/v0.8.3/GoNavi-0.8.3-Windows-Amd64.exe#/gonavi.exe",
+            "url": "https://gh-proxy.org/https://github.com/Syngnat/GoNavi/releases/download/v0.8.3/GoNavi-0.8.3-Windows-Amd64.exe#/gonavi.exe",
             "hash": "c64410bd07eca786ec5bea3b85ac542027b1ae3e29d32bb4dafa5ee3a263532e"
         },
         "arm64": {
-            "url": "https://ghp.ci/https://github.com/Syngnat/GoNavi/releases/download/v0.8.3/GoNavi-0.8.3-Windows-Arm64.exe#/gonavi.exe",
+            "url": "https://gh-proxy.org/https://github.com/Syngnat/GoNavi/releases/download/v0.8.3/GoNavi-0.8.3-Windows-Arm64.exe#/gonavi.exe",
             "hash": "fe1c27ac010a936ff5a09eaebb49e5a0fad1c3a86e835a8aad032b9b927da438"
         }
     },
@@ -27,10 +27,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/Syngnat/GoNavi/releases/download/v$version/GoNavi-$version-Windows-Amd64.exe#/gonavi.exe"
+                "url": "https://gh-proxy.org/https://github.com/Syngnat/GoNavi/releases/download/v$version/GoNavi-$version-Windows-Amd64.exe#/gonavi.exe"
             },
             "arm64": {
-                "url": "https://ghp.ci/https://github.com/Syngnat/GoNavi/releases/download/v$version/GoNavi-$version-Windows-Arm64.exe#/gonavi.exe"
+                "url": "https://gh-proxy.org/https://github.com/Syngnat/GoNavi/releases/download/v$version/GoNavi-$version-Windows-Arm64.exe#/gonavi.exe"
             }
         },
         "hash": {

@@ -12,10 +12,10 @@
         "Verify with: perry doctor",
         "First compile: perry compile hello.ts -o hello.exe"
     ],
-    "depends": "scoop-cn/llvm",
+    "depends": "llvm",
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/PerryTS/perry/releases/download/v0.5.1182/perry-windows-x86_64.zip",
+            "url": "https://gh-proxy.org/https://github.com/PerryTS/perry/releases/download/v0.5.1182/perry-windows-x86_64.zip",
             "hash": "961d0789a50043b3e441c8826cfb8cc0106b3c4124d8fb9ca2381880961405d9"
         }
     },
@@ -26,7 +26,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/PerryTS/perry/releases/download/v$version/perry-windows-x86_64.zip",
+                "url": "https://gh-proxy.org/https://github.com/PerryTS/perry/releases/download/v$version/perry-windows-x86_64.zip",
                 "hash": {
                     "url": "$url.sha256"
                 }

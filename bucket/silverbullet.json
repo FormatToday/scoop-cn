@@ -5,7 +5,7 @@
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/silverbulletmd/silverbullet/releases/download/2.9.0/silverbullet-server-windows-x86_64.zip",
+            "url": "https://gh-proxy.org/https://github.com/silverbulletmd/silverbullet/releases/download/2.9.0/silverbullet-server-windows-x86_64.zip",
             "hash": "7a2c88fd83da8435ec86f1ccb6f1ed033aa731c6831cf91b5334e70971d39f79"
         }
     },
@@ -16,7 +16,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/silverbulletmd/silverbullet/releases/download/$version/silverbullet-server-windows-x86_64.zip"
+                "url": "https://gh-proxy.org/https://github.com/silverbulletmd/silverbullet/releases/download/$version/silverbullet-server-windows-x86_64.zip"
             }
         }
     }

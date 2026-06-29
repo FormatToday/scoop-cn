@@ -5,11 +5,11 @@
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/kunchenguid/no-mistakes/releases/download/v1.31.2/no-mistakes-v1.31.2-windows-amd64.zip",
+            "url": "https://gh-proxy.org/https://github.com/kunchenguid/no-mistakes/releases/download/v1.31.2/no-mistakes-v1.31.2-windows-amd64.zip",
             "hash": "598811813a12b9246875de44f2c5371cf0a0712ea0ec4ca635f74ffb940d7179"
         },
         "arm64": {
-            "url": "https://ghp.ci/https://github.com/kunchenguid/no-mistakes/releases/download/v1.31.2/no-mistakes-v1.31.2-windows-arm64.zip",
+            "url": "https://gh-proxy.org/https://github.com/kunchenguid/no-mistakes/releases/download/v1.31.2/no-mistakes-v1.31.2-windows-arm64.zip",
             "hash": "b4070ffcd09c867fad4549d3f247d80c7901e8546cebf0696e30993f36a471d6"
         }
     },
@@ -23,10 +23,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/kunchenguid/no-mistakes/releases/download/v$version/no-mistakes-v$version-windows-amd64.zip"
+                "url": "https://gh-proxy.org/https://github.com/kunchenguid/no-mistakes/releases/download/v$version/no-mistakes-v$version-windows-amd64.zip"
             },
             "arm64": {
-                "url": "https://ghp.ci/https://github.com/kunchenguid/no-mistakes/releases/download/v$version/no-mistakes-v$version-windows-arm64.zip"
+                "url": "https://gh-proxy.org/https://github.com/kunchenguid/no-mistakes/releases/download/v$version/no-mistakes-v$version-windows-arm64.zip"
             }
         },
         "hash": {

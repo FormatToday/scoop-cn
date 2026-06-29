@@ -5,7 +5,7 @@
     "license": "GPL-3.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://mirrors.ustc.edu.cn/kde/stable/digikam/9.1.0/digiKam-9.1.0-Qt6-Win64.exe#/dl.7z",
+            "url": "https://download.kde.org/stable/digikam/9.1.0/digiKam-9.1.0-Qt6-Win64.exe#/dl.7z",
             "hash": "28ef373ab45ecc7eb1fd105b57828a29588504eb5a286c9e89c987c056bce8be"
         }
     },
@@ -31,7 +31,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://mirrors.ustc.edu.cn/kde/stable/digikam/$version/digiKam-$version-Qt6-Win64.exe#/dl.7z"
+                "url": "https://download.kde.org/stable/digikam/$version/digiKam-$version-Qt6-Win64.exe#/dl.7z"
             }
         },
         "hash": {

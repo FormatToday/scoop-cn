@@ -9,15 +9,15 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/j178/prek/releases/download/v0.4.5/prek-x86_64-pc-windows-msvc.zip",
+            "url": "https://gh-proxy.org/https://github.com/j178/prek/releases/download/v0.4.5/prek-x86_64-pc-windows-msvc.zip",
             "hash": "1ee0d2b210acc805e0ccd1b00fa84eb1d0d939f1a79da37ae9f432e1c16c5986"
         },
         "32bit": {
-            "url": "https://ghp.ci/https://github.com/j178/prek/releases/download/v0.4.5/prek-i686-pc-windows-msvc.zip",
+            "url": "https://gh-proxy.org/https://github.com/j178/prek/releases/download/v0.4.5/prek-i686-pc-windows-msvc.zip",
             "hash": "6c68300c052b902abbf95bc92b3fbbc1a438fba76d3fa5f5d8dfcff7179f042c"
         },
         "arm64": {
-            "url": "https://ghp.ci/https://github.com/j178/prek/releases/download/v0.4.5/prek-aarch64-pc-windows-msvc.zip",
+            "url": "https://gh-proxy.org/https://github.com/j178/prek/releases/download/v0.4.5/prek-aarch64-pc-windows-msvc.zip",
             "hash": "4f047fa4c0feb7d0379841c24c4c66a54d38dd1fa2fb0e83a0ef8d6678cb12e1"
         }
     },
@@ -26,13 +26,13 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/j178/prek/releases/download/v$version/prek-x86_64-pc-windows-msvc.zip"
+                "url": "https://gh-proxy.org/https://github.com/j178/prek/releases/download/v$version/prek-x86_64-pc-windows-msvc.zip"
             },
             "32bit": {
-                "url": "https://ghp.ci/https://github.com/j178/prek/releases/download/v$version/prek-i686-pc-windows-msvc.zip"
+                "url": "https://gh-proxy.org/https://github.com/j178/prek/releases/download/v$version/prek-i686-pc-windows-msvc.zip"
             },
             "arm64": {
-                "url": "https://ghp.ci/https://github.com/j178/prek/releases/download/v$version/prek-aarch64-pc-windows-msvc.zip"
+                "url": "https://gh-proxy.org/https://github.com/j178/prek/releases/download/v$version/prek-aarch64-pc-windows-msvc.zip"
             }
         },
         "hash": {

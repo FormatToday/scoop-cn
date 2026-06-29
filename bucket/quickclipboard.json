@@ -7,7 +7,7 @@
     "notes": "Portable version: data is saved to the 'data' subdirectory under the app folder and persisted.",
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/mosheng1/QuickClipboard/releases/download/v0.4.0/QuickClipboard_0.4.0_portable.exe#/QuickClipboard_portable.exe",
+            "url": "https://gh-proxy.org/https://github.com/mosheng1/QuickClipboard/releases/download/v0.4.0/QuickClipboard_0.4.0_portable.exe#/QuickClipboard_portable.exe",
             "hash": "664c259b14b338b56256f6f5372120f8a583f381bc9483d130fc214109efab84"
         }
     },
@@ -24,7 +24,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/mosheng1/QuickClipboard/releases/download/v$version/QuickClipboard_$version_portable.exe#/QuickClipboard_portable.exe"
+                "url": "https://gh-proxy.org/https://github.com/mosheng1/QuickClipboard/releases/download/v$version/QuickClipboard_$version_portable.exe#/QuickClipboard_portable.exe"
             }
         }
     }

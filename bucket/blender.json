@@ -5,12 +5,12 @@
     "license": "GPL-3.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://mirrors.aliyun.com/blender/release/Blender5.1/blender-5.1.2-windows-x64.zip",
+            "url": "https://mirrors.tuna.tsinghua.edu.cn/blender/release/Blender5.1/blender-5.1.2-windows-x64.zip",
             "hash": "345bedea7b0acf7cc9666423d8553f9129622aea34ded65c23e8cb70f83f14ff",
             "extract_dir": "blender-5.1.2-windows-x64"
         },
         "arm64": {
-            "url": "https://mirrors.aliyun.com/blender/release/Blender5.1/blender-5.1.2-windows-arm64.zip",
+            "url": "https://mirrors.tuna.tsinghua.edu.cn/blender/release/Blender5.1/blender-5.1.2-windows-arm64.zip",
             "hash": "91d39ca72ed4862724eb4398ccfc11913e0650654175efed72023efd7748960e",
             "extract_dir": "blender-5.1.2-windows-arm64"
         }
@@ -27,14 +27,14 @@
     ],
     "persist": "portable",
     "checkver": {
-        "url": "https://mirrors.aliyun.com/blender/release/",
+        "url": "https://mirrors.tuna.tsinghua.edu.cn/blender/release/",
         "script": [
             "try {",
             "    $baseVersion = [regex]::Matches($page, 'href=\"Blender(?<version>\\d+\\.\\d+)/\"') | ForEach-Object {",
             "        [version]\"$($_.Groups['version'].Value)\"",
             "    } | Sort-Object -Descending | Select-Object -First 1",
             "    if (-not $baseVersion) { throw 'No base version found' }",
-            "    $latestVersion = (Invoke-WebRequest -Uri \"https://mirrors.aliyun.com/blender/release/Blender$($baseVersion.Major).$($baseVersion.Minor)/\" -UseBasicParsing).Links | ForEach-Object {",
+            "    $latestVersion = (Invoke-WebRequest -Uri \"https://mirrors.tuna.tsinghua.edu.cn/blender/release/Blender$($baseVersion.Major).$($baseVersion.Minor)/\" -UseBasicParsing).Links | ForEach-Object {",
             "        if ($_.href -match '^blender-(?<version>\\d+\\.\\d+\\.\\d+)-windows-x64\\.zip$') {",
             "            [version]$Matches['version']",
             "        }",
@@ -50,11 +50,11 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://mirrors.aliyun.com/blender/release/Blender$majorVersion.$minorVersion/blender-$version-windows-x64.zip",
+                "url": "https://mirrors.tuna.tsinghua.edu.cn/blender/release/Blender$majorVersion.$minorVersion/blender-$version-windows-x64.zip",
                 "extract_dir": "blender-$version-windows-x64"
             },
             "arm64": {
-                "url": "https://mirrors.aliyun.com/blender/release/Blender$majorVersion.$minorVersion/blender-$version-windows-arm64.zip",
+                "url": "https://mirrors.tuna.tsinghua.edu.cn/blender/release/Blender$majorVersion.$minorVersion/blender-$version-windows-arm64.zip",
                 "extract_dir": "blender-$version-windows-arm64"
             }
         },

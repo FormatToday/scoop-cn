@@ -1,55 +1,81 @@
-# 开启调试
-# Set-PSDebug -Trace 1
+# 隐藏进度条
+$global:ProgressPreference = 'SilentlyContinue'
 
-# 需先以管理员权限打开系统自带的 Powershell，设置脚本运行权限
-# Set-Executionpolicy -ExecutionPolicy RemoteSigned -Scope Currentuser
+# --- Configuration ---
+$GithubProxy = "https://gh-proxy.org"
+$ScoopPath = if ($env:SCOOP) { $env:SCOOP } else { "$env:USERPROFILE\scoop" }
+$ScoopCNRepo = "$GithubProxy/https://github.com/duzyn/scoop-cn.git"
 
-# 安装 Scoop
-(Invoke-RestMethod https://mirror.ghproxy.com/https://raw.githubusercontent.com/scoopinstaller/install/master/install.ps1).Replace('"https://github.com', '"https://mirror.ghproxy.com/https://github.com') | Invoke-Expression
+# --- Functions ---
 
-# 将 Scoop 的仓库源替换为代理的
-scoop config scoop_repo https://mirror.ghproxy.com/https://github.com/ScoopInstaller/Scoop
-
-# 目前没有安装 Git，所以先下载几个必需的软件的 JSON，组成一个临时的应用仓库
-New-Item -ItemType "directory" -Path "$env:USERPROFILE\scoop\buckets\scoop-cn\bucket"
-New-Item -ItemType "directory" -Path "$env:USERPROFILE\scoop\buckets\scoop-cn\scripts\7-zip"
-New-Item -ItemType "directory" -Path "$env:USERPROFILE\scoop\buckets\scoop-cn\scripts\git"
-
-Invoke-RestMethod -Uri https://mirror.ghproxy.com/https://raw.githubusercontent.com/FormatToday/scoop-cn/master/bucket/7zip.json -OutFile "$env:USERPROFILE\scoop\buckets\scoop-cn\bucket\7zip.json"
-Invoke-RestMethod -Uri https://mirror.ghproxy.com/https://raw.githubusercontent.com/FormatToday/scoop-cn/master/scripts/7-zip/install-context.reg -OutFile "$env:USERPROFILE\scoop\buckets\scoop-cn\scripts\7-zip\install-context.reg"
-Invoke-RestMethod -Uri https://mirror.ghproxy.com/https://raw.githubusercontent.com/FormatToday/scoop-cn/master/scripts/7-zip/uninstall-context.reg -OutFile "$env:USERPROFILE\scoop\buckets\scoop-cn\scripts\7-zip\uninstall-context.reg"
-
-Invoke-RestMethod -Uri https://mirror.ghproxy.com/https://raw.githubusercontent.com/FormatToday/scoop-cn/master/bucket/git.json -OutFile "$env:USERPROFILE\scoop\buckets\scoop-cn\bucket\git.json"
-Invoke-RestMethod -Uri https://mirror.ghproxy.com/https://raw.githubusercontent.com/FormatToday/scoop-cn/master/scripts/git/install-context.reg -OutFile "$env:USERPROFILE\scoop\buckets\scoop-cn\scripts\git\install-context.reg"
-Invoke-RestMethod -Uri https://mirror.ghproxy.com/https://raw.githubusercontent.com/FormatToday/scoop-cn/master/scripts/git/uninstall-context.reg -OutFile "$env:USERPROFILE\scoop\buckets\scoop-cn\scripts\git\uninstall-context.reg"
-Invoke-RestMethod -Uri https://mirror.ghproxy.com/https://raw.githubusercontent.com/FormatToday/scoop-cn/master/scripts/git/install-file-associations.reg -OutFile "$env:USERPROFILE\scoop\buckets\scoop-cn\scripts\git\install-file-associations.reg"
-Invoke-RestMethod -Uri https://mirror.ghproxy.com/https://raw.githubusercontent.com/FormatToday/scoop-cn/master/scripts/git/uninstall-file-associations.reg -OutFile "$env:USERPROFILE\scoop\buckets\scoop-cn\scripts\git\uninstall-file-associations.reg"
-
-# Invoke-RestMethod -Uri https://mirror.ghproxy.com/https://raw.githubusercontent.com/FormatToday/scoop-cn/master/bucket/aria2.json -OutFile "$env:USERPROFILE\scoop\buckets\scoop-cn\bucket\aria2.json"
-
-# 安装时注意顺序是 7-Zip, Git, Aria2
-scoop install scoop-cn/7zip
-scoop install scoop-cn/git
-scoop install scoop-cn/sudo
-scoop install scoop-cn/scoop-search
-# scoop install scoop-cn/aria2
-
-# 将 Scoop 的 main 仓库源替换为代理的
-if (Test-Path -Path "$env:USERPROFILE\scoop\buckets\main") {
-    scoop bucket rm main
+function Set-ExecutionPolicyAndEnvironment {
+    # 需先以管理员权限打开系统自带的 Powershell，设置脚本运行权限
+    # Set-Executionpolicy -ExecutionPolicy RemoteSigned -Scope Currentuser
+    Write-Host "Set execution policy (requires manual step: Set-Executionpolicy -ExecutionPolicy RemoteSigned -Scope Currentuser)"
+    Write-Host "Setting environment variables..."
 }
-Write-Host "Adding main bucket..."
-scoop bucket add main https://mirror.ghproxy.com/https://github.com/ScoopInstaller/Main
 
-# scoop-cn 库还不是 Git 仓库，删掉后，重新添加 Git 仓库
-if (Test-Path -Path "$env:USERPROFILE\scoop\buckets\scoop-cn") {
-    scoop bucket rm scoop-cn
+function Install-Scoop {
+    Write-Host "Installing Scoop..."
+    # gh-proxy.org 无需替换字符串，网站自动替换了
+    Invoke-RestMethod "$GithubProxy/https://raw.githubusercontent.com/ScoopInstaller/Install/master/install.ps1" | Invoke-Expression
+
+    Write-Host "Setting Scoop core repo to use proxy..."
+    scoop config scoop_repo "$GithubProxy/https://github.com/ScoopInstaller/Scoop.git"
 }
-Write-Host "Adding scoop-cn bucket..."
-scoop bucket add scoop-cn https://mirror.ghproxy.com/https://github.com/FormatToday/scoop-cn
 
-# Set-Location "$env:USERPROFILE\scoop\buckets\scoop-cn"
-# git config pull.rebase true
+function Prepare-And-Install-Essentials {
+    param(
+        [Parameter(Mandatory=$true)]
+        [string]$Path
+    )
 
-scoop config aria2-warning-enabled false
-Write-Host "scoop and scoop-cn was installed successfully!"
+    Write-Host "Temporarily modifying 7zip and git manifests for proxy download..."
+
+    # 替换 7zip, git 的下载地址为代理的
+    $7zipManifestPath = "$Path\buckets\main\bucket\7zip.json"
+    $GitManifestPath = "$Path\buckets\main\bucket\git.json"
+
+    if (Test-Path -Path $7zipManifestPath) {
+        (Get-Content $7zipManifestPath) -replace '(https?://github\.com/.+/releases/.*download)', 'https://gh-proxy.org/$1' | Set-Content $7zipManifestPath
+    }
+
+    if (Test-Path -Path $GitManifestPath) {
+        (Get-Content $GitManifestPath) -replace '(https?://github\.com/.+/releases/.*download)', 'https://gh-proxy.org/$1' | Set-Content $GitManifestPath
+    }
+
+    Write-Host "Installing essential apps (7zip, git)..."
+    # 安装时注意顺序是 7zip, git
+    scoop install 7zip
+    scoop install git
+}
+
+function Setup-ScoopCN-Bucket {
+    param(
+        [Parameter(Mandatory=$true)]
+        [string]$Path
+    )
+    
+    # 将 Scoop 的 main 仓库源替换为 scoop-cn 的
+    if (Test-Path -Path "$Path\buckets\main") {
+        Write-Host "Removing original main bucket..."
+        scoop bucket rm main
+    }
+
+    Write-Host "Adding main bucket with proxy..."
+    # scoop bucket add main $ScoopCNRepo
+    # 只下载最近一次的提交，否则下载整个提交历史太耗时了
+    git clone --depth 1 $ScoopCNRepo $ScoopPath\buckets\main
+}
+
+# --- Main Execution ---
+
+# Set-ExecutionPolicyAndEnvironment # 保持注释，提醒用户手动设置
+
+Install-Scoop
+
+Prepare-And-Install-Essentials -Path $ScoopPath
+
+Setup-ScoopCN-Bucket -Path $ScoopPath
+
+Write-Host "scoop-cn was installed successfully!"

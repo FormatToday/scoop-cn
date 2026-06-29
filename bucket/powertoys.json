@@ -12,11 +12,11 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/microsoft/PowerToys/releases/download/v0.100.2/PowerToysUserSetup-0.100.2-x64.exe",
+            "url": "https://gh-proxy.org/https://github.com/microsoft/PowerToys/releases/download/v0.100.2/PowerToysUserSetup-0.100.2-x64.exe",
             "hash": "945fdf327e4d38e4ced61b0727b7ab8a1222958782982052989ddf7cb7096f62"
         },
         "arm64": {
-            "url": "https://ghp.ci/https://github.com/microsoft/PowerToys/releases/download/v0.100.2/PowerToysUserSetup-0.100.2-arm64.exe",
+            "url": "https://gh-proxy.org/https://github.com/microsoft/PowerToys/releases/download/v0.100.2/PowerToysUserSetup-0.100.2-arm64.exe",
             "hash": "5554984d72c30d5fd26355569d1ca8d63b74f0062ee4e59e0186e28216c837ae"
         }
     },
@@ -38,8 +38,8 @@
     },
     "post_install": [
         "'install-context', 'uninstall-context' | ForEach-Object {",
-        "    if (Test-Path \"$bucketsdir\\scoop-cn\\scripts\\$app\\$_.ps1\") {",
-        "        $content = Get-Content \"$bucketsdir\\scoop-cn\\scripts\\$app\\$_.ps1\"",
+        "    if (Test-Path \"$bucketsdir\\main\\scripts\\$app\\$_.ps1\") {",
+        "        $content = Get-Content \"$bucketsdir\\main\\scripts\\$app\\$_.ps1\"",
         "        $content = $content.Replace('{{scoop_dir}}', $original_dir)",
         "        if ($global) {",
         "            $content = $content.Replace('{{install_scope}}', 'perMachine')",
@@ -87,10 +87,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/microsoft/PowerToys/releases/download/v$version/PowerToysUserSetup-$version-x64.exe"
+                "url": "https://gh-proxy.org/https://github.com/microsoft/PowerToys/releases/download/v$version/PowerToysUserSetup-$version-x64.exe"
             },
             "arm64": {
-                "url": "https://ghp.ci/https://github.com/microsoft/PowerToys/releases/download/v$version/PowerToysUserSetup-$version-arm64.exe"
+                "url": "https://gh-proxy.org/https://github.com/microsoft/PowerToys/releases/download/v$version/PowerToysUserSetup-$version-arm64.exe"
             }
         },
         "hash": {

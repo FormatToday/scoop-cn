@@ -5,19 +5,19 @@
     "license": "MIT",
     "suggest": {
         "JDK": [
-            "scoop-cn/openjdk21",
-            "scoop-cn/oraclejdk-lts",
-            "scoop-cn/temurin21-jre"
+            "openjdk21",
+            "oraclejdk-lts",
+            "temurin21-jre"
         ],
         "Python": "python",
         "QPDF": "qpdf",
-        "LibreOffice": "scoop-cn/libreoffice",
+        "LibreOffice": "libreoffice",
         "Tesseract OCR": "tesseract",
         "Weasyprint": "weasyprint"
     },
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/Stirling-Tools/Stirling-PDF/releases/download/v2.13.2/Stirling-PDF.jar",
+            "url": "https://gh-proxy.org/https://github.com/Stirling-Tools/Stirling-PDF/releases/download/v2.13.2/Stirling-PDF.jar",
             "hash": "96d665c710183756b23c3c72f97829f637e1f2e0d1b89607a5333c23b6b80f0a"
         }
     },
@@ -33,7 +33,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/Stirling-Tools/Stirling-PDF/releases/download/v$version/Stirling-PDF.jar"
+                "url": "https://gh-proxy.org/https://github.com/Stirling-Tools/Stirling-PDF/releases/download/v$version/Stirling-PDF.jar"
             }
         }
     }

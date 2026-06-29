@@ -4,15 +4,15 @@
     "homepage": "https://usegitai.com",
     "license": "Apache-2.0",
     "suggest": {
-        "vcredist": "scoop-cn/vcredist2022"
+        "vcredist": "vcredist2022"
     },
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/git-ai-project/git-ai/releases/download/v1.6.4/git-ai-windows-x64.exe#/git-ai.exe",
+            "url": "https://gh-proxy.org/https://github.com/git-ai-project/git-ai/releases/download/v1.6.4/git-ai-windows-x64.exe#/git-ai.exe",
             "hash": "74a08cbc7481bc23b3bf95a36bf52ab1e9483bcab2774559b041285f982a6661"
         },
         "arm64": {
-            "url": "https://ghp.ci/https://github.com/git-ai-project/git-ai/releases/download/v1.6.4/git-ai-windows-arm64.exe#/git-ai.exe",
+            "url": "https://gh-proxy.org/https://github.com/git-ai-project/git-ai/releases/download/v1.6.4/git-ai-windows-arm64.exe#/git-ai.exe",
             "hash": "28e0235d6d190d7efb69a497e0e89699e4a28b65c6751a1ebaff31128eca9f40"
         }
     },
@@ -23,10 +23,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/git-ai-project/git-ai/releases/download/v$version/git-ai-windows-x64.exe#/git-ai.exe"
+                "url": "https://gh-proxy.org/https://github.com/git-ai-project/git-ai/releases/download/v$version/git-ai-windows-x64.exe#/git-ai.exe"
             },
             "arm64": {
-                "url": "https://ghp.ci/https://github.com/git-ai-project/git-ai/releases/download/v$version/git-ai-windows-arm64.exe#/git-ai.exe"
+                "url": "https://gh-proxy.org/https://github.com/git-ai-project/git-ai/releases/download/v$version/git-ai-windows-arm64.exe#/git-ai.exe"
             }
         },
         "hash": {

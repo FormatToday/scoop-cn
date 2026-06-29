@@ -4,15 +4,15 @@
     "homepage": "https://buck2.build/",
     "license": "MIT|Apache-2.0",
     "suggest": {
-        "vcredist": "scoop-cn/vcredist2022"
+        "vcredist": "vcredist2022"
     },
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/facebook/buck2/releases/download/2026-06-15/buck2-x86_64-pc-windows-msvc.exe.zst#/buck2.exe.zst",
+            "url": "https://gh-proxy.org/https://github.com/facebook/buck2/releases/download/2026-06-15/buck2-x86_64-pc-windows-msvc.exe.zst#/buck2.exe.zst",
             "hash": "96e24039b2f2304c8f350541d7d5ccdb34f56430b82af11e5296f13b2776798d"
         },
         "arm64": {
-            "url": "https://ghp.ci/https://github.com/facebook/buck2/releases/download/2026-06-15/buck2-aarch64-pc-windows-msvc.exe.zst#/buck2.exe.zst",
+            "url": "https://gh-proxy.org/https://github.com/facebook/buck2/releases/download/2026-06-15/buck2-aarch64-pc-windows-msvc.exe.zst#/buck2.exe.zst",
             "hash": "290b4849007c1817080d702565734df11b447866f0ada1725189d288394a342c"
         }
     },
@@ -25,10 +25,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/facebook/buck2/releases/download/$version/buck2-x86_64-pc-windows-msvc.exe.zst#/buck2.exe.zst"
+                "url": "https://gh-proxy.org/https://github.com/facebook/buck2/releases/download/$version/buck2-x86_64-pc-windows-msvc.exe.zst#/buck2.exe.zst"
             },
             "arm64": {
-                "url": "https://ghp.ci/https://github.com/facebook/buck2/releases/download/$version/buck2-aarch64-pc-windows-msvc.exe.zst#/buck2.exe.zst"
+                "url": "https://gh-proxy.org/https://github.com/facebook/buck2/releases/download/$version/buck2-aarch64-pc-windows-msvc.exe.zst#/buck2.exe.zst"
             }
         }
     }

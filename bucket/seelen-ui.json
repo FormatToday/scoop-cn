@@ -13,22 +13,22 @@
         "reg import \"$dir\\register-url-handler.reg\""
     ],
     "suggest": {
-        "Microsoft Edge WebView2": "scoop-cn/webview2"
+        "Microsoft Edge WebView2": "webview2"
     },
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/eythaann/Seelen-UI/releases/download/v2.7.3/Seelen.UI_2.7.3_x64-setup.exe#/dl.7z",
+            "url": "https://gh-proxy.org/https://github.com/eythaann/Seelen-UI/releases/download/v2.7.3/Seelen.UI_2.7.3_x64-setup.exe#/dl.7z",
             "hash": "6030d42972d950d8e0a6aa48737bb70061c9078d5809f76b2cb859715ff55582"
         },
         "arm64": {
-            "url": "https://ghp.ci/https://github.com/eythaann/Seelen-UI/releases/download/v2.7.3/Seelen.UI_2.7.3_arm64-setup.exe#/dl.7z",
+            "url": "https://gh-proxy.org/https://github.com/eythaann/Seelen-UI/releases/download/v2.7.3/Seelen.UI_2.7.3_arm64-setup.exe#/dl.7z",
             "hash": "8da97b41300e3a5ad773103d9e55d664be1ff90558c56bb1d3e3d4d31f1a560a"
         }
     },
     "pre_install": "'$*', 'uninst*' | ForEach-Object { Remove-Item -Path \"$dir\\$_\" -Recurse -Force -ErrorAction SilentlyContinue }",
     "post_install": [
         "$seelen_dir = $dir -replace '\\\\', '\\\\'",
-        "Get-ChildItem -Path \"$bucketsdir\\scoop-cn\\scripts\\$app\" -Filter '*.reg' -File | ForEach-Object {",
+        "Get-ChildItem -Path \"$bucketsdir\\main\\scripts\\$app\" -Filter '*.reg' -File | ForEach-Object {",
         "    $content = Get-Content -Path $_.FullName -Encoding utf8",
         "    if ($global) { $content = $content -replace 'HKEY_CURRENT_USER', 'HKEY_LOCAL_MACHINE' }",
         "    $content -replace '{{seelen_dir}}', $seelen_dir | Set-Content -Path \"$dir\\$($_.Name)\" -Encoding unicode",
@@ -55,10 +55,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/eythaann/Seelen-UI/releases/download/v$version/Seelen.UI_$version_x64-setup.exe#/dl.7z"
+                "url": "https://gh-proxy.org/https://github.com/eythaann/Seelen-UI/releases/download/v$version/Seelen.UI_$version_x64-setup.exe#/dl.7z"
             },
             "arm64": {
-                "url": "https://ghp.ci/https://github.com/eythaann/Seelen-UI/releases/download/v$version/Seelen.UI_$version_arm64-setup.exe#/dl.7z"
+                "url": "https://gh-proxy.org/https://github.com/eythaann/Seelen-UI/releases/download/v$version/Seelen.UI_$version_arm64-setup.exe#/dl.7z"
             }
         }
     }

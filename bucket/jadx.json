@@ -4,11 +4,11 @@
     "homepage": "https://github.com/skylot/jadx",
     "license": "Apache-2.0",
     "suggest": {
-        "JDK": "scoop-cn/openjdk"
+        "JDK": "openjdk"
     },
     "url": [
-        "https://ghp.ci/https://github.com/skylot/jadx/releases/download/v1.5.5/jadx-1.5.5.zip",
-        "https://ghp.ci/https://github.com/skylot/jadx/raw/master/jadx-gui/src/main/resources/logos/jadx-logo.ico"
+        "https://gh-proxy.org/https://github.com/skylot/jadx/releases/download/v1.5.5/jadx-1.5.5.zip",
+        "https://gh-proxy.org/https://github.com/skylot/jadx/raw/master/jadx-gui/src/main/resources/logos/jadx-logo.ico"
     ],
     "hash": [
         "38a5766d3c8170c41566b4b13ea0ede2430e3008421af4927235c2880234d51a",
@@ -29,8 +29,8 @@
     "checkver": "github",
     "autoupdate": {
         "url": [
-            "https://ghp.ci/https://github.com/skylot/jadx/releases/download/v$version/jadx-$version.zip",
-            "https://ghp.ci/https://github.com/skylot/jadx/raw/master/jadx-gui/src/main/resources/logos/jadx-logo.ico"
+            "https://gh-proxy.org/https://github.com/skylot/jadx/releases/download/v$version/jadx-$version.zip",
+            "https://gh-proxy.org/https://github.com/skylot/jadx/raw/master/jadx-gui/src/main/resources/logos/jadx-logo.ico"
         ]
     }
 }

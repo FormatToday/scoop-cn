@@ -5,7 +5,7 @@
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/containerd/nerdctl/releases/download/v2.3.3/nerdctl-2.3.3-windows-amd64.tar.gz",
+            "url": "https://gh-proxy.org/https://github.com/containerd/nerdctl/releases/download/v2.3.3/nerdctl-2.3.3-windows-amd64.tar.gz",
             "hash": "fa25c6d09785c9a00a1928147734460411ca6b2328bb9a672093bc437517812a"
         }
     },
@@ -14,7 +14,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/containerd/nerdctl/releases/download/v$version/nerdctl-$version-windows-amd64.tar.gz"
+                "url": "https://gh-proxy.org/https://github.com/containerd/nerdctl/releases/download/v$version/nerdctl-$version-windows-amd64.tar.gz"
             }
         },
         "hash": {

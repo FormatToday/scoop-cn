@@ -8,7 +8,7 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/TDesktop-x64/tdesktop/releases/download/v1.2.5/64Gram_1.2.5_x64.zip",
+            "url": "https://gh-proxy.org/https://github.com/TDesktop-x64/tdesktop/releases/download/v1.2.5/64Gram_1.2.5_x64.zip",
             "hash": "0911169f9877b95ac3e412dc5d0caa53b0562c26b29bccb52d1e999eb37ab91d"
         }
     },
@@ -33,7 +33,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/TDesktop-x64/tdesktop/releases/download/v$version/64Gram_$version_x64.zip"
+                "url": "https://gh-proxy.org/https://github.com/TDesktop-x64/tdesktop/releases/download/v$version/64Gram_$version_x64.zip"
             }
         }
     }

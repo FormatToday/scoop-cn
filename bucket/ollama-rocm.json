@@ -5,14 +5,14 @@
     "license": "MIT",
     "notes": "Ollama with daemon has been moved to 'extras/ollama-full'.",
     "suggest": {
-        "Ollama": "scoop-cn/ollama",
-        "Ollama Full": "scoop-cn/ollama-full"
+        "Ollama": "ollama",
+        "Ollama Full": "ollama-full"
     },
     "architecture": {
         "64bit": {
             "url": [
-                "https://ghp.ci/https://github.com/ollama/ollama/releases/download/v0.30.11/ollama-windows-amd64.zip",
-                "https://ghp.ci/https://github.com/ollama/ollama/releases/download/v0.30.11/ollama-windows-amd64-rocm.zip"
+                "https://gh-proxy.org/https://github.com/ollama/ollama/releases/download/v0.30.11/ollama-windows-amd64.zip",
+                "https://gh-proxy.org/https://github.com/ollama/ollama/releases/download/v0.30.11/ollama-windows-amd64-rocm.zip"
             ],
             "hash": [
                 "43d534c10040ea676c99af19836377a315daa8cb3bb6c3d9d609b4c23dd37b88",
@@ -28,8 +28,8 @@
         "architecture": {
             "64bit": {
                 "url": [
-                    "https://ghp.ci/https://github.com/ollama/ollama/releases/download/v$version/ollama-windows-amd64.zip",
-                    "https://ghp.ci/https://github.com/ollama/ollama/releases/download/v$version/ollama-windows-amd64-rocm.zip"
+                    "https://gh-proxy.org/https://github.com/ollama/ollama/releases/download/v$version/ollama-windows-amd64.zip",
+                    "https://gh-proxy.org/https://github.com/ollama/ollama/releases/download/v$version/ollama-windows-amd64-rocm.zip"
                 ]
             }
         },

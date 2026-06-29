@@ -5,7 +5,7 @@
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/desktop/desktop/releases/download/release-3.6.1/GitHubDesktop-3.6.1-x64-full.nupkg",
+            "url": "https://gh-proxy.org/https://github.com/desktop/desktop/releases/download/release-3.6.1/GitHubDesktop-3.6.1-x64-full.nupkg",
             "hash": "1a7d68d73c80363dc4478bfe0da21bac97283703e3e4bd4cb3fd8c5b4b9dc655"
         }
     },
@@ -25,7 +25,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/desktop/desktop/releases/download/release-$version/GitHubDesktop-$version-x64-full.nupkg"
+                "url": "https://gh-proxy.org/https://github.com/desktop/desktop/releases/download/release-$version/GitHubDesktop-$version-x64-full.nupkg"
             }
         },
         "hash": {

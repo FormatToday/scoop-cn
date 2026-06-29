@@ -6,8 +6,8 @@
     "architecture": {
         "64bit": {
             "url": [
-                "https://ghp.ci/https://github.com/supabase-community/postgres-language-server/releases/download/0.25.5/postgres-language-server_x86_64-pc-windows-msvc.exe#/postgres-language-server.exe",
-                "https://ghp.ci/https://github.com/supabase-community/postgres-language-server/releases/download/0.25.5/postgrestools_x86_64-pc-windows-msvc.exe#/postgrestools.exe"
+                "https://gh-proxy.org/https://github.com/supabase-community/postgres-language-server/releases/download/0.25.5/postgres-language-server_x86_64-pc-windows-msvc.exe#/postgres-language-server.exe",
+                "https://gh-proxy.org/https://github.com/supabase-community/postgres-language-server/releases/download/0.25.5/postgrestools_x86_64-pc-windows-msvc.exe#/postgrestools.exe"
             ],
             "hash": [
                 "03c090a99e7a0bc5d0d486323a986cfc3d3d381d85f7cdbb91ed3f6cfcd76788",
@@ -16,8 +16,8 @@
         },
         "arm64": {
             "url": [
-                "https://ghp.ci/https://github.com/supabase-community/postgres-language-server/releases/download/0.25.5/postgres-language-server_aarch64-pc-windows-msvc.exe#/postgres-language-server.exe",
-                "https://ghp.ci/https://github.com/supabase-community/postgres-language-server/releases/download/0.25.5/postgrestools_aarch64-pc-windows-msvc.exe#/postgrestools.exe"
+                "https://gh-proxy.org/https://github.com/supabase-community/postgres-language-server/releases/download/0.25.5/postgres-language-server_aarch64-pc-windows-msvc.exe#/postgres-language-server.exe",
+                "https://gh-proxy.org/https://github.com/supabase-community/postgres-language-server/releases/download/0.25.5/postgrestools_aarch64-pc-windows-msvc.exe#/postgrestools.exe"
             ],
             "hash": [
                 "e5c50c75f78c1551a8ee23766120cb18e491b1c1ebab308249e47bada1e732fc",
@@ -36,14 +36,14 @@
         "architecture": {
             "64bit": {
                 "url": [
-                    "https://ghp.ci/https://github.com/supabase-community/postgres-language-server/releases/download/$version/postgres-language-server_x86_64-pc-windows-msvc.exe#/postgres-language-server.exe",
-                    "https://ghp.ci/https://github.com/supabase-community/postgres-language-server/releases/download/$version/postgrestools_x86_64-pc-windows-msvc.exe#/postgrestools.exe"
+                    "https://gh-proxy.org/https://github.com/supabase-community/postgres-language-server/releases/download/$version/postgres-language-server_x86_64-pc-windows-msvc.exe#/postgres-language-server.exe",
+                    "https://gh-proxy.org/https://github.com/supabase-community/postgres-language-server/releases/download/$version/postgrestools_x86_64-pc-windows-msvc.exe#/postgrestools.exe"
                 ]
             },
             "arm64": {
                 "url": [
-                    "https://ghp.ci/https://github.com/supabase-community/postgres-language-server/releases/download/$version/postgres-language-server_aarch64-pc-windows-msvc.exe#/postgres-language-server.exe",
-                    "https://ghp.ci/https://github.com/supabase-community/postgres-language-server/releases/download/$version/postgrestools_aarch64-pc-windows-msvc.exe#/postgrestools.exe"
+                    "https://gh-proxy.org/https://github.com/supabase-community/postgres-language-server/releases/download/$version/postgres-language-server_aarch64-pc-windows-msvc.exe#/postgres-language-server.exe",
+                    "https://gh-proxy.org/https://github.com/supabase-community/postgres-language-server/releases/download/$version/postgrestools_aarch64-pc-windows-msvc.exe#/postgrestools.exe"
                 ]
             }
         }

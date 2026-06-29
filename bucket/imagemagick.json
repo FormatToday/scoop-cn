@@ -12,15 +12,15 @@
     ],
     "architecture": {
         "32bit": {
-            "url": "https://ghp.ci/https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-26/ImageMagick-7.1.2-26-Q16-HDRI-x86-dll.exe",
+            "url": "https://gh-proxy.org/https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-26/ImageMagick-7.1.2-26-Q16-HDRI-x86-dll.exe",
             "hash": "1be3643507d7f2c4d9c8b9e6f963a79bace1169cebb3ebea16348aef796d3d21"
         },
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-26/ImageMagick-7.1.2-26-Q16-HDRI-x64-dll.exe",
+            "url": "https://gh-proxy.org/https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-26/ImageMagick-7.1.2-26-Q16-HDRI-x64-dll.exe",
             "hash": "e629c8a7dc1c18f79226d5c0218e64b8102a1cfc96b9a16d891bac04d263d093"
         },
         "arm64": {
-            "url": "https://ghp.ci/https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-26/ImageMagick-7.1.2-26-Q16-HDRI-arm64-dll.exe",
+            "url": "https://gh-proxy.org/https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-26/ImageMagick-7.1.2-26-Q16-HDRI-arm64-dll.exe",
             "hash": "d8cb60e68d786f1cbceda259f0ecd4dd0847ad447f13f97eea46fbeffe43f2c2"
         }
     },
@@ -38,13 +38,13 @@
     "autoupdate": {
         "architecture": {
             "32bit": {
-                "url": "https://ghp.ci/https://github.com/ImageMagick/ImageMagick/releases/download/$version/ImageMagick-$version-Q16-HDRI-x86-dll.exe"
+                "url": "https://gh-proxy.org/https://github.com/ImageMagick/ImageMagick/releases/download/$version/ImageMagick-$version-Q16-HDRI-x86-dll.exe"
             },
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/ImageMagick/ImageMagick/releases/download/$version/ImageMagick-$version-Q16-HDRI-x64-dll.exe"
+                "url": "https://gh-proxy.org/https://github.com/ImageMagick/ImageMagick/releases/download/$version/ImageMagick-$version-Q16-HDRI-x64-dll.exe"
             },
             "arm64": {
-                "url": "https://ghp.ci/https://github.com/ImageMagick/ImageMagick/releases/download/$version/ImageMagick-$version-Q16-HDRI-arm64-dll.exe"
+                "url": "https://gh-proxy.org/https://github.com/ImageMagick/ImageMagick/releases/download/$version/ImageMagick-$version-Q16-HDRI-arm64-dll.exe"
             }
         }
     }

@@ -4,11 +4,11 @@
     "homepage": "https://pixieditor.net/",
     "license": "LGPL-3.0",
     "suggest": {
-        ".NET Desktop Runtime 8.0": "scoop-cn/windowsdesktop-runtime-8.0"
+        ".NET Desktop Runtime 8.0": "windowsdesktop-runtime-8.0"
     },
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/PixiEditor/PixiEditor/releases/download/2.1.1.5/PixiEditor.2.1.1.5.x64-win.zip",
+            "url": "https://gh-proxy.org/https://github.com/PixiEditor/PixiEditor/releases/download/2.1.1.5/PixiEditor.2.1.1.5.x64-win.zip",
             "hash": "6215525f87f14c8e83da7aa73e6039da1c0bb2fe2e8a226696ca3c0438222ab2"
         }
     },
@@ -25,7 +25,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/PixiEditor/PixiEditor/releases/download/$version/PixiEditor.$version.x64-win.zip"
+                "url": "https://gh-proxy.org/https://github.com/PixiEditor/PixiEditor/releases/download/$version/PixiEditor.$version.x64-win.zip"
             }
         }
     }

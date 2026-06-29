@@ -5,7 +5,7 @@
     "license": "GPL-2.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://mirrors.ustc.edu.cn/kde/stable/kdenlive/26.04/windows/kdenlive-26.04.2_standalone.exe#/dl.7z",
+            "url": "https://download.kde.org/stable/kdenlive/26.04/windows/kdenlive-26.04.2_standalone.exe#/dl.7z",
             "hash": "4f5a9167a65fa7df411ca6655fa826f0d9ec502ddd157b3ddbf70cd77398dff4"
         }
     },
@@ -24,7 +24,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://mirrors.ustc.edu.cn/kde/stable/kdenlive/$majorVersion.$minorVersion/windows/kdenlive-$version_standalone.exe#/dl.7z"
+                "url": "https://download.kde.org/stable/kdenlive/$majorVersion.$minorVersion/windows/kdenlive-$version_standalone.exe#/dl.7z"
             }
         },
         "hash": {

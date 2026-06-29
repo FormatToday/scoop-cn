@@ -5,15 +5,15 @@
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/cli/cli/releases/download/v2.95.0/gh_2.95.0_windows_amd64.zip",
+            "url": "https://gh-proxy.org/https://github.com/cli/cli/releases/download/v2.95.0/gh_2.95.0_windows_amd64.zip",
             "hash": "19a7154161ada9cfaa9e57edb752ecc679b75c391a62e4f7b586eea1df30b5bb"
         },
         "32bit": {
-            "url": "https://ghp.ci/https://github.com/cli/cli/releases/download/v2.95.0/gh_2.95.0_windows_386.zip",
+            "url": "https://gh-proxy.org/https://github.com/cli/cli/releases/download/v2.95.0/gh_2.95.0_windows_386.zip",
             "hash": "6fd704aedfb00eb8f0db49d4f22084ffabe7b8eb1212f5bf52fa2dbd52e7c50c"
         },
         "arm64": {
-            "url": "https://ghp.ci/https://github.com/cli/cli/releases/download/v2.95.0/gh_2.95.0_windows_arm64.zip",
+            "url": "https://gh-proxy.org/https://github.com/cli/cli/releases/download/v2.95.0/gh_2.95.0_windows_arm64.zip",
             "hash": "f7df0bf24275196b0fcbe853946e53ae80121c8a4ce4341bc9de1a35e33b4588"
         }
     },
@@ -24,13 +24,13 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/cli/cli/releases/download/v$version/gh_$version_windows_amd64.zip"
+                "url": "https://gh-proxy.org/https://github.com/cli/cli/releases/download/v$version/gh_$version_windows_amd64.zip"
             },
             "32bit": {
-                "url": "https://ghp.ci/https://github.com/cli/cli/releases/download/v$version/gh_$version_windows_386.zip"
+                "url": "https://gh-proxy.org/https://github.com/cli/cli/releases/download/v$version/gh_$version_windows_386.zip"
             },
             "arm64": {
-                "url": "https://ghp.ci/https://github.com/cli/cli/releases/download/v$version/gh_$version_windows_arm64.zip"
+                "url": "https://gh-proxy.org/https://github.com/cli/cli/releases/download/v$version/gh_$version_windows_arm64.zip"
             }
         },
         "hash": {

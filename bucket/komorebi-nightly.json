@@ -8,16 +8,16 @@
     },
     "notes": "Check out the quickstart guide on https://lgug2z.github.io/komorebi",
     "suggest": {
-        "whkd": "scoop-cn/whkd",
-        "autohotkey": "scoop-cn/autohotkey"
+        "whkd": "whkd",
+        "autohotkey": "autohotkey"
     },
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/LGUG2Z/komorebi/releases/download/nightly/komorebi-nightly-x86_64-pc-windows-msvc.zip",
+            "url": "https://gh-proxy.org/https://github.com/LGUG2Z/komorebi/releases/download/nightly/komorebi-nightly-x86_64-pc-windows-msvc.zip",
             "hash": "01e9b0702a324391ae70feeb8c91eaf503183aa777fb815aa659a0c94d4fc11c"
         },
         "arm64": {
-            "url": "https://ghp.ci/https://github.com/LGUG2Z/komorebi/releases/download/nightly/komorebi-nightly-aarch64-pc-windows-msvc.zip",
+            "url": "https://gh-proxy.org/https://github.com/LGUG2Z/komorebi/releases/download/nightly/komorebi-nightly-aarch64-pc-windows-msvc.zip",
             "hash": "60dd8874ac2635aaf565a11ede2fba0fcd9d0873cdcba66d13acc445ecf61245"
         }
     },
@@ -36,10 +36,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/LGUG2Z/komorebi/releases/download/nightly/komorebi-nightly-x86_64-pc-windows-msvc.zip"
+                "url": "https://gh-proxy.org/https://github.com/LGUG2Z/komorebi/releases/download/nightly/komorebi-nightly-x86_64-pc-windows-msvc.zip"
             },
             "arm64": {
-                "url": "https://ghp.ci/https://github.com/LGUG2Z/komorebi/releases/download/nightly/komorebi-nightly-aarch64-pc-windows-msvc.zip"
+                "url": "https://gh-proxy.org/https://github.com/LGUG2Z/komorebi/releases/download/nightly/komorebi-nightly-aarch64-pc-windows-msvc.zip"
             }
         },
         "hash": {

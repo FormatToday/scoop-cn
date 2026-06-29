@@ -4,15 +4,15 @@
     "homepage": "https://plezy.app",
     "license": "GPL-3.0-only",
     "suggest": {
-        "vcredist": "scoop-cn/vcredist2022"
+        "vcredist": "vcredist2022"
     },
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/edde746/plezy/releases/download/2.8.0/plezy-windows-x64-portable.7z",
+            "url": "https://gh-proxy.org/https://github.com/edde746/plezy/releases/download/2.8.0/plezy-windows-x64-portable.7z",
             "hash": "9af9cb08d7609c98b065bb51ddfb6076fc59eb3fa8c92391aa0c564e624f0e09"
         },
         "arm64": {
-            "url": "https://ghp.ci/https://github.com/edde746/plezy/releases/download/2.8.0/plezy-windows-arm64-portable.7z",
+            "url": "https://gh-proxy.org/https://github.com/edde746/plezy/releases/download/2.8.0/plezy-windows-arm64-portable.7z",
             "hash": "1e07ce67b8e30c103ade7d43e3fe044b08cb5efd482e65d051da8c331682a514"
         }
     },
@@ -28,10 +28,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/edde746/plezy/releases/download/$version/plezy-windows-x64-portable.7z"
+                "url": "https://gh-proxy.org/https://github.com/edde746/plezy/releases/download/$version/plezy-windows-x64-portable.7z"
             },
             "arm64": {
-                "url": "https://ghp.ci/https://github.com/edde746/plezy/releases/download/$version/plezy-windows-arm64-portable.7z"
+                "url": "https://gh-proxy.org/https://github.com/edde746/plezy/releases/download/$version/plezy-windows-arm64-portable.7z"
             }
         }
     }

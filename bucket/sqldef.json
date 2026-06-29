@@ -6,9 +6,9 @@
     "architecture": {
         "64bit": {
             "url": [
-                "https://ghp.ci/https://github.com/sqldef/sqldef/releases/download/v3.11.12/mssqldef_windows_amd64.zip",
-                "https://ghp.ci/https://github.com/sqldef/sqldef/releases/download/v3.11.12/mysqldef_windows_amd64.zip",
-                "https://ghp.ci/https://github.com/sqldef/sqldef/releases/download/v3.11.12/sqlite3def_windows_amd64.zip"
+                "https://gh-proxy.org/https://github.com/sqldef/sqldef/releases/download/v3.11.12/mssqldef_windows_amd64.zip",
+                "https://gh-proxy.org/https://github.com/sqldef/sqldef/releases/download/v3.11.12/mysqldef_windows_amd64.zip",
+                "https://gh-proxy.org/https://github.com/sqldef/sqldef/releases/download/v3.11.12/sqlite3def_windows_amd64.zip"
             ],
             "hash": [
                 "a9b9b8e06d43475b1b1ad6b03449f556efb5a1dcc36bfb0efa14937c9facf9d6",
@@ -27,9 +27,9 @@
         "architecture": {
             "64bit": {
                 "url": [
-                    "https://ghp.ci/https://github.com/sqldef/sqldef/releases/download/v$version/mssqldef_windows_amd64.zip",
-                    "https://ghp.ci/https://github.com/sqldef/sqldef/releases/download/v$version/mysqldef_windows_amd64.zip",
-                    "https://ghp.ci/https://github.com/sqldef/sqldef/releases/download/v$version/sqlite3def_windows_amd64.zip"
+                    "https://gh-proxy.org/https://github.com/sqldef/sqldef/releases/download/v$version/mssqldef_windows_amd64.zip",
+                    "https://gh-proxy.org/https://github.com/sqldef/sqldef/releases/download/v$version/mysqldef_windows_amd64.zip",
+                    "https://gh-proxy.org/https://github.com/sqldef/sqldef/releases/download/v$version/sqlite3def_windows_amd64.zip"
                 ]
             }
         }

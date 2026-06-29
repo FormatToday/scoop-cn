@@ -4,11 +4,11 @@
     "homepage": "https://koharu.rs/",
     "license": "GPL-3.0-only",
     "suggest": {
-        "vcredist": "scoop-cn/vcredist2022"
+        "vcredist": "vcredist2022"
     },
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/mayocream/koharu/releases/download/0.61.2/koharu_windows_x64.exe#/koharu.exe",
+            "url": "https://gh-proxy.org/https://github.com/mayocream/koharu/releases/download/0.61.2/koharu_windows_x64.exe#/koharu.exe",
             "hash": "8795dd1a3845ca1dd246ed1534b00a39511c2ff1cc0ad05882c1b3116a33de3f"
         }
     },
@@ -34,7 +34,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/mayocream/koharu/releases/download/$version/koharu_windows_x64.exe#/koharu.exe"
+                "url": "https://gh-proxy.org/https://github.com/mayocream/koharu/releases/download/$version/koharu_windows_x64.exe#/koharu.exe"
             }
         }
     }

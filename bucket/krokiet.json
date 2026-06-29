@@ -5,7 +5,7 @@
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/qarmin/czkawka/releases/download/12.0.0/windows_krokiet_on_linux.exe",
+            "url": "https://gh-proxy.org/https://github.com/qarmin/czkawka/releases/download/12.0.0/windows_krokiet_on_linux.exe",
             "hash": "6c65904eeb1de5b76a338906bc09bee5a4ddf1c977fff836a6cb3a41023a3dd4"
         }
     },
@@ -19,7 +19,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/qarmin/czkawka/releases/download/$version/windows_krokiet_on_linux.exe"
+                "url": "https://gh-proxy.org/https://github.com/qarmin/czkawka/releases/download/$version/windows_krokiet_on_linux.exe"
             }
         }
     }

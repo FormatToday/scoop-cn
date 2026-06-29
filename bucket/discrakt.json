@@ -4,11 +4,11 @@
     "homepage": "https://github.com/afonsojramos/discrakt",
     "license": "MIT",
     "suggest": {
-        "vcredist": "scoop-cn/vcredist2022"
+        "vcredist": "vcredist2022"
     },
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/afonsojramos/discrakt/releases/download/v4.0.0/discrakt_win64.exe#/discrakt.exe",
+            "url": "https://gh-proxy.org/https://github.com/afonsojramos/discrakt/releases/download/v4.0.0/discrakt_win64.exe#/discrakt.exe",
             "hash": "cbe2e742634c60004236c002ae9c5e3c81b6e9ba34d2fbd5cf6295330aa1349b"
         }
     },
@@ -23,7 +23,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/afonsojramos/discrakt/releases/download/v$version/discrakt_win64.exe#/discrakt.exe"
+                "url": "https://gh-proxy.org/https://github.com/afonsojramos/discrakt/releases/download/v$version/discrakt_win64.exe#/discrakt.exe"
             }
         }
     }

@@ -5,7 +5,7 @@
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/yurijmikhalevich/rclip/releases/download/v3.2.4/rclip-3.2.4.msi#/dl.msi_",
+            "url": "https://gh-proxy.org/https://github.com/yurijmikhalevich/rclip/releases/download/v3.2.4/rclip-3.2.4.msi#/dl.msi_",
             "hash": "76aa22fa930b6299949ea80f0c8520ccd6de3dc490879b2f922a404f6e35d446"
         }
     },
@@ -19,7 +19,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/yurijmikhalevich/rclip/releases/download/v$version/rclip-$version.msi#/dl.msi_"
+                "url": "https://gh-proxy.org/https://github.com/yurijmikhalevich/rclip/releases/download/v$version/rclip-$version.msi#/dl.msi_"
             }
         }
     }

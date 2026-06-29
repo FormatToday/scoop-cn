@@ -4,11 +4,11 @@
     "homepage": "https://cryptomator.org",
     "license": "GPL-3.0-only",
     "suggest": {
-        "WinFSP": "scoop-cn/winfsp-np"
+        "WinFSP": "winfsp-np"
     },
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/cryptomator/cryptomator/releases/download/1.19.2/Cryptomator-1.19.2-x64.msi",
+            "url": "https://gh-proxy.org/https://github.com/cryptomator/cryptomator/releases/download/1.19.2/Cryptomator-1.19.2-x64.msi",
             "hash": "4b34ba8d6525ad258de34c8098f9af2240b1874c6151862f1db1f4f2193911d4"
         }
     },
@@ -32,7 +32,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/cryptomator/cryptomator/releases/download/$version/Cryptomator-$version-x64.msi"
+                "url": "https://gh-proxy.org/https://github.com/cryptomator/cryptomator/releases/download/$version/Cryptomator-$version-x64.msi"
             }
         },
         "hash": {

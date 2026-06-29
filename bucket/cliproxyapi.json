@@ -10,11 +10,11 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/router-for-me/CLIProxyAPI/releases/download/v7.2.45/CLIProxyAPI_7.2.45_windows_amd64.zip",
+            "url": "https://gh-proxy.org/https://github.com/router-for-me/CLIProxyAPI/releases/download/v7.2.45/CLIProxyAPI_7.2.45_windows_amd64.zip",
             "hash": "a2a15b86c4f684ce7eff7e1d344606096502465849c56c284c1b031d819b7ce1"
         },
         "arm64": {
-            "url": "https://ghp.ci/https://github.com/router-for-me/CLIProxyAPI/releases/download/v7.2.45/CLIProxyAPI_7.2.45_windows_aarch64.zip",
+            "url": "https://gh-proxy.org/https://github.com/router-for-me/CLIProxyAPI/releases/download/v7.2.45/CLIProxyAPI_7.2.45_windows_aarch64.zip",
             "hash": "6cfbffbcdf19d3bd202844db020099f077516ebadda7492795359d5ed7d55db7"
         }
     },
@@ -37,10 +37,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/router-for-me/CLIProxyAPI/releases/download/v$version/CLIProxyAPI_$version_windows_amd64.zip"
+                "url": "https://gh-proxy.org/https://github.com/router-for-me/CLIProxyAPI/releases/download/v$version/CLIProxyAPI_$version_windows_amd64.zip"
             },
             "arm64": {
-                "url": "https://ghp.ci/https://github.com/router-for-me/CLIProxyAPI/releases/download/v$version/CLIProxyAPI_$version_windows_aarch64.zip"
+                "url": "https://gh-proxy.org/https://github.com/router-for-me/CLIProxyAPI/releases/download/v$version/CLIProxyAPI_$version_windows_aarch64.zip"
             }
         },
         "hash": {

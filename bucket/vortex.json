@@ -4,12 +4,12 @@
     "homepage": "https://nexusmods.com/about/vortex",
     "license": "GPL-3.0",
     "suggest": {
-        "vcredist": "scoop-cn/vcredist2022",
-        "windowsdesktop-runtime": "scoop-cn/windowsdesktop-runtime-6.0"
+        "vcredist": "vcredist2022",
+        "windowsdesktop-runtime": "windowsdesktop-runtime-6.0"
     },
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/Nexus-Mods/Vortex/releases/download/v2.1.1/vortex-setup-2.1.1.exe#/dl.7z",
+            "url": "https://gh-proxy.org/https://github.com/Nexus-Mods/Vortex/releases/download/v2.1.1/vortex-setup-2.1.1.exe#/dl.7z",
             "hash": "e7c6d29df92387ec7a698f8b74502af72e27727f7d5cc071b3f9b4461dfa0f76"
         }
     },
@@ -27,7 +27,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/Nexus-Mods/Vortex/releases/download/v$version/vortex-setup-$version.exe#/dl.7z"
+                "url": "https://gh-proxy.org/https://github.com/Nexus-Mods/Vortex/releases/download/v$version/vortex-setup-$version.exe#/dl.7z"
             }
         }
     }

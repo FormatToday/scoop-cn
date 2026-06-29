@@ -5,7 +5,7 @@
     "license": "GPL-2.0-only",
     "architecture": {
         "arm64": {
-            "url": "https://ghp.ci/https://github.com/obsproject/obs-studio/releases/download/32.2.0-beta2/OBS-Studio-32.2.0-beta2-Windows-arm64.zip",
+            "url": "https://gh-proxy.org/https://github.com/obsproject/obs-studio/releases/download/32.2.0-beta2/OBS-Studio-32.2.0-beta2-Windows-arm64.zip",
             "hash": "d8998e8f0d7ae05da07a62c4b31dacfbd9a0f22e819736d045d0a6db85afc9db",
             "shortcuts": [
                 [
@@ -15,7 +15,7 @@
             ]
         },
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/obsproject/obs-studio/releases/download/32.2.0-beta2/OBS-Studio-32.2.0-beta2-Windows-x64.zip",
+            "url": "https://gh-proxy.org/https://github.com/obsproject/obs-studio/releases/download/32.2.0-beta2/OBS-Studio-32.2.0-beta2-Windows-x64.zip",
             "hash": "38914895b20a6a2ffad4ed54ed41bf5ab2461fb10192cddc721eabccff526eae",
             "shortcuts": [
                 [
@@ -38,10 +38,10 @@
     "autoupdate": {
         "architecture": {
             "arm64": {
-                "url": "https://ghp.ci/https://github.com/obsproject/obs-studio/releases/download/$version/OBS-Studio-$version-Windows-arm64.zip"
+                "url": "https://gh-proxy.org/https://github.com/obsproject/obs-studio/releases/download/$version/OBS-Studio-$version-Windows-arm64.zip"
             },
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/obsproject/obs-studio/releases/download/$version/OBS-Studio-$version-Windows-x64.zip"
+                "url": "https://gh-proxy.org/https://github.com/obsproject/obs-studio/releases/download/$version/OBS-Studio-$version-Windows-x64.zip"
             }
         }
     }

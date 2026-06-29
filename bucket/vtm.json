@@ -5,15 +5,15 @@
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/directvt/vtm/releases/download/v2026.06.29/vtm_windows_x86_64.7z",
+            "url": "https://gh-proxy.org/https://github.com/directvt/vtm/releases/download/v2026.06.29/vtm_windows_x86_64.7z",
             "hash": "f87b3f6f1bdf674ebda6d41f22cfcb4a26b44625fca8417343f02da8ee602666"
         },
         "32bit": {
-            "url": "https://ghp.ci/https://github.com/directvt/vtm/releases/download/v2026.06.29/vtm_windows_x86.7z",
+            "url": "https://gh-proxy.org/https://github.com/directvt/vtm/releases/download/v2026.06.29/vtm_windows_x86.7z",
             "hash": "35338c0c00f56fd70caebcc7759aee85bb1d167bcd02230f401bd1a90696692a"
         },
         "arm64": {
-            "url": "https://ghp.ci/https://github.com/directvt/vtm/releases/download/v2026.06.29/vtm_windows_arm64.7z",
+            "url": "https://gh-proxy.org/https://github.com/directvt/vtm/releases/download/v2026.06.29/vtm_windows_arm64.7z",
             "hash": "4157926cc5a9f485ad2af30d6780609b5c7adfe2685af3551a39cb124ac5e630"
         }
     },
@@ -22,13 +22,13 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/directvt/vtm/releases/download/v$version/vtm_windows_x86_64.7z"
+                "url": "https://gh-proxy.org/https://github.com/directvt/vtm/releases/download/v$version/vtm_windows_x86_64.7z"
             },
             "32bit": {
-                "url": "https://ghp.ci/https://github.com/directvt/vtm/releases/download/v$version/vtm_windows_x86.7z"
+                "url": "https://gh-proxy.org/https://github.com/directvt/vtm/releases/download/v$version/vtm_windows_x86.7z"
             },
             "arm64": {
-                "url": "https://ghp.ci/https://github.com/directvt/vtm/releases/download/v$version/vtm_windows_arm64.7z"
+                "url": "https://gh-proxy.org/https://github.com/directvt/vtm/releases/download/v$version/vtm_windows_arm64.7z"
             }
         }
     }

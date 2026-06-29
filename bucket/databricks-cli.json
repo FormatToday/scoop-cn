@@ -9,11 +9,11 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/databricks/cli/releases/download/v1.5.0/databricks_cli_1.5.0_windows_amd64.zip",
+            "url": "https://gh-proxy.org/https://github.com/databricks/cli/releases/download/v1.5.0/databricks_cli_1.5.0_windows_amd64.zip",
             "hash": "f01ae7692538e4e91ba7e3fa56f70cf8cdad3767f7f17729035b334a151aa9b8"
         },
         "arm64": {
-            "url": "https://ghp.ci/https://github.com/databricks/cli/releases/download/v1.5.0/databricks_cli_1.5.0_windows_arm64.zip",
+            "url": "https://gh-proxy.org/https://github.com/databricks/cli/releases/download/v1.5.0/databricks_cli_1.5.0_windows_arm64.zip",
             "hash": "f7020aa2c978bdb9448771b242912eb8034fb6d7c4f7b9ec437d2e4b1577d0ed"
         }
     },
@@ -25,10 +25,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/databricks/cli/releases/download/v$version/databricks_cli_$version_windows_amd64.zip"
+                "url": "https://gh-proxy.org/https://github.com/databricks/cli/releases/download/v$version/databricks_cli_$version_windows_amd64.zip"
             },
             "arm64": {
-                "url": "https://ghp.ci/https://github.com/databricks/cli/releases/download/v$version/databricks_cli_$version_windows_arm64.zip"
+                "url": "https://gh-proxy.org/https://github.com/databricks/cli/releases/download/v$version/databricks_cli_$version_windows_arm64.zip"
             }
         },
         "hash": {

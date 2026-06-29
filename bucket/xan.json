@@ -5,7 +5,7 @@
     "license": "Unlincense|MIT",
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/medialab/xan/releases/download/0.59.0/xan-x86_64-pc-windows-msvc.zip",
+            "url": "https://gh-proxy.org/https://github.com/medialab/xan/releases/download/0.59.0/xan-x86_64-pc-windows-msvc.zip",
             "hash": "a23e45744dc804745318c927be1e3c657c2592be3622073a59a481aa5e9b8423"
         }
     },
@@ -14,7 +14,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/medialab/xan/releases/download/$version/xan-x86_64-pc-windows-msvc.zip",
+                "url": "https://gh-proxy.org/https://github.com/medialab/xan/releases/download/$version/xan-x86_64-pc-windows-msvc.zip",
                 "hash": {
                     "url": "$baseurl/xan-x86_64-pc-windows-msvc.sha256"
                 }

@@ -4,11 +4,11 @@
     "homepage": "https://github.com/esrlabs/chipmunk",
     "license": "Apache-2.0",
     "suggest": {
-        "vcredist": "scoop-cn/vcredist2022"
+        "vcredist": "vcredist2022"
     },
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/esrlabs/chipmunk/releases/download/4.0.1/chipmunk@4.0.1-win64-portable.tgz",
+            "url": "https://gh-proxy.org/https://github.com/esrlabs/chipmunk/releases/download/4.0.1/chipmunk@4.0.1-win64-portable.tgz",
             "hash": "1991ddf9ed4aee62fd3ebbcc9620ff4d97227c9e9c169dc99d64b67c816468fd"
         }
     },
@@ -22,7 +22,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/esrlabs/chipmunk/releases/download/$version/chipmunk@$version-win64-portable.tgz"
+                "url": "https://gh-proxy.org/https://github.com/esrlabs/chipmunk/releases/download/$version/chipmunk@$version-win64-portable.tgz"
             }
         }
     }

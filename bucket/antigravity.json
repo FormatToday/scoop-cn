@@ -17,7 +17,7 @@
         "You may need to move the persisted data manually after installing Antigravity IDE v2.x."
     ],
     "suggest": {
-        "Antigravity IDE": "scoop-cn/antigravity-ide"
+        "Antigravity IDE": "antigravity-ide"
     },
     "architecture": {
         "64bit": {

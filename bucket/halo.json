@@ -4,15 +4,15 @@
     "homepage": "https://halo.run",
     "license": "GPL-3.0-or-later",
     "suggest": {
-        "JDK": "scoop-cn/openjdk"
+        "JDK": "openjdk"
     },
-    "url": "https://ghp.ci/https://github.com/halo-dev/halo/releases/download/v2.25.4/halo-2.25.4.jar#/halo.jar",
+    "url": "https://gh-proxy.org/https://github.com/halo-dev/halo/releases/download/v2.25.4/halo-2.25.4.jar#/halo.jar",
     "hash": "537756c406ff013db34d47a3740093ed2cd1cbdedf5b3da34ca8017de61aa04e",
     "bin": "halo.jar",
     "checkver": {
         "github": "https://github.com/halo-dev/halo"
     },
     "autoupdate": {
-        "url": "https://ghp.ci/https://github.com/halo-dev/halo/releases/download/v$version/halo-$version.jar#/halo.jar"
+        "url": "https://gh-proxy.org/https://github.com/halo-dev/halo/releases/download/v$version/halo-$version.jar#/halo.jar"
     }
 }

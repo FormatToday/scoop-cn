@@ -4,9 +4,9 @@
     "homepage": "https://karatelabs.github.io/karate/",
     "license": "MIT",
     "suggest": {
-        "Java": "scoop-cn/openjdk"
+        "Java": "openjdk"
     },
-    "url": "https://ghp.ci/https://github.com/karatelabs/karate/releases/download/v2.1.0/karate-2.1.0.jar#/karate.jar",
+    "url": "https://gh-proxy.org/https://github.com/karatelabs/karate/releases/download/v2.1.0/karate-2.1.0.jar#/karate.jar",
     "hash": "226161aa304c617444399fb48f42080119ad350a427fbd66da7531650bac28aa",
     "pre_install": [
         "$cont = \"@echo off`r`n\" + 'cd /d \"%~dp0\"' + \"`r`njava -cp karate.jar;. com.intuit.karate.Main %*\"",
@@ -18,6 +18,6 @@
         "github": "https://github.com/karatelabs/karate"
     },
     "autoupdate": {
-        "url": "https://ghp.ci/https://github.com/karatelabs/karate/releases/download/v$version/karate-$version.jar#/karate.jar"
+        "url": "https://gh-proxy.org/https://github.com/karatelabs/karate/releases/download/v$version/karate-$version.jar#/karate.jar"
     }
 }

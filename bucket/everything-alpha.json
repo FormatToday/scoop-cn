@@ -4,7 +4,7 @@
     "homepage": "https://www.voidtools.com",
     "license": "MIT",
     "notes": [
-        "Everything 1.5 is now in BETA. The BETA version is available in Scoop as \"scoop-cn/everything-beta\".",
+        "Everything 1.5 is now in BETA. The BETA version is available in Scoop as \"everything-beta\".",
         "For upgrade guide, please visit: https://www.voidtools.com/forum/viewtopic.php?t=17663#portable",
         "",
         "To add Everything to right-click context menu, run:",
@@ -25,11 +25,11 @@
         "if (Test-Path \"$dir\\Everything64.exe\") { Rename-Item \"$dir\\Everything64.exe\" 'Everything.exe' }",
         "if (!(Test-Path \"$persist_dir\\Everything*.ini\")) { Invoke-ExternalCommand \"$dir\\Everything.exe\" -Args @('-install-config', 'null') | Out-Null }",
         "Get-ChildItem \"$persist_dir\\*\" -Include 'Bookmarks*.csv', 'Everything.lng', 'Everything*.db', 'Everything*.ini', 'Filters*.csv', 'Plugins*.ini', 'Run History*.csv', 'Search History*.csv', 'Session*.json', 'NO_ALPHA_INSTANCE', 'Omit Results.csv' | Copy-Item -Destination \"$dir\" -ErrorAction SilentlyContinue",
-        "Copy-Item \"$bucketsdir\\scoop-cn\\scripts\\everything\\uninstall-context.reg\" \"$dir\\\""
+        "Copy-Item \"$bucketsdir\\main\\scripts\\everything\\uninstall-context.reg\" \"$dir\\\""
     ],
     "post_install": [
         "$app_path = \"$dir\\Everything.exe\".Replace('\\', '\\\\')",
-        "$reg_content = Get-Content \"$bucketsdir\\scoop-cn\\scripts\\everything\\install-context.reg\"",
+        "$reg_content = Get-Content \"$bucketsdir\\main\\scripts\\everything\\install-context.reg\"",
         "$reg_content = $reg_content.replace('$app_path', $app_path)",
         "Set-Content \"$dir\\install-context.reg\" $reg_content -Encoding ASCII"
     ],

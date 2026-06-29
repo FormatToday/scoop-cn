@@ -10,13 +10,13 @@
     "notes": ".NET Framework 4.8 is required.",
     "suggest": {
         "vcredist": [
-            "scoop-cn/vcredist2010",
-            "scoop-cn/vcredist2022"
+            "vcredist2010",
+            "vcredist2022"
         ]
     },
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/TASVideos/BizHawk/releases/download/2.11.1/BizHawk-2.11.1-win-x64.zip",
+            "url": "https://gh-proxy.org/https://github.com/TASVideos/BizHawk/releases/download/2.11.1/BizHawk-2.11.1-win-x64.zip",
             "hash": "dd7cbd5e205b09c5bce6afabc4f8aa525acc0bbeb9753b198a8db3fe6a5e5717"
         }
     },
@@ -90,7 +90,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/TASVideos/BizHawk/releases/download/$version/BizHawk-$version-win-x64.zip"
+                "url": "https://gh-proxy.org/https://github.com/TASVideos/BizHawk/releases/download/$version/BizHawk-$version-win-x64.zip"
             }
         }
     }

@@ -5,7 +5,7 @@
     "license": "AGPL-3.0-only,BSD-3-Clause",
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/browseros-ai/BrowserOS/releases/download/v0.46.0/BrowserOS_v0.46.0_x64_installer.exe#/dl.7z",
+            "url": "https://gh-proxy.org/https://github.com/browseros-ai/BrowserOS/releases/download/v0.46.0/BrowserOS_v0.46.0_x64_installer.exe#/dl.7z",
             "hash": "0f4bcec0a89378438d24f47dad0b17d3dcefa6b09cae1d97ee8f57394e03904c"
         }
     },
@@ -37,7 +37,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/browseros-ai/BrowserOS/releases/download/$matchTag/BrowserOS_v$version_x64_installer.exe#/dl.7z"
+                "url": "https://gh-proxy.org/https://github.com/browseros-ai/BrowserOS/releases/download/$matchTag/BrowserOS_v$version_x64_installer.exe#/dl.7z"
             }
         }
     }

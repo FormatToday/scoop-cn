@@ -6,8 +6,8 @@
     "architecture": {
         "64bit": {
             "url": [
-                "https://ghp.ci/https://github.com/sigoden/window-switcher/releases/download/v1.18.0/window-switcher-v1.18.0-windows-64.zip",
-                "https://ghp.ci/https://github.com/sigoden/window-switcher/raw/v1.18.0/window-switcher.ini"
+                "https://gh-proxy.org/https://github.com/sigoden/window-switcher/releases/download/v1.18.0/window-switcher-v1.18.0-windows-64.zip",
+                "https://gh-proxy.org/https://github.com/sigoden/window-switcher/raw/v1.18.0/window-switcher.ini"
             ],
             "hash": [
                 "8370d3e45b86d9681b87092e1a32fc2267f566770e9b090e66973977074d83bd",
@@ -16,8 +16,8 @@
         },
         "arm64": {
             "url": [
-                "https://ghp.ci/https://github.com/sigoden/window-switcher/releases/download/v1.18.0/window-switcher-v1.18.0-windows-arm64.zip",
-                "https://ghp.ci/https://github.com/sigoden/window-switcher/raw/v1.18.0/window-switcher.ini"
+                "https://gh-proxy.org/https://github.com/sigoden/window-switcher/releases/download/v1.18.0/window-switcher-v1.18.0-windows-arm64.zip",
+                "https://gh-proxy.org/https://github.com/sigoden/window-switcher/raw/v1.18.0/window-switcher.ini"
             ],
             "hash": [
                 "a77a747f66e1e869104c94e522b44f35979e996c5a1bd65e216e46863d57b085",
@@ -37,14 +37,14 @@
         "architecture": {
             "64bit": {
                 "url": [
-                    "https://ghp.ci/https://github.com/sigoden/window-switcher/releases/download/v$version/window-switcher-v$version-windows-64.zip",
-                    "https://ghp.ci/https://github.com/sigoden/window-switcher/raw/v$version/window-switcher.ini"
+                    "https://gh-proxy.org/https://github.com/sigoden/window-switcher/releases/download/v$version/window-switcher-v$version-windows-64.zip",
+                    "https://gh-proxy.org/https://github.com/sigoden/window-switcher/raw/v$version/window-switcher.ini"
                 ]
             },
             "arm64": {
                 "url": [
-                    "https://ghp.ci/https://github.com/sigoden/window-switcher/releases/download/v$version/window-switcher-v$version-windows-arm64.zip",
-                    "https://ghp.ci/https://github.com/sigoden/window-switcher/raw/v$version/window-switcher.ini"
+                    "https://gh-proxy.org/https://github.com/sigoden/window-switcher/releases/download/v$version/window-switcher-v$version-windows-arm64.zip",
+                    "https://gh-proxy.org/https://github.com/sigoden/window-switcher/raw/v$version/window-switcher.ini"
                 ]
             }
         }

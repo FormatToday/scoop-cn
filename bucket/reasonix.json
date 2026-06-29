@@ -5,11 +5,11 @@
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/esengine/DeepSeek-Reasonix/releases/download/v1.13.0/reasonix-windows-amd64.zip",
+            "url": "https://gh-proxy.org/https://github.com/esengine/DeepSeek-Reasonix/releases/download/v1.13.0/reasonix-windows-amd64.zip",
             "hash": "d8160c580539299944321db3548e257b06eab44769e51abc869486e69fac4692"
         },
         "arm64": {
-            "url": "https://ghp.ci/https://github.com/esengine/DeepSeek-Reasonix/releases/download/v1.13.0/reasonix-windows-arm64.zip",
+            "url": "https://gh-proxy.org/https://github.com/esengine/DeepSeek-Reasonix/releases/download/v1.13.0/reasonix-windows-arm64.zip",
             "hash": "418ed1ae82618127706a43b5501a4c82835ca91ed571b1a1796a80eb25c4e2a8"
         }
     },
@@ -22,10 +22,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/esengine/DeepSeek-Reasonix/releases/download/v$version/reasonix-windows-amd64.zip"
+                "url": "https://gh-proxy.org/https://github.com/esengine/DeepSeek-Reasonix/releases/download/v$version/reasonix-windows-amd64.zip"
             },
             "arm64": {
-                "url": "https://ghp.ci/https://github.com/esengine/DeepSeek-Reasonix/releases/download/v$version/reasonix-windows-arm64.zip"
+                "url": "https://gh-proxy.org/https://github.com/esengine/DeepSeek-Reasonix/releases/download/v$version/reasonix-windows-arm64.zip"
             }
         },
         "hash": {

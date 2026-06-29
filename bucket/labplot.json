@@ -5,7 +5,7 @@
     "license": "GPL-2.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://mirrors.ustc.edu.cn/kde/stable/labplot/labplot-2.12.1-x86_64-setup.exe#/dl.7z",
+            "url": "https://download.kde.org/stable/labplot/labplot-2.12.1-x86_64-setup.exe#/dl.7z",
             "hash": "122f03b8939571e3951982376c4a7b11b6080eb8770ec35fdc4257215a4981a8"
         }
     },
@@ -20,13 +20,13 @@
         ]
     ],
     "checkver": {
-        "url": "https://mirrors.ustc.edu.cn/kde/stable/labplot/?C=M;O=D",
+        "url": "https://download.kde.org/stable/labplot/?C=M;O=D",
         "regex": "labplot-([\\d.]+)-(64bit|x86_64)-setup\\.exe"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://mirrors.ustc.edu.cn/kde/stable/labplot/labplot-$version-x86_64-setup.exe#/dl.7z"
+                "url": "https://download.kde.org/stable/labplot/labplot-$version-x86_64-setup.exe#/dl.7z"
             }
         },
         "hash": {

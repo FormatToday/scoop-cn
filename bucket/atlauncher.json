@@ -5,9 +5,9 @@
     "license": "GPL-3.0-only",
     "notes": "This application requires JRE 1.8 or higher to run.",
     "suggest": {
-        "JRE": "scoop-cn/temurin17-jre"
+        "JRE": "temurin17-jre"
     },
-    "url": "https://ghp.ci/https://github.com/ATLauncher/ATLauncher/releases/download/v3.4.41.0/ATLauncher-3.4.41.0.exe#/ATLauncher.exe",
+    "url": "https://gh-proxy.org/https://github.com/ATLauncher/ATLauncher/releases/download/v3.4.41.0/ATLauncher-3.4.41.0.exe#/ATLauncher.exe",
     "hash": "5cdba639ee37d173d17716346fb3e3114e1977b54f861b9da059f2a9c4f145aa",
     "bin": "ATLauncher.exe",
     "shortcuts": [
@@ -35,6 +35,6 @@
         "regex": "v([\\d.]+)"
     },
     "autoupdate": {
-        "url": "https://ghp.ci/https://github.com/ATLauncher/ATLauncher/releases/download/v$version/ATLauncher-$version.exe#/ATLauncher.exe"
+        "url": "https://gh-proxy.org/https://github.com/ATLauncher/ATLauncher/releases/download/v$version/ATLauncher-$version.exe#/ATLauncher.exe"
     }
 }

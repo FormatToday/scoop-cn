@@ -5,7 +5,7 @@
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/hotovo/aider-desk/releases/download/v0.71.0/aider-desk-0.71.0-setup.exe#/dl.7z",
+            "url": "https://gh-proxy.org/https://github.com/hotovo/aider-desk/releases/download/v0.71.0/aider-desk-0.71.0-setup.exe#/dl.7z",
             "hash": "sha512:4fd39c21c92ce1de5b4b2c6fbf4038a9aba2ceab86bacb4604d91db0c327660da22096c362a837d347529edae5e79e7334e3c8e2221f7370ea3725f85b46b32b",
             "pre_install": [
                 "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
@@ -27,7 +27,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/hotovo/aider-desk/releases/download/v$version/aider-desk-$version-setup.exe#/dl.7z"
+                "url": "https://gh-proxy.org/https://github.com/hotovo/aider-desk/releases/download/v$version/aider-desk-$version-setup.exe#/dl.7z"
             }
         },
         "hash": {

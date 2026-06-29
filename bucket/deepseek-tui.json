@@ -6,13 +6,13 @@
     "notes": "This manifest is deprecated and scheduled for removal on 2026-09-01. Please use `main/codewhale` instead.",
     "license": "MIT",
     "suggest": {
-        "vcredist": "scoop-cn/vcredist2022"
+        "vcredist": "vcredist2022"
     },
     "architecture": {
         "64bit": {
             "url": [
-                "https://ghp.ci/https://github.com/Hmbown/CodeWhale/releases/download/v0.8.65/codewhale-tui-windows-x64.exe#/codewhale-tui.exe",
-                "https://ghp.ci/https://github.com/Hmbown/CodeWhale/releases/download/v0.8.65/codewhale-windows-x64.exe#/codewhale.exe"
+                "https://gh-proxy.org/https://github.com/Hmbown/CodeWhale/releases/download/v0.8.65/codewhale-tui-windows-x64.exe#/codewhale-tui.exe",
+                "https://gh-proxy.org/https://github.com/Hmbown/CodeWhale/releases/download/v0.8.65/codewhale-windows-x64.exe#/codewhale.exe"
             ],
             "hash": [
                 "3d5997fb82134119f062744e85d687a491667b6b7904897faf6a696f289cfb5d",
@@ -28,8 +28,8 @@
         "architecture": {
             "64bit": {
                 "url": [
-                    "https://ghp.ci/https://github.com/Hmbown/CodeWhale/releases/download/v$version/codewhale-tui-windows-x64.exe#/codewhale-tui.exe",
-                    "https://ghp.ci/https://github.com/Hmbown/CodeWhale/releases/download/v$version/codewhale-windows-x64.exe#/codewhale.exe"
+                    "https://gh-proxy.org/https://github.com/Hmbown/CodeWhale/releases/download/v$version/codewhale-tui-windows-x64.exe#/codewhale-tui.exe",
+                    "https://gh-proxy.org/https://github.com/Hmbown/CodeWhale/releases/download/v$version/codewhale-windows-x64.exe#/codewhale.exe"
                 ]
             }
         },

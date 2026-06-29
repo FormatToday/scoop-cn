@@ -12,11 +12,11 @@
     "shortcuts": [
         [
             "RDCMan.exe",
-            "SysInternals/RDCMan"
+            "RDCMan"
         ]
     ],
     "checkver": {
-        "url": "https://ghp.ci/https://raw.githubusercontent.com/MicrosoftDocs/sysinternals/main/sysinternals/downloads/rdcman.md",
+        "url": "https://gh-proxy.org/https://raw.githubusercontent.com/MicrosoftDocs/sysinternals/main/sysinternals/downloads/rdcman.md",
         "regex": "#.*?v([\\d.]+)"
     },
     "autoupdate": {

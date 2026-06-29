@@ -4,9 +4,9 @@
     "description": "Open source, mod-friendly Android + Desktop remake of Civ V, made with LibGDX",
     "license": "MPL-2.0",
     "suggest": {
-        "Java Runtime Environment": "scoop-cn/temurin-jre"
+        "Java Runtime Environment": "temurin-jre"
     },
-    "url": "https://ghp.ci/https://github.com/yairm210/Unciv/releases/download/4.20.16/Unciv-Windows64.zip",
+    "url": "https://gh-proxy.org/https://github.com/yairm210/Unciv/releases/download/4.20.16/Unciv-Windows64.zip",
     "hash": "7b9ae302f78468366585d518d2db2675e4511046c3bc1269d1a0e976e78c48cc",
     "pre_install": [
         "if (!(Test-Path \"$persist_dir\\GameSettings.json\")) {",
@@ -29,6 +29,6 @@
         "jsonpath": "$[?(@.prerelease == false && @.assets[?(@.name == 'Unciv-Windows64.zip')])].tag_name"
     },
     "autoupdate": {
-        "url": "https://ghp.ci/https://github.com/yairm210/Unciv/releases/download/$version/Unciv-Windows64.zip"
+        "url": "https://gh-proxy.org/https://github.com/yairm210/Unciv/releases/download/$version/Unciv-Windows64.zip"
     }
 }

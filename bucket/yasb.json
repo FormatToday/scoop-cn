@@ -5,11 +5,11 @@
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/amnweb/yasb/releases/download/v2.0.5/yasb-2.0.5-x64.msi",
+            "url": "https://gh-proxy.org/https://github.com/amnweb/yasb/releases/download/v2.0.5/yasb-2.0.5-x64.msi",
             "hash": "65b0cc76356a42bcd13f4721f924ea145ee3bec90db4277cf808b13bbe3d9e0f"
         },
         "arm64": {
-            "url": "https://ghp.ci/https://github.com/amnweb/yasb/releases/download/v2.0.5/yasb-2.0.5-aarch64.msi",
+            "url": "https://gh-proxy.org/https://github.com/amnweb/yasb/releases/download/v2.0.5/yasb-2.0.5-aarch64.msi",
             "hash": "2fedcb026ca693c45980707ce5b5f1b06fac18c638eb35810aecc4cd5fbe1375"
         }
     },
@@ -28,10 +28,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/amnweb/yasb/releases/download/v$version/yasb-$version-x64.msi"
+                "url": "https://gh-proxy.org/https://github.com/amnweb/yasb/releases/download/v$version/yasb-$version-x64.msi"
             },
             "arm64": {
-                "url": "https://ghp.ci/https://github.com/amnweb/yasb/releases/download/v$version/yasb-$version-aarch64.msi"
+                "url": "https://gh-proxy.org/https://github.com/amnweb/yasb/releases/download/v$version/yasb-$version-aarch64.msi"
             }
         },
         "hash": {

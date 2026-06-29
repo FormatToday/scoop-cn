@@ -5,11 +5,11 @@
     "license": "MIT",
     "suggest": {
         "Python3": "python",
-        "Everything": "scoop-cn/everything"
+        "Everything": "everything"
     },
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/Wox-launcher/Wox/releases/download/v2.3.0-beta.1/wox-windows-amd64.exe",
+            "url": "https://gh-proxy.org/https://github.com/Wox-launcher/Wox/releases/download/v2.3.0-beta.1/wox-windows-amd64.exe",
             "hash": "eea5cd512ece753bba002867fbe50639513a84fa4c8e67459aaa048d2ad8aae0"
         }
     },
@@ -29,7 +29,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/Wox-launcher/Wox/releases/download/v$version/wox-windows-amd64.exe"
+                "url": "https://gh-proxy.org/https://github.com/Wox-launcher/Wox/releases/download/v$version/wox-windows-amd64.exe"
             }
         }
     }

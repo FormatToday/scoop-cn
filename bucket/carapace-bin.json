@@ -6,15 +6,15 @@
     "notes": "Register the completers manually: https://carapace-sh.github.io/carapace-bin/setup.html",
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/carapace-sh/carapace-bin/releases/download/v1.7.1/carapace-bin_1.7.1_windows_amd64.zip",
+            "url": "https://gh-proxy.org/https://github.com/carapace-sh/carapace-bin/releases/download/v1.7.1/carapace-bin_1.7.1_windows_amd64.zip",
             "hash": "c366a85c055b2d75020939b911d1ffff2e18a8f2315b1521730f3391c13266ca"
         },
         "32bit": {
-            "url": "https://ghp.ci/https://github.com/carapace-sh/carapace-bin/releases/download/v1.7.1/carapace-bin_1.7.1_windows_386.zip",
+            "url": "https://gh-proxy.org/https://github.com/carapace-sh/carapace-bin/releases/download/v1.7.1/carapace-bin_1.7.1_windows_386.zip",
             "hash": "6dfada012adab73cbfffd6e7a6bbc28172c7ce2a8d3875e6d8ff3b26049f7d94"
         },
         "arm64": {
-            "url": "https://ghp.ci/https://github.com/carapace-sh/carapace-bin/releases/download/v1.7.1/carapace-bin_1.7.1_windows_arm64.zip",
+            "url": "https://gh-proxy.org/https://github.com/carapace-sh/carapace-bin/releases/download/v1.7.1/carapace-bin_1.7.1_windows_arm64.zip",
             "hash": "7a116e5bb04e35b610c9f9214b805b68bf5cbcc118c97f53a67a77f869d2d935"
         }
     },
@@ -25,13 +25,13 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/carapace-sh/carapace-bin/releases/download/v$version/carapace-bin_$version_windows_amd64.zip"
+                "url": "https://gh-proxy.org/https://github.com/carapace-sh/carapace-bin/releases/download/v$version/carapace-bin_$version_windows_amd64.zip"
             },
             "32bit": {
-                "url": "https://ghp.ci/https://github.com/carapace-sh/carapace-bin/releases/download/v$version/carapace-bin_$version_windows_386.zip"
+                "url": "https://gh-proxy.org/https://github.com/carapace-sh/carapace-bin/releases/download/v$version/carapace-bin_$version_windows_386.zip"
             },
             "arm64": {
-                "url": "https://ghp.ci/https://github.com/carapace-sh/carapace-bin/releases/download/v$version/carapace-bin_$version_windows_arm64.zip"
+                "url": "https://gh-proxy.org/https://github.com/carapace-sh/carapace-bin/releases/download/v$version/carapace-bin_$version_windows_arm64.zip"
             }
         },
         "hash": {

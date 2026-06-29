@@ -4,12 +4,12 @@
     "homepage": "https://jan.ai",
     "license": "AGPL-3.0-only",
     "suggest": {
-        "vcredist": "scoop-cn/vcredist2022",
-        "Microsoft Edge WebView2": "scoop-cn/webview2"
+        "vcredist": "vcredist2022",
+        "Microsoft Edge WebView2": "webview2"
     },
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/janhq/jan/releases/download/v0.8.3/Jan_0.8.3_x64-setup.exe#/dl.7z",
+            "url": "https://gh-proxy.org/https://github.com/janhq/jan/releases/download/v0.8.3/Jan_0.8.3_x64-setup.exe#/dl.7z",
             "hash": "411dc07174f2dbda01ffc807cedb9ecf75cc6730057ed59432c7ca2d466fb939"
         }
     },
@@ -27,7 +27,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/janhq/jan/releases/download/v$version/Jan_$version_x64-setup.exe#/dl.7z"
+                "url": "https://gh-proxy.org/https://github.com/janhq/jan/releases/download/v$version/Jan_$version_x64-setup.exe#/dl.7z"
             }
         }
     }

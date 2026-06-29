@@ -5,11 +5,11 @@
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://mirrors.aliyun.com/gimp/gimp/v3.2/windows/gimp-3.2.4-setup.exe",
+            "url": "https://mirrors.nju.edu.cn/gimp/gimp/v3.2/windows/gimp-3.2.4-setup.exe",
             "hash": "ec31d757dd82831d201ffcf47ffeac4175df739e0c02d5122e89aeeadfb988cc"
         },
         "arm64": {
-            "url": "https://mirrors.aliyun.com/gimp/gimp/v3.2/windows/gimp-3.2.4-setup.exe",
+            "url": "https://mirrors.nju.edu.cn/gimp/gimp/v3.2/windows/gimp-3.2.4-setup.exe",
             "hash": "ec31d757dd82831d201ffcf47ffeac4175df739e0c02d5122e89aeeadfb988cc"
         }
     },
@@ -75,7 +75,7 @@
         "replace": "${version}${build}"
     },
     "autoupdate": {
-        "url": "https://mirrors.aliyun.com/gimp/gimp/v$majorVersion.$minorVersion/windows/gimp-$matchHead-setup$matchTail.exe",
+        "url": "https://mirrors.nju.edu.cn/gimp/gimp/v$majorVersion.$minorVersion/windows/gimp-$matchHead-setup$matchTail.exe",
         "hash": {
             "url": "$baseurl/SHA256SUMS"
         },

@@ -5,17 +5,17 @@
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://npmmirror.com/mirrors/node/v22.23.1/node-v22.23.1-win-x64.7z",
+            "url": "https://mirrors.ustc.edu.cn/node/v22.23.1/node-v22.23.1-win-x64.7z",
             "hash": "036de547d4bf8b916f25a41064baed7cd61f12ce7d8cfe283d12f91688b51cb9",
             "extract_dir": "node-v22.23.1-win-x64"
         },
         "32bit": {
-            "url": "https://npmmirror.com/mirrors/node/v22.23.1/node-v22.23.1-win-x86.7z",
+            "url": "https://mirrors.ustc.edu.cn/node/v22.23.1/node-v22.23.1-win-x86.7z",
             "hash": "6b757e4bc3d293fe926a1be2727ab02d7411b95ece6c94a60d1d5de2279e846f",
             "extract_dir": "node-v22.23.1-win-x86"
         },
         "arm64": {
-            "url": "https://npmmirror.com/mirrors/node/v22.23.1/node-v22.23.1-win-arm64.7z",
+            "url": "https://mirrors.ustc.edu.cn/node/v22.23.1/node-v22.23.1-win-arm64.7z",
             "hash": "6fa537484f545991961061112624ab9c40b2d5b78e7848c096adde40e0a248c4",
             "extract_dir": "node-v22.23.1-win-arm64"
         }
@@ -33,21 +33,21 @@
         "Set-Content -Value \"prefix=$persist_dir\\bin`ncache=$persist_dir\\cache\" -Path \"$dir\\node_modules\\npm\\npmrc\""
     ],
     "checkver": {
-        "url": "https://npmmirror.com/mirrors/node/latest-v22.x/",
+        "url": "https://mirrors.ustc.edu.cn/node/latest-v22.x/",
         "regex": "node-v([\\d.]+)-win-x64\\.7z"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://npmmirror.com/mirrors/node/v$version/node-v$version-win-x64.7z",
+                "url": "https://mirrors.ustc.edu.cn/node/v$version/node-v$version-win-x64.7z",
                 "extract_dir": "node-v$version-win-x64"
             },
             "32bit": {
-                "url": "https://npmmirror.com/mirrors/node/v$version/node-v$version-win-x86.7z",
+                "url": "https://mirrors.ustc.edu.cn/node/v$version/node-v$version-win-x86.7z",
                 "extract_dir": "node-v$version-win-x86"
             },
             "arm64": {
-                "url": "https://npmmirror.com/mirrors/node/v$version/node-v$version-win-arm64.7z",
+                "url": "https://mirrors.ustc.edu.cn/node/v$version/node-v$version-win-arm64.7z",
                 "extract_dir": "node-v$version-win-arm64"
             }
         },

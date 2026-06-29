@@ -16,15 +16,15 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/PowerShell/PowerShell/releases/download/v7.6.3/PowerShell-7.6.3-win-x64.zip",
+            "url": "https://gh-proxy.org/https://github.com/PowerShell/PowerShell/releases/download/v7.6.3/PowerShell-7.6.3-win-x64.zip",
             "hash": "07ddb0d00b660459560ef82a9841da7705b27cd5dcca5a0d7b025a98eca29eca"
         },
         "32bit": {
-            "url": "https://ghp.ci/https://github.com/PowerShell/PowerShell/releases/download/v7.6.3/PowerShell-7.6.3-win-x86.zip",
+            "url": "https://gh-proxy.org/https://github.com/PowerShell/PowerShell/releases/download/v7.6.3/PowerShell-7.6.3-win-x86.zip",
             "hash": "5db68ff2d8bd763a5b379bf9299f7461c1fd6bb779a4ee8ce8782f1ace7b8110"
         },
         "arm64": {
-            "url": "https://ghp.ci/https://github.com/PowerShell/PowerShell/releases/download/v7.6.3/PowerShell-7.6.3-win-arm64.zip",
+            "url": "https://gh-proxy.org/https://github.com/PowerShell/PowerShell/releases/download/v7.6.3/PowerShell-7.6.3-win-arm64.zip",
             "hash": "2ece90557c370bb5ee03275ef41f2a49e26ea85defcf2052aca32c20dadb62c2"
         }
     },
@@ -37,8 +37,8 @@
         "if ($architecture -eq '32bit') { $pwshArch = 'x86' } else { $pwshArch = 'x64' }",
         "$pwshPath = \"$dir\\pwsh.exe\".Replace('\\', '\\\\')",
         "'install-explorer-context', 'uninstall-explorer-context', 'install-file-context' , 'uninstall-file-context' | ForEach-Object {",
-        "    if (Test-Path \"$bucketsdir\\scoop-cn\\scripts\\pwsh\\$_.reg\") {",
-        "        $content = (Get-Content \"$bucketsdir\\scoop-cn\\scripts\\pwsh\\$_.reg\").Replace('$pwshPath', $pwshPath)",
+        "    if (Test-Path \"$bucketsdir\\main\\scripts\\pwsh\\$_.reg\") {",
+        "        $content = (Get-Content \"$bucketsdir\\main\\scripts\\pwsh\\$_.reg\").Replace('$pwshPath', $pwshPath)",
         "        $content = $content.Replace('$pwshArch', $pwshArch)",
         "        if ($global) { $content = $content.Replace('HKEY_CURRENT_USER', 'HKEY_LOCAL_MACHINE') }",
         "        Set-Content \"$dir\\$_.reg\" $content -Encoding Ascii -Force",
@@ -70,13 +70,13 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/PowerShell/PowerShell/releases/download/v$version/PowerShell-$version-win-x64.zip"
+                "url": "https://gh-proxy.org/https://github.com/PowerShell/PowerShell/releases/download/v$version/PowerShell-$version-win-x64.zip"
             },
             "32bit": {
-                "url": "https://ghp.ci/https://github.com/PowerShell/PowerShell/releases/download/v$version/PowerShell-$version-win-x86.zip"
+                "url": "https://gh-proxy.org/https://github.com/PowerShell/PowerShell/releases/download/v$version/PowerShell-$version-win-x86.zip"
             },
             "arm64": {
-                "url": "https://ghp.ci/https://github.com/PowerShell/PowerShell/releases/download/v$version/PowerShell-$version-win-arm64.zip"
+                "url": "https://gh-proxy.org/https://github.com/PowerShell/PowerShell/releases/download/v$version/PowerShell-$version-win-arm64.zip"
             }
         },
         "hash": {

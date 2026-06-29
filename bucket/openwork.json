@@ -5,7 +5,7 @@
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/different-ai/openwork/releases/download/v0.17.4/openwork-win-x64-0.17.4.exe#/dl.7z",
+            "url": "https://gh-proxy.org/https://github.com/different-ai/openwork/releases/download/v0.17.4/openwork-win-x64-0.17.4.exe#/dl.7z",
             "hash": "4e4aa7c0bf9eb974bc8a78ac414a16031a57f0e1facd6f7c403c25c497a7c2ae",
             "pre_install": [
                 "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\" -Removal",
@@ -30,7 +30,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/different-ai/openwork/releases/download/v$version/openwork-win-x64-$version.exe#/dl.7z"
+                "url": "https://gh-proxy.org/https://github.com/different-ai/openwork/releases/download/v$version/openwork-win-x64-$version.exe#/dl.7z"
             }
         }
     }

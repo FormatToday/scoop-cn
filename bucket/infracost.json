@@ -5,11 +5,11 @@
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/infracost/cli/releases/download/v2.6.0/infracost-windows-amd64.zip",
+            "url": "https://gh-proxy.org/https://github.com/infracost/cli/releases/download/v2.6.0/infracost-windows-amd64.zip",
             "hash": "b120c49be11a5b785959962a43872cd31bac4e20c87b91baf9e491e6efd8e030"
         },
         "arm64": {
-            "url": "https://ghp.ci/https://github.com/infracost/cli/releases/download/v2.6.0/infracost-windows-arm64.zip",
+            "url": "https://gh-proxy.org/https://github.com/infracost/cli/releases/download/v2.6.0/infracost-windows-arm64.zip",
             "hash": "c5a38d417cdd9096978c6c071ea7d3a517643857c6412f95fdac2e0a48d634b9"
         }
     },
@@ -20,10 +20,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/infracost/cli/releases/download/v$version/infracost-windows-amd64.zip"
+                "url": "https://gh-proxy.org/https://github.com/infracost/cli/releases/download/v$version/infracost-windows-amd64.zip"
             },
             "arm64": {
-                "url": "https://ghp.ci/https://github.com/infracost/cli/releases/download/v$version/infracost-windows-arm64.zip"
+                "url": "https://gh-proxy.org/https://github.com/infracost/cli/releases/download/v$version/infracost-windows-arm64.zip"
             }
         },
         "hash": {

@@ -5,7 +5,7 @@
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/Sigil-Ebook/Sigil/releases/download/2.8.0/Sigil-2.8.0-Windows-x64-Setup.exe",
+            "url": "https://gh-proxy.org/https://github.com/Sigil-Ebook/Sigil/releases/download/2.8.0/Sigil-2.8.0-Windows-x64-Setup.exe",
             "hash": "389a43bba319e355788a25936fb9b3f0ea190c4607a60f753fda254c7d07dd69"
         }
     },
@@ -23,7 +23,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/Sigil-Ebook/Sigil/releases/download/$version/Sigil-$version-Windows-x64-Setup.exe"
+                "url": "https://gh-proxy.org/https://github.com/Sigil-Ebook/Sigil/releases/download/$version/Sigil-$version-Windows-x64-Setup.exe"
             }
         },
         "hash": {

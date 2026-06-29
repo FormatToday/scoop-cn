@@ -5,7 +5,7 @@
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/istio/istio/releases/download/1.30.2/istioctl-1.30.2-win.zip",
+            "url": "https://gh-proxy.org/https://github.com/istio/istio/releases/download/1.30.2/istioctl-1.30.2-win.zip",
             "hash": "d35d98fbcda668279f15528a19b5c94b3306839dbe081c563f38e057c9575c29"
         }
     },
@@ -16,7 +16,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/istio/istio/releases/download/$version/istioctl-$version-win.zip"
+                "url": "https://gh-proxy.org/https://github.com/istio/istio/releases/download/$version/istioctl-$version-win.zip"
             }
         },
         "hash": {

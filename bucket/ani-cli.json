@@ -5,20 +5,20 @@
     "license": "GPL-3.0-or-later",
     "depends": [
         "fzf",
-        "scoop-cn/mpv"
+        "mpv"
     ],
     "suggest": {
         "local downloads": [
             "aria2",
             "yt-dlp"
         ],
-        "alternate player": "scoop-cn/vlc"
+        "alternate player": "vlc"
     },
-    "url": "https://ghp.ci/https://github.com/pystardust/ani-cli/releases/download/v4.13/ani-cli",
+    "url": "https://gh-proxy.org/https://github.com/pystardust/ani-cli/releases/download/v4.13/ani-cli",
     "hash": "17c8a97b034d3e48ba4663d538a5705adfbbffb951fa67650a57f7e4414959e2",
     "bin": "ani-cli",
     "checkver": "github",
     "autoupdate": {
-        "url": "https://ghp.ci/https://github.com/pystardust/ani-cli/releases/download/v$version/ani-cli"
+        "url": "https://gh-proxy.org/https://github.com/pystardust/ani-cli/releases/download/v$version/ani-cli"
     }
 }

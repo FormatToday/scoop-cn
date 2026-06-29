@@ -5,11 +5,11 @@
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/tristanisham/zvm/releases/download/v0.8.27/zvm-windows-amd64.zip",
+            "url": "https://gh-proxy.org/https://github.com/tristanisham/zvm/releases/download/v0.8.27/zvm-windows-amd64.zip",
             "hash": "bc82e7aace1ad9574bf53486ef54a6558ad5e0f35161aa90fda424b94cba7b4d"
         },
         "arm64": {
-            "url": "https://ghp.ci/https://github.com/tristanisham/zvm/releases/download/v0.8.27/zvm-windows-arm64.zip",
+            "url": "https://gh-proxy.org/https://github.com/tristanisham/zvm/releases/download/v0.8.27/zvm-windows-arm64.zip",
             "hash": "f41fe165e13cb5366ee654469a5af3c63529fadce59c96e90263d51dfe735c74"
         }
     },
@@ -20,10 +20,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/tristanisham/zvm/releases/download/v$version/zvm-windows-amd64.zip"
+                "url": "https://gh-proxy.org/https://github.com/tristanisham/zvm/releases/download/v$version/zvm-windows-amd64.zip"
             },
             "arm64": {
-                "url": "https://ghp.ci/https://github.com/tristanisham/zvm/releases/download/v$version/zvm-windows-arm64.zip"
+                "url": "https://gh-proxy.org/https://github.com/tristanisham/zvm/releases/download/v$version/zvm-windows-arm64.zip"
             }
         }
     },

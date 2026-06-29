@@ -5,7 +5,7 @@
     "license": "BSD-2-Clause",
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/angr/angr-management/releases/download/v9.2.222/angr-management-v9.2.222-win64-x86_64.zip",
+            "url": "https://gh-proxy.org/https://github.com/angr/angr-management/releases/download/v9.2.222/angr-management-v9.2.222-win64-x86_64.zip",
             "hash": "dd16f2622207bd840a9bdf80d1762b634e19fa4db12ea6f70719258d979b8107"
         }
     },
@@ -22,7 +22,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/angr/angr-management/releases/download/v$version/angr-management-v$version-win64-x86_64.zip"
+                "url": "https://gh-proxy.org/https://github.com/angr/angr-management/releases/download/v$version/angr-management-v$version-win64-x86_64.zip"
             }
         }
     }

@@ -11,7 +11,7 @@
         "reg import \"$dir\\install-associations.reg\""
     ],
     "suggest": {
-        "vcredist": "scoop-cn/vcredist2022"
+        "vcredist": "vcredist2022"
     },
     "architecture": {
         "64bit": {
@@ -45,9 +45,9 @@
     ],
     "post_install": [
         "'install-associations', 'uninstall-associations' | ForEach-Object {",
-        "    if (Test-Path \"$bucketsdir\\scoop-cn\\scripts\\$app\\$_.reg\") {",
+        "    if (Test-Path \"$bucketsdir\\main\\scripts\\$app\\$_.reg\") {",
         "        $qbitPath = \"$dir\".Replace('\\', '\\\\')",
-        "        $content = (Get-Content \"$bucketsdir\\scoop-cn\\scripts\\$app\\$_.reg\").Replace('$qbit', $qbitPath)",
+        "        $content = (Get-Content \"$bucketsdir\\main\\scripts\\$app\\$_.reg\").Replace('$qbit', $qbitPath)",
         "        if ($global) { $content = $content.Replace('HKEY_CURRENT_USER', 'HKEY_LOCAL_MACHINE') }",
         "        Set-Content \"$dir\\$_.reg\" $content -Encoding Ascii -Force",
         "    }",
@@ -68,7 +68,7 @@
         "github": "https://api.github.com/repos/qbittorrent/qBittorrent/actions/workflows/ci_windows.yaml/runs?branch=master&status=success",
         "script": [
             "$ci_workflows = $page | ConvertFrom-Json",
-            "$ci_file = Invoke-RestMethod https://ghp.ci/https://raw.githubusercontent.com/qbittorrent/qBittorrent/master/.github/workflows/ci_windows.yaml",
+            "$ci_file = Invoke-RestMethod https://gh-proxy.org/https://raw.githubusercontent.com/qbittorrent/qBittorrent/master/.github/workflows/ci_windows.yaml",
             "$libtorrent_version = ( $ci_file | Select-String 'libtorrent:\\n.*version:\\s*\"([^\"]+)\"').matches.groups[1].value",
             "$output = @{'result' = \"$($ci_workflows.workflow_runs[0].id) $libtorrent_version\"} | ConvertTo-Json",
             "Write-Output $output"

@@ -20,7 +20,7 @@
         "script": [
             "'root', 'packages' | Foreach-Object { ensure \"$persist_dir\\$_\" | Out-Null }",
             "$install_args = @(",
-            "    '--site', 'https://mirrors.aliyun.com/cygwin/'",
+            "    '--site', 'https://mirrors.tuna.tsinghua.edu.cn/cygwin/'",
             "    '--no-admin', '--no-shortcuts', '--quiet-mode', '--upgrade-also'",
             "    '--local-package-dir', \"$persist_dir\\packages\", '--root', \"$persist_dir\\root\"",
             ")",

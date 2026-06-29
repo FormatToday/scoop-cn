@@ -4,11 +4,11 @@
     "homepage": "https://wasmcloud.com/docs/wash",
     "license": "Apache-2.0",
     "suggest": {
-        "vcredist": "scoop-cn/vcredist2022"
+        "vcredist": "vcredist2022"
     },
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/wasmCloud/wasmCloud/releases/download/v2.4.0/wash-x86_64-pc-windows-msvc.zip",
+            "url": "https://gh-proxy.org/https://github.com/wasmCloud/wasmCloud/releases/download/v2.4.0/wash-x86_64-pc-windows-msvc.zip",
             "hash": "526ed30f04006a366d26f12ea36cd16969974c26290362c0b8e077958699f93f"
         }
     },
@@ -19,7 +19,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/wasmCloud/wasmCloud/releases/download/v$version/wash-x86_64-pc-windows-msvc.zip"
+                "url": "https://gh-proxy.org/https://github.com/wasmCloud/wasmCloud/releases/download/v$version/wash-x86_64-pc-windows-msvc.zip"
             }
         }
     }

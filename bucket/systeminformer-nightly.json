@@ -5,15 +5,15 @@
     "license": "MIT",
     "architecture": {
         "32bit": {
-            "url": "https://ghp.ci/https://github.com/winsiderss/si-builds/releases/download/4.0.26162.539/systeminformer-build-win32-bin.zip",
+            "url": "https://gh-proxy.org/https://github.com/winsiderss/si-builds/releases/download/4.0.26162.539/systeminformer-build-win32-bin.zip",
             "hash": "9456a522c0386e9d351f3446b2dc1c6b52746996ef22651707766f84bf4d904e"
         },
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/winsiderss/si-builds/releases/download/4.0.26162.539/systeminformer-build-win64-bin.zip",
+            "url": "https://gh-proxy.org/https://github.com/winsiderss/si-builds/releases/download/4.0.26162.539/systeminformer-build-win64-bin.zip",
             "hash": "b2831e50e212024d84cd5cde4f08732c0586791fdb5a09c1a7ed9042039071a1"
         },
         "arm64": {
-            "url": "https://ghp.ci/https://github.com/winsiderss/si-builds/releases/download/4.0.26162.539/systeminformer-build-arm64-bin.zip",
+            "url": "https://gh-proxy.org/https://github.com/winsiderss/si-builds/releases/download/4.0.26162.539/systeminformer-build-arm64-bin.zip",
             "hash": "5647e0ba30c7f919a4dc6d9a54bc868f565adeab88e154054a45a4aeb679a05e"
         }
     },
@@ -54,13 +54,13 @@
     "autoupdate": {
         "architecture": {
             "32bit": {
-                "url": "https://ghp.ci/https://github.com/winsiderss/si-builds/releases/download/$version/systeminformer-build-win32-bin.zip"
+                "url": "https://gh-proxy.org/https://github.com/winsiderss/si-builds/releases/download/$version/systeminformer-build-win32-bin.zip"
             },
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/winsiderss/si-builds/releases/download/$version/systeminformer-build-win64-bin.zip"
+                "url": "https://gh-proxy.org/https://github.com/winsiderss/si-builds/releases/download/$version/systeminformer-build-win64-bin.zip"
             },
             "arm64": {
-                "url": "https://ghp.ci/https://github.com/winsiderss/si-builds/releases/download/$version/systeminformer-build-arm64-bin.zip"
+                "url": "https://gh-proxy.org/https://github.com/winsiderss/si-builds/releases/download/$version/systeminformer-build-arm64-bin.zip"
             }
         }
     }

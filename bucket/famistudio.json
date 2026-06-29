@@ -1,10 +1,11 @@
 {
-    "homepage": "https://github.com/BleuBleu/FamiStudio",
-    "description": "FamiStudio NES Music Editor.",
-    "license": "MIT",
     "version": "4.5.1",
-    "url": "https://ghp.ci/https://github.com/BleuBleu/FamiStudio/releases/download/4.5.1/FamiStudio451-WinPortableExe.zip",
+    "description": "FamiStudio NES Music Editor",
+    "homepage": "https://github.com/BleuBleu/FamiStudio",
+    "license": "MIT",
+    "url": "https://gh-proxy.org/https://github.com/BleuBleu/FamiStudio/releases/download/4.5.1/FamiStudio451-WinPortableExe.zip",
     "hash": "2858e6cfc4329af03522678e0c5ac91911c47e3fd769bc4cbc7c5a776d390176",
+    "pre_install": "if (!(Test-Path \"$persist_dir\\FamiStudio.ini\")) { New-Item \"$dir\\FamiStudio.ini\" | Out-Null }",
     "bin": "FamiStudio.exe",
     "shortcuts": [
         [
@@ -12,8 +13,12 @@
             "FamiStudio"
         ]
     ],
+    "persist": [
+        "AutoSaves",
+        "FamiStudio.ini"
+    ],
     "checkver": "github",
     "autoupdate": {
-        "url": "https://ghp.ci/https://github.com/BleuBleu/FamiStudio/releases/download/$version/FamiStudio$majorVersion$minorVersion$patchVersion-WinPortableExe.zip"
+        "url": "https://gh-proxy.org/https://github.com/BleuBleu/FamiStudio/releases/download/$version/FamiStudio$cleanVersion-WinPortableExe.zip"
     }
 }

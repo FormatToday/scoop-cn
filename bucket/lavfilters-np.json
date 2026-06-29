@@ -8,15 +8,15 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/Nevcairiel/LAVFilters/releases/download/0.82/LAVFilters-0.82-x64.zip",
+            "url": "https://gh-proxy.org/https://github.com/Nevcairiel/LAVFilters/releases/download/0.82/LAVFilters-0.82-x64.zip",
             "hash": "90d6961689d30e5cbb0abfc3a03387461878d138fecf9d16cc0f5fc68ce0da1f"
         },
         "32bit": {
-            "url": "https://ghp.ci/https://github.com/Nevcairiel/LAVFilters/releases/download/0.82/LAVFilters-0.82-x86.zip",
+            "url": "https://gh-proxy.org/https://github.com/Nevcairiel/LAVFilters/releases/download/0.82/LAVFilters-0.82-x86.zip",
             "hash": "410a5f535cc4da5e65ede43805422719ee2fbaed8349f1f205bd2e599e613585"
         }
     },
-    "depends": "scoop-cn/sudo",
+    "depends": "sudo",
     "installer": {
         "script": [
             "sudo \"$env:COMSPEC\" /c \"regsvr32 /s `\"$dir\\LAVAudio.ax`\" & regsvr32 /s `\"$dir\\LAVSplitter.ax`\" & regsvr32 /s `\"$dir\\LAVVideo.ax`\"\"",
@@ -53,10 +53,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/Nevcairiel/LAVFilters/releases/download/$version/LAVFilters-$version-x64.zip"
+                "url": "https://gh-proxy.org/https://github.com/Nevcairiel/LAVFilters/releases/download/$version/LAVFilters-$version-x64.zip"
             },
             "32bit": {
-                "url": "https://ghp.ci/https://github.com/Nevcairiel/LAVFilters/releases/download/$version/LAVFilters-$version-x86.zip"
+                "url": "https://gh-proxy.org/https://github.com/Nevcairiel/LAVFilters/releases/download/$version/LAVFilters-$version-x86.zip"
             }
         }
     }

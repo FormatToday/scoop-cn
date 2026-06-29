@@ -9,16 +9,16 @@
         "Download: https://addons.mozilla.org/firefox/addon/pwas-for-firefox/"
     ],
     "suggest": {
-        "vcredist": "scoop-cn/vcredist2022",
-        "firefox": "scoop-cn/firefox"
+        "vcredist": "vcredist2022",
+        "firefox": "firefox"
     },
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/filips123/PWAsForFirefox/releases/download/v2.18.4/firefoxpwa-2.18.4-x86_64.msi",
+            "url": "https://gh-proxy.org/https://github.com/filips123/PWAsForFirefox/releases/download/v2.18.4/firefoxpwa-2.18.4-x86_64.msi",
             "hash": "a118c7252cc93d6a16fbd7dbdf2cffa07861374435dd07ed7c0604cd684448f7"
         },
         "32bit": {
-            "url": "https://ghp.ci/https://github.com/filips123/PWAsForFirefox/releases/download/v2.18.4/firefoxpwa-2.18.4-x86.msi",
+            "url": "https://gh-proxy.org/https://github.com/filips123/PWAsForFirefox/releases/download/v2.18.4/firefoxpwa-2.18.4-x86.msi",
             "hash": "f1191c1ba577ef0f2bfdc28acb3bf55a5f5e6310151339e59750d2c1abbda961"
         }
     },
@@ -43,10 +43,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/filips123/PWAsForFirefox/releases/download/v$version/firefoxpwa-$version-x86_64.msi"
+                "url": "https://gh-proxy.org/https://github.com/filips123/PWAsForFirefox/releases/download/v$version/firefoxpwa-$version-x86_64.msi"
             },
             "32bit": {
-                "url": "https://ghp.ci/https://github.com/filips123/PWAsForFirefox/releases/download/v$version/firefoxpwa-$version-x86.msi"
+                "url": "https://gh-proxy.org/https://github.com/filips123/PWAsForFirefox/releases/download/v$version/firefoxpwa-$version-x86.msi"
             }
         }
     }

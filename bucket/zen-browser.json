@@ -11,11 +11,11 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/zen-browser/desktop/releases/download/1.21.4b/zen.installer.exe#/dl.7z",
+            "url": "https://gh-proxy.org/https://github.com/zen-browser/desktop/releases/download/1.21.4b/zen.installer.exe#/dl.7z",
             "hash": "72b93a2146cc8a28309edc2ae9f5f0f5aead1da9b00c66995fd030ad0cd443f7"
         },
         "arm64": {
-            "url": "https://ghp.ci/https://github.com/zen-browser/desktop/releases/download/1.21.4b/zen.installer-arm64.exe#/dl.7z",
+            "url": "https://gh-proxy.org/https://github.com/zen-browser/desktop/releases/download/1.21.4b/zen.installer-arm64.exe#/dl.7z",
             "hash": "6288b3b274be6c8ee9983280f2a9f9c0b37ba3f9adf8b1e69ebfa2d18199d756"
         }
     },
@@ -51,10 +51,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/zen-browser/desktop/releases/download/$version/zen.installer.exe#/dl.7z"
+                "url": "https://gh-proxy.org/https://github.com/zen-browser/desktop/releases/download/$version/zen.installer.exe#/dl.7z"
             },
             "arm64": {
-                "url": "https://ghp.ci/https://github.com/zen-browser/desktop/releases/download/$version/zen.installer-arm64.exe#/dl.7z"
+                "url": "https://gh-proxy.org/https://github.com/zen-browser/desktop/releases/download/$version/zen.installer-arm64.exe#/dl.7z"
             }
         }
     }

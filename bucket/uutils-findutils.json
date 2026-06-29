@@ -8,7 +8,7 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/uutils/findutils/releases/download/0.9.1/findutils-x86_64-pc-windows-msvc.zip",
+            "url": "https://gh-proxy.org/https://github.com/uutils/findutils/releases/download/0.9.1/findutils-x86_64-pc-windows-msvc.zip",
             "hash": "3cd96c5073a4fa2d913365a179327653bd038c646d4c613e93f8a4dc62e82be6"
         }
     },
@@ -22,7 +22,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/uutils/findutils/releases/download/$version/findutils-x86_64-pc-windows-msvc.zip"
+                "url": "https://gh-proxy.org/https://github.com/uutils/findutils/releases/download/$version/findutils-x86_64-pc-windows-msvc.zip"
             }
         },
         "hash": {

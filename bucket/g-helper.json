@@ -5,11 +5,11 @@
     "license": "MIT",
     "notes": "Asus System Control Interface v3+ and .NET Desktop Runtime 7 are required.",
     "suggest": {
-        ".NET Desktop Runtime 8.0": "scoop-cn/windowsdesktop-runtime-8.0"
+        ".NET Desktop Runtime 8.0": "windowsdesktop-runtime-8.0"
     },
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/seerge/g-helper/releases/download/v0.260/GHelper.zip",
+            "url": "https://gh-proxy.org/https://github.com/seerge/g-helper/releases/download/v0.260/GHelper.zip",
             "hash": "493afe1fedb5c8a6e1440812c89ea49733c73d15e43c96a85ff710c28fec24ee"
         }
     },
@@ -37,7 +37,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/seerge/g-helper/releases/download/v$version/GHelper.zip"
+                "url": "https://gh-proxy.org/https://github.com/seerge/g-helper/releases/download/v$version/GHelper.zip"
             }
         }
     }

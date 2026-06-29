@@ -5,7 +5,7 @@
     "license": "UPL-1.0",
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/oracle/oci-cli/releases/download/v3.88.0/oci-cli-3.88.0-Windows-Server-Installer.msi",
+            "url": "https://gh-proxy.org/https://github.com/oracle/oci-cli/releases/download/v3.88.0/oci-cli-3.88.0-Windows-Server-Installer.msi",
             "hash": "47860f83e4a249e73400d8a27c2aa2f76359eddc5555f31d629efcca1bd2d829"
         }
     },
@@ -14,7 +14,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/oracle/oci-cli/releases/download/v$version/oci-cli-$version-Windows-Server-Installer.msi"
+                "url": "https://gh-proxy.org/https://github.com/oracle/oci-cli/releases/download/v$version/oci-cli-$version-Windows-Server-Installer.msi"
             }
         }
     }

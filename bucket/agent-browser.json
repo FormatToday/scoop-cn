@@ -5,7 +5,7 @@
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/vercel-labs/agent-browser/releases/download/v0.31.1/agent-browser-win32-x64.exe#/agent-browser.exe",
+            "url": "https://gh-proxy.org/https://github.com/vercel-labs/agent-browser/releases/download/v0.31.1/agent-browser-win32-x64.exe#/agent-browser.exe",
             "hash": "0a355020b0ff2f9199fbb7385a0b8b7e16b548bb0d6df64498b456b76898adfa"
         }
     },
@@ -16,7 +16,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/vercel-labs/agent-browser/releases/download/v$version/agent-browser-win32-x64.exe#/agent-browser.exe"
+                "url": "https://gh-proxy.org/https://github.com/vercel-labs/agent-browser/releases/download/v$version/agent-browser-win32-x64.exe#/agent-browser.exe"
             }
         }
     }

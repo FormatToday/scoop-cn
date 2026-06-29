@@ -7,12 +7,12 @@
         "url": "https://github.com/Wox-launcher/Wox/blob/master/LICENSE"
     },
     "suggest": {
-        "Python3": "scoop-cn/python",
-        "Everything": "scoop-cn/everything"
+        "Python3": "python",
+        "Everything": "everything"
     },
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/Wox-launcher/Wox/releases/download/v2.2.0/wox-windows-amd64.exe#/wox.exe",
+            "url": "https://gh-proxy.org/https://github.com/Wox-launcher/Wox/releases/download/v2.2.0/wox-windows-amd64.exe#/wox.exe",
             "hash": "eceaaafa4b0dc0bcb58d998530a31d5ab88ded895f3d35f19aa620f033dd6311"
         }
     },
@@ -31,7 +31,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/Wox-launcher/Wox/releases/download/v$version/wox-windows-amd64.exe#/wox.exe"
+                "url": "https://gh-proxy.org/https://github.com/Wox-launcher/Wox/releases/download/v$version/wox-windows-amd64.exe#/wox.exe"
             }
         }
     }

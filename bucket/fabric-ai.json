@@ -5,15 +5,15 @@
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/danielmiessler/Fabric/releases/download/v1.4.455/fabric_Windows_x86_64.zip",
+            "url": "https://gh-proxy.org/https://github.com/danielmiessler/Fabric/releases/download/v1.4.455/fabric_Windows_x86_64.zip",
             "hash": "b67d811544fe67d274254500d7fa19444760bc605e2d6c03c469b35954daa0fc"
         },
         "32bit": {
-            "url": "https://ghp.ci/https://github.com/danielmiessler/Fabric/releases/download/v1.4.455/fabric_Windows_i386.zip",
+            "url": "https://gh-proxy.org/https://github.com/danielmiessler/Fabric/releases/download/v1.4.455/fabric_Windows_i386.zip",
             "hash": "d3ef82c74b943b630fc6810593e3fad6d8a0cae0db54c680d2ae8582d274a835"
         },
         "arm64": {
-            "url": "https://ghp.ci/https://github.com/danielmiessler/Fabric/releases/download/v1.4.455/fabric_Windows_arm64.zip",
+            "url": "https://gh-proxy.org/https://github.com/danielmiessler/Fabric/releases/download/v1.4.455/fabric_Windows_arm64.zip",
             "hash": "37ec8cd126c37e4e7de6da5a30a835e0aeae75384b489ef01dfbbefa33c11741"
         }
     },
@@ -22,13 +22,13 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/danielmiessler/Fabric/releases/download/v$version/fabric_Windows_x86_64.zip"
+                "url": "https://gh-proxy.org/https://github.com/danielmiessler/Fabric/releases/download/v$version/fabric_Windows_x86_64.zip"
             },
             "32bit": {
-                "url": "https://ghp.ci/https://github.com/danielmiessler/Fabric/releases/download/v$version/fabric_Windows_i386.zip"
+                "url": "https://gh-proxy.org/https://github.com/danielmiessler/Fabric/releases/download/v$version/fabric_Windows_i386.zip"
             },
             "arm64": {
-                "url": "https://ghp.ci/https://github.com/danielmiessler/Fabric/releases/download/v$version/fabric_Windows_arm64.zip"
+                "url": "https://gh-proxy.org/https://github.com/danielmiessler/Fabric/releases/download/v$version/fabric_Windows_arm64.zip"
             }
         },
         "hash": {

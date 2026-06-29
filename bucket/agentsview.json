@@ -5,11 +5,11 @@
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/kenn-io/agentsview/releases/download/v0.34.5/agentsview_0.34.5_windows_amd64.zip",
+            "url": "https://gh-proxy.org/https://github.com/kenn-io/agentsview/releases/download/v0.34.5/agentsview_0.34.5_windows_amd64.zip",
             "hash": "110377d7bcb0b37d4b2d97a90b245b1071ca674db70993b714f5f32209bbff3a"
         },
         "arm64": {
-            "url": "https://ghp.ci/https://github.com/kenn-io/agentsview/releases/download/v0.34.5/agentsview_0.34.5_windows_arm64.zip",
+            "url": "https://gh-proxy.org/https://github.com/kenn-io/agentsview/releases/download/v0.34.5/agentsview_0.34.5_windows_arm64.zip",
             "hash": "a869281ea14841e11955745cd965f7fd66f70ace343a17eddd6f18e93aa8ccc1"
         }
     },
@@ -20,10 +20,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/kenn-io/agentsview/releases/download/v$version/agentsview_$version_windows_amd64.zip"
+                "url": "https://gh-proxy.org/https://github.com/kenn-io/agentsview/releases/download/v$version/agentsview_$version_windows_amd64.zip"
             },
             "arm64": {
-                "url": "https://ghp.ci/https://github.com/kenn-io/agentsview/releases/download/v$version/agentsview_$version_windows_arm64.zip"
+                "url": "https://gh-proxy.org/https://github.com/kenn-io/agentsview/releases/download/v$version/agentsview_$version_windows_arm64.zip"
             }
         },
         "hash": {

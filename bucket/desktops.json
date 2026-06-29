@@ -19,7 +19,7 @@
             "shortcuts": [
                 [
                     "Desktops64.exe",
-                    "SysInternals/Desktops",
+                    "Desktops",
                     "/accepteula"
                 ]
             ]
@@ -29,14 +29,14 @@
             "shortcuts": [
                 [
                     "Desktops.exe",
-                    "SysInternals/Desktops",
+                    "Desktops",
                     "/accepteula"
                 ]
             ]
         }
     },
     "checkver": {
-        "url": "https://ghp.ci/https://raw.githubusercontent.com/MicrosoftDocs/sysinternals/main/sysinternals/downloads/desktops.md",
+        "url": "https://gh-proxy.org/https://raw.githubusercontent.com/MicrosoftDocs/sysinternals/main/sysinternals/downloads/desktops.md",
         "regex": "#.*?v([\\d.]+)"
     },
     "autoupdate": {

@@ -5,7 +5,7 @@
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/pbatard/rufus/releases/download/v4.15_BETA2/rufus-4.15_BETA2.exe#/rufus.exe",
+            "url": "https://gh-proxy.org/https://github.com/pbatard/rufus/releases/download/v4.15_BETA2/rufus-4.15_BETA2.exe#/rufus.exe",
             "hash": "3f41084a123045cc265e06ccd5cd2d34267443adf58c3c97661633cb7621d683"
         }
     },
@@ -33,7 +33,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/pbatard/rufus/releases/download/v$version/rufus-$version.exe#/rufus.exe"
+                "url": "https://gh-proxy.org/https://github.com/pbatard/rufus/releases/download/v$version/rufus-$version.exe#/rufus.exe"
             }
         }
     }

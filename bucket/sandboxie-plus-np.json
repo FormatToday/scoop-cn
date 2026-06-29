@@ -14,11 +14,11 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/sandboxie-plus/Sandboxie/releases/download/v1.17.9/Sandboxie-Plus-x64-v1.17.9.exe",
+            "url": "https://gh-proxy.org/https://github.com/sandboxie-plus/Sandboxie/releases/download/v1.17.9/Sandboxie-Plus-x64-v1.17.9.exe",
             "hash": "b2a786e62dcf67d8e67ce1f673b72ea59d0a9252611eaddf4dc2512afab6e6d3"
         },
         "arm64": {
-            "url": "https://ghp.ci/https://github.com/sandboxie-plus/Sandboxie/releases/download/v1.17.9/Sandboxie-Plus-ARM64-v1.17.9.exe",
+            "url": "https://gh-proxy.org/https://github.com/sandboxie-plus/Sandboxie/releases/download/v1.17.9/Sandboxie-Plus-ARM64-v1.17.9.exe",
             "hash": "f76c0645eae9ee41d0c50d7e2950e0aca50bf5b0448872955aaf73a2adbf9ac3"
         }
     },
@@ -80,10 +80,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/sandboxie-plus/Sandboxie/releases/download/$matchTag/Sandboxie-Plus-x64-v$version.exe"
+                "url": "https://gh-proxy.org/https://github.com/sandboxie-plus/Sandboxie/releases/download/$matchTag/Sandboxie-Plus-x64-v$version.exe"
             },
             "arm64": {
-                "url": "https://ghp.ci/https://github.com/sandboxie-plus/Sandboxie/releases/download/$matchTag/Sandboxie-Plus-ARM64-v$version.exe"
+                "url": "https://gh-proxy.org/https://github.com/sandboxie-plus/Sandboxie/releases/download/$matchTag/Sandboxie-Plus-ARM64-v$version.exe"
             }
         },
         "hash": {

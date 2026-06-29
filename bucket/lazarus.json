@@ -32,7 +32,7 @@
     },
     "post_install": [
         "$lazarus_dir = $dir -replace '\\\\', '\\\\'",
-        "Get-ChildItem -Path \"$bucketsdir\\scoop-cn\\scripts\\$app\" -Filter '*.reg' -File | ForEach-Object -Process {",
+        "Get-ChildItem -Path \"$bucketsdir\\main\\scripts\\$app\" -Filter '*.reg' -File | ForEach-Object -Process {",
         "    $content = Get-Content -Path $_.FullName -Encoding utf8",
         "    if ($global) { $content = $content -replace 'HKEY_CURRENT_USER(?=.+Classes)', 'HKEY_LOCAL_MACHINE' }",
         "    $content -replace '{{lazarus_dir}}', $lazarus_dir | Set-Content -Path \"$dir\\$($_.Name)\" -Encoding unicode",

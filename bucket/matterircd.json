@@ -5,15 +5,15 @@
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/42wim/matterircd/releases/download/v0.30.0/matterircd-0.30.0-windows-amd64.exe#/matterircd.exe",
+            "url": "https://gh-proxy.org/https://github.com/42wim/matterircd/releases/download/v0.30.0/matterircd-0.30.0-windows-amd64.exe#/matterircd.exe",
             "hash": "b71a20692a5a7f2f9172888b1a5c833eb54fd45009f2c7575553a6b622aeafff"
         },
         "32bit": {
-            "url": "https://ghp.ci/https://github.com/42wim/matterircd/releases/download/v0.30.0/matterircd-0.30.0-windows-386.exe#/matterircd.exe",
+            "url": "https://gh-proxy.org/https://github.com/42wim/matterircd/releases/download/v0.30.0/matterircd-0.30.0-windows-386.exe#/matterircd.exe",
             "hash": "6aa1c96dd9603fc130045d3128308d7e47f1b99a3116591cdadd90f06adfe10b"
         },
         "arm64": {
-            "url": "https://ghp.ci/https://github.com/42wim/matterircd/releases/download/v0.30.0/matterircd-0.30.0-windows-arm64.exe#/matterircd.exe",
+            "url": "https://gh-proxy.org/https://github.com/42wim/matterircd/releases/download/v0.30.0/matterircd-0.30.0-windows-arm64.exe#/matterircd.exe",
             "hash": "6c4c8a1ffae143e626b9f53de01798908228ed0b9f1b2db2e2f6874860176053"
         }
     },
@@ -22,13 +22,13 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/42wim/matterircd/releases/download/v$version/matterircd-$version-windows-amd64.exe#/matterircd.exe"
+                "url": "https://gh-proxy.org/https://github.com/42wim/matterircd/releases/download/v$version/matterircd-$version-windows-amd64.exe#/matterircd.exe"
             },
             "32bit": {
-                "url": "https://ghp.ci/https://github.com/42wim/matterircd/releases/download/v$version/matterircd-$version-windows-386.exe#/matterircd.exe"
+                "url": "https://gh-proxy.org/https://github.com/42wim/matterircd/releases/download/v$version/matterircd-$version-windows-386.exe#/matterircd.exe"
             },
             "arm64": {
-                "url": "https://ghp.ci/https://github.com/42wim/matterircd/releases/download/v$version/matterircd-$version-windows-arm64.exe#/matterircd.exe"
+                "url": "https://gh-proxy.org/https://github.com/42wim/matterircd/releases/download/v$version/matterircd-$version-windows-arm64.exe#/matterircd.exe"
             }
         },
         "hash": {

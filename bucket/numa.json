@@ -5,11 +5,11 @@
     "license": "MIT",
     "notes": "User data is stored in '$Env:PROGRAMDATA\\numa', and is not persisted by Scoop.",
     "suggest": {
-        "vcredist": "scoop-cn/vcredist2022"
+        "vcredist": "vcredist2022"
     },
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/razvandimescu/numa/releases/download/v0.21.0/numa-windows-x86_64.zip",
+            "url": "https://gh-proxy.org/https://github.com/razvandimescu/numa/releases/download/v0.21.0/numa-windows-x86_64.zip",
             "hash": "d253e0b2c2e332750cfbedbf8ebddc3f2a085ceb9bd7365591aecf599fbd7c6d"
         }
     },
@@ -20,7 +20,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/razvandimescu/numa/releases/download/v$version/numa-windows-x86_64.zip"
+                "url": "https://gh-proxy.org/https://github.com/razvandimescu/numa/releases/download/v$version/numa-windows-x86_64.zip"
             }
         },
         "hash": {

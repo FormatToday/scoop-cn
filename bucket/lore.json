@@ -5,7 +5,7 @@
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/EpicGames/lore/releases/download/v0.8.4/lore-v0.8.4-x86_64-pc-windows-msvc.zip",
+            "url": "https://gh-proxy.org/https://github.com/EpicGames/lore/releases/download/v0.8.4/lore-v0.8.4-x86_64-pc-windows-msvc.zip",
             "hash": "79746c66a9863611ff547ab4d744297e4d96351d1bb9c1555493681bff372181"
         }
     },
@@ -16,7 +16,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/EpicGames/lore/releases/download/v$version/lore-v$version-x86_64-pc-windows-msvc.zip"
+                "url": "https://gh-proxy.org/https://github.com/EpicGames/lore/releases/download/v$version/lore-v$version-x86_64-pc-windows-msvc.zip"
             }
         }
     }

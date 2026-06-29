@@ -5,15 +5,15 @@
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/SpacingBat3/WebCord/releases/download/v4.13.2/WebCord-win32-x64-4.13.2.zip",
+            "url": "https://gh-proxy.org/https://github.com/SpacingBat3/WebCord/releases/download/v4.13.2/WebCord-win32-x64-4.13.2.zip",
             "hash": "cad02326f7da7eb7730f93e38408df8e984caffbf1ce6083176fee92fa5bc90b"
         },
         "32bit": {
-            "url": "https://ghp.ci/https://github.com/SpacingBat3/WebCord/releases/download/v4.13.2/WebCord-win32-ia32-4.13.2.zip",
+            "url": "https://gh-proxy.org/https://github.com/SpacingBat3/WebCord/releases/download/v4.13.2/WebCord-win32-ia32-4.13.2.zip",
             "hash": "3a646a8885867e91b9226d8106d3b0ff4c3aa3b067d6aaa7cb81875d6dc4c7cd"
         },
         "arm64": {
-            "url": "https://ghp.ci/https://github.com/SpacingBat3/WebCord/releases/download/v4.13.2/WebCord-win32-arm64-4.13.2.zip",
+            "url": "https://gh-proxy.org/https://github.com/SpacingBat3/WebCord/releases/download/v4.13.2/WebCord-win32-arm64-4.13.2.zip",
             "hash": "c0e47ad78f1437d102a1db07c2c8b14d818625b4a1bc3c3cf504419b72fa9f42"
         }
     },
@@ -27,13 +27,13 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/SpacingBat3/WebCord/releases/download/v$version/WebCord-win32-x64-$version.zip"
+                "url": "https://gh-proxy.org/https://github.com/SpacingBat3/WebCord/releases/download/v$version/WebCord-win32-x64-$version.zip"
             },
             "32bit": {
-                "url": "https://ghp.ci/https://github.com/SpacingBat3/WebCord/releases/download/v$version/WebCord-win32-ia32-$version.zip"
+                "url": "https://gh-proxy.org/https://github.com/SpacingBat3/WebCord/releases/download/v$version/WebCord-win32-ia32-$version.zip"
             },
             "arm64": {
-                "url": "https://ghp.ci/https://github.com/SpacingBat3/WebCord/releases/download/v$version/WebCord-win32-arm64-$version.zip"
+                "url": "https://gh-proxy.org/https://github.com/SpacingBat3/WebCord/releases/download/v$version/WebCord-win32-arm64-$version.zip"
             }
         }
     }

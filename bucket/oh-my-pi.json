@@ -5,7 +5,7 @@
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/can1357/oh-my-pi/releases/download/v16.2.4/omp-windows-x64.exe#/omp.exe",
+            "url": "https://gh-proxy.org/https://github.com/can1357/oh-my-pi/releases/download/v16.2.4/omp-windows-x64.exe#/omp.exe",
             "hash": "e4d87b97fa9a7cdd3d273c8e12c167845c90b28638cf12b6d81574b4bfe88e08"
         }
     },
@@ -14,7 +14,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/can1357/oh-my-pi/releases/download/v$version/omp-windows-x64.exe#/omp.exe"
+                "url": "https://gh-proxy.org/https://github.com/can1357/oh-my-pi/releases/download/v$version/omp-windows-x64.exe#/omp.exe"
             }
         }
     }

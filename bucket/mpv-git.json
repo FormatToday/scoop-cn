@@ -12,15 +12,15 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/shinchiro/mpv-winbuild-cmake/releases/download/20260610/mpv-x86_64-20260610-git-304426c.7z",
+            "url": "https://gh-proxy.org/https://github.com/shinchiro/mpv-winbuild-cmake/releases/download/20260610/mpv-x86_64-20260610-git-304426c.7z",
             "hash": "facac536baa73c7b925771af5e39a3c9cb16b8d75b59a6e9800de89799dffca7"
         },
         "32bit": {
-            "url": "https://ghp.ci/https://github.com/shinchiro/mpv-winbuild-cmake/releases/download/20260610/mpv-i686-20260610-git-304426c.7z",
+            "url": "https://gh-proxy.org/https://github.com/shinchiro/mpv-winbuild-cmake/releases/download/20260610/mpv-i686-20260610-git-304426c.7z",
             "hash": "ce5ffa43c7cb599e0fff619f199452d17c22ed8f3b2f5bbf8f914d5da34db941"
         },
         "arm64": {
-            "url": "https://ghp.ci/https://github.com/shinchiro/mpv-winbuild-cmake/releases/download/20260610/mpv-aarch64-20260610-git-304426c.7z",
+            "url": "https://gh-proxy.org/https://github.com/shinchiro/mpv-winbuild-cmake/releases/download/20260610/mpv-aarch64-20260610-git-304426c.7z",
             "hash": "0781fdffeef27a40a7f266631d1ca9e5c1d0f82868a1678c58d23e0b1bd1eb98"
         }
     },
@@ -41,13 +41,13 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/shinchiro/mpv-winbuild-cmake/releases/download/$version/mpv-x86_64-$version-git-$matchCommit.7z"
+                "url": "https://gh-proxy.org/https://github.com/shinchiro/mpv-winbuild-cmake/releases/download/$version/mpv-x86_64-$version-git-$matchCommit.7z"
             },
             "32bit": {
-                "url": "https://ghp.ci/https://github.com/shinchiro/mpv-winbuild-cmake/releases/download/$version/mpv-i686-$version-git-$matchCommit.7z"
+                "url": "https://gh-proxy.org/https://github.com/shinchiro/mpv-winbuild-cmake/releases/download/$version/mpv-i686-$version-git-$matchCommit.7z"
             },
             "arm64": {
-                "url": "https://ghp.ci/https://github.com/shinchiro/mpv-winbuild-cmake/releases/download/$version/mpv-aarch64-$version-git-$matchCommit.7z"
+                "url": "https://gh-proxy.org/https://github.com/shinchiro/mpv-winbuild-cmake/releases/download/$version/mpv-aarch64-$version-git-$matchCommit.7z"
             }
         }
     }

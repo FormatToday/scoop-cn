@@ -7,7 +7,7 @@
         "url": "https://schinagl.priv.at/nt/hardlinkshellext/license.txt"
     },
     "suggest": {
-        "vcredist": "scoop-cn/vcredist2022"
+        "vcredist": "vcredist2022"
     },
     "architecture": {
         "64bit": {

@@ -5,7 +5,7 @@
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/zk-org/zk/releases/download/v0.15.5/zk-v0.15.5-windows-x86_64.tar.gz",
+            "url": "https://gh-proxy.org/https://github.com/zk-org/zk/releases/download/v0.15.5/zk-v0.15.5-windows-x86_64.tar.gz",
             "hash": "64858cac1e8a6a3a486ef0cc6df1a4c6148e9766f1361e5d750eade3cb045b57"
         }
     },
@@ -16,7 +16,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/zk-org/zk/releases/download/v$version/zk-v$version-windows-x86_64.tar.gz"
+                "url": "https://gh-proxy.org/https://github.com/zk-org/zk/releases/download/v$version/zk-v$version-windows-x86_64.tar.gz"
             }
         }
     }

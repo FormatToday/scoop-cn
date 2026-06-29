@@ -9,7 +9,7 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/slonopotamus/stevedore/releases/download/3.3.1/stevedore-3.3.1-x86_64.msi#/setup.msi_",
+            "url": "https://gh-proxy.org/https://github.com/slonopotamus/stevedore/releases/download/3.3.1/stevedore-3.3.1-x86_64.msi#/setup.msi_",
             "hash": "07dae88d1f2ef1bef61303c2d7a04803c628c30b276f97d3326190f5b7ce113f"
         }
     },
@@ -23,7 +23,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/slonopotamus/stevedore/releases/download/$version/stevedore-$version-x86_64.msi#/setup.msi_"
+                "url": "https://gh-proxy.org/https://github.com/slonopotamus/stevedore/releases/download/$version/stevedore-$version-x86_64.msi#/setup.msi_"
             }
         }
     }

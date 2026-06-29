@@ -5,16 +5,16 @@
     "license": "Apache-2.0",
     "notes": "RustNet requires Npcap to capture packets. Install it in \"WinPcap API-compatible Mode\" from https://npcap.com/#download",
     "suggest": {
-        "vcredist": "scoop-cn/vcredist2022"
+        "vcredist": "vcredist2022"
     },
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/domcyrus/rustnet/releases/download/v1.4.0/rustnet-v1.4.0-x86_64-pc-windows-msvc.zip",
+            "url": "https://gh-proxy.org/https://github.com/domcyrus/rustnet/releases/download/v1.4.0/rustnet-v1.4.0-x86_64-pc-windows-msvc.zip",
             "hash": "84bc9226ed0b82ac143ca549375b117256f3abcb151d519e8885a8a214c7f579",
             "extract_dir": "rustnet-v1.4.0-x86_64-pc-windows-msvc"
         },
         "32bit": {
-            "url": "https://ghp.ci/https://github.com/domcyrus/rustnet/releases/download/v1.4.0/rustnet-v1.4.0-i686-pc-windows-msvc.zip",
+            "url": "https://gh-proxy.org/https://github.com/domcyrus/rustnet/releases/download/v1.4.0/rustnet-v1.4.0-i686-pc-windows-msvc.zip",
             "hash": "7ae4c2da4152f0ca028c88988acfa523bce2ca0db8594eff96ad4d8a667ba828",
             "extract_dir": "rustnet-v1.4.0-i686-pc-windows-msvc"
         }
@@ -24,11 +24,11 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/domcyrus/rustnet/releases/download/v$version/rustnet-v$version-x86_64-pc-windows-msvc.zip",
+                "url": "https://gh-proxy.org/https://github.com/domcyrus/rustnet/releases/download/v$version/rustnet-v$version-x86_64-pc-windows-msvc.zip",
                 "extract_dir": "rustnet-v$version-x86_64-pc-windows-msvc"
             },
             "32bit": {
-                "url": "https://ghp.ci/https://github.com/domcyrus/rustnet/releases/download/v$version/rustnet-v$version-i686-pc-windows-msvc.zip",
+                "url": "https://gh-proxy.org/https://github.com/domcyrus/rustnet/releases/download/v$version/rustnet-v$version-i686-pc-windows-msvc.zip",
                 "extract_dir": "rustnet-v$version-i686-pc-windows-msvc"
             }
         }

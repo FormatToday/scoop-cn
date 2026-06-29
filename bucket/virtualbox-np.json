@@ -7,8 +7,8 @@
         "url": "https://www.virtualbox.org/wiki/Licensing_FAQ"
     },
     "notes": "Guest Additions are located at: \"$env:ProgramW6432\\Oracle\\VirtualBox\\VBoxGuestAdditions.iso\".",
-    "depends": "scoop-cn/vcredist2022",
-    "url": "https://mirrors.nju.edu.cn/virtualbox/7.2.10/VirtualBox-7.2.10-174163-Win.exe",
+    "depends": "vcredist2022",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/virtualbox/7.2.10/VirtualBox-7.2.10-174163-Win.exe",
     "hash": "f4750f6f64c44df03ee2921de77e63c30e84e03a3aad07fd00f292265ff164c7",
     "architecture": {
         "64bit": {
@@ -74,9 +74,9 @@
         "regex": "VirtualBox-([\\w.-]+)-Win.exe"
     },
     "autoupdate": {
-        "url": "https://mirrors.nju.edu.cn/virtualbox/$matchHead/VirtualBox-$version-Win.exe",
+        "url": "https://mirrors.tuna.tsinghua.edu.cn/virtualbox/$matchHead/VirtualBox-$version-Win.exe",
         "hash": {
-            "url": "https://mirrors.nju.edu.cn/virtualbox/$matchHead/SHA256SUMS"
+            "url": "https://mirrors.tuna.tsinghua.edu.cn/virtualbox/$matchHead/SHA256SUMS"
         }
     }
 }

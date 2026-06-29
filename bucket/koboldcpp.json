@@ -6,7 +6,7 @@
     "notes": "Look Model *.bin weights at https://rentry.org/nur779",
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/LostRuins/koboldcpp/releases/download/v1.116.1/koboldcpp.exe",
+            "url": "https://gh-proxy.org/https://github.com/LostRuins/koboldcpp/releases/download/v1.116.1/koboldcpp.exe",
             "hash": "0da35863b367567862be3693bbb1947f70532dd37b9ae733ec054b0a5194f0a6"
         }
     },
@@ -15,7 +15,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/LostRuins/koboldcpp/releases/download/v$version/koboldcpp.exe"
+                "url": "https://gh-proxy.org/https://github.com/LostRuins/koboldcpp/releases/download/v$version/koboldcpp.exe"
             }
         }
     }

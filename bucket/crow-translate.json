@@ -5,7 +5,7 @@
     "license": "GPL-3.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://mirrors.ustc.edu.cn/kde/stable/crow-translate/3.1.0/crow-translate-release_3.1-433-windows-cl-msvc2019-x86_64.7z",
+            "url": "https://download.kde.org/stable/crow-translate/3.1.0/crow-translate-release_3.1-433-windows-cl-msvc2019-x86_64.7z",
             "hash": "4a7ab5ddb0a62279d1fa1aed76fcd1424c0da101a0f6166b3fc77403ef219113"
         }
     },
@@ -23,7 +23,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://mirrors.ustc.edu.cn/kde/stable/crow-translate/$version/crow-translate-release_$matchFull-windows-cl-$matchLib-x86_64.7z"
+                "url": "https://download.kde.org/stable/crow-translate/$version/crow-translate-release_$matchFull-windows-cl-$matchLib-x86_64.7z"
             }
         }
     }

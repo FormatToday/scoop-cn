@@ -5,13 +5,13 @@
     "license": "EPL-1.0",
     "suggest": {
         "JDK": [
-            "scoop-cn/oraclejdk",
-            "scoop-cn/openjdk"
+            "oraclejdk",
+            "openjdk"
         ]
     },
     "architecture": {
         "64bit": {
-            "url": "https://ghp.ci/https://github.com/buchen/portfolio/releases/download/0.84.2/PortfolioPerformance-0.84.2-win32.win32.x86_64.zip",
+            "url": "https://gh-proxy.org/https://github.com/buchen/portfolio/releases/download/0.84.2/PortfolioPerformance-0.84.2-win32.win32.x86_64.zip",
             "hash": "452609cc42bc870bea727534c72ac044f3a7641d6cffe554050c73b7a8a7078f"
         }
     },
@@ -28,7 +28,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://ghp.ci/https://github.com/buchen/portfolio/releases/download/$version/PortfolioPerformance-$version-win32.win32.x86_64.zip"
+                "url": "https://gh-proxy.org/https://github.com/buchen/portfolio/releases/download/$version/PortfolioPerformance-$version-win32.win32.x86_64.zip"
             }
         }
     }

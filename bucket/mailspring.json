@@ -3,7 +3,7 @@
     "description": "Extensible email app with open tracking, link click tracking, contacts enrichment data and more",
     "homepage": "https://getmailspring.com/",
     "license": "GPL-3.0-only",
-    "url": "https://ghp.ci/https://github.com/Foundry376/Mailspring/releases/download/1.22.0/Mailspring-1.22.0-full.nupkg",
+    "url": "https://gh-proxy.org/https://github.com/Foundry376/Mailspring/releases/download/1.22.0/Mailspring-1.22.0-full.nupkg",
     "hash": "sha1:dfd2a896b8507709bbcbfb40c38c01298d6cba09",
     "extract_dir": "lib\\net45",
     "bin": "Mailspring.exe",
@@ -17,7 +17,7 @@
         "github": "https://github.com/Foundry376/Mailspring"
     },
     "autoupdate": {
-        "url": "https://ghp.ci/https://github.com/Foundry376/Mailspring/releases/download/$version/Mailspring-$version-full.nupkg",
+        "url": "https://gh-proxy.org/https://github.com/Foundry376/Mailspring/releases/download/$version/Mailspring-$version-full.nupkg",
         "hash": {
             "url": "$baseurl/RELEASES"
         }

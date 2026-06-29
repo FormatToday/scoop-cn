@@ -12,7 +12,7 @@
         "For more information: https://code.claude.com/docs/en/setup#set-up-on-windows"
     ],
     "suggest": {
-        "git": "scoop-cn/git"
+        "git": "git"
     },
     "architecture": {
         "64bit": {
