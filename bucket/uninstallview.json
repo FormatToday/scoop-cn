@@ -1,27 +1,18 @@
 {
     "homepage": "https://www.nirsoft.net/utils/uninstall_view.html",
-    "description": "Shows installed programs on your system and allows you to uninstall them.",
-    "version": "1.52",
-    "license": "Freeware",
+    "checkver": "UninstallView v(\\d+\\.\\d\\d)",
+    "version": "1.51",
+    "license": "freeware",
+    "description": "UninstallView is a tool for Windows that collects information about all programs installed on your system and displays the details of the installed programs in one table. You can use it to get installed programs information for your local system, for remote computer on your network, and for external hard-drive plugged to your computer. It also allows you to easily uninstall a software on your local computer and remote computer (Including quiet uninstall if the installer supports it).",
     "architecture": {
         "64bit": {
             "url": "https://www.nirsoft.net/utils/uninstallview-x64.zip",
-            "hash": "9d6835be4d7afccafd7a7ce945b057537dfe3e638f4f52f0fe359b1bd7aa8836"
+            "hash": "1fd9553ef6b9434f26583c22cb1f5810353ff252abe2055b96a828facb64fd5a"
         },
         "32bit": {
             "url": "https://www.nirsoft.net/utils/uninstallview.zip",
-            "hash": "62a42ba931f247d3a78e5467bf7e5539c8c0f83d204dc4c8ac8a624c245bd72a"
+            "hash": "b5ea1be8f2a76aa52825ecbc85b69501a9dd64cd91f7134b9053d731305a57de"
         }
-    },
-    "shortcuts": [
-        [
-            "UninstallView.exe",
-            "UninstallView"
-        ]
-    ],
-    "checkver": {
-        "url": "https://www.nirsoft.net/pad/uninstallview.xml",
-        "re": "(?:<Program_Version>)(.*)(?:</Program_Version>)"
     },
     "autoupdate": {
         "architecture": {
@@ -33,5 +24,11 @@
             }
         }
     },
-    "notes": "If this application is useful to you, please consider donating to nirsoft."
+    "bin": "UninstallView.exe",
+    "shortcuts": [
+        [
+            "UninstallView.exe",
+            "NirSoft\\UninstallView - Shows installed programs on your system"
+        ]
+    ]
 }
