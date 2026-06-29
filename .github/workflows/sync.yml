@@ -3,7 +3,7 @@ name: 定期更新
 on:
   push:
     branches:
-      - "master"
+      - "main"
   schedule:
     - cron: "0 * * * *"
 
@@ -117,7 +117,7 @@ jobs:
             git config --global i18n.commit.encoding utf-8
           git add --all
           git commit -m "自动更新：$(Get-Date -Format "yyyy-MM-dd HH:mm:ss")"
-          git push -f origin master
+          git push -f origin main
 
       - name: 删除旧 Actions
         uses: Mattraks/delete-workflow-runs@main
