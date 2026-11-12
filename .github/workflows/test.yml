@@ -1,0 +1,23 @@
+name: Test
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'install.ps1'
+
+jobs:
+  test:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Test
+        shell: pwsh
+        run: |
+          powershell -ExecutionPolicy RemoteSigned -Command "Invoke-RestMethod -Uri https://gh-proxy.org/https://raw.githubusercontent.com/FormatToday/scoop-cn/master/install.ps1 | Invoke-Expression"
+

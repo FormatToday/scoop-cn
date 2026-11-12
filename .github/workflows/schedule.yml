@@ -1,0 +1,106 @@
+name: 定期更新
+
+on:
+    push:
+        branches:
+            - "main"
+    schedule:
+        - cron: "56 0 * * *"
+    workflow_dispatch:
+
+jobs:
+    # 并行检出各个外部仓库（每个矩阵实例在不同的 runner 上同时执行）
+    checkout-repos:
+        name: 并行检出仓库
+        runs-on: windows-latest
+        strategy:
+            max-parallel: 20
+            matrix:
+                include:
+                    - repo: "ScoopInstaller/Main"
+                      path: "Main"
+                    - repo: "ScoopInstaller/Extras"
+                      path: "Extras"
+                    - repo: "ScoopInstaller/Versions"
+                      path: "Versions"
+                    - repo: "kodybrown/scoop-nirsoft"
+                      path: "scoop-nirsoft"
+                    - repo: "ScoopInstaller/PHP"
+                      path: "PHP"
+                    - repo: "matthewjberger/scoop-nerd-fonts"
+                      path: "scoop-nerd-fonts"
+                    - repo: "ScoopInstaller/Nonportable"
+                      path: "Nonportable"
+                    - repo: "ScoopInstaller/Java"
+                      path: "Java"
+                    - repo: "Calinou/scoop-games"
+                      path: "scoop-games"
+                    - repo: "niheaven/scoop-sysinternals"
+                      path: "scoop-sysinternals"
+                    - repo: "chawyehsu/dorado"
+                      path: "dorado"
+                    - repo: "starise/Scoop-Gaming"
+                      path: "Scoop-Gaming"
+        steps:
+            - name: 检出 ${{ matrix.path }}
+              uses: actions/checkout@main
+              with:
+                  repository: ${{ matrix.repo }}
+                  fetch-depth: 1
+                  path: ${{ matrix.path }}
+
+            - name: 上传 ${{ matrix.path }}
+              uses: actions/upload-artifact@main
+              with:
+                  name: repo-${{ matrix.path }}
+                  path: ${{ matrix.path }}
+                  retention-days: 1
+
+    # 串行执行：检出本仓库、汇总各仓库、处理 buckets、提交并清理
+    process:
+        name: 执行更新
+        runs-on: windows-latest
+        needs: checkout-repos
+        steps:
+            - name: 更新时区
+              shell: pwsh
+              run: |
+                  Set-TimeZone -Id "China Standard Time"
+
+            - name: 更新本仓库
+              uses: actions/checkout@main
+              with:
+                  fetch-depth: 1
+
+            - name: 下载并还原检出的仓库
+              uses: actions/download-artifact@main
+              with:
+                  path: .
+
+            - name: 还原仓库目录结构
+              shell: pwsh
+              run: |
+                  Get-ChildItem -Directory -Filter 'repo-*' | ForEach-Object {
+                      Move-Item -Path $_.FullName -Destination $_.Name.Substring(5) -Force
+                  }
+
+            - name: 处理 buckets
+              shell: pwsh
+              run: |
+                  .\update.ps1
+                  git config user.name github-actions
+                  git config user.email github-actions@github.com
+                    git config --global i18n.logoutputencoding utf-8
+                    git config --global gui.encoding utf-8
+                    git config --global i18n.commit.encoding utf-8
+                  git add --all
+                  git commit -m "自动更新：$(Get-Date -Format "yyyy-MM-dd HH:mm:ss")"
+                  git push -f origin main
+
+            - name: 删除旧 Actions
+              uses: Mattraks/delete-workflow-runs@main
+              with:
+                  token: ${{ github.token }}
+                  repository: ${{ github.repository }}
+                  retain_days: 0
+                  keep_minimum_runs: 2
