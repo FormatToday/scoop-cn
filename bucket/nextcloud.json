@@ -1,0 +1,40 @@
+{
+    "version": "35.0.3",
+    "description": "Desktop sync client for Nextcloud, a self-hosted productivity platform",
+    "homepage": "https://nextcloud.com/",
+    "license": "GPL-2.0-or-later",
+    "suggest": {
+        "vcredist": "vcredist2022"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/nextcloud-releases/desktop/releases/download/v35.0.3/Nextcloud-35.0.3-x64.msi",
+            "hash": "09dbaecd4585078f33cbcd62482fc244d2146a92aeef2f3324a68478b12685d2"
+        }
+    },
+    "extract_dir": "PFiles\\Nextcloud",
+    "bin": [
+        "nextcloudcmd.exe",
+        [
+            "nextcloudcmd.exe",
+            "nextcloud"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "nextcloud.exe",
+            "Nextcloud"
+        ]
+    ],
+    "checkver": {
+        "url": "https://nextcloud.com/install/",
+        "regex": "Nextcloud-([\\d.]+)-x64.msi"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/nextcloud-releases/desktop/releases/download/v$version/Nextcloud-$version-x64.msi"
+            }
+        }
+    }
+}

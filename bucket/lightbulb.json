@@ -1,0 +1,48 @@
+{
+    "version": "2.7.3",
+    "description": "Computer screen gamma adjuster based on the current time",
+    "homepage": "https://github.com/Tyrrrz/LightBulb",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/Tyrrrz/LightBulb/releases/download/2.7.3/LightBulb.win-x64.zip",
+            "hash": "18714f54376dc8d608c11709d8e62f858a3662888ef1c2ec98a894223dc6eac9"
+        },
+        "32bit": {
+            "url": "https://gh-proxy.org/https://github.com/Tyrrrz/LightBulb/releases/download/2.7.3/LightBulb.win-x86.zip",
+            "hash": "5810f17081f27b6ddd392de0037751ad3e75319c3cda376f967530c82f157a6c"
+        },
+        "arm64": {
+            "url": "https://gh-proxy.org/https://github.com/Tyrrrz/LightBulb/releases/download/2.7.3/LightBulb.win-arm64.zip",
+            "hash": "16155f546543268615a364139c0f45485c410cb06b208fade4d98ad2528ddde5"
+        }
+    },
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\Settings.json\")) {",
+        "    if (Test-Path \"$persist_dir\\Configuration.dat\") { warn 'Configuration from version 1 is not compatile with version 2!' }",
+        "    Set-Content \"$dir\\Settings.json\" -Value '{ \"IsAutoUpdateEnabled\": false }' -Encoding Ascii",
+        "}"
+    ],
+    "bin": "LightBulb.exe",
+    "shortcuts": [
+        [
+            "LightBulb.exe",
+            "LightBulb"
+        ]
+    ],
+    "persist": "Settings.json",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/Tyrrrz/LightBulb/releases/download/$version/LightBulb.win-x64.zip"
+            },
+            "32bit": {
+                "url": "https://gh-proxy.org/https://github.com/Tyrrrz/LightBulb/releases/download/$version/LightBulb.win-x86.zip"
+            },
+            "arm64": {
+                "url": "https://gh-proxy.org/https://github.com/Tyrrrz/LightBulb/releases/download/$version/LightBulb.win-arm64.zip"
+            }
+        }
+    }
+}

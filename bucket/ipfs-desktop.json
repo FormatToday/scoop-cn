@@ -1,0 +1,37 @@
+{
+    "version": "0.50.1",
+    "description": "A desktop client for IPFS",
+    "homepage": "https://ipfs.tech/",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/ipfs/ipfs-desktop/releases/download/v0.50.1/ipfs-desktop-setup-0.50.1-win-x64.exe#/dl.7z",
+            "hash": "sha512:bb9a5ef6f8f52295e0f8219de96f3bfc50df459ae1d45bfd04b7f472cb191d9a9f9281d202f49fa191cc0623d5e29ef469b7fe7bf69c7b9972ad3d628c9ebb6a",
+            "pre_install": [
+                "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
+                "Remove-Item \"$dir\\`$*\" -Recurse"
+            ]
+        }
+    },
+    "bin": "resources\\app.asar.unpacked\\node_modules\\kubo\\kubo\\ipfs.exe",
+    "shortcuts": [
+        [
+            "IPFS Desktop.exe",
+            "IPFS Desktop"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/ipfs/ipfs-desktop"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/ipfs/ipfs-desktop/releases/download/v$version/ipfs-desktop-setup-$version-win-x64.exe#/dl.7z"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/latest.yml",
+            "regex": "sha512:\\s+$base64"
+        }
+    }
+}

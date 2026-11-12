@@ -1,0 +1,41 @@
+{
+    "version": "2.6.0",
+    "description": "A popular dependency manager focusing on flexibility and simplicity.",
+    "homepage": "https://ant.apache.org/ivy/index.html",
+    "license": "Apache-2.0",
+    "depends": "ant",
+    "suggest": {
+        "JDK": [
+            "oraclejdk",
+            "openjdk"
+        ]
+    },
+    "url": "https://downloads.apache.org/ant/ivy/2.6.0/apache-ivy-2.6.0-bin.zip",
+    "hash": "sha512:71f5834ff8619abb72b2440396efa4aa4dd6c1ce4f81bbcd1c62aac39c77a903802937932ca8e7376a5464de952270dede75091dc8393bc3a4d478619a43f7ac",
+    "extract_dir": "apache-ivy-2.6.0",
+    "installer": {
+        "script": [
+            "$antLibPath = \"$(appsdir $global)\\ant\\current\\lib\"",
+            "Write-Host -fore blue \"Copying ivy-$version.jar to $antLibPath\"",
+            "Copy-Item \"$dir\\ivy-$version.jar\" $antLibPath"
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "$antLibPath = \"$(appsdir $global)\\ant\\current\\lib\"",
+            "Write-Host -fore blue \"Removing ivy-$version.jar from $antLibPath\"",
+            "Remove-Item -force $antLibPath\\ivy-$version.jar"
+        ]
+    },
+    "checkver": {
+        "url": "https://ant.apache.org/ivy/download.cgi",
+        "regex": "/([\\d.]+)/"
+    },
+    "autoupdate": {
+        "url": "https://downloads.apache.org/ant/ivy/$version/apache-ivy-$version-bin.zip",
+        "hash": {
+            "url": "$url.sha512"
+        },
+        "extract_dir": "apache-ivy-$version"
+    }
+}

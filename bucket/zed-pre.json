@@ -1,0 +1,45 @@
+{
+    "version": "1.29.1",
+    "description": "Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter. It's also open source. (Preview version)",
+    "homepage": "https://zed.dev/",
+    "license": "AGPL-3.0, Apache-2.0, GPL-3.0",
+    "notes": "Please manually disable Zed's auto-update feature in the settings to prevent the updater from installing the program in unintended locations.",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/zed-industries/zed/releases/download/v1.29.1-pre/Zed-x86_64.exe",
+            "hash": "8ba55a6043a0ea3ed9d30f23149c6ceba35d4369eae57dd5b7fa34f10b44266d"
+        },
+        "arm64": {
+            "url": "https://gh-proxy.org/https://github.com/zed-industries/zed/releases/download/v1.29.1-pre/Zed-aarch64.exe",
+            "hash": "b2bc0ab9c8f4fe13dc513c518a1069566af3d977eb833a769c939afc99b96c01"
+        }
+    },
+    "installer": {
+        "script": [
+            "Expand-InnoArchive -Path \"$dir\\$fname\" -ExtractDir '{app}'",
+            "Expand-InnoArchive -Path \"$dir\\$fname\" -ExtractDir '{code_GetInstallDir}' -Removal"
+        ]
+    },
+    "bin": "bin\\zed.exe",
+    "shortcuts": [
+        [
+            "zed.exe",
+            "Zed (Preview)"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/zed-industries/zed/releases",
+        "jsonpath": "$[?(@.prerelease == true)].tag_name",
+        "regex": "v([\\w.-]+)-pre"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/zed-industries/zed/releases/download/v$version-pre/Zed-x86_64.exe"
+            },
+            "arm64": {
+                "url": "https://gh-proxy.org/https://github.com/zed-industries/zed/releases/download/v$version-pre/Zed-aarch64.exe"
+            }
+        }
+    }
+}

@@ -1,0 +1,42 @@
+{
+    "version": "4.8.8",
+    "description": "Allows USB devices to be used remotely over a network just as if they were locally connected (server-side app)",
+    "homepage": "https://www.virtualhere.com/windows_server_software",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://www.virtualhere.com/windows_server_license"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://www.virtualhere.com/sites/default/files/usbserver/vhusbdwinw64.exe#/vhusbdwin.exe",
+            "hash": "sha1:e2d5ef5403b91636f5ad700eed2d2eb21fd83166"
+        },
+        "arm64": {
+            "url": "https://www.virtualhere.com/sites/default/files/usbserver/vhusbdwinarmw64.exe#/vhusbdwin.exe",
+            "hash": "sha1:e544c5f7da482dc592cc4a2ecd8ad7a2d8d01609"
+        }
+    },
+    "pre_install": "if (!(Test-Path \"$persist_dir\\config.ini\")) { New-Item \"$dir\\config.ini\" | Out-Null }",
+    "shortcuts": [
+        [
+            "vhusbdwin.exe",
+            "VirtualHere USB Server"
+        ]
+    ],
+    "persist": "config.ini",
+    "checkver": "version ([\\d.]+) Changes</a>",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://www.virtualhere.com/sites/default/files/usbserver/vhusbdwinw64.exe#/vhusbdwin.exe"
+            },
+            "arm64": {
+                "url": "https://www.virtualhere.com/sites/default/files/usbserver/vhusbdwinarmw64.exe#/vhusbdwin.exe"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/SHA1SUM",
+            "regex": "$sha1\\s+$basename"
+        }
+    }
+}

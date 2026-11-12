@@ -1,0 +1,24 @@
+{
+    "version": "0.25.2",
+    "description": "A Spotify player in the terminal with full feature parity",
+    "homepage": "https://github.com/aome510/spotify-player",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/aome510/spotify-player/releases/download/v0.25.2/spotify_player-x86_64-pc-windows-msvc.zip",
+            "hash": "5ddd441c1572c09c84a253b6fb2a63beb64627a785a88328d2e438a5c29432c9"
+        }
+    },
+    "bin": "spotify_player.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/aome510/spotify-player/releases/download/v$version/spotify_player-x86_64-pc-windows-msvc.zip"
+            }
+        },
+        "hash": {
+            "url": "$urlNoExt.sha256"
+        }
+    }
+}

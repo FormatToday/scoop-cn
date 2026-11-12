@@ -1,0 +1,45 @@
+{
+    "version": "b772",
+    "description": "Command-line tool for creating accurate optical disc dumps.",
+    "homepage": "https://github.com/superg/redumper",
+    "license": "GPL-3.0-or-later",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/superg/redumper/releases/download/b772/redumper-b772-windows-x64.zip",
+            "hash": "10b835c14727ef867fb5398d34cda7161dcd7fae927df88b55dabb0ca28251aa",
+            "extract_dir": "redumper-b772-windows-x64\\bin"
+        },
+        "32bit": {
+            "url": "https://gh-proxy.org/https://github.com/superg/redumper/releases/download/b772/redumper-b772-windows-x86.zip",
+            "hash": "95eafb7fe499614887f514742c0c6cb0d9d7ae19d546489d6227f35c928066b3",
+            "extract_dir": "redumper-b772-windows-x86\\bin"
+        },
+        "arm64": {
+            "url": "https://gh-proxy.org/https://github.com/superg/redumper/releases/download/b772/redumper-b772-windows-arm64.zip",
+            "hash": "a614389565f88ad5d9d094a7f3501899bd0fe626dfb0cfa1482c1b500a1d5fe9",
+            "extract_dir": "redumper-b772-windows-arm64\\bin"
+        }
+    },
+    "bin": "redumper.exe",
+    "checkver": {
+        "github": "https://api.github.com/repos/superg/redumper/releases/latest",
+        "jsonpath": "$.tag_name",
+        "regex": "(b[\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/superg/redumper/releases/download/$version/redumper-$version-windows-x64.zip",
+                "extract_dir": "redumper-$version-windows-x64\\bin"
+            },
+            "32bit": {
+                "url": "https://gh-proxy.org/https://github.com/superg/redumper/releases/download/$version/redumper-$version-windows-x86.zip",
+                "extract_dir": "redumper-$version-windows-x86\\bin"
+            },
+            "arm64": {
+                "url": "https://gh-proxy.org/https://github.com/superg/redumper/releases/download/$version/redumper-$version-windows-arm64.zip",
+                "extract_dir": "redumper-$version-windows-arm64\\bin"
+            }
+        }
+    }
+}

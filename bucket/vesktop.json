@@ -1,0 +1,35 @@
+{
+    "version": "1.6.9",
+    "description": "A cross platform electron-based desktop app aiming to give you a snappier Discord experience with Vencord pre-installed",
+    "homepage": "https://github.com/Vencord/Vesktop",
+    "license": "GPL-3.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/Vencord/Vesktop/releases/download/v1.6.9/Vesktop-1.6.9-win.zip",
+            "hash": "a437592ccaf0511a1dd2388bc651cff93bb38abeff57b88a975f82dc5127531c"
+        },
+        "arm64": {
+            "url": "https://gh-proxy.org/https://github.com/Vencord/Vesktop/releases/download/v1.6.9/Vesktop-1.6.9-arm64-win.zip",
+            "hash": "05512529923008769550f76ef4d8d1bdbb1b48468d9fd2d512911fd6a6009a34"
+        }
+    },
+    "bin": "Vesktop.exe",
+    "shortcuts": [
+        [
+            "Vesktop.exe",
+            "Vencord Desktop"
+        ]
+    ],
+    "persist": "Data",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/Vencord/Vesktop/releases/download/v$version/Vesktop-$version-win.zip"
+            },
+            "arm64": {
+                "url": "https://gh-proxy.org/https://github.com/Vencord/Vesktop/releases/download/v$version/Vesktop-$version-arm64-win.zip"
+            }
+        }
+    }
+}

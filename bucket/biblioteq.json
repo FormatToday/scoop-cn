@@ -1,0 +1,36 @@
+{
+    "##": "Not all releases include build artifacts, hence the checkver.jsonpath. See: https://github.com/textbrowser/biblioteq/issues/300.",
+    "version": "2026.09.15",
+    "description": "Professional archiving, cataloging, and library management suite providing connectivity to PostgreSQL and SQLite.",
+    "homepage": "https://textbrowser.github.io/biblioteq/",
+    "license": "BSD-3-Clause",
+    "suggest": {
+        "vcredist": "vcredist2022"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/textbrowser/biblioteq/releases/download/2026.09.15/BiblioteQ-2026.09.15.zip",
+            "hash": "f59ff618d29cb2bcb2c91749e56bca06c9743376d9f6dc2479634d0ba730a3c8"
+        }
+    },
+    "extract_dir": "BiblioteQ",
+    "pre_install": "Remove-Item \"$dir\\vc_red*\"",
+    "shortcuts": [
+        [
+            "BiblioteQ.exe",
+            "BiblioteQ"
+        ]
+    ],
+    "persist": ".biblioteq",
+    "checkver": {
+        "github": "https://api.github.com/repos/textbrowser/biblioteq/releases",
+        "jsonpath": "$[?(@.assets[0].url)].tag_name"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/textbrowser/biblioteq/releases/download/$version/BiblioteQ-$version.zip"
+            }
+        }
+    }
+}

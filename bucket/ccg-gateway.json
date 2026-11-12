@@ -1,0 +1,26 @@
+{
+    "version": "2.2.0",
+    "description": "A productivity tool built for Claude Code, Codex, and Gemini CLI, integrating a smart API gateway and configuration management.",
+    "homepage": "https://github.com/mos1128/ccg-gateway",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/mos1128/ccg-gateway/releases/download/v2.2.0/ccg-gateway.exe",
+            "hash": "ce1f83aec077a19559691a6f524153095fa55526b43549955b61e0a34e8c0b0c"
+        }
+    },
+    "shortcuts": [
+        [
+            "ccg-gateway.exe",
+            "CCG Gateway"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/mos1128/ccg-gateway/releases/download/v$version/ccg-gateway.exe"
+            }
+        }
+    }
+}

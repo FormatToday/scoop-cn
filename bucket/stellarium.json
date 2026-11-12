@@ -1,0 +1,38 @@
+{
+    "version": "26.3",
+    "description": "Real time realistic skies generator",
+    "homepage": "https://stellarium.org",
+    "license": "GPL-2.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/Stellarium/stellarium/releases/download/v26.3/stellarium-26.3-qt6-win64.exe",
+            "hash": "06d0444e02bca3ad9703e08a641270576c1df581088eb3e7549870887e039cd8"
+        },
+        "arm64": {
+            "url": "https://gh-proxy.org/https://github.com/Stellarium/stellarium/releases/download/v26.3/stellarium-26.3-qt6-arm64.exe",
+            "hash": "06deb597dd6e1f6cc6e3bb2399df98369cdc61028eef61862bb3a49045ab75ec"
+        }
+    },
+    "innosetup": true,
+    "bin": "stellarium.exe",
+    "shortcuts": [
+        [
+            "stellarium.exe",
+            "Stellarium"
+        ]
+    ],
+    "checkver": {
+        "url": "https://github.com/Stellarium/stellarium/releases",
+        "regex": "(?sm)stellarium-(?<long>[\\d\\.]+)\\.tar\\.gz</.*?Stellarium (?<version>[\\d\\.]+) for"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/Stellarium/stellarium/releases/download/v$version/stellarium-$matchLong-qt6-win64.exe"
+            },
+            "arm64": {
+                "url": "https://gh-proxy.org/https://github.com/Stellarium/stellarium/releases/download/v$version/stellarium-$matchLong-qt6-arm64.exe"
+            }
+        }
+    }
+}

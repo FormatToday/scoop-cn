@@ -1,0 +1,38 @@
+{
+    "version": "4.20.1",
+    "description": "Reads and applies migrations in correct order to a database.",
+    "homepage": "https://github.com/golang-migrate/migrate",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/golang-migrate/migrate/releases/download/v4.20.1/migrate.windows-amd64.zip",
+            "hash": "bf68e2fdd1c8efd3cac59c6cb4cddca51546c402e3fc616172329d7686875ce8"
+        },
+        "32bit": {
+            "url": "https://gh-proxy.org/https://github.com/golang-migrate/migrate/releases/download/v4.20.1/migrate.windows-386.zip",
+            "hash": "dbdd250326b9875fe35a928cc1444955e50703ed56b358278ff3705d444f382b"
+        },
+        "arm64": {
+            "url": "https://gh-proxy.org/https://github.com/golang-migrate/migrate/releases/download/v4.20.1/migrate.windows-arm64.zip",
+            "hash": "7e7bf6db821e35831f4a36a57a8b64dd8f897a2a5e9d5c7921355fff3676032f"
+        }
+    },
+    "bin": "migrate.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/golang-migrate/migrate/releases/download/v$version/migrate.windows-amd64.zip"
+            },
+            "32bit": {
+                "url": "https://gh-proxy.org/https://github.com/golang-migrate/migrate/releases/download/v$version/migrate.windows-386.zip"
+            },
+            "arm64": {
+                "url": "https://gh-proxy.org/https://github.com/golang-migrate/migrate/releases/download/v$version/migrate.windows-arm64.zip"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/sha256sum.txt"
+        }
+    }
+}

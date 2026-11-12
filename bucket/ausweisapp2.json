@@ -1,0 +1,32 @@
+{
+    "version": "2.6.2",
+    "description": "Authenticate to websites with german ID.",
+    "homepage": "https://www.ausweisapp.bund.de/",
+    "license": "EUPL-1.2",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/Governikus/AusweisApp/releases/download/2.6.2/AusweisApp-2.6.2.msi",
+            "hash": "f106595577516164f6c6cc339839cb314cd53d93b36f78067ee3c135a78f4e53",
+            "extract_dir": "PFiles64\\AusweisApp"
+        }
+    },
+    "shortcuts": [
+        [
+            "AusweisApp.exe",
+            "AusweisApp"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/Governikus/AusweisApp"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/Governikus/AusweisApp/releases/download/$version/AusweisApp-$version.msi",
+                "hash": {
+                    "url": "$url.sha256"
+                }
+            }
+        }
+    }
+}

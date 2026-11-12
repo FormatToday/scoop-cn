@@ -1,0 +1,22 @@
+{
+    "version": "1.8.27",
+    "description": "A command-line cd replacement that accelerates directory navigation by learning user access patterns.",
+    "homepage": "https://github.com/skywind3000/z.lua",
+    "license": {
+        "identifier": "MIT",
+        "url": "https://github.com/skywind3000/z.lua/blob/HEAD/LICENSE"
+    },
+    "notes": "Configure accordingly to 'https://github.com/skywind3000/z.lua#install'",
+    "depends": "lua",
+    "url": "https://gh-proxy.org/https://github.com/skywind3000/z.lua/archive/refs/tags/1.8.27.zip",
+    "hash": "90d86300de410779c89cc5e6081dff00c6880cae83eb651cbbaad22af4595b75",
+    "extract_dir": "z.lua-1.8.27",
+    "checkver": {
+        "github": "https://api.github.com/repos/skywind3000/z.lua/releases/latest",
+        "regex": "(?i)(?<tag>v?([\\d.]+))"
+    },
+    "autoupdate": {
+        "url": "https://gh-proxy.org/https://github.com/skywind3000/z.lua/archive/refs/tags/$matchTag.zip",
+        "extract_dir": "z.lua-$version"
+    }
+}

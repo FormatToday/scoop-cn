@@ -1,0 +1,35 @@
+{
+    "version": "368.261109.0",
+    "description": "The official desktop client for Tuta Mail (formerly Tutanota), the email service with a strong focus on security and privacy.",
+    "homepage": "https://tuta.com/",
+    "license": "GPL-3.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/tutao/tutanota/releases/download/tutanota-desktop-release-368.261109.0/tutanota-desktop-win.exe#/dl.7z",
+            "hash": "4616e517d4aed23314d826a72aae471e87d2c626d4b2c01afc09b6e968f36b49"
+        }
+    },
+    "extract_dir": "$PLUGINSDIR",
+    "pre_install": "Expand-7zipArchive \"$dir\\app-64.7z\" \"$dir\" -Removal",
+    "shortcuts": [
+        [
+            "Tuta.exe",
+            "Tuta Mail"
+        ]
+    ],
+    "checkver": {
+        "url": "https://github.com/tutao/tutanota/tags",
+        "regex": "tutanota-desktop-release-([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/tutao/tutanota/releases/download/tutanota-desktop-release-$version/tutanota-desktop-win.exe#/dl.7z",
+                "hash": {
+                    "url": "https://github.com/tutao/tutanota/releases/tag/tutanota-desktop-release-$version",
+                    "regex": "tutanota-desktop-win.exe:.*\\n$sha256"
+                }
+            }
+        }
+    }
+}

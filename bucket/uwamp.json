@@ -1,0 +1,27 @@
+{
+    "version": "4.0.0",
+    "description": "Wamp Server with Apache MySQL PHP and SQLite.",
+    "homepage": "https://www.uwamp.com/en/",
+    "license": "Unknown",
+    "url": "https://www.uwamp.com/file/UwAmp-4.0.0.zip",
+    "hash": "a2b7d825d107e0437d6c784c8218a76349e813526c3168ea5c2ed5f74fd86e06",
+    "extract_dir": "UwAmp",
+    "bin": "UwAmp.exe",
+    "shortcuts": [
+        [
+            "UwAmp.exe",
+            "UwAmp"
+        ]
+    ],
+    "checkver": {
+        "url": "https://www.uwamp.com/en/?page=download",
+        "regex": ">Download UwAmp ([\\d.]+)<"
+    },
+    "autoupdate": {
+        "url": "https://www.uwamp.com/file/UwAmp-$version.zip",
+        "hash": {
+            "url": "$baseurl/SHA256SUMS.txt",
+            "regex": "$sha256\\s$base64$basename"
+        }
+    }
+}

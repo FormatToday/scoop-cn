@@ -1,0 +1,43 @@
+{
+    "version": "7.0.03",
+    "description": "The scientific analysis of speech in phonetics",
+    "homepage": "https://praat.org/",
+    "license": "GPL-2.0-or-later",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/praat/praat.github.io/releases/download/v7.0.03/praat7003_win-x64v3.zip",
+            "hash": "393622c0e148a660f4dbc69ab7b44e7fa786c53d399c80486dc0f94c829fd657"
+        },
+        "32bit": {
+            "url": "https://gh-proxy.org/https://github.com/praat/praat.github.io/releases/download/v7.0.03/praat7003_win-intel32.zip",
+            "hash": "30724bf0cb77ca2c8604e5b34b9003442e2654c12f5a7b4cb83d170b016d50ba"
+        },
+        "arm64": {
+            "url": "https://gh-proxy.org/https://github.com/praat/praat.github.io/releases/download/v7.0.03/praat7003_win-arm64.zip",
+            "hash": "ad1be120271aa5235e067d82dac582a253593e1b28a5a7664645ec9186cbfb75"
+        }
+    },
+    "bin": "Praat.exe",
+    "shortcuts": [
+        [
+            "Praat.exe",
+            "Praat"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/praat/praat.github.io"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/praat/praat.github.io/releases/download/v$version/praat$cleanVersion_win-x64v3.zip"
+            },
+            "32bit": {
+                "url": "https://gh-proxy.org/https://github.com/praat/praat.github.io/releases/download/v$version/praat$cleanVersion_win-intel32.zip"
+            },
+            "arm64": {
+                "url": "https://gh-proxy.org/https://github.com/praat/praat.github.io/releases/download/v$version/praat$cleanVersion_win-arm64.zip"
+            }
+        }
+    }
+}

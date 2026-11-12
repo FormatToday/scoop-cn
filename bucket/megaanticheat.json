@@ -1,0 +1,28 @@
+{
+    "version": "0.2.1",
+    "license": "GPL-3.0",
+    "homepage": "https://github.com/MegaAntiCheat/client-backend",
+    "description": "Fan-made TF2 client-side anticheat which builds a list of cheaters using collected demo data",
+    "url": "https://gh-proxy.org/https://github.com/MegaAntiCheat/client-backend/releases/download/v0.2.1/client_backend.exe#/megaanticheat.exe",
+    "hash": "005c064c7645c38873569c752e1a2000a1a9c8b8723d342ce238fd9b1e12471e",
+    "checkver": {
+        "url": "https://api.github.com/repos/MegaAntiCheat/client-backend/releases?per_page=1",
+        "jsonpath": "$[0].tag_name",
+        "regex": "v([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://gh-proxy.org/https://github.com/MegaAntiCheat/client-backend/releases/download/v$version/client_backend.exe#/megaanticheat.exe"
+    },
+    "bin": "megaanticheat.exe",
+    "shortcuts": [
+        [
+            "megaanticheat.exe",
+            "MegaAntiCheat"
+        ]
+    ],
+    "notes": [
+        "Setup guide:",
+        "",
+        "    https://github.com/MegaAntiCheat/client-backend#usage-steps"
+    ]
+}

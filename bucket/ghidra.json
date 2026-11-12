@@ -1,0 +1,55 @@
+{
+    "version": "12.2-20261016",
+    "description": "a software reverse engineering (SRE) framework",
+    "homepage": "https://ghidra-sre.org",
+    "license": "Apache-2.0",
+    "notes": "Ghidra requires JDK 25 on the PATH to run.",
+    "extract_dir": "ghidra_12.2_PUBLIC",
+    "suggest": {
+        "JDK": "temurin25-jdk"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/NationalSecurityAgency/ghidra/releases/download/Ghidra_12.2_build/ghidra_12.2_PUBLIC_20261016.zip",
+            "hash": "2c2cd776db3c1f6a097ba418922378ac3649cadd5e844a6f5f088ae628a7be67"
+        }
+    },
+    "post_install": [
+        "# Copy default Configurations to persisting dir.",
+        "if (Test-Path \"$dir\\Ghidra\\Configurations.original\") {",
+        "    Copy-Item \"$dir\\Ghidra\\Configurations.original\\*\" \"$persist_dir\\Ghidra\\Configurations\" -Force -Recurse",
+        "    Remove-Item \"$dir\\Ghidra\\Configurations.original\" -Force -Recurse | Out-Null",
+        "}"
+    ],
+    "bin": "ghidraRun.bat",
+    "shortcuts": [
+        [
+            "ghidraRun.bat",
+            "ghidra",
+            "",
+            "support\\ghidra.ico"
+        ]
+    ],
+    "env_set": {
+        "GHIDRA_INSTALL_DIR": "$dir"
+    },
+    "persist": "Ghidra/Configurations",
+    "checkver": {
+        "github": "https://api.github.com/repos/NationalSecurityAgency/ghidra/releases/latest",
+        "jsonpath": "$.assets[*].browser_download_url",
+        "regex": "ghidra_([\\d.]+)_PUBLIC_(?<releasedate>\\d+)\\.zip",
+        "replace": "${1}-${2}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/NationalSecurityAgency/ghidra/releases/download/Ghidra_$matchHead_build/ghidra_$matchHead_PUBLIC_$matchReleasedate.zip"
+            }
+        },
+        "hash": {
+            "url": "https://github.com/NationalSecurityAgency/ghidra/releases/tag/Ghidra_$matchHead_build",
+            "regex": "<code>$sha256</code>"
+        },
+        "extract_dir": "ghidra_$matchHead_PUBLIC"
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "version": "0.8.0",
+    "description": "Fast, keyboard-driven file explorer.",
+    "homepage": "https://github.com/mattstermiller/koffee/",
+    "license": "MIT",
+    "notes": "Thanks for installing Koffee! Please visit the homepage for usage instructions by typing 'scoop home koffee', or press '?' in Koffee to view the keybindings.",
+    "url": "https://gh-proxy.org/https://github.com/mattstermiller/koffee/releases/download/v0.8.0/Koffee-0.8.0.zip",
+    "hash": "ecd67f3eec943078e09a97be2642e977dfecc144c4945f5e93c77a9e514bd3f5",
+    "extract_dir": "Koffee",
+    "bin": "Koffee.exe",
+    "shortcuts": [
+        [
+            "Koffee.exe",
+            "Koffee"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://gh-proxy.org/https://github.com/mattstermiller/koffee/releases/download/v$version/Koffee-$version.zip"
+    }
+}

@@ -1,0 +1,37 @@
+{
+    "version": "1.11.0",
+    "description": "Synchronize games from other platforms into your Steam library",
+    "homepage": "https://github.com/PhilipK/BoilR",
+    "license": "MIT|Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/PhilipK/BoilR/releases/download/v.1.11.0/windows_BoilR.exe",
+            "hash": "b8a2e79020385ea0f301bebd5353a251e20f7b1bda792ed46a09ad82aebd8bb7"
+        }
+    },
+    "bin": [
+        [
+            "windows_BoilR.exe",
+            "boilr",
+            "--no-ui"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "windows_BoilR.exe",
+            "BoilR"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/PhilipK/BoilR/releases/latest",
+        "jsonpath": "$.assets[*].browser_download_url",
+        "regex": "/v\\.([\\d.]+)/windows_BoilR\\.exe"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/PhilipK/BoilR/releases/download/v.$version/windows_BoilR.exe"
+            }
+        }
+    }
+}

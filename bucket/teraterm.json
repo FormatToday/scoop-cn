@@ -1,0 +1,57 @@
+{
+    "version": "5.7.1",
+    "description": "Terminal emulator for ssh/telnet/serial connection.",
+    "homepage": "https://teratermproject.github.io/index-en.html",
+    "license": "BSD-3-Clause",
+    "notes": "OSDN is currently unstable. See: https://github.com/TeraTermProject/osdn-download",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/TeraTermProject/teraterm/releases/download/v5.7.1/teraterm-5.7.1-x64.zip",
+            "hash": "68521f36a07754396eb925aabb0cd1f2092b15fffac74d330b428952552adafc",
+            "extract_dir": "teraterm-5.7.1-x64"
+        },
+        "32bit": {
+            "url": "https://gh-proxy.org/https://github.com/TeraTermProject/teraterm/releases/download/v5.7.1/teraterm-5.7.1-x86.zip",
+            "hash": "b4640c1157df01f50ea273bdecbb49bee18e208af48360bb625ab6651100c22a",
+            "extract_dir": "teraterm-5.7.1-x86"
+        },
+        "arm64": {
+            "url": "https://gh-proxy.org/https://github.com/TeraTermProject/teraterm/releases/download/v5.7.1/teraterm-5.7.1-arm64.zip",
+            "hash": "62a8130ace6ce6686f87a4e16b9aca6f9a55cffa32afa53c2bf0628a8049381f",
+            "extract_dir": "teraterm-5.7.1-arm64"
+        }
+    },
+    "bin": "ttermpro.exe",
+    "shortcuts": [
+        [
+            "ttermpro.exe",
+            "Tera Term"
+        ]
+    ],
+    "persist": [
+        "cygterm.cfg",
+        "KEYBOARD.CNF",
+        "ttpmenu.ini",
+        "ssh_known_hosts",
+        "TERATERM.INI"
+    ],
+    "checkver": {
+        "github": "https://github.com/TeraTermProject/teraterm"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/TeraTermProject/teraterm/releases/download/v$version/teraterm-$version-x64.zip",
+                "extract_dir": "teraterm-$version-x64"
+            },
+            "32bit": {
+                "url": "https://gh-proxy.org/https://github.com/TeraTermProject/teraterm/releases/download/v$version/teraterm-$version-x86.zip",
+                "extract_dir": "teraterm-$version-x86"
+            },
+            "arm64": {
+                "url": "https://gh-proxy.org/https://github.com/TeraTermProject/teraterm/releases/download/v$version/teraterm-$version-arm64.zip",
+                "extract_dir": "teraterm-$version-arm64"
+            }
+        }
+    }
+}

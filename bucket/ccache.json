@@ -1,0 +1,34 @@
+{
+    "version": "4.14.3",
+    "description": "Compiler cache to speed up recompilation by caching previous compilations and detecting when the same compilation is being done again.",
+    "homepage": "https://ccache.dev",
+    "license": "GPL-3.0-or-later",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/ccache/ccache/releases/download/v4.14.3/ccache-4.14.3-windows-x86_64.zip",
+            "hash": "c845c3d65be81954c75659145a522a793a27586bf940c5dcfe18af33fa1a67dd",
+            "extract_dir": "ccache-4.14.3-windows-x86_64"
+        },
+        "arm64": {
+            "url": "https://gh-proxy.org/https://github.com/ccache/ccache/releases/download/v4.14.3/ccache-4.14.3-windows-aarch64.zip",
+            "hash": "4c12ee652936c83b7730ff16f93c86e9e905a91aed9549ce1304185f33c8b3e4",
+            "extract_dir": "ccache-4.14.3-windows-aarch64"
+        }
+    },
+    "bin": "ccache.exe",
+    "checkver": {
+        "github": "https://github.com/ccache/ccache"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/ccache/ccache/releases/download/v$version/ccache-$version-windows-x86_64.zip",
+                "extract_dir": "ccache-$version-windows-x86_64"
+            },
+            "arm64": {
+                "url": "https://gh-proxy.org/https://github.com/ccache/ccache/releases/download/v$version/ccache-$version-windows-aarch64.zip",
+                "extract_dir": "ccache-$version-windows-aarch64"
+            }
+        }
+    }
+}

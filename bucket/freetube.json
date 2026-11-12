@@ -1,0 +1,37 @@
+{
+    "version": "0.26.0-beta",
+    "description": "The private YouTube client",
+    "homepage": "https://freetubeapp.io",
+    "license": "AGPL-3.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/FreeTubeApp/FreeTube/releases/download/v0.26.0-beta/freetube-0.26.0-beta-win-x64-portable.7z",
+            "hash": "cb46a01035004670ec7028424dcdfaeb3497417e5c0943895e1d13efa19a7eea"
+        },
+        "arm64": {
+            "url": "https://gh-proxy.org/https://github.com/FreeTubeApp/FreeTube/releases/download/v0.26.0-beta/freetube-0.26.0-beta-win-arm64-portable.7z",
+            "hash": "b13de5d8aa88810591d702d1581ab0ea7492b9db546848d197d7b7183f363d0f"
+        }
+    },
+    "shortcuts": [
+        [
+            "FreeTube.exe",
+            "FreeTube"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/FreeTubeApp/FreeTube/tags",
+        "jsonpath": "$[0].name",
+        "regex": "v([\\w.-]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/FreeTubeApp/FreeTube/releases/download/v$version/freetube-$version-win-x64-portable.7z"
+            },
+            "arm64": {
+                "url": "https://gh-proxy.org/https://github.com/FreeTubeApp/FreeTube/releases/download/v$version/freetube-$version-win-arm64-portable.7z"
+            }
+        }
+    }
+}

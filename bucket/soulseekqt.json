@@ -1,0 +1,35 @@
+{
+    "version": "2026.4.30",
+    "description": "File sharing network.",
+    "homepage": "https://www.slsknet.org/news/",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://www.slsknet.org/news/node/682"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://f004.backblazeb2.com/file/SoulseekQt/SoulseekQt-2026-4-30-64bit.exe",
+            "hash": "4ba32e37bbd804ee69a88af018c3b9b49dd1bf772b65ad7c268718d0ed93eb29"
+        }
+    },
+    "innosetup": true,
+    "bin": "SoulseekQt.exe",
+    "shortcuts": [
+        [
+            "SoulseekQt.exe",
+            "SoulseekQt"
+        ]
+    ],
+    "checkver": {
+        "url": "https://www.slsknet.org/news/node/1",
+        "regex": "SoulseekQt-(\\d+)-(\\d+)-(\\d+(?:-\\d+)?)-64bit",
+        "replace": "${1}.${2}.${3}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://f004.backblazeb2.com/file/SoulseekQt/SoulseekQt-$dashVersion-64bit.exe"
+            }
+        }
+    }
+}

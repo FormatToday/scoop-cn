@@ -1,0 +1,29 @@
+{
+    "version": "1.4.1",
+    "description": "Machine learning powered Karaoke app (with scores!).",
+    "homepage": "https://nightingale.cafe",
+    "license": "GPL-3.0-or-later",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/rzru/nightingale/releases/download/v1.4.1/Nightingale_1.4.1_x64_en-US.msi",
+            "hash": "d986f6fa06799c605a14f2cb005e464ac79cf950ab31885467fa549b6a677885"
+        }
+    },
+    "extract_dir": "PFiles\\Nightingale",
+    "shortcuts": [
+        [
+            "Nightingale.exe",
+            "Nightingale"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/rzru/nightingale"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/rzru/nightingale/releases/download/v$version/Nightingale_$version_x64_en-US.msi"
+            }
+        }
+    }
+}

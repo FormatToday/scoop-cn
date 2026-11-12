@@ -1,0 +1,29 @@
+{
+    "version": "7.1.2",
+    "homepage": "https://authme.levminer.com/",
+    "description": "A 2FA desktop app that supports TOTP and Google Authenticator QR codes.",
+    "license": "GPL-3.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/Levminer/authme/releases/download/7.1.2/authme-7.1.2-windows-x64.msi",
+            "hash": "85083b1e14fd9ada6cf7a023dd45fecfa015d4ce9044c5603c44db18ffe977f9"
+        }
+    },
+    "extract_dir": "PFiles\\Authme",
+    "shortcuts": [
+        [
+            "Authme.exe",
+            "Authme"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/Levminer/authme"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/Levminer/authme/releases/download/$version/authme-$version-windows-x64.msi"
+            }
+        }
+    }
+}

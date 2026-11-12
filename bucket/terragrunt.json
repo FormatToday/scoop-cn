@@ -1,0 +1,33 @@
+{
+    "version": "1.2.2",
+    "description": "Thin wrapper for Terraform that provides extra tools for keeping Terraform configurations DRY, working with multiple Terraform modules, and managing remote state.",
+    "homepage": "https://terragrunt.com",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/gruntwork-io/terragrunt/releases/download/v1.2.2/terragrunt_windows_amd64.exe#/terragrunt.exe",
+            "hash": "b2aae99537724c43782c9977d9615c6276c63248d36b2b0e182d0484a409a9da"
+        },
+        "32bit": {
+            "url": "https://gh-proxy.org/https://github.com/gruntwork-io/terragrunt/releases/download/v1.2.2/terragrunt_windows_386.exe#/terragrunt.exe",
+            "hash": "871c27ee9fccf3e49bb0c4bfb31ccd66215c4f0a7d09fea0b8fd3b108d39cb9f"
+        }
+    },
+    "bin": "terragrunt.exe",
+    "checkver": {
+        "github": "https://github.com/gruntwork-io/terragrunt"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/gruntwork-io/terragrunt/releases/download/v$version/terragrunt_windows_amd64.exe#/terragrunt.exe"
+            },
+            "32bit": {
+                "url": "https://gh-proxy.org/https://github.com/gruntwork-io/terragrunt/releases/download/v$version/terragrunt_windows_386.exe#/terragrunt.exe"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/SHA256SUMS"
+        }
+    }
+}

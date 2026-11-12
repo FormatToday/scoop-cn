@@ -1,0 +1,32 @@
+{
+    "version": "0.12.0",
+    "description": "Distributed, offline-first bug tracker embedded in git, with bridges",
+    "homepage": "https://github.com/git-bug/git-bug",
+    "license": "GPL-3.0-or-later",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/git-bug/git-bug/releases/download/v0.12.0/git-bug_windows_amd64.zip",
+            "hash": "97e4740c3a845d78683625a4c52dc7ee3d2cb63853f3ec489be5c03343a559c3",
+            "extract_dir": "git-bug_windows_amd64"
+        },
+        "arm64": {
+            "url": "https://gh-proxy.org/https://github.com/git-bug/git-bug/releases/download/v0.12.0/git-bug_windows_arm64.zip",
+            "hash": "8423893e3a5bce4208fd523a4a0a271f707e942c54fb01755bb2667b73aa44aa",
+            "extract_dir": "git-bug_windows_arm64"
+        }
+    },
+    "bin": "git-bug.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/git-bug/git-bug/releases/download/v$version/git-bug_windows_amd64.zip",
+                "extract_dir": "git-bug_windows_amd64"
+            },
+            "arm64": {
+                "url": "https://gh-proxy.org/https://github.com/git-bug/git-bug/releases/download/v$version/git-bug_windows_arm64.zip",
+                "extract_dir": "git-bug_windows_arm64"
+            }
+        }
+    }
+}

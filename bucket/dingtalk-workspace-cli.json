@@ -1,0 +1,31 @@
+{
+    "version": "1.0.68",
+    "description": "Officially CLI tool from DingTalk, designed for both human users and AI agent scenarios.",
+    "homepage": "https://github.com/DingTalk-Real-AI/dingtalk-workspace-cli",
+    "license": "Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/DingTalk-Real-AI/dingtalk-workspace-cli/releases/download/v1.0.68/dws-windows-amd64.zip",
+            "hash": "70c1bbea9986820ae8cee492f95d5af8c3875b62efdbeb0afa92a0ca23cdafbb"
+        },
+        "arm64": {
+            "url": "https://gh-proxy.org/https://github.com/DingTalk-Real-AI/dingtalk-workspace-cli/releases/download/v1.0.68/dws-windows-arm64.zip",
+            "hash": "f3912fe2b163c88881d351ca296cece4855a145af34d46440920078887906265"
+        }
+    },
+    "bin": "dws.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/DingTalk-Real-AI/dingtalk-workspace-cli/releases/download/v$version/dws-windows-amd64.zip"
+            },
+            "arm64": {
+                "url": "https://gh-proxy.org/https://github.com/DingTalk-Real-AI/dingtalk-workspace-cli/releases/download/v$version/dws-windows-arm64.zip"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/checksums.txt"
+        }
+    }
+}

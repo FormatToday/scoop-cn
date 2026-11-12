@@ -1,0 +1,39 @@
+{
+    "version": "1.0.4",
+    "description": "Rednex Game Boy Development System - An assembly toolchain for the Nintendo Game Boy and Game Boy Color",
+    "homepage": "https://rgbds.gbdev.io/",
+    "license": {
+        "identifier": "MIT",
+        "url": "https://github.com/gbdev/rgbds/blob/master/LICENSE"
+    },
+    "architecture": {
+        "32bit": {
+            "url": "https://gh-proxy.org/https://github.com/gbdev/rgbds/releases/download/v1.0.4/rgbds-win32.zip",
+            "hash": "2e434076da73d194a7ae1de31eeb94065f850723f2f268c4a079d90b48994782"
+        },
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/gbdev/rgbds/releases/download/v1.0.4/rgbds-win64.zip",
+            "hash": "bd1d7e386f290afd57f4ea9a7353bfcd4ae10884a94c5c1f2fc42a75db7f97e6"
+        }
+    },
+    "extract_dir": "bin",
+    "bin": [
+        "rgbasm.exe",
+        "rgbfix.exe",
+        "rgbgfx.exe",
+        "rgblink.exe"
+    ],
+    "checkver": {
+        "github": "https://github.com/gbdev/rgbds"
+    },
+    "autoupdate": {
+        "architecture": {
+            "32bit": {
+                "url": "https://gh-proxy.org/https://github.com/gbdev/rgbds/releases/download/v$version/rgbds-win32.zip"
+            },
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/gbdev/rgbds/releases/download/v$version/rgbds-win64.zip"
+            }
+        }
+    }
+}

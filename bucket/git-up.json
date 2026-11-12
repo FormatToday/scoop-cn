@@ -1,0 +1,25 @@
+{
+    "version": "2.6.1",
+    "description": "A nicer 'git pull'",
+    "homepage": "https://github.com/msiemens/PyGitUp",
+    "license": "MIT",
+    "depends": "python",
+    "url": "https://gh-proxy.org/https://github.com/msiemens/PyGitUp/archive/v2.6.1.zip",
+    "hash": "60215b2637417b198588f6dbbadc31041261ce4c05feb8a2a5be82e987352d17",
+    "extract_dir": "PyGitUp-2.6.1",
+    "post_install": [
+        "pushd \"$dir\"",
+        "try {",
+        "    scoop reset python",
+        "    iex \"$(scoop which python) setup.py install\"",
+        "}",
+        "finally {",
+        "    popd",
+        "}"
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://gh-proxy.org/https://github.com/msiemens/PyGitUp/archive/v$version.zip",
+        "extract_dir": "PyGitUp-$version"
+    }
+}

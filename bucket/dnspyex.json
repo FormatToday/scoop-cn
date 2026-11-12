@@ -1,0 +1,34 @@
+{
+    "version": "6.6.0",
+    "description": "Continuation of the dnSpy project, a .NET debugger and assembly editor.",
+    "homepage": "https://github.com/dnSpyEx/dnSpy",
+    "license": "GPL-3.0-or-later",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/dnSpyEx/dnSpy/releases/download/v6.6.0/dnSpy-net-win64.zip",
+            "hash": "8ed48f165dc355e869f3a0037ad4f9216147f995a5ae0258b296eeef1f73aab0"
+        },
+        "32bit": {
+            "url": "https://gh-proxy.org/https://github.com/dnSpyEx/dnSpy/releases/download/v6.6.0/dnSpy-net-win32.zip",
+            "hash": "6ec1271aabb6503985e4d6299b0929aaa72f995a17a68d3233d5a3363092cdca"
+        }
+    },
+    "bin": "dnSpy.Console.exe",
+    "shortcuts": [
+        [
+            "dnSpy.exe",
+            "dnSpy"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/dnSpyEx/dnSpy/releases/download/v$version/dnSpy-net-win64.zip"
+            },
+            "32bit": {
+                "url": "https://gh-proxy.org/https://github.com/dnSpyEx/dnSpy/releases/download/v$version/dnSpy-net-win32.zip"
+            }
+        }
+    }
+}

@@ -1,0 +1,46 @@
+{
+    "version": "5.5.1",
+    "description": "A tool for building self-running Lua programs",
+    "homepage": "https://github.com/LuaDist/srlua",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": [
+                "https://joedf.github.io/LuaBuilds/hdata/srlua-5.5.1_Win64_bin.zip",
+                "https://joedf.github.io/LuaBuilds/hdata/libgcc_s_dw2-1.dll.zip"
+            ],
+            "hash": [
+                "6e28523a5483548e96db5dc38f660050ac03d85f45bf87acb49dc1afeb35c20b",
+                "546204ef8af80565b051b0d5dec2d885ae524cf060f99683e038e4b49b60d9e5"
+            ]
+        },
+        "32bit": {
+            "url": [
+                "https://joedf.github.io/LuaBuilds/hdata/srlua-5.5.1_Win32_bin.zip",
+                "https://joedf.github.io/LuaBuilds/hdata/libgcc_s_dw2-1.dll.zip"
+            ],
+            "hash": [
+                "791359017cfa5036c440b5fe9bca1c6dfd8160db756ef18dce1c7e2574708eda",
+                "546204ef8af80565b051b0d5dec2d885ae524cf060f99683e038e4b49b60d9e5"
+            ]
+        }
+    },
+    "bin": [
+        "srlua.exe",
+        "srglue.exe"
+    ],
+    "checkver": {
+        "url": "https://joedf.github.io/LuaBuilds/",
+        "regex": "Lua ([\\d.]+(-[\\w]+)?)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://joedf.github.io/LuaBuilds/hdata/srlua-$version_Win64_bin.zip"
+            },
+            "32bit": {
+                "url": "https://joedf.github.io/LuaBuilds/hdata/srlua-$version_Win32_bin.zip"
+            }
+        }
+    }
+}

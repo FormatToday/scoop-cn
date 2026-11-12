@@ -1,0 +1,31 @@
+{
+    "version": "1.10.0",
+    "description": "Play and manage your cartridges using Epilogue cartridge readers",
+    "homepage": "https://www.epilogue.co/",
+    "license": "Freeware",
+    "architecture": {
+        "64bit": {
+            "url": "https://releases.epilogue.co/desktop/playback/1.10.0/release/windows/playback-setup.exe",
+            "hash": "986fe22d7bfad291daf24057e3cb1b6468acf0fa3cf075baf184db6770105c1f"
+        }
+    },
+    "innosetup": true,
+    "bin": "Playback.exe",
+    "shortcuts": [
+        [
+            "Playback.exe",
+            "Epilogue Playback"
+        ]
+    ],
+    "checkver": {
+        "url": "https://www.epilogue.co/software/playback",
+        "regex": "playback/([\\d.]+)/release/windows"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://releases.epilogue.co/desktop/playback/$version/release/windows/playback-setup.exe"
+            }
+        }
+    }
+}

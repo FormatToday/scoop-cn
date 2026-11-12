@@ -1,0 +1,61 @@
+{
+    "version": "3.4.12-1",
+    "description": "Ruby, a dynamic programming language with a focus on simplicity and productivity. (version 3.4)",
+    "homepage": "https://rubyinstaller.org",
+    "license": "BSD-3-Clause",
+    "notes": "Install MSYS2 via 'scoop install msys2' and then run 'ridk install' to install the toolchain!",
+    "suggest": {
+        "MSYS2": "msys2"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-3.4.12-1/rubyinstaller-3.4.12-1-x64.7z",
+            "hash": "3806f164377824bcb17e1cf39b17d967e2bdc01e8547ce0254cd786dbe2cfe13",
+            "extract_dir": "rubyinstaller-3.4.12-1-x64"
+        },
+        "32bit": {
+            "url": "https://gh-proxy.org/https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-3.4.12-1/rubyinstaller-3.4.12-1-x86.7z",
+            "hash": "7160ecd92b6a747a1d81060deeeb23189b61d612508d791f73f32a6869dfdb25",
+            "extract_dir": "rubyinstaller-3.4.12-1-x86"
+        },
+        "arm64": {
+            "url": "https://gh-proxy.org/https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-3.4.12-1/rubyinstaller-3.4.12-1-arm.7z",
+            "hash": "6462eea40a8399420708518b82d121eec0d24daf5bb64abdf238a54d85362d29",
+            "extract_dir": "rubyinstaller-3.4.12-1-arm"
+        }
+    },
+    "post_install": "gem install rake",
+    "env_add_path": [
+        "bin",
+        "gems\\bin"
+    ],
+    "env_set": {
+        "GEM_HOME": "$dir\\gems",
+        "GEM_PATH": "$dir\\gems"
+    },
+    "persist": "gems",
+    "checkver": {
+        "url": "https://gh-proxy.org/https://raw.githubusercontent.com/oneclick/rubyinstaller.org-website/master/_data/downloads.yaml",
+        "regex": "Ruby (3\\.4[\\d.-]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-$version/rubyinstaller-$version-x64.7z",
+                "extract_dir": "rubyinstaller-$version-x64"
+            },
+            "32bit": {
+                "url": "https://gh-proxy.org/https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-$version/rubyinstaller-$version-x86.7z",
+                "extract_dir": "rubyinstaller-$version-x86"
+            },
+            "arm64": {
+                "url": "https://gh-proxy.org/https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-$version/rubyinstaller-$version-arm.7z",
+                "extract_dir": "rubyinstaller-$version-arm"
+            }
+        },
+        "hash": {
+            "url": "https://gh-proxy.org/https://raw.githubusercontent.com/oneclick/rubyinstaller.org-website/master/_data/downloads.yaml",
+            "regex": "(?sm)$basename[^.].*?$sha256"
+        }
+    }
+}

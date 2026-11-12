@@ -1,0 +1,41 @@
+{
+    "version": "0.1.0-beta.177",
+    "description": "The Native Terminal Emulator with a builtin AI Harness (beta version).",
+    "homepage": "https://con.nowledge.co/",
+    "license": "MIT",
+    "notes": "User data is stored in '$Env:AppData\\con-terminal', and is not persisted by Scoop.",
+    "suggest": {
+        "vcredist": "vcredist2022"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/nowledge-co/con-terminal/releases/download/v0.1.0-beta.177/con-0.1.0-beta.177-windows-x86_64.zip",
+            "hash": "5bb76191d69c2c9c7d6b923d25c207231954de93d7e86677c4505df438599554"
+        }
+    },
+    "bin": [
+        "con-app.exe",
+        "con-cli.exe"
+    ],
+    "shortcuts": [
+        [
+            "con-app.exe",
+            "Con Beta"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/nowledge-co/con-terminal",
+        "jsonpath": "$.tag_name",
+        "regex": "v([\\w.-]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/nowledge-co/con-terminal/releases/download/v$version/con-$version-windows-x86_64.zip"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/SHA256SUMS-windows.txt"
+        }
+    }
+}

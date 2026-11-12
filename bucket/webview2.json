@@ -1,0 +1,61 @@
+{
+    "version": "157.0.4341.46",
+    "description": "Microsoft Edge WebView2 Runtime. Embed web content (HTML, CSS, and JavaScript) in your native applications with Microsoft Edge WebView2.",
+    "homepage": "https://developer.microsoft.com/en-us/microsoft-edge/webview2",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://developer.microsoft.com/microsoft-edge/api/eula/webview2"
+    },
+    "notes": "Overrides any natively installed Runtime through environment variable 'WEBVIEW2_BROWSER_EXECUTABLE_FOLDER'. This is architecture-specific: Applications must match the runtime architecture, for example install the 32-bit build (--arch 32bit) to support 32-bit applications.",
+    "architecture": {
+        "32bit": {
+            "url": "https://msedge.sf.dl.delivery.mp.microsoft.com/filestreamingservice/files/6fbd1439-b179-4f38-9205-eb505ced2d82/Microsoft.WebView2.FixedVersionRuntime.157.0.4341.46.x86.cab#/dl.7z",
+            "hash": "e232fd46424c379c9f200ef42fb350194215e3b09f16b6fc6d00e0c2e9fb0e6d",
+            "extract_dir": "Microsoft.WebView2.FixedVersionRuntime.157.0.4341.46.x86"
+        },
+        "64bit": {
+            "url": "https://msedge.sf.dl.delivery.mp.microsoft.com/filestreamingservice/files/edb19202-9173-4dd1-ab87-c45c2d80aaec/Microsoft.WebView2.FixedVersionRuntime.157.0.4341.46.x64.cab#/dl.7z",
+            "hash": "0ac7317a08c3f3beebbb9b6d90f5b77352569f0a33a54a15ef6aaabc82899b7c",
+            "extract_dir": "Microsoft.WebView2.FixedVersionRuntime.157.0.4341.46.x64"
+        },
+        "arm64": {
+            "url": "https://msedge.sf.dl.delivery.mp.microsoft.com/filestreamingservice/files/18de7780-f6f2-4f8c-a4e9-3e0fc898346f/Microsoft.WebView2.FixedVersionRuntime.157.0.4341.46.arm64.cab#/dl.7z",
+            "hash": "386d7d0b82341f5b9398ef4bdffd97cd5b0d2fd142e44406390f4fe522d5cdb9",
+            "extract_dir": "Microsoft.WebView2.FixedVersionRuntime.157.0.4341.46.arm64"
+        }
+    },
+    "env_set": {
+        "WEBVIEW2_BROWSER_EXECUTABLE_FOLDER": "$dir"
+    },
+    "checkver": {
+        "url": "https://developer.microsoft.com/en-us/Microsoft-edge/webview2/",
+        "script": [
+            "$page = $page -replace '\\\\u002F', '/'",
+            "$page -match 'https://msedge\\.sf\\.dl\\.delivery\\.mp\\.microsoft\\.com/filestreamingservice/files/(?<folder>[0-9a-z-]+)/Microsoft\\.WebView2\\.FixedVersionRuntime\\.([0-9.]+)\\.x86\\.cab'",
+            "$arch32 = $Matches.folder",
+            "$page -match 'https://msedge\\.sf\\.dl\\.delivery\\.mp\\.microsoft\\.com/filestreamingservice/files/(?<folder>[0-9a-z-]+)/Microsoft\\.WebView2\\.FixedVersionRuntime\\.(?<version>[0-9.]+)\\.x64\\.cab'",
+            "$version = $Matches.version",
+            "$arch64 = $Matches.folder",
+            "$page -match 'https://msedge\\.sf\\.dl\\.delivery\\.mp\\.microsoft\\.com/filestreamingservice/files/(?<folder>[0-9a-z-]+)/Microsoft\\.WebView2\\.FixedVersionRuntime\\.([0-9.]+)\\.arm64\\.cab'",
+            "$archarm64 = $Matches.folder",
+            "Write-Output \"$version $arch32 $arch64 $archarm64\""
+        ],
+        "regex": "(?<version>[\\d.]+) (?<arch32>[^ ]+) (?<arch64>[^ ]+) (?<archarm64>[^ ]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "32bit": {
+                "url": "https://msedge.sf.dl.delivery.mp.microsoft.com/filestreamingservice/files/$matchArch32/Microsoft.WebView2.FixedVersionRuntime.$version.x86.cab#/dl.7z",
+                "extract_dir": "Microsoft.WebView2.FixedVersionRuntime.$version.x86"
+            },
+            "64bit": {
+                "url": "https://msedge.sf.dl.delivery.mp.microsoft.com/filestreamingservice/files/$matchArch64/Microsoft.WebView2.FixedVersionRuntime.$version.x64.cab#/dl.7z",
+                "extract_dir": "Microsoft.WebView2.FixedVersionRuntime.$version.x64"
+            },
+            "arm64": {
+                "url": "https://msedge.sf.dl.delivery.mp.microsoft.com/filestreamingservice/files/$matchArcharm64/Microsoft.WebView2.FixedVersionRuntime.$version.arm64.cab#/dl.7z",
+                "extract_dir": "Microsoft.WebView2.FixedVersionRuntime.$version.arm64"
+            }
+        }
+    }
+}

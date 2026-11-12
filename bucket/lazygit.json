@@ -1,0 +1,38 @@
+{
+    "version": "0.66.3",
+    "description": "A simple terminal UI for git commands",
+    "homepage": "https://github.com/jesseduffield/lazygit",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/jesseduffield/lazygit/releases/download/v0.66.3/lazygit_0.66.3_Windows_x86_64.zip",
+            "hash": "a76fe17339fd387c20addc09060f07c240e4b20a9f55fee4ad7c86a251c0741e"
+        },
+        "32bit": {
+            "url": "https://gh-proxy.org/https://github.com/jesseduffield/lazygit/releases/download/v0.66.3/lazygit_0.66.3_Windows_32-bit.zip",
+            "hash": "e6f8bd3a97c3d981ca9768da5729702e975397571482706d37a67263c9df182e"
+        },
+        "arm64": {
+            "url": "https://gh-proxy.org/https://github.com/jesseduffield/lazygit/releases/download/v0.66.3/lazygit_0.66.3_Windows_arm64.zip",
+            "hash": "c8b3b7141387f9c317b098147cf674166154a98dcad3fcd322b07c882ba1eed4"
+        }
+    },
+    "bin": "lazygit.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/jesseduffield/lazygit/releases/download/v$version/lazygit_$version_Windows_x86_64.zip"
+            },
+            "32bit": {
+                "url": "https://gh-proxy.org/https://github.com/jesseduffield/lazygit/releases/download/v$version/lazygit_$version_Windows_32-bit.zip"
+            },
+            "arm64": {
+                "url": "https://gh-proxy.org/https://github.com/jesseduffield/lazygit/releases/download/v$version/lazygit_$version_Windows_arm64.zip"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/checksums.txt"
+        }
+    }
+}

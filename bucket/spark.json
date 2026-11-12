@@ -1,0 +1,30 @@
+{
+    "version": "4.3.0",
+    "description": "A unified analytics engine for large-scale data processing.",
+    "homepage": "https://spark.apache.org/",
+    "license": "Apache-2.0",
+    "notes": "Spark now comes with Hadoop 3. For the version with Hadoop 2, please install spark-hadoop2 from the Versions bucket.",
+    "suggest": {
+        "JDK": "openjdk"
+    },
+    "url": "https://archive.apache.org/dist/spark/spark-4.3.0/spark-4.3.0-bin-hadoop3.tgz",
+    "hash": "sha512:51a2473d09c74b6b755d3c4158275922fe4fed9c3801d9e48ade6083dc03b45693274020fe0fcf2be2a607a6a828f7159f78609ef913049e98c1882d2d0aab5f",
+    "extract_dir": "spark-4.3.0-bin-hadoop3",
+    "env_add_path": "bin",
+    "env_set": {
+        "SPARK_HOME": "$dir"
+    },
+    "persist": "conf",
+    "checkver": {
+        "url": "https://spark.apache.org/js/downloads.js",
+        "regex": "addRelease\\(\"([\\d.]+)\","
+    },
+    "autoupdate": {
+        "url": "https://archive.apache.org/dist/spark/spark-$version/spark-$version-bin-hadoop3.tgz",
+        "hash": {
+            "url": "$url.sha512",
+            "regex": "$basename: ([A-F0-9\\s]+)$"
+        },
+        "extract_dir": "spark-$version-bin-hadoop3"
+    }
+}

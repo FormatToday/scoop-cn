@@ -1,0 +1,31 @@
+{
+    "version": "0.46.2",
+    "description": "A CLI for interacting with Tekton - a cloud native CI/CD solution",
+    "homepage": "https://github.com/tektoncd/cli",
+    "license": "Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/tektoncd/cli/releases/download/v0.46.2/tkn_0.46.2_Windows_x86_64.zip",
+            "hash": "26d43bd6ca140831899c7ea909f364f6c5f1e67c9d818a8b088e79ce93012940"
+        },
+        "arm64": {
+            "url": "https://gh-proxy.org/https://github.com/tektoncd/cli/releases/download/v0.46.2/tkn_0.46.2_Windows_aarch64.zip",
+            "hash": "afa1173186499c87f485815b42a00dbebe6be9aa14149e184c258141e57bc825"
+        }
+    },
+    "bin": "tkn.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/tektoncd/cli/releases/download/v$version/tkn_$version_Windows_x86_64.zip"
+            },
+            "arm64": {
+                "url": "https://gh-proxy.org/https://github.com/tektoncd/cli/releases/download/v$version/tkn_$version_Windows_aarch64.zip"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/checksums.txt"
+        }
+    }
+}

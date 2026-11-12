@@ -1,0 +1,35 @@
+{
+    "version": "20261004",
+    "description": "Split screen video comparison tool using FFmpeg and SDL2.",
+    "homepage": "https://github.com/pixop/video-compare",
+    "license": "GPL-2.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/pixop/video-compare/releases/download/20261004/video-compare-20261004-win10-x86_64.zip",
+            "hash": "3d757f9db6d367f92a330f325d476f0284bdea709a8a700bbc2487861ce65c50"
+        }
+    },
+    "post_install": [
+        "$LnkPath = Join-Path ([System.Environment]::GetFolderPath('SendTo')) video-compare.lnk",
+        "if (Test-Path $LnkPath){Remove-Item $LnkPath}",
+        "$WScriptShell = New-Object -ComObject WScript.Shell",
+        "$Shortcut = $WScriptShell.CreateShortcut($LnkPath)",
+        "$Shortcut.TargetPath = (Join-Path $DIR video-compare.exe)",
+        "$Shortcut.Save()"
+    ],
+    "uninstaller": {
+        "script": [
+            "$LnkPath = Join-Path ([System.Environment]::GetFolderPath('SendTo')) video-compare.lnk",
+            "if (Test-Path $LnkPath){Remove-Item $LnkPath}"
+        ]
+    },
+    "bin": "video-compare.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/pixop/video-compare/releases/download/$version/video-compare-$version-win10-x86_64.zip"
+            }
+        }
+    }
+}

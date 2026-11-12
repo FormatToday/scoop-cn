@@ -1,0 +1,42 @@
+{
+    "version": "4.3.0.0",
+    "homepage": "https://files.community",
+    "description": "A modern file manager that helps users organize their files and folders.",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://cdn.files.community/files/stable/Files.Package_4.3.0.0_Test/Files.Package_4.3.0.0_x64_arm64.msixbundle",
+            "hash": "385d6088856b0a47d5dd102c964908a0f8a70f64a8da0d670b4ecf0f1a4c50f9"
+        }
+    },
+    "installer": {
+        "script": "Add-AppxPackage -Path \"$dir\\$fname\""
+    },
+    "post_install": "Remove-Item \"$dir\\$fname\"",
+    "uninstaller": {
+        "script": "Get-AppxPackage 'Files' | Remove-AppxPackage"
+    },
+    "checkver": {
+        "github": "https://api.github.com/repos/microsoft/winget-pkgs/contents/manifests/f/FilesCommunity/Files",
+        "script": [
+            "$release = $page | ConvertFrom-Json -ErrorAction Stop",
+            "$latest_version = $release | Where-Object { $_.type -eq 'dir' } |",
+            "        Sort-Object -Property { [version]$_.name } -Descending | Select-Object -ExpandProperty name -First 1",
+            "$version_info = @{ result = $latest_version } | ConvertTo-Json -Compress",
+            "Write-Output $version_info"
+        ],
+        "jsonpath": "$.result",
+        "regex": "([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://cdn.files.community/files/stable/Files.Package_$version_Test/Files.Package_$version_x64_arm64.msixbundle"
+            }
+        },
+        "hash": {
+            "url": "https://gh-proxy.org/https://raw.githubusercontent.com/microsoft/winget-pkgs/HEAD/manifests/f/FilesCommunity/Files/$version/FilesCommunity.Files.installer.yaml",
+            "regex": "(?s)$basename.+?$sha256"
+        }
+    }
+}

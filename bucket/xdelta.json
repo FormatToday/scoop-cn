@@ -1,0 +1,33 @@
+{
+    "version": "3.2.2",
+    "description": "Xdelta version 3 is a C library and command-line tool for delta compression using VCDIFF/RFC 3284 streams.",
+    "homepage": "https://github.com/jmacd/xdelta",
+    "license": "Apache-2.0",
+    "suggest": {
+        "vcredist": "vcredist2022"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/jmacd/xdelta/releases/download/v3.2.2/xdelta3-3.2.2-windows-x86_64.zip",
+            "hash": "d48f7651d86b78fdca397057b46601f89131f37219675df736db70af44ec3379",
+            "extract_dir": "xdelta3-3.2.2-windows-x86_64"
+        }
+    },
+    "bin": [
+        "xdelta3.exe",
+        [
+            "xdelta3.exe",
+            "xdelta"
+        ],
+        "xdelta3decode.exe"
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/jmacd/xdelta/releases/download/v$version/xdelta3-$version-windows-x86_64.zip",
+                "extract_dir": "xdelta3-$version-windows-x86_64"
+            }
+        }
+    }
+}

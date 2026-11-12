@@ -1,0 +1,32 @@
+{
+    "version": "0.8.9",
+    "description": "A modern, cross-platform SSH client and remote server management tool.",
+    "homepage": "https://reachssh.com",
+    "license": "MIT",
+    "suggest": {
+        "Microsoft Edge WebView2": "webview2"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/alexandrosnt/Reach/releases/download/v0.8.9/Reach_0.8.9_x64_en-US.msi",
+            "hash": "d956abf0624c8a9cd23619ccfe88e3a7203702d38b41225a6903c6cd4fde31cf"
+        }
+    },
+    "extract_dir": "PFiles\\Reach",
+    "shortcuts": [
+        [
+            "reach.exe",
+            "Reach"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/alexandrosnt/Reach"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/alexandrosnt/Reach/releases/download/v$version/Reach_$version_x64_en-US.msi"
+            }
+        }
+    }
+}

@@ -1,0 +1,33 @@
+{
+    "version": "0.18.0",
+    "description": "Tool, language and decoders for working with binary data.",
+    "homepage": "https://wader.github.io/fq/",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/wader/fq/releases/download/v0.18.0/fq_0.18.0_windows_amd64.zip",
+            "hash": "b255a2f2716a25132607f235e6cb564659ad037eb8bf48d60815edd82f21758d"
+        },
+        "arm64": {
+            "url": "https://gh-proxy.org/https://github.com/wader/fq/releases/download/v0.18.0/fq_0.18.0_windows_arm64.zip",
+            "hash": "420ea5bec0d9e6a5edffbc3d87a3763aa3ac71b756aa5e66a39e8d460a028f12"
+        }
+    },
+    "bin": "fq.exe",
+    "checkver": {
+        "github": "https://github.com/wader/fq"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/wader/fq/releases/download/v$version/fq_$version_windows_amd64.zip"
+            },
+            "arm64": {
+                "url": "https://gh-proxy.org/https://github.com/wader/fq/releases/download/v$version/fq_$version_windows_arm64.zip"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/checksums.txt"
+        }
+    }
+}

@@ -1,0 +1,40 @@
+{
+    "version": "0.10.2",
+    "description": "WHEP to RTP/RTSP tool.",
+    "homepage": "https://live777.pages.dev",
+    "license": {
+        "identifier": "MPL-2.0",
+        "url": "https://github.com/binbat/live777/blob/HEAD/LICENSE"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/binbat/live777/releases/download/v0.10.2/whepfrom-v0.10.2-x86_64-pc-windows-msvc.exe#/whepfrom.exe",
+            "hash": "2543c11799589b4d7103bb74f1fdd846219329f5827d393b7876c85b097b698e"
+        },
+        "32bit": {
+            "url": "https://gh-proxy.org/https://github.com/binbat/live777/releases/download/v0.10.2/whepfrom-v0.10.2-i686-pc-windows-msvc.exe#/whepfrom.exe",
+            "hash": "bfa5edb380002d95d65c9e3ecf9f0430f163be4d08df844a4eb490978d61108f"
+        },
+        "arm64": {
+            "url": "https://gh-proxy.org/https://github.com/binbat/live777/releases/download/v0.10.2/whepfrom-v0.10.2-aarch64-pc-windows-msvc.exe#/whepfrom.exe",
+            "hash": "42c031d225752002a3bd9d08e6c012dae49d6672729ac8f2a994fcec8551baef"
+        }
+    },
+    "bin": "whepfrom.exe",
+    "checkver": {
+        "github": "https://github.com/binbat/live777"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/binbat/live777/releases/download/v$version/whepfrom-v$version-x86_64-pc-windows-msvc.exe#/whepfrom.exe"
+            },
+            "32bit": {
+                "url": "https://gh-proxy.org/https://github.com/binbat/live777/releases/download/v$version/whepfrom-v$version-i686-pc-windows-msvc.exe#/whepfrom.exe"
+            },
+            "arm64": {
+                "url": "https://gh-proxy.org/https://github.com/binbat/live777/releases/download/v$version/whepfrom-v$version-aarch64-pc-windows-msvc.exe#/whepfrom.exe"
+            }
+        }
+    }
+}

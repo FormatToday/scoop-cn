@@ -1,0 +1,51 @@
+{
+    "version": "1.80.8",
+    "homepage": "https://effekseer.github.io/en/index.html",
+    "description": "An open source tool that allows easy creation of beautiful particle effects for games and movies. ",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/effekseer/Effekseer/releases/download/1808/Effekseer1.80.8Win.zip",
+            "hash": "99a61cd6dae02a63a2025e615e73f0c8f63683e9c141539bc0ab25b6f0b64c45",
+            "extract_dir": "Effekseer1.80.8Win"
+        }
+    },
+    "installer": {
+        "script": [
+            "foreach ($c_file in 'Effekseer.imgui.ini', 'config.option.xml', 'config.recent.xml', 'Effekseer.config.Dock.xml') {",
+            "    Copy-Item \"$persist_dir\\Tool\\$c_file\" \"$dir\\Tool\\$c_file\" -ErrorAction 'SilentlyContinue'",
+            "}",
+            "if (!(Test-Path \"$persist_dir\\Tool\\config.network.xml\")) { New-Item \"$dir\\Tool\\config.network.xml\" | Out-Null }"
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "foreach ($c_file in 'Effekseer.imgui.ini', 'config.option.xml', 'config.recent.xml', 'Effekseer.config.Dock.xml') {",
+            "    Copy-Item \"$dir\\Tool\\$c_file\" \"$persist_dir\\Tool\\$c_file\" -ErrorAction 'SilentlyContinue'",
+            "}"
+        ]
+    },
+    "shortcuts": [
+        [
+            "Tool\\Effekseer.exe",
+            "Effekseer"
+        ]
+    ],
+    "persist": [
+        "Tool\\scripts",
+        "Tool\\config.network.xml"
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/effekseer/Effekseer/releases",
+        "jsonpath": "$[?(@.prerelease == false)].assets[?(@.name =~ /Win\\.zip$/i)].browser_download_url",
+        "regex": "(?i)download/(?<tag>[^/]+)/Effekseer([\\w.]+)Win"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/effekseer/Effekseer/releases/download/$cleanVersion/Effekseer$versionWin.zip",
+                "extract_dir": "Effekseer$versionWin"
+            }
+        }
+    }
+}

@@ -1,0 +1,41 @@
+{
+    "version": "1.6.7",
+    "description": "Open Source Desktop Publishing",
+    "homepage": "https://www.scribus.net",
+    "license": "GPL-2.0-or-later",
+    "notes": "If asked for ghostscript, point to \"..\\..\\ghostscript\\current\\bin\\gswin64c.exe\".",
+    "depends": "ghostscript",
+    "suggest": {
+        "vcredist": "vcredist2012"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://sourceforge.net/projects/scribus/files/scribus/1.6.7/scribus-1.6.7-windows-x64.exe#/dl.7z",
+            "hash": "sha1:324465c47ef4a7b71bd9d0dbaf72c8b16535d95c"
+        },
+        "32bit": {
+            "url": "https://sourceforge.net/projects/scribus/files/scribus/1.6.7/scribus-1.6.7-windows.exe#/dl.7z",
+            "hash": "sha1:aea9197a4a8f992d873a8486e0f9eaa61d081f20"
+        }
+    },
+    "bin": "Scribus.exe",
+    "shortcuts": [
+        [
+            "Scribus.exe",
+            "Scribus"
+        ]
+    ],
+    "checkver": {
+        "sourceforge": "scribus/scribus"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://sourceforge.net/projects/scribus/files/scribus/$version/scribus-$version-windows-x64.exe#/dl.7z"
+            },
+            "32bit": {
+                "url": "https://sourceforge.net/projects/scribus/files/scribus/$version/scribus-$version-windows.exe#/dl.7z"
+            }
+        }
+    }
+}

@@ -1,0 +1,46 @@
+{
+    "version": "16.6.0.3233",
+    "description": "A multi-tabbed file manager and is an alternative to the standard Windows Explorer",
+    "homepage": "https://multicommander.com/",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://multicommander.com/docs/License"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://multicommander.com/files/updates/MultiCommander_x64_Portable_(16.6.0.3233).zip",
+            "hash": "0f29aeb862b6ca8fbb951802ab1727396e07191ac46d47b85c51dfd20dd0bb31"
+        },
+        "32bit": {
+            "url": "https://multicommander.com/files/updates/MultiCommander_win32_Portable_(16.6.0.3233).zip",
+            "hash": "e87f9e8fdc3bd206d5c28b5fa85f951ad6538856047966027c726e0e568ddf06"
+        }
+    },
+    "bin": "MultiCommander.exe",
+    "shortcuts": [
+        [
+            "MultiCommander.exe",
+            "Multi Commander"
+        ]
+    ],
+    "persist": [
+        "Config",
+        "SessionConfig",
+        "Extensions",
+        "UserData"
+    ],
+    "checkver": {
+        "url": "https://multicommander.com/updates/version.xml",
+        "xpath": "/updates/multicommander/stable/@version"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://multicommander.com/files/updates/MultiCommander_x64_Portable_($version).zip"
+            },
+            "32bit": {
+                "url": "https://multicommander.com/files/updates/MultiCommander_win32_Portable_($version).zip"
+            }
+        }
+    }
+}

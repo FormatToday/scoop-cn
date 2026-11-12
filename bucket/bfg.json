@@ -1,0 +1,19 @@
+{
+    "version": "1.15.0",
+    "description": "BFG Repo-Cleaner removes large or troublesome blobs like git-filter-branch does, but faster",
+    "homepage": "https://rtyley.github.io/bfg-repo-cleaner/",
+    "license": "GPL-3.0-or-later",
+    "suggest": {
+        "JDK": "openjdk"
+    },
+    "url": "https://repo1.maven.org/maven2/com/madgag/bfg/1.15.0/bfg-1.15.0.jar#/bfg.jar",
+    "hash": "dfe2885adc2916379093f02a80181200536856c9a987bf21c492e452adefef7a",
+    "bin": "bfg.jar",
+    "checkver": {
+        "url": "https://repo1.maven.org/maven2/com/madgag/bfg/maven-metadata.xml",
+        "xpath": "/metadata/versioning/latest"
+    },
+    "autoupdate": {
+        "url": "https://repo1.maven.org/maven2/com/madgag/bfg/$version/bfg-$version.jar#/bfg.jar"
+    }
+}

@@ -1,0 +1,46 @@
+{
+    "version": "5.5.1",
+    "description": "A powerful, efficient, lightweight, embeddable scripting language",
+    "homepage": "http://www.lua.org",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": [
+                "https://joedf.github.io/LuaBuilds/hdata/lua-5.5.1_Win64_bin.zip",
+                "https://joedf.github.io/LuaBuilds/hdata/libgcc_s_dw2-1.dll.zip"
+            ],
+            "hash": [
+                "54904960060343079fab0fecd04e5ec93a0643ba4fd5fa16d492f4a0f621112b",
+                "546204ef8af80565b051b0d5dec2d885ae524cf060f99683e038e4b49b60d9e5"
+            ]
+        },
+        "32bit": {
+            "url": [
+                "https://joedf.github.io/LuaBuilds/hdata/lua-5.5.1_Win32_bin.zip",
+                "https://joedf.github.io/LuaBuilds/hdata/libgcc_s_dw2-1.dll.zip"
+            ],
+            "hash": [
+                "e0b35215da5318e56eb751131fa5f02f1bb73b654485fc3707796dff10a803e2",
+                "546204ef8af80565b051b0d5dec2d885ae524cf060f99683e038e4b49b60d9e5"
+            ]
+        }
+    },
+    "bin": [
+        "lua.exe",
+        "luac.exe"
+    ],
+    "checkver": {
+        "url": "https://joedf.github.io/LuaBuilds/",
+        "regex": "Lua ([\\d.]+)<"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://joedf.github.io/LuaBuilds/hdata/lua-$version_Win64_bin.zip"
+            },
+            "32bit": {
+                "url": "https://joedf.github.io/LuaBuilds/hdata/lua-$version_Win32_bin.zip"
+            }
+        }
+    }
+}

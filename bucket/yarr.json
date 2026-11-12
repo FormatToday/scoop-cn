@@ -1,0 +1,37 @@
+{
+    "version": "2.9",
+    "description": "Yet Another RSS Reader, a web-based feed aggregator",
+    "homepage": "https://github.com/nkanaev/yarr",
+    "license": "MIT",
+    "notes": [
+        "yarr is a server and will continue to run in the background unless manually stopped.",
+        "Check the system tray for the yarr icon."
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/nkanaev/yarr/releases/download/v2.9/yarr_windows_amd64_gui.zip",
+            "hash": "095677575a57f85eaa1b1934e798fc8f6a908177d1661665c933f4ad48f29481"
+        }
+    },
+    "bin": "yarr.exe",
+    "shortcuts": [
+        [
+            "yarr.exe",
+            "yarr",
+            "-open"
+        ]
+    ],
+    "env_set": {
+        "YARR_DB": "$dir\\data\\storage.db",
+        "YARR_LOGFILE": "$dir\\data\\yarr.log"
+    },
+    "persist": "data",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/nkanaev/yarr/releases/download/v$version/yarr_windows_amd64_gui.zip"
+            }
+        }
+    }
+}

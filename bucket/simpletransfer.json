@@ -1,0 +1,34 @@
+{
+    "version": "4.1.1",
+    "description": "Transfer photos & videos from iPhone or iPad to PC or Mac.",
+    "homepage": "https://rambax.com/simpletransfer",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://rambax.com/simpletransfer/termsofservice"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://rambax.com/simpletransfer/desktop/SimpleTransfer%20Desktop-Windows-4.1.1.exe#/dl.7z",
+            "hash": "9f027a9efa679ba0ae35c1e4b867a0e705b60b90cdcff5ed3e8903fc42944d12",
+            "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\""
+        }
+    },
+    "post_install": "Remove-Item \"$dir\\`$*\", \"$dir\\Uninst*\" -Force -Recurse",
+    "shortcuts": [
+        [
+            "SimpleTransfer Desktop.exe",
+            "Simple Transfer"
+        ]
+    ],
+    "checkver": {
+        "url": "https://rambax.com/simpletransfer/download",
+        "regex": "Desktop-Windows-([\\d.]+)\\.exe"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://rambax.com/simpletransfer/desktop/SimpleTransfer%20Desktop-Windows-$version.exe#/dl.7z"
+            }
+        }
+    }
+}

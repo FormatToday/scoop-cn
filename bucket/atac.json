@@ -1,0 +1,38 @@
+{
+    "version": "0.24.0",
+    "description": "Arguably a Terminal API Client based on well-known clients such as Postman, Insomnia, or even Bruno.",
+    "homepage": "https://github.com/Julien-cpsn/ATAC",
+    "license": "MIT",
+    "notes": [
+        "Scoop persists config data via env variable `ATAC_MAIN_DIR` since version 0.23.0.",
+        "You may need to move data by yourself.",
+        "Before: '$env:APPDATA\\Julien-cpsn\\ATAC\\config'",
+        "After : '$persist_dir\\config'"
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/Julien-cpsn/ATAC/releases/download/v0.24.0/atac-v0.24.0-x86_64-pc-windows-msvc.zip",
+            "hash": "927b165091e5aaf4ed58849fe7af9eae310f7bab61c641800c2405a0a835f4e5"
+        },
+        "arm64": {
+            "url": "https://gh-proxy.org/https://github.com/Julien-cpsn/ATAC/releases/download/v0.24.0/atac-v0.24.0-aarch64-pc-windows-msvc.zip",
+            "hash": "d3ef3a7391d95e6a9020ebcf1ae3f2a8147c5d02b51e90db1638df6e10025968"
+        }
+    },
+    "env_set": {
+        "ATAC_MAIN_DIR": "$persist_dir\\config"
+    },
+    "bin": "atac.exe",
+    "persist": "config",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/Julien-cpsn/ATAC/releases/download/v$version/atac-v$version-x86_64-pc-windows-msvc.zip"
+            },
+            "arm64": {
+                "url": "https://gh-proxy.org/https://github.com/Julien-cpsn/ATAC/releases/download/v$version/atac-v$version-aarch64-pc-windows-msvc.zip"
+            }
+        }
+    }
+}

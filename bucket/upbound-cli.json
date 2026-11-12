@@ -1,0 +1,39 @@
+{
+    "version": "0.56.0",
+    "description": "Official CLI for interacting with Upbound Cloud, Upbound Enterprise, and Universal Crossplane (UXP).",
+    "homepage": "https://docs.upbound.io/manuals/cli/overview/",
+    "license": "Apache-2.0",
+    "architecture": {
+        "arm64": {
+            "url": "https://cli.upbound.io/stable/v0.56.0/bin/windows_arm64/up.exe",
+            "hash": "98bd8f4028651a9a579db966e30559b33e227c735a40fe447674d2d90dd5b27a"
+        },
+        "64bit": {
+            "url": "https://cli.upbound.io/stable/v0.56.0/bin/windows_amd64/up.exe",
+            "hash": "2872ce3aa2b05eb4b1d9fdd7f212c9737437745611cbbd4d07ba17422de03574"
+        }
+    },
+    "bin": "up.exe",
+    "checkver": {
+        "url": "https://cli.upbound.io/stable/current/version",
+        "regex": "\\Av([\\d.]+)\\Z"
+    },
+    "autoupdate": {
+        "architecture": {
+            "arm64": {
+                "url": "https://cli.upbound.io/stable/v$version/bin/windows_arm64/up.exe",
+                "hash": {
+                    "url": "https://cli.upbound.io/stable/v$version/checksums.txt",
+                    "regex": "$sha256  bin/windows_arm64/$basename"
+                }
+            },
+            "64bit": {
+                "url": "https://cli.upbound.io/stable/v$version/bin/windows_amd64/up.exe",
+                "hash": {
+                    "url": "https://cli.upbound.io/stable/v$version/checksums.txt",
+                    "regex": "$sha256  bin/windows_amd64/$basename"
+                }
+            }
+        }
+    }
+}

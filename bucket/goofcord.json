@@ -1,0 +1,33 @@
+{
+    "version": "2.3.1",
+    "description": "A privacy minded and highly configurable Discord client",
+    "homepage": "https://github.com/Milkshiift/GoofCord",
+    "license": "OSL-3.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/Milkshiift/GoofCord/releases/download/v2.3.1/GoofCord-2.3.1-win-x64.zip",
+            "hash": "964927f0d14f975dd22509fbf29f4d6297c63cfc5c2269e34499f90d5d5854c4"
+        },
+        "arm64": {
+            "url": "https://gh-proxy.org/https://github.com/Milkshiift/GoofCord/releases/download/v2.3.1/GoofCord-2.3.1-win-arm64.zip",
+            "hash": "21a2e1d2d3fb7fd620b52a93b761bf20887b8de18ffa674bb40da74409a88000"
+        }
+    },
+    "shortcuts": [
+        [
+            "GoofCord.exe",
+            "GoofCord"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/Milkshiift/GoofCord/releases/download/v$version/GoofCord-$version-win-x64.zip"
+            },
+            "arm64": {
+                "url": "https://gh-proxy.org/https://github.com/Milkshiift/GoofCord/releases/download/v$version/GoofCord-$version-win-arm64.zip"
+            }
+        }
+    }
+}

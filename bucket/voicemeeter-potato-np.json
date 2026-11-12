@@ -1,0 +1,32 @@
+{
+    "version": "3.1.3.0",
+    "description": "Audio mixer application endowed with virtual audio device (POTATO/ultimate version)",
+    "homepage": "https://vb-audio.com/Voicemeeter/",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://vb-audio.com/Services/licensing.htm"
+    },
+    "notes": "Free for non-professional use only.",
+    "url": "https://download.vb-audio.com/Download_CABLE/Voicemeeter8Setup_v3130.zip",
+    "hash": "f0772b275bb6fe0d4b2a5a2fa4d25d1b5a6ee0a8ee02ba79574c9cdd85fb6fa3",
+    "installer": {
+        "script": [
+            "Get-ChildItem \"$dir\\Voicemeeter*Setup.exe\" | Rename-Item -NewName 'setup.exe'",
+            "if (!(is_admin)) { error \"$app requires admin rights to $cmd\"; break }",
+            "Start-Process -Wait \"$dir\\setup.exe\" -ArgumentList @('-i', '-h') -Verb RunAs"
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "if (!(is_admin)) { error \"$app requires admin rights to $cmd\"; break }",
+            "Start-Process -Wait \"$dir\\setup.exe\" -ArgumentList @('-u', '-h') -Verb RunAs"
+        ]
+    },
+    "checkver": {
+        "url": "https://vb-audio.com/Voicemeeter/potato.htm",
+        "regex": "Voicemeeter ([\\d.]+) \\(ZIP Package\\)"
+    },
+    "autoupdate": {
+        "url": "https://download.vb-audio.com/Download_CABLE/Voicemeeter8Setup_v$cleanVersion.zip"
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "version": "0.19.3",
+    "description": "Elm language compiler.",
+    "homepage": "https://elm-lang.org",
+    "license": "BSD-3-Clause",
+    "suggest": {
+        "nodejs": [
+            "nodejs",
+            "nodejs-lts"
+        ]
+    },
+    "url": "https://gh-proxy.org/https://github.com/elm/compiler/releases/download/0.19.3/installer-for-windows.exe#/dl.7z",
+    "hash": "964dbef5f34a500bfaead2ea1238d7c3c94d7e69416012ce02a012995240c982",
+    "extract_dir": "bin",
+    "bin": "elm.exe",
+    "checkver": {
+        "github": "https://github.com/elm/compiler"
+    },
+    "autoupdate": {
+        "url": "https://gh-proxy.org/https://github.com/elm/compiler/releases/download/$version/installer-for-windows.exe#/dl.7z"
+    }
+}

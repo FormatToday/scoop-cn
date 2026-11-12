@@ -1,0 +1,37 @@
+{
+    "version": "2.38.7",
+    "description": "Creates remote development machines so your team can develop from anywhere.",
+    "homepage": "https://coder.com/",
+    "license": "AGPL-3.0-or-later",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/coder/coder/releases/download/v2.38.7/coder_2.38.7_windows_amd64.zip",
+            "hash": "96e0449d3c63d2210aba3e3714b31ac6717f880b72e8124a49aa126e08dcb7dd"
+        },
+        "arm64": {
+            "url": "https://gh-proxy.org/https://github.com/coder/coder/releases/download/v2.38.7/coder_2.38.7_windows_arm64.zip",
+            "hash": "dd40b0aaae67b5cf1d05dabff8e378d8505f5b15dee086f9dbe65a10c8b8b983"
+        }
+    },
+    "bin": "coder.exe",
+    "env_set": {
+        "CODER_CONFIG_DIR": "$dir\\config"
+    },
+    "persist": "config",
+    "checkver": {
+        "github": "https://github.com/coder/coder"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/coder/coder/releases/download/v$version/coder_$version_windows_amd64.zip"
+            },
+            "arm64": {
+                "url": "https://gh-proxy.org/https://github.com/coder/coder/releases/download/v$version/coder_$version_windows_arm64.zip"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/coder_$version_checksums.txt"
+        }
+    }
+}

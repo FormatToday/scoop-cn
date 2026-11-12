@@ -1,0 +1,29 @@
+{
+    "version": "0.30.0",
+    "description": "A focused launcher for your desktop.",
+    "homepage": "https://vicinae.com",
+    "license": "GPL-3.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/vicinaehq/vicinae/releases/download/v0.30.0/vicinae-x64-portable.zip",
+            "hash": "cf5689593bb81a6565dcf892cbf75505539b8f91d07cb393ee31d0a8e7f89e28"
+        }
+    },
+    "bin": "bin/vicinae.exe",
+    "shortcuts": [
+        [
+            "bin/vicinae-server.exe",
+            "Vicinae"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/vicinaehq/vicinae"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/vicinaehq/vicinae/releases/download/v$version/vicinae-x64-portable.zip"
+            }
+        }
+    }
+}

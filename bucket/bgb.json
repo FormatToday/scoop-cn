@@ -1,0 +1,48 @@
+{
+    "version": "1.6.7",
+    "description": "GameBoy emulator/debugger",
+    "homepage": "http://bgb.bircd.org/",
+    "license": "Freeware",
+    "architecture": {
+        "32bit": {
+            "url": "http://bgb.bircd.org/bgb.zip",
+            "hash": "4ba99e3cfd14e7cc8a7134a35beb28a3093e5d896926e25f02f214a44bf59919",
+            "bin": "bgb.exe",
+            "shortcuts": [
+                [
+                    "bgb.exe",
+                    "BGB GameBoy Emulator"
+                ]
+            ]
+        },
+        "64bit": {
+            "url": "http://bgb.bircd.org/bgbw64.zip",
+            "hash": "203b4d659b213ff362b4add9944bf50083221a29bd46bd6f766a136ef7a2b8c8",
+            "bin": "bgb64.exe",
+            "shortcuts": [
+                [
+                    "bgb64.exe",
+                    "BGB GameBoy Emulator"
+                ]
+            ]
+        }
+    },
+    "persist": [
+        "bgb.ini",
+        "scrnshot"
+    ],
+    "checkver": {
+        "url": "http://bgb.bircd.org/",
+        "regex": "\\(current version: BGB ([\\d]+[\\.][\\d]+[\\.][\\d]+)\\)<\\/title>"
+    },
+    "autoupdate": {
+        "architecture": {
+            "32bit": {
+                "url": "http://bgb.bircd.org/bgb.zip"
+            },
+            "64bit": {
+                "url": "http://bgb.bircd.org/bgbw64.zip"
+            }
+        }
+    }
+}

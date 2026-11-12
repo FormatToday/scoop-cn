@@ -1,0 +1,41 @@
+{
+    "version": "1.2.3",
+    "homepage": "https://encodegui.com",
+    "description": "A free and open source video transcoder GUI that utilizes AI tools for a fascinating encoding experience.",
+    "license": {
+        "identifier": "AGPL-3.0-or-later",
+        "url": "https://github.com/DaGooseYT/EncodeGUI/blob/HEAD/LICENSE"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://www.encodegui.com/dl/EncodeGUI_v1.2.3_win_setup.zip",
+            "hash": "a8c7323a0e2142575ed052e3ff81d9daf711bb3dc90edbc1058ba5890202e0de"
+        }
+    },
+    "pre_install": "if (-not (is_admin)) { abort \"`n[ERROR]  $app requires admin rights to $cmd.\" }",
+    "installer": {
+        "script": [
+            "$args_list = @('/VERYSILENT', \"/DIR=`\"$dir`\"\", '/SUPPRESSMSGBOXES')",
+            "$installer_file = Get-ChildItem -Path $dir -Filter '*.exe' -File | Select-Object -ExpandProperty FullName -First 1",
+            "Start-Process -FilePath $installer_file -ArgumentList $args_list -WindowStyle Hidden -Wait",
+            "Remove-Item -Path $installer_file -Force -ErrorAction SilentlyContinue"
+        ]
+    },
+    "pre_uninstall": "if (-not (is_admin)) { abort \"`n[ERROR]  $app requires admin rights to $cmd.\" }",
+    "uninstaller": {
+        "script": [
+            "$args_list = @('/VERYSILENT', '/FORCECLOSEAPPLICATIONS', '/SUPPRESSMSGBOXES')",
+            "Start-Process -FilePath \"$dir\\unins000.exe\" -ArgumentList $args_list -WindowStyle Hidden -Wait"
+        ]
+    },
+    "checkver": {
+        "github": "https://github.com/DaGooseYT/EncodeGUI"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://www.encodegui.com/dl/EncodeGUI_v$version_win_setup.zip"
+            }
+        }
+    }
+}

@@ -1,0 +1,56 @@
+{
+    "version": "0.6.7",
+    "description": "A Rust-powered download manager with HTTP, FTP, BitTorrent and HLS/DASH streaming support.",
+    "homepage": "https://fluxdown.zerx.dev",
+    "license": {
+        "identifier": "AGPL-3.0-only",
+        "url": "https://github.com/zerx-lab/FluxDown/blob/main/LICENSE"
+    },
+    "notes": [
+        "FluxDown portable data persistence:",
+        "  - Built-in portable mode: runtime data stored in portable_data/ subdirectory",
+        "  - Download history and config persisted via portable_data/flux_down.db (SQLite)",
+        "  - BT session state (fast-resume) persisted via portable_data/bt_session/",
+        "  - UI settings (window state, theme, locale) persisted via portable_data/settings.json",
+        "  - Application logs persisted via portable_data/logs/",
+        "  - All data is preserved across updates",
+        "",
+        "Browser extensions (required for download interception):",
+        "  Chrome: https://chromewebstore.google.com/detail/fluxdown/meleenglfggcmcajknpeeeiobnpfmahc",
+        "  Firefox: https://addons.mozilla.org/firefox/addon/fluxdown",
+        "  Edge: https://microsoftedge.microsoft.com/addons/detail/fluxdown/nglkkjbogjghekbhhcnccnpfedjbdhhd"
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/zerx-lab/FluxDown/releases/download/v0.6.7/FluxDown-0.6.7-windows-x64-portable.zip",
+            "hash": "c3233481eebe2fbe90c133f5af5dedee60854e79f810019634dde7892e0660da"
+        },
+        "arm64": {
+            "url": "https://gh-proxy.org/https://github.com/zerx-lab/FluxDown/releases/download/v0.6.7/FluxDown-0.6.7-windows-arm64-portable.zip",
+            "hash": "150ca99c18346d763db6f5fa377976cd351082abf307d0aaf2764318484e05c5"
+        }
+    },
+    "shortcuts": [
+        [
+            "flux_down.exe",
+            "FluxDown"
+        ]
+    ],
+    "persist": "portable_data",
+    "checkver": {
+        "github": "https://github.com/zerx-lab/FluxDown"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/zerx-lab/FluxDown/releases/download/v$version/FluxDown-$version-windows-x64-portable.zip"
+            },
+            "arm64": {
+                "url": "https://gh-proxy.org/https://github.com/zerx-lab/FluxDown/releases/download/v$version/FluxDown-$version-windows-arm64-portable.zip"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/SHA256SUMS.txt"
+        }
+    }
+}

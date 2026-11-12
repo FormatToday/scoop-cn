@@ -1,0 +1,46 @@
+{
+    "version": "9.14.1",
+    "description": "An advanced, purely functional programming language.",
+    "homepage": "https://www.haskell.org",
+    "license": "BSD-3-Clause",
+    "notes": [
+        "For Haskell Stack, please install 'stack'.",
+        "For 32bit Haskell, please install 'versions/haskell863'."
+    ],
+    "suggest": {
+        "Stack": "stack"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://downloads.haskell.org/~ghc/9.14.1/ghc-9.14.1-x86_64-unknown-mingw32.tar.xz",
+            "hash": "4914e262a91a9cb65807ec33b3a2adc884894b1dcc33691d820bb9456f2794ba",
+            "extract_dir": "ghc-9.14.1-x86_64-unknown-mingw32"
+        }
+    },
+    "bin": [
+        "bin\\ghc.exe",
+        "bin\\ghci.exe",
+        "bin\\ghc-pkg.exe",
+        "bin\\haddock.exe",
+        "bin\\hp2ps.exe",
+        "bin\\hpc.exe",
+        "bin\\hsc2hs.exe",
+        "bin\\runghc.exe"
+    ],
+    "env_add_path": "lib\\bin",
+    "checkver": {
+        "url": "https://downloads.haskell.org/ghc/latest/",
+        "regex": "ghc-([\\d.]+)-x86_64-unknown-mingw32"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://downloads.haskell.org/~ghc/$version/ghc-$version-x86_64-unknown-mingw32.tar.xz",
+                "extract_dir": "ghc-$version-x86_64-unknown-mingw32"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/SHA256SUMS"
+        }
+    }
+}

@@ -1,0 +1,50 @@
+{
+    "version": "1.77.0-beta.10779.9622aff8f",
+    "description": "Sync files and directories to and from multiple cloud / FTP / HTTP hosters (beta version).",
+    "homepage": "https://rclone.org",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://beta.rclone.org/v1.77.0-beta.10779.9622aff8f/rclone-v1.77.0-beta.10779.9622aff8f-windows-amd64.zip",
+            "extract_dir": "rclone-v1.77.0-beta.10779.9622aff8f-windows-amd64",
+            "hash": "cdc4f30a27dfc78d31f0b759a9537e7c22f87041ada0589c43473858cb642ae5"
+        },
+        "32bit": {
+            "url": "https://beta.rclone.org/v1.77.0-beta.10779.9622aff8f/rclone-v1.77.0-beta.10779.9622aff8f-windows-386.zip",
+            "extract_dir": "rclone-v1.77.0-beta.10779.9622aff8f-windows-386",
+            "hash": "28f60c91371506500736b6227e89e2d93a7743d44e6eb90fa11b0c2c60ae8f72"
+        },
+        "arm64": {
+            "url": "https://beta.rclone.org/v1.77.0-beta.10779.9622aff8f/rclone-v1.77.0-beta.10779.9622aff8f-windows-arm64.zip",
+            "hash": "edecd7757ac4376c95aa1119725531182c31a9c79d0a847c95434f6987e31873",
+            "extract_dir": "rclone-v1.77.0-beta.10779.9622aff8f-windows-arm64"
+        }
+    },
+    "bin": [
+        "rclone.exe",
+        [
+            "rclone.exe",
+            "rclone-beta"
+        ]
+    ],
+    "checkver": {
+        "url": "https://beta.rclone.org/version.txt",
+        "regex": "rclone v(.+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://beta.rclone.org/v$version/rclone-v$version-windows-amd64.zip",
+                "extract_dir": "rclone-v$version-windows-amd64"
+            },
+            "32bit": {
+                "url": "https://beta.rclone.org/v$version/rclone-v$version-windows-386.zip",
+                "extract_dir": "rclone-v$version-windows-386"
+            },
+            "arm64": {
+                "url": "https://beta.rclone.org/v$version/rclone-v$version-windows-arm64.zip",
+                "extract_dir": "rclone-v$version-windows-arm64"
+            }
+        }
+    }
+}

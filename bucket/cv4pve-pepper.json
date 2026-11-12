@@ -1,0 +1,31 @@
+{
+    "version": "2.0.1",
+    "description": "Launching SPICE remote-viewer to access VM running on Proxmox VE.",
+    "homepage": "https://www.cv4pve-tools.com/",
+    "license": "GPL-3.0-only",
+    "depends": "virt-viewer",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/Corsinvest/cv4pve-pepper/releases/download/v2.0.1/cv4pve-pepper.exe-win-x64.zip",
+            "hash": "fd67d72e420918e54abc5c2e515e1a07d0eecb6e3b5182e8dc3bb29c1add961b"
+        },
+        "32bit": {
+            "url": "https://gh-proxy.org/https://github.com/Corsinvest/cv4pve-pepper/releases/download/v2.0.1/cv4pve-pepper.exe-win-x86.zip",
+            "hash": "e68e6e45b23a73d328c7c69b6a023624282fcf0a37949b3664f170bc8b9f4bfe"
+        }
+    },
+    "bin": "cv4pve-pepper.exe",
+    "checkver": {
+        "github": "https://github.com/Corsinvest/cv4pve-pepper"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/Corsinvest/cv4pve-pepper/releases/download/v$version/cv4pve-pepper.exe-win-x64.zip"
+            },
+            "32bit": {
+                "url": "https://gh-proxy.org/https://github.com/Corsinvest/cv4pve-pepper/releases/download/v$version/cv4pve-pepper.exe-win-x86.zip"
+            }
+        }
+    }
+}

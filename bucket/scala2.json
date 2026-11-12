@@ -1,0 +1,30 @@
+{
+    "version": "2.13.18",
+    "description": "A modern multi-paradigm programming language designed to express common programming patterns in a concise, elegant, and type-safe way.",
+    "homepage": "https://www.scala-lang.org/",
+    "license": "BSD-3-Clause",
+    "suggest": {
+        "JDK": "openjdk"
+    },
+    "url": "https://gh-proxy.org/https://github.com/scala/scala/releases/download/v2.13.18/scala-2.13.18.zip",
+    "hash": "9c90562f29b0a316e269474d6752bc8ec45b1cabf61d5401d7ca50407b3a9d2b",
+    "extract_dir": "scala-2.13.18",
+    "bin": [
+        "bin\\fsc.bat",
+        "bin\\scala.bat",
+        "bin\\scalac.bat",
+        "bin\\scaladoc.bat",
+        "bin\\scalap.bat"
+    ],
+    "env_set": {
+        "SCALA_HOME": "$dir"
+    },
+    "checkver": {
+        "url": "https://www.scala-lang.org/download/all.html",
+        "regex": "/download/(2[\\d.]+)\\.html"
+    },
+    "autoupdate": {
+        "url": "https://gh-proxy.org/https://github.com/scala/scala/releases/download/v$version/scala-$version.zip",
+        "extract_dir": "scala-$version"
+    }
+}

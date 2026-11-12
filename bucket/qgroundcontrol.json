@@ -1,0 +1,40 @@
+{
+    "version": "5.1.5",
+    "description": "Intuitive and Powerful Ground Control Station for the MAVLink protocol",
+    "homepage": "http://qgroundcontrol.com",
+    "license": "Apache-2.0|GPL-3.0-only",
+    "suggest": {
+        "vcredist": "vcredist2022"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/mavlink/qgroundcontrol/releases/download/v5.1.5/QGroundControl-installer-AMD64.exe#/dl.7z",
+            "hash": "5c3435932446461f5bee5b6d2fe9ef977ca9b471eeb894e26e6b9209f09d0374"
+        },
+        "arm64": {
+            "url": "https://gh-proxy.org/https://github.com/mavlink/qgroundcontrol/releases/download/v5.1.5/QGroundControl-installer-ARM64.exe#/dl.7z",
+            "hash": "81fe3e380bea9e1c50ea556c6465f78a0410b23cf3e5e85043e8d2feddcf6d39"
+        }
+    },
+    "pre_install": "Remove-Item \"$dir\\`$*\", \"$dir\\bin\\vc_red*\", \"$dir\\*uninsta*exe\" -Recurse",
+    "bin": "bin\\QGroundControl.exe",
+    "shortcuts": [
+        [
+            "bin\\QGroundControl.exe",
+            "QGroundControl"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/mavlink/qgroundcontrol"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/mavlink/qgroundcontrol/releases/download/v$version/QGroundControl-installer-AMD64.exe#/dl.7z"
+            },
+            "arm64": {
+                "url": "https://gh-proxy.org/https://github.com/mavlink/qgroundcontrol/releases/download/v$version/QGroundControl-installer-ARM64.exe#/dl.7z"
+            }
+        }
+    }
+}

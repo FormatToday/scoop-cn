@@ -1,0 +1,33 @@
+{
+    "version": "2026-09",
+    "description": "Eclipse IDE for Java Developers",
+    "homepage": "https://www.eclipse.org",
+    "license": "EPL-1.0",
+    "architecture": {
+        "64bit": {
+            "url": "http://download.eclipse.org/technology/epp/downloads/release/2026-09/R/eclipse-java-2026-09-R-win32-x86_64.zip",
+            "hash": "sha512:38c83cc590fb444f86a01924ac323eb312c01aca8a7f58051ae11ce8e1f78e317b69b0e60d815b5eb1c8b4eba6dca0498051225e06136243c17e59b1e0cfea9c"
+        }
+    },
+    "extract_dir": "eclipse",
+    "shortcuts": [
+        [
+            "eclipse.exe",
+            "Eclipse IDE for Java Developers"
+        ]
+    ],
+    "checkver": {
+        "url": "https://www.eclipse.org/downloads/packages/",
+        "regex": "([\\d-]+)/R/eclipse-inst-jre-win64"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "http://download.eclipse.org/technology/epp/downloads/release/$version/R/eclipse-java-$version-R-win32-x86_64.zip",
+                "hash": {
+                    "url": "$url.sha512"
+                }
+            }
+        }
+    }
+}

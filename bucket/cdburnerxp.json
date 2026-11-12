@@ -1,0 +1,54 @@
+{
+    "version": "4.5.8.7128",
+    "description": "Burns CDs and DVDs, including Blu-Ray and HD-DVDs.",
+    "homepage": "https://cdburnerxp.se",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://cdburnerxp.se/help/Intro/license"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://sourceforge.net/projects/cdburnerxp/files/CDBurnerXP-x64-4.5.8.7128.zip",
+            "hash": "sha1:43c1acec3d891fc24dbc841202e7cc00ffcc9769"
+        },
+        "32bit": {
+            "url": "https://sourceforge.net/projects/cdburnerxp/files/CDBurnerXP-4.5.8.7128.zip",
+            "hash": "sha1:1e1acd637eee12b238cfb496dbbe92cb06708488"
+        }
+    },
+    "pre_install": [
+        "if (-not (Test-Path \"$persist_dir\\UserSettings.ini\")) {",
+        "    $cfg = @( '[General]', 'UseCustomTempFolder=1', \"CustomTempFolder=$persist_dir\\tmp\", \"RemoveableMediaCache=$persist_dir\\cache\" )",
+        "    Set-Content -Path \"$dir\\UserSettings.ini\" -Value $cfg -Encoding Ascii",
+        "}"
+    ],
+    "bin": [
+        "cdbxpp.exe",
+        "cdbxpcmd.exe"
+    ],
+    "shortcuts": [
+        [
+            "cdbxpp.exe",
+            "CDBurnerXP"
+        ]
+    ],
+    "persist": [
+        "tmp",
+        "cache",
+        "UserSettings.ini"
+    ],
+    "checkver": {
+        "sourceforge": "cdburnerxp",
+        "regex": "CDBurnerXP-x64-([\\d.]+)\\.zip"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://sourceforge.net/projects/cdburnerxp/files/CDBurnerXP-x64-$version.zip"
+            },
+            "32bit": {
+                "url": "https://sourceforge.net/projects/cdburnerxp/files/CDBurnerXP-$version.zip"
+            }
+        }
+    }
+}

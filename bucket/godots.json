@@ -1,0 +1,31 @@
+{
+    "version": "1.4.2",
+    "description": "Ultimate go-to hub for managing your Godot versions and projects!",
+    "homepage": "https://github.com/MakovWait/godots",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/MakovWait/godots/releases/download/v1.4.2.stable/Windows.Desktop.zip",
+            "hash": "a14e45ca4b8b803bec6aabf9655e7e61d50b1cb90962a2a4f863ca0af55735b1"
+        }
+    },
+    "bin": "Godots.exe",
+    "shortcuts": [
+        [
+            "Godots.exe",
+            "Godots"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/MakovWait/godots",
+        "jsonpath": "$.tag_name",
+        "regex": "(?:v|V)?([\\d.]+[\\d]+)\\.stable"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/MakovWait/godots/releases/download/v$version.stable/Windows.Desktop.zip"
+            }
+        }
+    }
+}

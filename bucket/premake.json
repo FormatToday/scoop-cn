@@ -1,0 +1,16 @@
+{
+    "version": "5.0.0",
+    "description": "Automatically generate build configurations for multiple and widely used toolsets using one universal definition.",
+    "homepage": "https://premake.github.io/",
+    "license": "BSD-3-Clause",
+    "url": "https://gh-proxy.org/https://github.com/premake/premake-core/releases/download/v5.0.0/premake-5.0.0-windows.zip",
+    "hash": "15e63506eed5dfd526b96c8e957a7feff2be6cfe70f46e353bfe4813b82e2fdc",
+    "bin": "premake5.exe",
+    "checkver": {
+        "url": "https://premake.github.io/download",
+        "regex": "v(5[\\w.-]+)"
+    },
+    "autoupdate": {
+        "url": "https://gh-proxy.org/https://github.com/premake/premake-core/releases/download/v$version/premake-$version-windows.zip"
+    }
+}

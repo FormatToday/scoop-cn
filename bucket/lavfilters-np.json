@@ -1,0 +1,63 @@
+{
+    "version": "0.83",
+    "description": "Open-Source DirectShow Media Splitter and Decoders.",
+    "homepage": "https://1f0.de/",
+    "license": {
+        "identifier": "GPL-2.0-only",
+        "url": "https://github.com/Nevcairiel/LAVFilters/blob/master/COPYING"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/Nevcairiel/LAVFilters/releases/download/0.83/LAVFilters-0.83-x64.zip",
+            "hash": "0126982f47157bb86a6dbb43c4f332f7f98beba9ad552c19b65f9db2e7d4f186"
+        },
+        "32bit": {
+            "url": "https://gh-proxy.org/https://github.com/Nevcairiel/LAVFilters/releases/download/0.83/LAVFilters-0.83-x86.zip",
+            "hash": "8189505b593f25ff939f4a070135ec09f417d1d505012f79f43cbb247c7f21b2"
+        }
+    },
+    "depends": "sudo",
+    "installer": {
+        "script": [
+            "sudo \"$env:COMSPEC\" /c \"regsvr32 /s `\"$dir\\LAVAudio.ax`\" & regsvr32 /s `\"$dir\\LAVSplitter.ax`\" & regsvr32 /s `\"$dir\\LAVVideo.ax`\"\"",
+            "@('LAVAudio', 'LAVSplitter', 'LAVVideo') | %{",
+            "    $s = (New-Object -ComObject WScript.Shell).CreateShortcut(\"$dir\\$_.lnk\")",
+            "    $s.TargetPath = \"rundll32.exe\"",
+            "    $s.Arguments = \"`\"$dir\\$_.ax`\",OpenConfiguration\"",
+            "    $s.WorkingDirectory = \"$dir\"",
+            "    $s.IconLocation = \"$dir\\$_.ax\"",
+            "    $s.Save()",
+            "}"
+        ]
+    },
+    "uninstaller": {
+        "script": "sudo \"$env:COMSPEC\" /c \"regsvr32 /u /s `\"$dir\\LAVAudio.ax`\" & regsvr32 /u /s `\"$dir\\LAVSplitter.ax`\" & regsvr32 /u /s `\"$dir\\LAVVideo.ax`\"\""
+    },
+    "shortcuts": [
+        [
+            "LAVAudio.lnk",
+            "LAV Audio Configuration"
+        ],
+        [
+            "LAVSplitter.lnk",
+            "LAV Splitter Configuration"
+        ],
+        [
+            "LAVVideo.lnk",
+            "LAV Video Configuration"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/Nevcairiel/LAVFilters"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/Nevcairiel/LAVFilters/releases/download/$version/LAVFilters-$version-x64.zip"
+            },
+            "32bit": {
+                "url": "https://gh-proxy.org/https://github.com/Nevcairiel/LAVFilters/releases/download/$version/LAVFilters-$version-x86.zip"
+            }
+        }
+    }
+}

@@ -1,0 +1,44 @@
+{
+    "version": "8.10.9",
+    "description": "Distributed Workflow Engine for Microservices Orchestration",
+    "homepage": "https://camunda.com/products/cloud/workflow-engine/",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://docs.camunda.io/docs/reference/licenses/"
+    },
+    "notes": [
+        "If you are upgrading from version 1.x, you can follow the instructions on this page to migrate the settings:",
+        "https://unsupported.docs.camunda.io/8.0/docs/guides/update-guide/130-to-800/"
+    ],
+    "suggest": {
+        "JDK": "openjdk"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/camunda/camunda/releases/download/8.10.9/camunda-zeebe-8.10.9.zip",
+            "hash": "eb3cb0558816f1520ae9b9903866c4a52e635a89cbc6544ce960d492577f6b5b"
+        }
+    },
+    "extract_dir": "camunda-zeebe-8.10.9",
+    "bin": [
+        [
+            "bin\\broker.bat",
+            "zeebe-broker"
+        ],
+        [
+            "bin\\gateway.bat",
+            "zeebe-gateway"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/camunda/camunda"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/camunda/camunda/releases/download/$version/camunda-zeebe-$version.zip"
+            }
+        },
+        "extract_dir": "camunda-zeebe-$version"
+    }
+}

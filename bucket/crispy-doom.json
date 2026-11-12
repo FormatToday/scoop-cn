@@ -1,0 +1,95 @@
+{
+    "version": "7.2",
+    "description": "Faithful enhanced-resolution source port for Doom",
+    "homepage": "https://fabiangreffrath.github.io/crispy-homepage",
+    "license": "GPL-2.0-or-later",
+    "notes": [
+        "Place WAD files (game data) in:",
+        "",
+        "    $persist_dir\\..\\_doom"
+    ],
+    "suggest": {
+        "Launcher (frontend)": [
+            "doomrunner",
+            "zdl"
+        ]
+    },
+    "persist": [
+        "crispy-doom.cfg",
+        "default.cfg"
+    ],
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\crispy-doom.cfg\")) {",
+        "   New-Item -ItemType File \"$dir\\crispy-doom.cfg\" | Out-Null",
+        "}",
+        "if (!(Test-Path \"$persist_dir\\default.cfg\")) {",
+        "   New-Item -ItemType File \"$dir\\default.cfg\" | Out-Null",
+        "}",
+        "if (!(Test-Path \"$scoopdir\\persist\\_doom\")) {",
+        "   New-item \"$scoopdir\\persist\\_doom\" -ItemType Directory | Out-Null",
+        "}"
+    ],
+    "env_set": {
+        "DOOMWADDIR": "$persist_dir\\..\\_doom"
+    },
+    "bin": "crispy-doom.exe",
+    "shortcuts": [
+        [
+            "crispy-doom.exe",
+            "Crispy Doom (Doom 2)",
+            "-iwad doom2.wad"
+        ],
+        [
+            "crispy-doom.exe",
+            "Crispy Doom (The Ultimate Doom)",
+            "-iwad doom.wad"
+        ],
+        [
+            "crispy-doom.exe",
+            "Crispy Doom (The Plutonia Experiment)",
+            "-iwad plutonia.wad"
+        ],
+        [
+            "crispy-doom.exe",
+            "Crispy Doom (TNT Evilution)",
+            "-iwad tnt.wad"
+        ],
+        [
+            "crispy-doom.exe",
+            "Crispy Doom (Freedoom Phase 1)",
+            "-iwad freedoom1.wad"
+        ],
+        [
+            "crispy-doom.exe",
+            "Crispy Doom (Freedoom Phase 2)",
+            "-iwad freedoom2.wad"
+        ],
+        [
+            "crispy-doom.exe",
+            "Crispy Doom (FreeDM)",
+            "-iwad freedm.wad"
+        ],
+        [
+            "crispy-doom-setup.exe",
+            "Setup Crispy Doom"
+        ]
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/fabiangreffrath/crispy-doom/releases/download/crispy-doom-7.2/crispy-doom-7.2.0-win64.zip",
+            "hash": "c04feca63c00fd4c381c53cce8444a2bb520020be38368ce80da60484c94f2ab"
+        }
+    },
+    "checkver": {
+        "url": "https://api.github.com/repositories/17395051/releases/latest",
+        "regex": "crispy-doom-([\\d.]+)\\/crispy-doom-([\\d.]+)-win64.zip",
+        "replace": "${1}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/fabiangreffrath/crispy-doom/releases/download/crispy-doom-$version/crispy-doom-$match2-win64.zip"
+            }
+        }
+    }
+}

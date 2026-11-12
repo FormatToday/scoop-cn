@@ -1,0 +1,67 @@
+{
+    "version": "0.1.9",
+    "description": "Desktop app for orchestrating AI coding agents like Claude Code, Codex, Cursor CLI and OpenCode",
+    "homepage": "https://t3.codes",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/pingdotgg/t3code/releases/download/v0.1.9/T3-Code-0.1.9-x64.exe#/dl.7z",
+            "hash": "sha512:76dd5540b766ff4788af0ccf94cd489945e773c0802132c5cd333635cbbce48348d312e17faa763793c7d0a913b585e9dd3b13ec5bf0192347e608c86e631426"
+        },
+        "arm64": {
+            "url": "https://gh-proxy.org/https://github.com/pingdotgg/t3code/releases/download/v0.1.9/T3-Code-0.1.9-arm64.exe#/dl.7z",
+            "hash": "sha512:d3e5788cca320c6bcfdc58ebc139840b010acc6f4531e590bd2b6890a93dc26453607f411ef35964544d9a96add3beaac80a1b282d8c6a8f4684a6253f06fcee"
+        }
+    },
+    "pre_install": [
+        "Get-Item \"$dir\\`$PLUGINSDIR\\app*.7z\" | Select-Object -First 1 | Expand-7zipArchive -DestinationPath $dir",
+        "Remove-Item \"$dir\\`$*\", \"$dir\\Uninst*\" -Force -Recurse -ErrorAction Ignore"
+    ],
+    "post_install": [
+        "if (Test-Path $env:USERPROFILE\\.t3) {",
+        "    Write-Host \"`r`nMove user config from non-portable version...\"",
+        "    Copy-Item -Path $env:USERPROFILE\\.t3\\* -Destination \"$persist_dir\\user\" -Force -Recurse -ErrorAction Stop | Out-Null",
+        "    Remove-Item $env:USERPROFILE\\.t3 -Force -Recurse",
+        "}",
+        "if (Test-Path $env:APPDATA\\t3code) {",
+        "    Write-Host \"`r`nMove app config from non-portable version...\"",
+        "    Copy-Item -Path $env:APPDATA\\t3code\\* -Destination \"$persist_dir\\app\" -Force -Recurse -ErrorAction Stop | Out-Null",
+        "    Remove-Item $env:APPDATA\\t3code -Force -Recurse",
+        "}",
+        "New-Item -ItemType Junction -Path $env:USERPROFILE\\.t3 -Target \"$persist_dir\\user\" | Out-Null",
+        "New-Item -ItemType Junction -Path $env:APPDATA\\t3code -Target \"$persist_dir\\app\" | Out-Null"
+    ],
+    "uninstaller": {
+        "script": [
+            "Remove-Item $env:USERPROFILE\\.t3 -Force -Recurse",
+            "Remove-Item $env:APPDATA\\t3code -Force -Recurse"
+        ]
+    },
+    "shortcuts": [
+        [
+            "T3 Code (Beta).exe",
+            "T3 Code (Beta)"
+        ]
+    ],
+    "persist": [
+        "user",
+        "app"
+    ],
+    "checkver": {
+        "github": "https://github.com/pingdotgg/t3code"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/pingdotgg/t3code/releases/download/v$version/T3-Code-$version-x64.exe#/dl.7z"
+            },
+            "arm64": {
+                "url": "https://gh-proxy.org/https://github.com/pingdotgg/t3code/releases/download/v$version/T3-Code-$version-arm64.exe#/dl.7z"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/latest.yml",
+            "regex": "(?sm)$basename.*?$base64"
+        }
+    }
+}

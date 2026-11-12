@@ -1,0 +1,45 @@
+{
+    "version": "1.2026.10",
+    "description": "A tool to draw UML diagrams, using a simple and human readable text description.",
+    "homepage": "https://github.com/plantuml/plantuml",
+    "license": "GPL-3.0-only",
+    "suggest": {
+        "JDK": [
+            "oraclejdk",
+            "openjdk"
+        ]
+    },
+    "url": [
+        "https://gh-proxy.org/https://github.com/plantuml/plantuml/releases/download/v1.2026.10/plantuml-1.2026.10.jar#/plantuml.jar",
+        "http://beta.plantuml.net/batikAndFop.zip"
+    ],
+    "hash": [
+        "e9bc9e6b2eb715e8c0c929f3dcb5fc1923be13f37599b09c293c66d354e88686",
+        "c1f328a9aacfd954c6cd90650cefd924baea358d6e27520de7ccf9b30a681877"
+    ],
+    "pre_install": [
+        "$batContent = '@java.exe -jar \"%~dp0plantuml.jar\" -charset UTF-8 %*'",
+        "Set-Content -Path \"$dir\\plantuml.bat\" -Value $batContent -Encoding Ascii",
+        "$guiBatContent = '@start javaw.exe -jar \"%~dp0plantuml.jar\" -charset UTF-8 -gui'",
+        "Set-Content -Path \"$dir\\plantuml-gui.bat\" -Value $guiBatContent -Encoding Ascii"
+    ],
+    "bin": [
+        [
+            "plantuml.bat",
+            "plantuml"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "plantuml-gui.bat",
+            "PlantUML"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": [
+            "https://gh-proxy.org/https://github.com/plantuml/plantuml/releases/download/v$version/plantuml-$version.jar#/plantuml.jar",
+            "http://beta.plantuml.net/batikAndFop.zip"
+        ]
+    }
+}

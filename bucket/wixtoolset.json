@@ -1,0 +1,36 @@
+{
+    "version": "7.0.1",
+    "description": "Set of tools for windows installer creation.",
+    "homepage": "https://wixtoolset.org/",
+    "license": "MS-RL",
+    "notes": [
+        "WiX Toolset requires .NET 8+ SDK or Runtimes.",
+        "WiX now requires an explicit gesture to accept the OSMF EULA to avoid accidentally violating the EULA terms.",
+        "The OSMF EULA v1.1 avoids requiring a fee until you make at least US$10,000 a year from your projects that use WiX."
+    ],
+    "suggest": {
+        ".NET SDK": [
+            "dotnet-sdk",
+            "dotnet-sdk-lts",
+            "dotnet8-sdk",
+            "dotnet9-sdk",
+            "dotnet10-sdk"
+        ]
+    },
+    "url": "https://api.nuget.org/v3-flatcontainer/wix/7.0.1/wix.7.0.1.nupkg",
+    "hash": "25209a1f73b20106621f11abe5e1a4e87c1d9f5c596795d246de7bb64446df17",
+    "extract_dir": "tools\\net8.0\\any",
+    "bin": "wix.exe",
+    "post_install": [
+        "# Specify full path to wix.exe in this installation directory to avoid another version of wix.exe in PATH being used",
+        "& \"$dir\\wix.exe\" eula accept wix7"
+    ],
+    "checkver": {
+        "url": "https://api.nuget.org/v3-flatcontainer/wix/index.json",
+        "regex": "\"([\\d.]+)\"",
+        "reverse": true
+    },
+    "autoupdate": {
+        "url": "https://api.nuget.org/v3-flatcontainer/wix/$version/wix.$version.nupkg"
+    }
+}

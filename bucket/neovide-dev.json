@@ -1,0 +1,33 @@
+{
+    "version": "0.16.2",
+    "description": "A simple GUI for Neovim (prerelease version)",
+    "homepage": "https://github.com/neovide/neovide",
+    "license": "MIT",
+    "suggest": {
+        "neovim": "neovim"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/neovide/neovide/releases/download/0.16.2/neovide.exe.zip",
+            "hash": "d1e071d8bf676a500988820b852843e811fc8355396ce72e8f4c7ed2c744e2e2"
+        }
+    },
+    "bin": "neovide.exe",
+    "shortcuts": [
+        [
+            "neovide.exe",
+            "Neovide"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/neovide/neovide/releases",
+        "jsonpath": "$[0].tag_name"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/neovide/neovide/releases/download/$version/neovide.exe.zip"
+            }
+        }
+    }
+}

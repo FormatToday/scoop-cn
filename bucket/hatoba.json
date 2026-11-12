@@ -1,0 +1,38 @@
+{
+    "version": "0.8.5",
+    "description": "Open-source desktop SSH client with an AI assistant and end-to-end encrypted sync",
+    "homepage": "https://hatoba.fog.moe",
+    "license": "MIT",
+    "suggest": {
+        "Microsoft Edge WebView2": "webview2"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/scarletkc/Hatoba/releases/download/v0.8.5/Hatoba_0.8.5_windows-x64-setup.exe#/dl.7z",
+            "hash": "cccfc1ede3695779e7ac0a5c274994eacf783ae9ff91d59d2b634f3450d8da50"
+        }
+    },
+    "pre_install": [
+        "Remove-Item \"$dir\\`$*\", \"$dir\\uninstall.exe\" -Force -Recurse",
+        "Set-Content -LiteralPath \"$dir\\managed-by-package-manager\" -Value \"scoop\" -Encoding ASCII"
+    ],
+    "shortcuts": [
+        [
+            "Hatoba.exe",
+            "Hatoba"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/scarletkc/Hatoba"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/scarletkc/Hatoba/releases/download/v$version/Hatoba_$version_windows-x64-setup.exe#/dl.7z"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/SHA256SUMS.txt"
+        }
+    }
+}

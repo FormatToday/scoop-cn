@@ -1,0 +1,21 @@
+{
+    "version": "2.0.0",
+    "description": "Reformats Java source code to comply with Google Java Style.",
+    "homepage": "https://github.com/google/google-java-format",
+    "license": "Apache-2.0",
+    "suggest": {
+        "JDK": [
+            "oraclejdk",
+            "openjdk"
+        ]
+    },
+    "url": "https://gh-proxy.org/https://github.com/google/google-java-format/releases/download/v2.0.0/google-java-format-2.0.0-all-deps.jar#/google-java-format.jar",
+    "hash": "c78feb48c549fa7114b7ea11db3b456808f7b371ffe84e6643a44dd2f9588639",
+    "bin": "google-java-format.jar",
+    "checkver": {
+        "github": "https://github.com/google/google-java-format"
+    },
+    "autoupdate": {
+        "url": "https://gh-proxy.org/https://github.com/google/google-java-format/releases/download/v$version/google-java-format-$version-all-deps.jar#/google-java-format.jar"
+    }
+}

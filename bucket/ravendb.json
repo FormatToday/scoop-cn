@@ -1,0 +1,60 @@
+{
+    "version": "7.2.7",
+    "description": "NoSQL database built on .NET Core",
+    "homepage": "https://ravendb.net",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://ravendb.net/terms/commercial"
+    },
+    "suggest": {
+        "vcredist": "vcredist2022"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://daily-builds.s3.amazonaws.com/RavenDB-7.2.7-windows-x64.zip",
+            "hash": "3155e3059b5919fabea6b28dee6489fa758bced0cd300ad27f629c2729bcda32"
+        },
+        "32bit": {
+            "url": "https://daily-builds.s3.amazonaws.com/RavenDB-7.2.7-windows-x86.zip",
+            "hash": "cf7de272e37f6b4926b6d64cf54695bd833abb024f9c11357bd7cc542d5c544c"
+        }
+    },
+    "installer": {
+        "script": [
+            "if(!(Test-Path \"$persist_dir\\Server\\settings.json\")){",
+            "    Copy-Item \"$dir\\Server\\settings.default.json\" \"$dir\\Server\\settings.json\"",
+            "}"
+        ]
+    },
+    "bin": [
+        "Server\\rvn.exe",
+        "Server\\Raven.Server.exe",
+        "Server\\Raven.Debug.exe",
+        [
+            "run.ps1",
+            "raven-run"
+        ],
+        [
+            "setup-as-service.ps1",
+            "raven-setup-as-service"
+        ],
+        [
+            "uninstall-service.ps1",
+            "raven-uninstall-service"
+        ]
+    ],
+    "persist": "Server\\settings.json",
+    "checkver": {
+        "github": "https://github.com/ravendb/ravendb"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://daily-builds.s3.amazonaws.com/RavenDB-$version-windows-x64.zip"
+            },
+            "32bit": {
+                "url": "https://daily-builds.s3.amazonaws.com/RavenDB-$version-windows-x86.zip"
+            }
+        }
+    }
+}

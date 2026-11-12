@@ -1,0 +1,33 @@
+{
+    "version": "1.124.0",
+    "description": "A simple and flexible scheduler and orchestrator to manage non-containerized applications.",
+    "homepage": "https://f1bonacc1.github.io/process-compose/",
+    "license": "Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/F1bonacc1/process-compose/releases/download/v1.124.0/process-compose_windows_amd64.zip",
+            "hash": "a77d51dcb34e3e8d2b88af372ada7ca8a62cb87f0c6af0f78834c0fd6c95e2a7"
+        },
+        "arm64": {
+            "url": "https://gh-proxy.org/https://github.com/F1bonacc1/process-compose/releases/download/v1.124.0/process-compose_windows_arm64.zip",
+            "hash": "e6aa71e4beec37d37834ca01b722cda0d71a198822f494014438672ac5fcae46"
+        }
+    },
+    "bin": "process-compose.exe",
+    "checkver": {
+        "github": "https://github.com/F1bonacc1/process-compose"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/F1bonacc1/process-compose/releases/download/v$version/process-compose_windows_amd64.zip"
+            },
+            "arm64": {
+                "url": "https://gh-proxy.org/https://github.com/F1bonacc1/process-compose/releases/download/v$version/process-compose_windows_arm64.zip"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/process-compose_checksums.txt"
+        }
+    }
+}

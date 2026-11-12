@@ -1,0 +1,42 @@
+{
+    "version": "5.6.8",
+    "description": "A Qt/C++ front-end to yt-dlp, youtube-dl, gallery-dl, lux, you-get, svtplay-dl, aria2c, wget and safari books.",
+    "homepage": "https://github.com/mhogomchungu/media-downloader",
+    "license": "GPL-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/mhogomchungu/media-downloader/releases/download/5.6.8/MediaDownloaderQt6-5.6.8.zip",
+            "hash": "b6d5d9b5bc81c5498d2a1a147fc79d834880e93a9700479a52f15f686a5afdcb",
+            "extract_dir": "MediaDownloaderQt6-5.6.8"
+        },
+        "32bit": {
+            "url": "https://gh-proxy.org/https://github.com/mhogomchungu/media-downloader/releases/download/5.6.8/MediaDownloaderQt5-5.6.8.zip",
+            "hash": "001810d8b80e3cb484fbca964332428c1681b0e21b677fa7c4131b633b8dd527",
+            "extract_dir": "MediaDownloaderQt5-5.6.8"
+        }
+    },
+    "bin": "media-downloader.exe",
+    "shortcuts": [
+        [
+            "media-downloader.exe",
+            "Media Downloader"
+        ]
+    ],
+    "persist": "local",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/mhogomchungu/media-downloader/releases/download/$version/MediaDownloaderQt6-$version.zip",
+                "extract_dir": "MediaDownloaderQt6-$version"
+            },
+            "32bit": {
+                "url": "https://gh-proxy.org/https://github.com/mhogomchungu/media-downloader/releases/download/$version/MediaDownloaderQt5-$version.zip",
+                "extract_dir": "MediaDownloaderQt5-$version"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/ZWindowsHashes.txt"
+        }
+    }
+}

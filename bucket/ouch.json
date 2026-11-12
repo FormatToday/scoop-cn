@@ -1,0 +1,30 @@
+{
+    "version": "0.8.3",
+    "description": "Painless compression and decompression for your terminal.",
+    "homepage": "https://github.com/ouch-org/ouch",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/ouch-org/ouch/releases/download/0.8.3/ouch-x86_64-pc-windows-msvc.zip",
+            "hash": "6383a95987894412d5c9c4172e3d1d87c86aa322acb2b7ffcad42f492abc5dfe",
+            "extract_dir": "ouch-x86_64-pc-windows-msvc"
+        },
+        "arm64": {
+            "url": "https://gh-proxy.org/https://github.com/ouch-org/ouch/releases/download/0.8.3/ouch-aarch64-pc-windows-msvc.zip",
+            "hash": "2ffacd22c03a5a73cf4084ef8d70f13788268dfa7148242ad9fc5002e167c4c7",
+            "extract_dir": "ouch-aarch64-pc-windows-msvc"
+        }
+    },
+    "bin": "ouch.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/ouch-org/ouch/releases/download/$version/ouch-x86_64-pc-windows-msvc.zip"
+            },
+            "arm64": {
+                "url": "https://gh-proxy.org/https://github.com/ouch-org/ouch/releases/download/$version/ouch-aarch64-pc-windows-msvc.zip"
+            }
+        }
+    }
+}

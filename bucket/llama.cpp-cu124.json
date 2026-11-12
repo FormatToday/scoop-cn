@@ -1,0 +1,45 @@
+{
+    "version": "b12317",
+    "description": "Inference of LLaMA model in pure C/C++ (CUDA 12.4 version)",
+    "homepage": "https://github.com/ggml-org/llama.cpp",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/ggml-org/llama.cpp/releases/download/b12317/llama-b12317-bin-win-cuda-12.4-x64.zip",
+            "hash": "b6678853912e0cd1ac5adb2258db6b021c1833c4d139001fa1bb3ed7481745ea"
+        }
+    },
+    "bin": [
+        "llama-batched-bench.exe",
+        "llama-bench.exe",
+        "llama-cli.exe",
+        "llama-completion.exe",
+        "llama-fit-params.exe",
+        "llama-gemma3-cli.exe",
+        "llama-gguf-split.exe",
+        "llama-imatrix.exe",
+        "llama-llava-cli.exe",
+        "llama-minicpmv-cli.exe",
+        "llama-mtmd-cli.exe",
+        "llama-perplexity.exe",
+        "llama-quantize.exe",
+        "llama-qwen2vl-cli.exe",
+        "llama-server.exe",
+        "llama-tokenize.exe",
+        "llama-tts.exe",
+        "llama.exe"
+    ],
+    "persist": "models",
+    "checkver": {
+        "github": "https://api.github.com/repos/ggml-org/llama.cpp/releases",
+        "jsonpath": "$[*].tag_name",
+        "regex": "\"(b[\\d]+)\""
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/ggml-org/llama.cpp/releases/download/$version/llama-$version-bin-win-cuda-12.4-x64.zip"
+            }
+        }
+    }
+}

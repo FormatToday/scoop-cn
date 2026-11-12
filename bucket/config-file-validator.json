@@ -1,0 +1,35 @@
+{
+    "version": "3.0.0",
+    "description": "A tool to validate the syntax of configuration files",
+    "homepage": "https://boeing.github.io/config-file-validator/",
+    "license": "Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/Boeing/config-file-validator/releases/download/v3.0.0/cfv-3.0.0-windows-amd64.zip",
+            "hash": "283d45c22a0fcaf3ae4c4340405329a25e5256834dd1babd8c329f1df96271d3"
+        },
+        "32bit": {
+            "url": "https://gh-proxy.org/https://github.com/Boeing/config-file-validator/releases/download/v3.0.0/cfv-3.0.0-windows-386.zip",
+            "hash": "1c1d8c8600b89526ab028ab6707183a5d9a34181354857dcd0dcd13c4ca3cd08"
+        }
+    },
+    "bin": "cfv.exe",
+    "checkver": {
+        "github": "https://api.github.com/repos/Boeing/config-file-validator/releases",
+        "jsonpath": "$[?(@.prerelease == false)].tag_name",
+        "regex": "(?:v|V)?([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/Boeing/config-file-validator/releases/download/v$version/cfv-$version-windows-amd64.zip"
+            },
+            "32bit": {
+                "url": "https://gh-proxy.org/https://github.com/Boeing/config-file-validator/releases/download/v$version/cfv-$version-windows-386.zip"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/SHA256SUMS"
+        }
+    }
+}

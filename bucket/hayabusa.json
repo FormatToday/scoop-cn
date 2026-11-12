@@ -1,0 +1,36 @@
+{
+    "version": "4.4.0",
+    "description": "Sigma-based threat hunting and fast forensics timeline generator for Windows event logs.",
+    "homepage": "https://github.com/Yamato-Security/hayabusa",
+    "license": "AGPL-3.0-only",
+    "architecture": {
+        "32bit": {
+            "url": "https://gh-proxy.org/https://github.com/Yamato-Security/hayabusa/releases/download/v4.4.0/hayabusa-4.4.0-win-x86.zip",
+            "hash": "5c049106e5ffd9c066ccc2088e84c7e8943716aecc934825b626220c2e335e80"
+        },
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/Yamato-Security/hayabusa/releases/download/v4.4.0/hayabusa-4.4.0-win-x64.zip",
+            "hash": "dec63d2efa9e87ccf76da7e52e491df379f9eb37b69a92775d90ab6d91f22807"
+        },
+        "arm64": {
+            "url": "https://gh-proxy.org/https://github.com/Yamato-Security/hayabusa/releases/download/v4.4.0/hayabusa-4.4.0-win-aarch64.zip",
+            "hash": "600314c3e8b027cb96d59a7905d544c2e1570716179c6b62c0604106229e9abc"
+        }
+    },
+    "pre_install": "Get-ChildItem \"$dir\\hayabusa-*.exe\" | Select-Object -First 1 | Rename-Item -NewName 'hayabusa.exe'",
+    "bin": "hayabusa.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "32bit": {
+                "url": "https://gh-proxy.org/https://github.com/Yamato-Security/hayabusa/releases/download/v$version/hayabusa-$version-win-x86.zip"
+            },
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/Yamato-Security/hayabusa/releases/download/v$version/hayabusa-$version-win-x64.zip"
+            },
+            "arm64": {
+                "url": "https://gh-proxy.org/https://github.com/Yamato-Security/hayabusa/releases/download/v$version/hayabusa-$version-win-aarch64.zip"
+            }
+        }
+    }
+}

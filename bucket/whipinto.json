@@ -1,0 +1,40 @@
+{
+    "version": "0.10.2",
+    "description": "RTP/RTSP to WHIP tool.",
+    "homepage": "https://live777.pages.dev",
+    "license": {
+        "identifier": "MPL-2.0",
+        "url": "https://github.com/binbat/live777/blob/HEAD/LICENSE"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/binbat/live777/releases/download/v0.10.2/whipinto-v0.10.2-x86_64-pc-windows-msvc.exe#/whipinto.exe",
+            "hash": "dd33b54cd7edeb569b2d2f5d1893ab27be833f27c0093706138798679b330ef8"
+        },
+        "32bit": {
+            "url": "https://gh-proxy.org/https://github.com/binbat/live777/releases/download/v0.10.2/whipinto-v0.10.2-i686-pc-windows-msvc.exe#/whipinto.exe",
+            "hash": "b79979eb2fe192bd7d9831d414f18503726ee29d7d9c72ef24ff1a2ce843feac"
+        },
+        "arm64": {
+            "url": "https://gh-proxy.org/https://github.com/binbat/live777/releases/download/v0.10.2/whipinto-v0.10.2-aarch64-pc-windows-msvc.exe#/whipinto.exe",
+            "hash": "f433afe88f94a9192635712d6a2558d5229429daf46dac5a9b389de59d4bb96b"
+        }
+    },
+    "bin": "whipinto.exe",
+    "checkver": {
+        "github": "https://github.com/binbat/live777"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/binbat/live777/releases/download/v$version/whipinto-v$version-x86_64-pc-windows-msvc.exe#/whipinto.exe"
+            },
+            "32bit": {
+                "url": "https://gh-proxy.org/https://github.com/binbat/live777/releases/download/v$version/whipinto-v$version-i686-pc-windows-msvc.exe#/whipinto.exe"
+            },
+            "arm64": {
+                "url": "https://gh-proxy.org/https://github.com/binbat/live777/releases/download/v$version/whipinto-v$version-aarch64-pc-windows-msvc.exe#/whipinto.exe"
+            }
+        }
+    }
+}

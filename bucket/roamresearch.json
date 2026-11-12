@@ -1,0 +1,38 @@
+{
+    "version": "0.0.42",
+    "homepage": "https://roamresearch.com/",
+    "description": "An easy to use note-taking tool for for networked thought.",
+    "license": {
+        "identifier": "Shareware",
+        "url": "https://roamresearch.com/#/app/help/page/MHRK1dgTE"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://roam-electron-deploy.s3.us-east-2.amazonaws.com/Roam+Research+Setup+0.0.42.exe#/dl.7z",
+            "hash": "sha512:42c5f3f4328b7be447f48ebca0136d51d60d60c55a8ee7dfba74975d76c774408ac5843f592788831d809255f97c22404ea0f7aba063bcf6ff8fa53a57622ef7",
+            "pre_install": "Expand-7zipArchive \"$dir\\app-64.7z\" \"$dir\" -Removal"
+        }
+    },
+    "extract_dir": "$PLUGINSDIR",
+    "shortcuts": [
+        [
+            "Roam Research.exe",
+            "Roam Research"
+        ]
+    ],
+    "checkver": {
+        "url": "https://roam-electron-deploy.s3.us-east-2.amazonaws.com/latest.yml",
+        "regex": "version:\\s([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://roam-electron-deploy.s3.us-east-2.amazonaws.com/Roam+Research+Setup+$version.exe#/dl.7z",
+                "hash": {
+                    "url": "$baseurl/latest.yml",
+                    "regex": "sha512:\\s$base64"
+                }
+            }
+        }
+    }
+}

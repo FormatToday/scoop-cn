@@ -1,0 +1,39 @@
+{
+    "version": "1.1.675",
+    "description": "A moldable development environment.",
+    "homepage": "https://gtoolkit.com",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/feenkcom/gtoolkit/releases/download/v1.1.675/GlamorousToolkit-Windows-x86_64-v1.1.675.zip",
+            "hash": "3a4bca2c75020724827e19a4b189bdee01c447726ae14a45db441f934cef9f12"
+        },
+        "arm64": {
+            "url": "https://gh-proxy.org/https://github.com/feenkcom/gtoolkit/releases/download/v1.1.675/GlamorousToolkit-Windows-aarch64-v1.1.675.zip",
+            "hash": "62d9c67a0d73903151763456ab499e4156ce372ebacdf1190a23951e96ac42b4"
+        }
+    },
+    "bin": "bin\\GlamorousToolkit-cli.exe",
+    "shortcuts": [
+        [
+            "bin\\GlamorousToolkit.exe",
+            "GlamorousToolkit"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/feenkcom/gtoolkit"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/feenkcom/gtoolkit/releases/download/v$version/GlamorousToolkit-Windows-x86_64-v$version.zip"
+            },
+            "arm64": {
+                "url": "https://gh-proxy.org/https://github.com/feenkcom/gtoolkit/releases/download/v$version/GlamorousToolkit-Windows-aarch64-v$version.zip"
+            }
+        },
+        "hash": {
+            "url": "$url.sha256"
+        }
+    }
+}

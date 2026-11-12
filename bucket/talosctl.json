@@ -1,0 +1,33 @@
+{
+    "version": "1.14.6",
+    "description": "CLI for out-of-band management of Kubernetes nodes created by Talos",
+    "homepage": "https://talos.dev",
+    "license": " MPL-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/siderolabs/talos/releases/download/v1.14.6/talosctl-windows-amd64.exe#/talosctl.exe",
+            "hash": "5bd12fdf298fc4bd7bbcdf207d0ca200c620f9c169be31663ebca5f8a81a2d6b"
+        },
+        "arm64": {
+            "url": "https://gh-proxy.org/https://github.com/siderolabs/talos/releases/download/v1.14.6/talosctl-windows-arm64.exe#/talosctl.exe",
+            "hash": "a24086ee01502a20a4607492aecf05e3d64204285ff2c44b084655913071ed86"
+        }
+    },
+    "bin": "talosctl.exe",
+    "checkver": {
+        "github": "https://github.com/siderolabs/talos"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/siderolabs/talos/releases/download/v$version/talosctl-windows-amd64.exe#/talosctl.exe"
+            },
+            "arm64": {
+                "url": "https://gh-proxy.org/https://github.com/siderolabs/talos/releases/download/v$version/talosctl-windows-arm64.exe#/talosctl.exe"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/sha256sum.txt"
+        }
+    }
+}

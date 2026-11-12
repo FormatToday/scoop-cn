@@ -1,0 +1,54 @@
+{
+    "##": "Please keep .exe instead of the .nupkg. The Update.exe extracted from .exe is needed to convert the persistent data to the latest version (#10938).",
+    "version": "12.36.3",
+    "description": "Complete API development environment.",
+    "homepage": "https://www.getpostman.com/",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://www.getpostman.com/licenses/postman_eula"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://dl.pstmn.io/download/12.36.3/Postman%20v12.36.3%20(x64).exe#/dl.7z",
+            "hash": "sha1:4dab646a77c33ad28d5196f3dd8cba75d5213d31"
+        },
+        "arm64": {
+            "url": "https://dl.pstmn.io/download/12.36.3/Postman%20v12.36.3%20(arm64).exe#/dl.7z",
+            "hash": "sha1:4417b50bf1e30b16b0161dcb2c5879db7fbcef12"
+        }
+    },
+    "installer": {
+        "script": [
+            "Expand-7zipArchive \"$dir\\Postman-$version-full.nupkg\" \"$dir\\app\" -ExtractDir 'lib\\net45' -Removal",
+            "'background.gif', 'RELEASES', 'setupIcon.ico' | ForEach-Object { Remove-Item \"$dir\\$_\" }"
+        ]
+    },
+    "shortcuts": [
+        [
+            "app/Postman.exe",
+            "Postman"
+        ]
+    ],
+    "checkver": {
+        "url": "https://dl.pstmn.io/changelog?channel=stable&platform=win64",
+        "jsonpath": "$.changelog[0].name"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://dl.pstmn.io/download/$version/Postman%20v$version%20(x64).exe#/dl.7z",
+                "hash": {
+                    "url": "https://dl.pstmn.io/RELEASES?platform=win64&from=$version",
+                    "regex": "(?sm)$basename.*?$sha1"
+                }
+            },
+            "arm64": {
+                "url": "https://dl.pstmn.io/download/$version/Postman%20v$version%20(arm64).exe#/dl.7z",
+                "hash": {
+                    "url": "https://dl.pstmn.io/RELEASES?platform=winarm64&from=$version",
+                    "regex": "(?sm)$basename.*?$sha1"
+                }
+            }
+        }
+    }
+}

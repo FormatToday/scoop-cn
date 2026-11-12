@@ -1,0 +1,38 @@
+{
+    "version": "6.1.1",
+    "description": "The free translation memory tool.",
+    "homepage": "https://omegat.org/",
+    "license": "GPL-3.0-or-later",
+    "architecture": {
+        "64bit": {
+            "url": "https://downloads.sourceforge.net/project/omegat/OmegaT%20-%20Standard/OmegaT%206.1.1/OmegaT_6.1.1_Windows_64_signed.exe",
+            "hash": "sha1:960bfd649dbd89d54078f7268618d9bba372a48c"
+        },
+        "arm64": {
+            "url": "https://downloads.sourceforge.net/project/omegat/OmegaT%20-%20Standard/OmegaT%206.1.1/OmegaT_6.1.1_Windows_aarch64_signed.exe",
+            "hash": "sha1:372489838476877caefbe117baa6ec95a37d0480"
+        }
+    },
+    "innosetup": true,
+    "bin": "OmegaT.exe",
+    "shortcuts": [
+        [
+            "OmegaT.exe",
+            "OmegaT"
+        ]
+    ],
+    "checkver": {
+        "url": "https://sourceforge.net/projects/omegat/rss?path=/OmegaT%20-%20Standard",
+        "regex": "OmegaT_([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://downloads.sourceforge.net/project/omegat/OmegaT%20-%20Standard/OmegaT%20$version/OmegaT_$version_Windows_64_signed.exe"
+            },
+            "arm64": {
+                "url": "https://downloads.sourceforge.net/project/omegat/OmegaT%20-%20Standard/OmegaT%20$version/OmegaT_$version_Windows_aarch64_signed.exe"
+            }
+        }
+    }
+}

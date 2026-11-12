@@ -1,0 +1,46 @@
+{
+    "version": "2.15.3",
+    "description": "High-Performance server for NATS.io, the cloud and edge native messaging system",
+    "homepage": "https://nats.io",
+    "license": "Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/nats-io/nats-server/releases/download/v2.15.3/nats-server-v2.15.3-windows-amd64.zip",
+            "hash": "b202c46689a56b17e88939b6c53a25294021b000b9c7225209bcb1bbda347bad",
+            "extract_dir": "nats-server-v2.15.3-windows-amd64"
+        },
+        "32bit": {
+            "url": "https://gh-proxy.org/https://github.com/nats-io/nats-server/releases/download/v2.15.3/nats-server-v2.15.3-windows-386.zip",
+            "hash": "9d69ee7fe6f32e7b48faf6a55051fd8ad149bfa074df3d053469213c5cf79d94",
+            "extract_dir": "nats-server-v2.15.3-windows-386"
+        },
+        "arm64": {
+            "url": "https://gh-proxy.org/https://github.com/nats-io/nats-server/releases/download/v2.15.3/nats-server-v2.15.3-windows-arm64.zip",
+            "hash": "76e51178ca20683d537c1bf627dd0fff8b28114c6aafd371c49a5ccb62a1355b",
+            "extract_dir": "nats-server-v2.15.3-windows-arm64"
+        }
+    },
+    "bin": "nats-server.exe",
+    "checkver": {
+        "github": "https://github.com/nats-io/nats-server"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/nats-io/nats-server/releases/download/v$version/nats-server-v$version-windows-amd64.zip",
+                "extract_dir": "nats-server-v$version-windows-amd64"
+            },
+            "32bit": {
+                "url": "https://gh-proxy.org/https://github.com/nats-io/nats-server/releases/download/v$version/nats-server-v$version-windows-386.zip",
+                "extract_dir": "nats-server-v$version-windows-386"
+            },
+            "arm64": {
+                "url": "https://gh-proxy.org/https://github.com/nats-io/nats-server/releases/download/v$version/nats-server-v$version-windows-arm64.zip",
+                "extract_dir": "nats-server-v$version-windows-arm64"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/SHA256SUMS"
+        }
+    }
+}

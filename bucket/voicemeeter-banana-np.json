@@ -1,0 +1,32 @@
+{
+    "version": "2.1.3.0",
+    "description": "Audio mixer application endowed with virtual audio device (BANANA/advanced version)",
+    "homepage": "https://vb-audio.com/Voicemeeter/",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://vb-audio.com/Services/licensing.htm"
+    },
+    "notes": "Free for non-professional use only.",
+    "url": "https://download.vb-audio.com/Download_CABLE/VoicemeeterSetup_v2130.zip",
+    "hash": "ee8b1f6cd4728233c8ae52897128c9af02367c091b88f55a1996d424e04d3965",
+    "installer": {
+        "script": [
+            "Get-ChildItem \"$dir\\Voicemeeter*Setup.exe\" | Rename-Item -NewName 'setup.exe'",
+            "if (!(is_admin)) { error \"$app requires admin rights to $cmd\"; break }",
+            "Start-Process -Wait \"$dir\\setup.exe\" -ArgumentList @('-i', '-h') -Verb RunAs"
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "if (!(is_admin)) { error \"$app requires admin rights to $cmd\"; break }",
+            "Start-Process -Wait \"$dir\\setup.exe\" -ArgumentList @('-u', '-h') -Verb RunAs"
+        ]
+    },
+    "checkver": {
+        "url": "https://vb-audio.com/Voicemeeter/banana.htm",
+        "regex": "Voicemeeter ([\\d.]+) \\(ZIP Package\\)"
+    },
+    "autoupdate": {
+        "url": "https://download.vb-audio.com/Download_CABLE/VoicemeeterSetup_v$cleanVersion.zip"
+    }
+}

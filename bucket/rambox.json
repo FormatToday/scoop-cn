@@ -1,0 +1,39 @@
+{
+    "version": "3.2.0",
+    "description": "Tool for organizing web apps into one application with rich features",
+    "homepage": "https://rambox.app",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://rambox.app/eula/"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/ramboxapp/download/releases/download/v3.2.0/Rambox-3.2.0-win-x64.exe#/dl.7z",
+            "hash": "sha512:8ada05e872f2898b15858c5f95f81adc6b6153a12494fb7f9cb3c40b158cc05a1b364597a0bdb48492e97e5369ff581b97de935a26c6b8fe2ec2a3a14482670b"
+        }
+    },
+    "pre_install": [
+        "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
+        "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninstall*\" -Recurse"
+    ],
+    "shortcuts": [
+        [
+            "Rambox.exe",
+            "Rambox"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/ramboxapp/download"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/ramboxapp/download/releases/download/v$version/Rambox-$version-win-x64.exe#/dl.7z",
+                "hash": {
+                    "url": "$baseurl/latest.yml",
+                    "regex": "sha512:\\s+$base64"
+                }
+            }
+        }
+    }
+}

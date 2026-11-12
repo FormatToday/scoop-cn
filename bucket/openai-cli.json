@@ -1,0 +1,38 @@
+{
+    "version": "1.52.0",
+    "description": "Official command-line tool for the OpenAI API",
+    "homepage": "https://github.com/openai/openai-cli",
+    "license": "Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/openai/openai-cli/releases/download/v1.52.0/openai_1.52.0_windows_amd64.zip",
+            "hash": "832404b72e002ec73b749f5637ba7a3c0abdad401efb3924d6284dc699fde78c"
+        },
+        "32bit": {
+            "url": "https://gh-proxy.org/https://github.com/openai/openai-cli/releases/download/v1.52.0/openai_1.52.0_windows_386.zip",
+            "hash": "0bcf27ff72736f815b703f15c66c69688d9457743c0dab29c1acaf475686a52c"
+        },
+        "arm64": {
+            "url": "https://gh-proxy.org/https://github.com/openai/openai-cli/releases/download/v1.52.0/openai_1.52.0_windows_arm64.zip",
+            "hash": "96172000607bdc0b76e415987d85cad8f4c8439bc7f29d3e83a5b94802ad3723"
+        }
+    },
+    "bin": "openai.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/openai/openai-cli/releases/download/v$version/openai_$version_windows_amd64.zip"
+            },
+            "32bit": {
+                "url": "https://gh-proxy.org/https://github.com/openai/openai-cli/releases/download/v$version/openai_$version_windows_386.zip"
+            },
+            "arm64": {
+                "url": "https://gh-proxy.org/https://github.com/openai/openai-cli/releases/download/v$version/openai_$version_windows_arm64.zip"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/openai_$version_checksums.txt"
+        }
+    }
+}

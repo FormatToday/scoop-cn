@@ -1,0 +1,31 @@
+{
+    "version": "0.12.1",
+    "description": "Dancing visualizer of osu! standard maps and custom osu! client written in Go. Also a generator for osu! videos.",
+    "homepage": "https://github.com/Wieku/danser-go",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/Wieku/danser-go/releases/download/0.12.1/danser-0.12.1-win.zip",
+            "hash": "68b9529ac7a745283d59d26d7fa7178d8b7cccd50d070746791c397b7594da71"
+        }
+    },
+    "bin": [
+        "danser.exe",
+        "danser-cli.exe"
+    ],
+    "shortcuts": [
+        [
+            "danser.exe",
+            "danser-go"
+        ]
+    ],
+    "persist": "settings",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/Wieku/danser-go/releases/download/$version/danser-$version-win.zip"
+            }
+        }
+    }
+}

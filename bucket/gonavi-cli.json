@@ -1,0 +1,36 @@
+{
+    "version": "1.2.2",
+    "description": "A modern lightweight database client built with Wails and React. (CLI)",
+    "homepage": "https://gonavi.org",
+    "license": "Apache-2.0",
+    "suggest": {
+        "GoNavi": "gonavi"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/Syngnat/GoNavi/releases/download/v1.2.2/gonavi-cli_1.2.2_windows_amd64.zip",
+            "hash": "262c5d265006c36e9ee3f7ca6f2a65e01943d0e230da06ea7da3cfb7082b866f"
+        },
+        "arm64": {
+            "url": "https://gh-proxy.org/https://github.com/Syngnat/GoNavi/releases/download/v1.2.2/gonavi-cli_1.2.2_windows_arm64.zip",
+            "hash": "6c11bf078cea6183a241b125f755e1335e717f425ad184cf2e8447985c48af87"
+        }
+    },
+    "bin": "gonavi.exe",
+    "checkver": {
+        "github": "https://github.com/Syngnat/GoNavi"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/Syngnat/GoNavi/releases/download/v$version/gonavi-cli_$version_windows_amd64.zip"
+            },
+            "arm64": {
+                "url": "https://gh-proxy.org/https://github.com/Syngnat/GoNavi/releases/download/v$version/gonavi-cli_$version_windows_arm64.zip"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/gonavi-cli_$version_checksums.txt"
+        }
+    }
+}

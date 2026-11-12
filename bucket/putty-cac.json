@@ -1,0 +1,72 @@
+{
+    "version": "0.85u1",
+    "description": "PuTTY CAC is a fork of the PuTTY, a popular Secure Shell (SSH) terminal. PuTTY CAC adds the ability to use the Windows Certificate API (CAPI) or a Public Key Cryptography Standards (PKCS) library to perform SSH public key authentication using a private key associated with a certificate that is stored on a hardware token.",
+    "homepage": "https://github.com/NoMoreFood/putty-cac",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/NoMoreFood/putty-cac/raw/0.85u1/binaries/puttycac-0.85u1-x64.zip",
+            "hash": "01def223ee3b50847c40159de45a65a15d7582abdf0c0dac7fccf7aad7b23373"
+        },
+        "32bit": {
+            "url": "https://gh-proxy.org/https://github.com/NoMoreFood/putty-cac/raw/0.85u1/binaries/puttycac-0.85u1-x86.zip",
+            "hash": "8f0acf0196d582e39d4ca6eb6a3cf1b2e355eb6ea176737ae93fb77d56c266a3"
+        },
+        "arm64": {
+            "url": "https://gh-proxy.org/https://github.com/NoMoreFood/putty-cac/raw/0.85u1/binaries/puttycac-0.85u1-arm64.zip",
+            "hash": "031199057dc8ee6e515efcc1804b023375c1c6ad0f05c0dd5fcf3af76be08384"
+        }
+    },
+    "bin": [
+        "putty.exe",
+        "puttygen.exe",
+        "pscp.exe",
+        "pageant.exe",
+        "psftp.exe",
+        "plink.exe",
+        "puttytel.exe"
+    ],
+    "shortcuts": [
+        [
+            "putty.exe",
+            "PuTTY"
+        ],
+        [
+            "pageant.exe",
+            "Pageant"
+        ],
+        [
+            "psftp.exe",
+            "PSFTP"
+        ],
+        [
+            "puttygen.exe",
+            "PuTTYgen"
+        ],
+        [
+            "puttytel.exe",
+            "PuTTYtel"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/NoMoreFood/putty-cac",
+        "regex": "([\\w.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/NoMoreFood/putty-cac/raw/$version/binaries/puttycac-$version-x64.zip"
+            },
+            "32bit": {
+                "url": "https://gh-proxy.org/https://github.com/NoMoreFood/putty-cac/raw/$version/binaries/puttycac-$version-x86.zip"
+            },
+            "arm64": {
+                "url": "https://gh-proxy.org/https://github.com/NoMoreFood/putty-cac/raw/$version/binaries/puttycac-$version-arm64.zip"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/puttycac-hash.txt",
+            "regex": "$sha256.*?$basename"
+        }
+    }
+}

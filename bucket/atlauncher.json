@@ -1,0 +1,40 @@
+{
+    "version": "3.4.41.3",
+    "description": "Launcher for Minecraft with support for downloading modpacks",
+    "homepage": "https://atlauncher.com/",
+    "license": "GPL-3.0-only",
+    "notes": "This application requires JRE 1.8 or higher to run.",
+    "suggest": {
+        "JRE": "temurin17-jre"
+    },
+    "url": "https://gh-proxy.org/https://github.com/ATLauncher/ATLauncher/releases/download/v3.4.41.3/ATLauncher-3.4.41.3.exe#/ATLauncher.exe",
+    "hash": "9e38e3d1a863e36bdbf0fc3a2617b9f35cba72221ad1757e34efc1ba4a3b0d7b",
+    "bin": "ATLauncher.exe",
+    "shortcuts": [
+        [
+            "ATLauncher.exe",
+            "ATLauncher"
+        ]
+    ],
+    "persist": [
+        "assets",
+        "backups",
+        "configs",
+        "downloads",
+        "instances",
+        "jre",
+        "libraries",
+        "loaders",
+        "runtimes",
+        "servers",
+        "users"
+    ],
+    "checkver": {
+        "url": "https://api.github.com/repos/ATLauncher/ATLauncher/releases/latest",
+        "jsonpath": "$.tag_name",
+        "regex": "v([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://gh-proxy.org/https://github.com/ATLauncher/ATLauncher/releases/download/v$version/ATLauncher-$version.exe#/ATLauncher.exe"
+    }
+}

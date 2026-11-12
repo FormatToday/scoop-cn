@@ -1,0 +1,37 @@
+{
+    "version": "2026.3",
+    "description": "JetBrains dotTrace Command Line Tools that enable analyzing performance of .NET applications outside of Visual Studio.",
+    "homepage": "https://www.jetbrains.com/profiler/download/#section=commandline",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://www.jetbrains.com/legal/docs/toolbox/user"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://download.jetbrains.com/resharper/dotUltimate.2026.3/JetBrains.dotTrace.CommandLineTools.windows-x64.2026.3.zip",
+            "hash": "ecd9aa0911a6b4df981c06aff529a209c0011bf91d3727fe7d98dcce36483bdf"
+        },
+        "arm64": {
+            "url": "https://download.jetbrains.com/resharper/dotUltimate.2026.3/JetBrains.dotTrace.CommandLineTools.windows-arm64.2026.3.zip",
+            "hash": "c56054d8391aff95ed2d7048db573cf6b8cf8ad9321adf72fed290318155a697"
+        }
+    },
+    "bin": "ConsoleProfiler.exe",
+    "checkver": {
+        "url": "https://data.services.jetbrains.com/products/releases?code=DPCLT&latest=true&platform=zip&type=release",
+        "jsonpath": "$..version"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://download.jetbrains.com/resharper/dotUltimate.$version/JetBrains.dotTrace.CommandLineTools.windows-x64.$version.zip"
+            },
+            "arm64": {
+                "url": "https://download.jetbrains.com/resharper/dotUltimate.$version/JetBrains.dotTrace.CommandLineTools.windows-arm64.$version.zip"
+            }
+        },
+        "hash": {
+            "url": "$url.sha256"
+        }
+    }
+}

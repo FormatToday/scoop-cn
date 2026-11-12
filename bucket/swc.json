@@ -1,0 +1,39 @@
+{
+    "version": "1.16.22",
+    "description": "A super-fast TypeScript / JavaScript compiler written in Rust",
+    "homepage": "https://swc.rs",
+    "license": "Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/swc-project/swc/releases/download/v1.16.22/swc-win32-x64-msvc.exe#/swc.exe",
+            "hash": "a976214b54e7bb108adb83954ba0ce0535f82563add5ff5a28b0e05f888825b1"
+        },
+        "32bit": {
+            "url": "https://gh-proxy.org/https://github.com/swc-project/swc/releases/download/v1.16.22/swc-win32-ia32-msvc.exe#/swc.exe",
+            "hash": "6e0f760ee0a911e9479797adc22af3ab8c540bf6399d09b04913f2afed60da31"
+        },
+        "arm64": {
+            "url": "https://gh-proxy.org/https://github.com/swc-project/swc/releases/download/v1.16.22/swc-win32-arm64-msvc.exe#/swc.exe",
+            "hash": "75b8914c21f63d1a26d1cbc3a1203a2b9edfa7b3e04dd9739c674a5c7928f2e0"
+        }
+    },
+    "bin": "swc.exe",
+    "checkver": {
+        "github": "https://api.github.com/repos/swc-project/swc/releases",
+        "jsonpath": "$[?(@.prerelease == false)].tag_name",
+        "regex": "\"v?(\\d+(?:\\.\\d+)+)\""
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/swc-project/swc/releases/download/v$version/swc-win32-x64-msvc.exe#/swc.exe"
+            },
+            "32bit": {
+                "url": "https://gh-proxy.org/https://github.com/swc-project/swc/releases/download/v$version/swc-win32-ia32-msvc.exe#/swc.exe"
+            },
+            "arm64": {
+                "url": "https://gh-proxy.org/https://github.com/swc-project/swc/releases/download/v$version/swc-win32-arm64-msvc.exe#/swc.exe"
+            }
+        }
+    }
+}

@@ -1,0 +1,35 @@
+{
+    "version": "1.68",
+    "description": "Easily drag windows when pressing the Alt key (maintained continuation of Stefan Sundin's AltDrag)",
+    "homepage": "https://github.com/RamonUnch/AltSnap",
+    "license": "GPL-3.0-or-later",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/RamonUnch/AltSnap/releases/download/1.68/AltSnap1.68bin_x64.zip",
+            "hash": "7db3dad3746e7b23857db92fc05ee2d3e17eee1b28e237709a612366ba909c79"
+        },
+        "32bit": {
+            "url": "https://gh-proxy.org/https://github.com/RamonUnch/AltSnap/releases/download/1.68/AltSnap1.68bin.zip",
+            "hash": "b75970c707e1e39c276f2ed6e8baed5586a802c2bfe6843dc1479f81ae5ac994"
+        }
+    },
+    "shortcuts": [
+        [
+            "AltSnap.exe",
+            "AltSnap"
+        ]
+    ],
+    "bin": "AltSnap.exe",
+    "persist": "AltSnap.ini",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/RamonUnch/AltSnap/releases/download/$version/AltSnap$versionbin_x64.zip"
+            },
+            "32bit": {
+                "url": "https://gh-proxy.org/https://github.com/RamonUnch/AltSnap/releases/download/$version/AltSnap$versionbin.zip"
+            }
+        }
+    }
+}

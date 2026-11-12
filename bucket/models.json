@@ -1,0 +1,21 @@
+{
+    "version": "0.14.1",
+    "description": "Fast CLI and TUI for browsing AI models, benchmarks, and coding agents",
+    "homepage": "https://github.com/arimxyer/models",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/arimxyer/models/releases/download/v0.14.1/models-x86_64-pc-windows-msvc.zip",
+            "hash": "c48129a2c8c59bc5e0468b4db830b556b8f8c15ae38b0db03a63e66f028b5862"
+        }
+    },
+    "bin": "models.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/arimxyer/models/releases/download/v$version/models-x86_64-pc-windows-msvc.zip"
+            }
+        }
+    }
+}

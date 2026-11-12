@@ -1,0 +1,29 @@
+{
+    "version": "59.1",
+    "homepage": "https://perfetto.dev/",
+    "description": "A production-grade open-source stack for performance instrumentation and trace analysis.",
+    "license": "Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/google/perfetto/releases/download/v59.1/windows-amd64.zip",
+            "hash": "f7ce9e3f43cb2c0c0525e79861054aa1a50a800bb88023b990d767247c80ac88",
+            "extract_dir": "windows-amd64"
+        }
+    },
+    "bin": [
+        "perfetto.exe",
+        "trace_processor_shell.exe",
+        "traceconv.exe",
+        "traced.exe"
+    ],
+    "checkver": {
+        "github": "https://github.com/google/perfetto"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/google/perfetto/releases/download/v$version/windows-amd64.zip"
+            }
+        }
+    }
+}

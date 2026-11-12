@@ -1,0 +1,39 @@
+{
+    "version": "0.8.6",
+    "description": "The Ergonomic, Safe and Familiar Evolution of C",
+    "homepage": "https://c3-lang.org",
+    "license": "LGPL-3.0-or-later,MIT",
+    "notes": [
+        "To use c3 compiler, you need to install Microsoft Visual Studio Build Tools 17 or higher.",
+        "Microsoft Visual Studio Build Tools 17 or higher is needed and can be downloaded here: https://visualstudio.microsoft.com/visual-cpp-build-tools/",
+        "When installing build tools, these two components should be selected:",
+        "- MSVC - VS C++ x64/x86 build tools",
+        "- Windows SDK",
+        "If you have already installed Visual Studio, you can skip this step."
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/c3lang/c3c/releases/download/v0.8.6/c3-windows.zip",
+            "hash": "72437e98d127f41cb8ba0e6b760f14f9f40551e130c661a0859dc8a94bb2197b"
+        },
+        "arm64": {
+            "url": "https://gh-proxy.org/https://github.com/c3lang/c3c/releases/download/v0.8.6/c3-windows-aarch64.zip",
+            "hash": "a5f8f2f6379c01c406b87ab7d55cdce291c9e35b3661884b5332a5e206bb774b"
+        }
+    },
+    "extract_dir": "c3",
+    "bin": "c3c.exe",
+    "checkver": {
+        "github": "https://github.com/c3lang/c3c"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/c3lang/c3c/releases/download/v$version/c3-windows.zip"
+            },
+            "arm64": {
+                "url": "https://gh-proxy.org/https://github.com/c3lang/c3c/releases/download/v$version/c3-windows-aarch64.zip"
+            }
+        }
+    }
+}

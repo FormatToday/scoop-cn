@@ -1,0 +1,55 @@
+{
+    "version": "4.0-q4-patched",
+    "description": "High quality MPEG Audio Layer III (MP3) encoder",
+    "homepage": "https://lame.sourceforge.io/",
+    "license": "LGPL-2.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://www.rarewares.org/files/mp3/lame-4.0-x64-q4-patched.zip",
+            "hash": "c900843218ae13b1ddfc334c705298be4503d8a1e9db6bb3d03458dd1c1f1157"
+        },
+        "32bit": {
+            "url": "https://www.rarewares.org/files/mp3/lame-4.0-x86-q4-patched.zip",
+            "hash": "ec67c7dcc63f56e081cfb05dd580826dfbaab721c0f55f67cd36d6b939c58874"
+        }
+    },
+    "bin": "lame.exe",
+    "checkver": {
+        "url": "https://www.rarewares.org/mp3-lame-bundle.php",
+        "script": [
+            "$versions = [regex]::Matches(",
+            "    $page,",
+            "    '/files/mp3/lame-(?<version>[\\d.]+)-x64(?<patch>-[-\\w]+)?\\.zip',",
+            "    [System.Text.RegularExpressions.RegexOptions]::IgnoreCase",
+            ") | ForEach-Object {",
+            "    $version = $_.Groups['version'].Value",
+            "    $patch   = $_.Groups['patch'].Value",
+            "",
+            "    [PSCustomObject]@{",
+            "        Version     = [version]$version",
+            "        Patch       = $patch",
+            "        FullVersion = \"${version}${patch}\"",
+            "        Url         = \"https://www.rarewares.org$($_.Value)\"",
+            "    }",
+            "} | Sort-Object -Property `",
+            "    @{ Expression = 'Version'; Descending = $true },",
+            "    @{ Expression = { -not [string]::IsNullOrEmpty($_.Patch) }; Descending = $true },",
+            "    @{ Expression = 'Patch'; Descending = $true } `",
+            "  | Select-Object -First 1",
+            "",
+            "$versions.FullVersion"
+        ],
+        "regex": "(?<version>[\\d.]+)(?<patch>-[-\\w]+)?",
+        "replace": "${version}${patch}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://www.rarewares.org/files/mp3/lame-$matchVersion-x64$matchPatch.zip"
+            },
+            "32bit": {
+                "url": "https://www.rarewares.org/files/mp3/lame-$matchVersion-x86$matchPatch.zip"
+            }
+        }
+    }
+}

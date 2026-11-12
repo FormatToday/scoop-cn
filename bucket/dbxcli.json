@@ -1,0 +1,26 @@
+{
+    "version": "3.8.0",
+    "description": "A command line client for Dropbox",
+    "homepage": "https://github.com/dropbox/dbxcli",
+    "license": "Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/dropbox/dbxcli/releases/download/v3.8.0/dbxcli_3.8.0_windows_amd64.zip",
+            "hash": "a9de70d474503e4e4ac7db3dcfa78c9c198c46bf8e90c23d571a480936154c5e",
+            "extract_dir": "dbxcli_3.8.0_windows_amd64"
+        }
+    },
+    "bin": "dbxcli.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/dropbox/dbxcli/releases/download/v$version/dbxcli_$version_windows_amd64.zip",
+                "extract_dir": "dbxcli_$version_windows_amd64"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/SHA256SUMS"
+        }
+    }
+}

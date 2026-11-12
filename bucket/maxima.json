@@ -1,0 +1,35 @@
+{
+    "version": "5.50.0",
+    "description": "Computer Algebra System",
+    "homepage": "https://maxima.sourceforge.io",
+    "license": "GPL-3.0-or-later",
+    "architecture": {
+        "64bit": {
+            "url": "https://downloads.sourceforge.net/project/maxima/Maxima-Windows/5.50.0-Windows/maxima-5.50.0-win64.exe#/dl.7z",
+            "hash": "sha1:acdf32ce8ddea0c57d8f59e83cbe60a7bbe27a1b"
+        }
+    },
+    "pre_install": "Remove-Item \"$dir\\`$*\", \"$dir\\Unins*\" -Recurse -Force",
+    "bin": [
+        "bin\\lispselector.bat",
+        "bin\\maxima.bat",
+        "bin\\xmaxima.bat"
+    ],
+    "shortcuts": [
+        [
+            "bin\\wxmaxima.exe",
+            "wxMaxima"
+        ]
+    ],
+    "checkver": {
+        "url": "https://sourceforge.net/projects/maxima/rss?path=/Maxima-Windows",
+        "regex": "([\\d.]+)-Windows"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://downloads.sourceforge.net/project/maxima/Maxima-Windows/$version-Windows/maxima-$version-win64.exe#/dl.7z"
+            }
+        }
+    }
+}

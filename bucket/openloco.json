@@ -1,0 +1,40 @@
+{
+    "version": "26.09",
+    "description": "Open source re-implementation of Chris Sawyer's Locomotion",
+    "homepage": "https://openloco.io",
+    "license": {
+        "identifier": "MIT",
+        "url": "https://gh-proxy.org/https://github.com/OpenLoco/OpenLoco/raw/master/LICENSE"
+    },
+    "notes": "OpenLoco requires original Chris Sawyer's Locomotion game assets to run.",
+    "architecture": {
+        "32bit": {
+            "url": "https://gh-proxy.org/https://github.com/OpenLoco/OpenLoco/releases/download/v26.09/OpenLoco-v26.09-windows-portable-win32.zip",
+            "hash": "0a4ba4043288d6aa515d0c5b6684c39ec03b401e17499ed1636e04b37b23b558"
+        },
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/OpenLoco/OpenLoco/releases/download/v26.09/OpenLoco-v26.09-windows-portable-x64.zip",
+            "hash": "07890fa5dbb7615a2055f90dd759b5fe96f48a95f18fcff9d819cf820e31b7e8"
+        }
+    },
+    "bin": "OpenLoco.exe",
+    "shortcuts": [
+        [
+            "OpenLoco.exe",
+            "OpenLoco"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/OpenLoco/OpenLoco"
+    },
+    "autoupdate": {
+        "architecture": {
+            "32bit": {
+                "url": "https://gh-proxy.org/https://github.com/OpenLoco/OpenLoco/releases/download/v$version/OpenLoco-v$version-windows-portable-win32.zip"
+            },
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/OpenLoco/OpenLoco/releases/download/v$version/OpenLoco-v$version-windows-portable-x64.zip"
+            }
+        }
+    }
+}

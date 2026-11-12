@@ -1,0 +1,37 @@
+{
+    "version": "3.0.4",
+    "description": "Picard is a cross-platform music tagger powered by the MusicBrainz database",
+    "homepage": "https://picard.musicbrainz.org",
+    "license": "GPL-2.0-or-later",
+    "architecture": {
+        "64bit": {
+            "url": "http://ftp.musicbrainz.org/pub/musicbrainz/picard/picard-setup-3.0.4.exe#/dl.7z",
+            "hash": "md5:b3b8ea251c59a45521541ec540350405"
+        }
+    },
+    "pre_install": "Remove-Item \"$dir\\`$*\", \"$dir\\uninst*\" -Force -Recurse -ErrorAction Ignore",
+    "bin": [
+        "picard.exe",
+        "picard-cli.exe"
+    ],
+    "shortcuts": [
+        [
+            "picard.exe",
+            "MusicBrainz Picard"
+        ]
+    ],
+    "checkver": {
+        "url": "https://picard.musicbrainz.org/downloads/",
+        "regex": "picard-setup-([\\d.]+)\\.exe"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "http://ftp.musicbrainz.org/pub/musicbrainz/picard/picard-setup-$version.exe#/dl.7z"
+            }
+        },
+        "hash": {
+            "url": "$url.md5"
+        }
+    }
+}

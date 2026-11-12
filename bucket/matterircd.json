@@ -1,0 +1,38 @@
+{
+    "version": "0.34.0",
+    "description": "Connects to mattermost or slack using IRC-client.",
+    "homepage": "https://github.com/42wim/matterircd",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/42wim/matterircd/releases/download/v0.34.0/matterircd-0.34.0-windows-amd64.exe#/matterircd.exe",
+            "hash": "1d2bbb65a7e78ddeca895b32e63108ad8ef7b6dc4d1a149815eca155118cc758"
+        },
+        "32bit": {
+            "url": "https://gh-proxy.org/https://github.com/42wim/matterircd/releases/download/v0.34.0/matterircd-0.34.0-windows-386.exe#/matterircd.exe",
+            "hash": "81b641fc79b60ab0cf99c326b31193ce3d94f5c7e375db16cd090bea0ea77f9e"
+        },
+        "arm64": {
+            "url": "https://gh-proxy.org/https://github.com/42wim/matterircd/releases/download/v0.34.0/matterircd-0.34.0-windows-arm64.exe#/matterircd.exe",
+            "hash": "cb5552f4071cc3379649f91f53c4a8ca1c354efa6b8f9e1c8692d7167856a831"
+        }
+    },
+    "bin": "matterircd.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/42wim/matterircd/releases/download/v$version/matterircd-$version-windows-amd64.exe#/matterircd.exe"
+            },
+            "32bit": {
+                "url": "https://gh-proxy.org/https://github.com/42wim/matterircd/releases/download/v$version/matterircd-$version-windows-386.exe#/matterircd.exe"
+            },
+            "arm64": {
+                "url": "https://gh-proxy.org/https://github.com/42wim/matterircd/releases/download/v$version/matterircd-$version-windows-arm64.exe#/matterircd.exe"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/checksums.txt"
+        }
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "version": "4.4.0",
+    "description": "Docker distribution that aims to provide a frictionless Docker experience on Windows",
+    "homepage": "https://github.com/slonopotamus/stevedore",
+    "license": "Apache-2.0",
+    "notes": [
+        "A restart may be required, at least on the first install.",
+        "Please run `sc start stevedored` as an administrator if `docker run` does not work."
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/slonopotamus/stevedore/releases/download/4.4.0/stevedore-4.4.0-x86_64.msi#/setup.msi_",
+            "hash": "56caa244f5866ec81ea84512df8a69727f18f2a0898c35533e732c0fe0b26f67"
+        }
+    },
+    "installer": {
+        "script": "Start-Process -Wait msiexec \"/i `\"$dir\\setup.msi_`\" /qn /norestart\" -Verb RunAs"
+    },
+    "uninstaller": {
+        "script": "Start-Process -Wait msiexec \"/x `\"$dir\\setup.msi_`\" /qn /norestart\" -Verb RunAs"
+    },
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/slonopotamus/stevedore/releases/download/$version/stevedore-$version-x86_64.msi#/setup.msi_"
+            }
+        }
+    }
+}

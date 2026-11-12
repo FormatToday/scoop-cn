@@ -1,0 +1,28 @@
+{
+    "version": "3.2",
+    "description": "Network Forensic Analysis Tool",
+    "homepage": "https://www.netresec.com/?page=NetworkMiner",
+    "license": "GPL-2.0-or-later",
+    "url": "https://www.netresec.com/?download=NetworkMiner#/dl.zip",
+    "hash": "daceec649fb4fe59b11e4a9e4ecd5f51c1dd37824280dfbeac67bec27b6b6d60",
+    "extract_dir": "NetworkMiner_3-2",
+    "bin": "NetworkMiner.exe",
+    "shortcuts": [
+        [
+            "NetworkMiner.exe",
+            "NetworkMiner"
+        ]
+    ],
+    "checkver": {
+        "url": "https://www.netresec.com/updatecheck.ashx?l=1250",
+        "regex": "^([\\d.]+)\\s+"
+    },
+    "autoupdate": {
+        "url": "https://www.netresec.com/?download=NetworkMiner#/dl.zip",
+        "extract_dir": "NetworkMiner_$dashVersion",
+        "hash": {
+            "url": "https://www.netresec.com/?page=NetworkMiner",
+            "regex": "SHA256 hash: $sha256"
+        }
+    }
+}

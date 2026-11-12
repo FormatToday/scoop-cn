@@ -1,0 +1,36 @@
+{
+    "version": "3.15.0",
+    "description": "Tool for testing Helm charts. It is meant to be used for linting and testing pull requests. It automatically detects charts changed against the target branch.",
+    "homepage": "https://github.com/helm/chart-testing/",
+    "license": "Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/helm/chart-testing/releases/download/v3.15.0/chart-testing_3.15.0_windows_amd64.zip",
+            "hash": "6499089288d39d818cc0d49b22593b1167a04d5ee25321940f2b7b4d8903a6d7"
+        },
+        "arm64": {
+            "url": "https://gh-proxy.org/https://github.com/helm/chart-testing/releases/download/v3.15.0/chart-testing_3.15.0_windows_arm64.zip",
+            "hash": "315d370847775a6c28473ee3cc713ab4769b86730b204d23cfcfb1de217c4e23"
+        }
+    },
+    "post_install": [
+        "New-Item -ItemType Directory -Path \"~/.ct\" -Force | Out-Null",
+        "Copy-Item -Path \"$dir/etc/*\" -Destination \"~/.ct\" -Recurse -Force | Out-Null"
+    ],
+    "bin": "ct.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/helm/chart-testing/releases/download/v$version/chart-testing_$version_windows_amd64.zip"
+            },
+            "arm64": {
+                "url": "https://gh-proxy.org/https://github.com/helm/chart-testing/releases/download/v$version/chart-testing_$version_windows_arm64.zip"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/checksums.txt",
+            "regex": "(?im)^$sha256\\s+$basename$"
+        }
+    }
+}

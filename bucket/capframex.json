@@ -1,0 +1,43 @@
+{
+    "version": "1.9.2",
+    "description": "Frametimes analysis tool compatible with OCAT",
+    "homepage": "https://github.com/CXWorld/CapFrameX",
+    "license": "MIT",
+    "suggest": {
+        "OCAT": "ocat"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/CXWorld/CapFrameX/releases/download/v1.9.2/release_1.9.2_portable.zip",
+            "hash": "0c3374d382abb359439f8898bdaaa1c4e6a7cc0fdd936022c0ead0ca213bda08"
+        }
+    },
+    "pre_install": [
+        "# The executable is sometimes nested within a subdirectory of the archive.",
+        "$topLevelItems = Get-ChildItem -Path $dir",
+        "if (($topLevelItems.Count -eq 1) -and ($topLevelItems[0].PSIsContainer)) {",
+        "    $subfolder = $topLevelItems[0].FullName",
+        "    Copy-Item -Path \"$subfolder\\*\" -Destination $dir -Recurse",
+        "    Remove-Item -Path $subfolder -Recurse -Force",
+        "}"
+    ],
+    "bin": "CapFrameX.exe",
+    "shortcuts": [
+        [
+            "CapFrameX.exe",
+            "CapFrameX"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/CXWorld/CapFrameX/releases",
+        "jsonpath": "$[?(@.tag_name =~ /^(?!.*beta).+$/)].tag_name",
+        "regex": "(?<tag>v(?<version>[\\d.]+)[^\"]*)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/CXWorld/CapFrameX/releases/download/$matchTag/release_$version_portable.zip"
+            }
+        }
+    }
+}

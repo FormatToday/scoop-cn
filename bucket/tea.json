@@ -1,0 +1,35 @@
+{
+    "version": "0.16.0",
+    "description": "Official command-line tool to interact with Gitea servers",
+    "homepage": "https://gitea.com/gitea/tea",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://gitea.com/gitea/tea/releases/download/v0.16.0/tea-0.16.0-windows-amd64.exe.xz",
+            "hash": "caa6a2c5335547db25415160ecda4b92e5de378a96022db62c3f17cc36eccc17"
+        },
+        "arm64": {
+            "url": "https://gitea.com/gitea/tea/releases/download/v0.16.0/tea-0.16.0-windows-arm64.exe.xz",
+            "hash": "61b22607c6c03649abfddad7b0ba65b370b9f6c5480f2ba0c5cfbaa5ed213a95"
+        }
+    },
+    "pre_install": "Get-ChildItem -LiteralPath $dir -Filter 'tea-*.exe' -File | Select-Object -First 1 | Rename-Item -NewName 'tea.exe'",
+    "bin": "tea.exe",
+    "checkver": {
+        "url": "https://gitea.com/gitea/tea/releases/latest",
+        "regex": "/tag/v([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gitea.com/gitea/tea/releases/download/v$version/tea-$version-windows-amd64.exe.xz"
+            },
+            "arm64": {
+                "url": "https://gitea.com/gitea/tea/releases/download/v$version/tea-$version-windows-arm64.exe.xz"
+            }
+        },
+        "hash": {
+            "url": "$url.sha256"
+        }
+    }
+}

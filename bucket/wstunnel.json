@@ -1,0 +1,33 @@
+{
+    "version": "11.1.0",
+    "description": "Tunneling over websocket protocol",
+    "homepage": "https://wstunnel.erebe.dev",
+    "license": "BSD-3-Clause",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/erebe/wstunnel/releases/download/v11.1.0/wstunnel_11.1.0_windows_amd64.tar.gz",
+            "hash": "b271d076fbba92fe3d8c9b7612bf17f4ac905d68614a6c40debd73107883d75e"
+        },
+        "arm64": {
+            "url": "https://gh-proxy.org/https://github.com/erebe/wstunnel/releases/download/v11.1.0/wstunnel_11.1.0_windows_arm64.tar.gz",
+            "hash": "041b36f0e59863c84e43c9e9409dd7ad166936ce4d538f89dbb5fdff4c618c6f"
+        }
+    },
+    "bin": "wstunnel.exe",
+    "checkver": {
+        "github": "https://github.com/erebe/wstunnel"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/erebe/wstunnel/releases/download/v$version/wstunnel_$version_windows_amd64.tar.gz"
+            },
+            "arm64": {
+                "url": "https://gh-proxy.org/https://github.com/erebe/wstunnel/releases/download/v$version/wstunnel_$version_windows_arm64.tar.gz"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/checksums.txt"
+        }
+    }
+}

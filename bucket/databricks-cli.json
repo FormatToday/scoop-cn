@@ -1,0 +1,38 @@
+{
+    "##": "Please keep checkver field as is. We cannot fetch the latest version via the GitHub API, due to the IP restrictions in the Databricks org.",
+    "version": "1.26.0",
+    "description": "CLI for interacting with the Databricks platform.",
+    "homepage": "https://docs.databricks.com/aws/en/dev-tools/cli",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://github.com/databricks/cli/blob/main/LICENSE"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/databricks/cli/releases/download/v1.26.0/databricks_cli_1.26.0_windows_amd64.zip",
+            "hash": "7c7f2bdfc503d0277d60ef36d9ef6d9577769cd992bd3633691ebe47b9f214a2"
+        },
+        "arm64": {
+            "url": "https://gh-proxy.org/https://github.com/databricks/cli/releases/download/v1.26.0/databricks_cli_1.26.0_windows_arm64.zip",
+            "hash": "08545c9bc35110fccb19e117bb0c36df8d34f53f6f193ba2b3e83860d2350aaa"
+        }
+    },
+    "bin": "databricks.exe",
+    "checkver": {
+        "url": "https://github.com/databricks/cli/releases/latest",
+        "regex": "/tree/(?:v|V)([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/databricks/cli/releases/download/v$version/databricks_cli_$version_windows_amd64.zip"
+            },
+            "arm64": {
+                "url": "https://gh-proxy.org/https://github.com/databricks/cli/releases/download/v$version/databricks_cli_$version_windows_arm64.zip"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/databricks_cli_$version_SHA256SUMS"
+        }
+    }
+}

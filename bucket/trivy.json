@@ -1,0 +1,29 @@
+{
+    "##": "Please keep checkver field as is. Commercial edition restrictions prevent us from fetching the latest version via the GitHub API in automated workflows.",
+    "version": "0.76.2",
+    "description": "Find vulnerabilities, misconfigurations, secrets, SBOM in containers, Kubernetes, code repositories, clouds and more",
+    "homepage": "https://trivy.dev",
+    "license": "Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/aquasecurity/trivy/releases/download/v0.76.2/trivy_0.76.2_windows-64bit.zip",
+            "hash": "691f737a7e5566a673c3a74dab9160552ec32101e953b659e5c77443d16dddb6"
+        }
+    },
+    "bin": "trivy.exe",
+    "checkver": {
+        "url": "https://github.com/aquasecurity/trivy/releases/latest",
+        "regex": "/tree/(?:v|V)([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/aquasecurity/trivy/releases/download/v$version/trivy_$version_windows-64bit.zip"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/trivy_$version_checksums.txt",
+            "regex": "$sha256\\s+$basename"
+        }
+    }
+}

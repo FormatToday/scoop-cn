@@ -1,0 +1,22 @@
+{
+    "version": "4.02",
+    "description": "Audio conversion tool",
+    "homepage": "https://www.rationalqm.us/eac3to/",
+    "license": "Freeware",
+    "url": "https://www.rationalqm.us/eac3to/eac3to_4.02.rar",
+    "hash": "6f0d6c2f747751b96b7abad0e28b1bc9fd09d8b494e9c96bbb5f291534a2d416",
+    "bin": "eac3to.exe",
+    "persist": [
+        "eac3to.ini",
+        "error.wav",
+        "success.wav"
+    ],
+    "checkver": {
+        "url": "https://www.rationalqm.us/eac3to/",
+        "regex": "eac3to_([\\d.]+).rar",
+        "reverse": true
+    },
+    "autoupdate": {
+        "url": "https://www.rationalqm.us/eac3to/eac3to_$version.rar"
+    }
+}

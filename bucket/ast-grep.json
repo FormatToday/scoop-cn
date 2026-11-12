@@ -1,0 +1,40 @@
+{
+    "version": "0.51.2",
+    "description": "A fast and polyglot tool for code searching, linting, rewriting at large scale.",
+    "homepage": "https://ast-grep.github.io",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/ast-grep/ast-grep/releases/download/0.51.2/app-x86_64-pc-windows-msvc.zip",
+            "hash": "7d5a83bf2f9a4020dc529df371537c860e7a665e52789ac67ef231123a6b4a7e"
+        },
+        "32bit": {
+            "url": "https://gh-proxy.org/https://github.com/ast-grep/ast-grep/releases/download/0.51.2/app-i686-pc-windows-msvc.zip",
+            "hash": "e1a7bcf8db1cdfb81885edf9ed07d868453f4dbcea3b4f75f43e960eeb95ed4e"
+        },
+        "arm64": {
+            "url": "https://gh-proxy.org/https://github.com/ast-grep/ast-grep/releases/download/0.51.2/app-aarch64-pc-windows-msvc.zip",
+            "hash": "bceb859b8d9adb68398bff129ef9ea34dd045e81a5b304732a54d310adf599a5"
+        }
+    },
+    "bin": [
+        "ast-grep.exe",
+        "sg.exe"
+    ],
+    "checkver": {
+        "github": "https://github.com/ast-grep/ast-grep"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/ast-grep/ast-grep/releases/download/$version/app-x86_64-pc-windows-msvc.zip"
+            },
+            "32bit": {
+                "url": "https://gh-proxy.org/https://github.com/ast-grep/ast-grep/releases/download/$version/app-i686-pc-windows-msvc.zip"
+            },
+            "arm64": {
+                "url": "https://gh-proxy.org/https://github.com/ast-grep/ast-grep/releases/download/$version/app-aarch64-pc-windows-msvc.zip"
+            }
+        }
+    }
+}

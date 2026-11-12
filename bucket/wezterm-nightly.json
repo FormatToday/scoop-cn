@@ -1,0 +1,46 @@
+{
+    "version": "nightly",
+    "description": "GPU-accelerated terminal emulator (nightly builds)",
+    "homepage": "https://github.com/wezterm/wezterm",
+    "license": "Apache-2.0",
+    "notes": [
+        "Add \"Open with Wezterm\" as a context menu option by running:",
+        "reg import \"$dir\\install-context.reg\""
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/wezterm/wezterm/releases/download/nightly/WezTerm-windows-nightly.zip"
+        }
+    },
+    "installer": {
+        "script": [
+            "$foldername = (Get-Item $dir\\WezTerm-windows-*).Name",
+            "Move-Item $dir\\$foldername\\* $dir",
+            "Remove-Item $dir\\$foldername"
+        ]
+    },
+    "post_install": [
+        "$weztermPath = \"$dir\\wezterm-gui.exe\".Replace('\\', '\\\\')",
+        "'install-context', 'uninstall-context' | ForEach-Object {",
+        "    if (Test-Path \"$bucketsdir\\main\\scripts\\$app\\$_.reg\") {",
+        "        $content = Get-Content \"$bucketsdir\\main\\scripts\\$app\\$_.reg\"",
+        "        $content = $content.Replace('$weztermPath', $weztermPath)",
+        "        if ($global) { $content = $content.Replace('HKEY_CURRENT_USER', 'HKEY_LOCAL_MACHINE') }",
+        "        Set-Content \"$dir\\$_.reg\" $content -Encoding Ascii -Force",
+        "    }",
+        "}"
+    ],
+    "bin": [
+        "wezterm.exe",
+        "wezterm-gui.exe"
+    ],
+    "shortcuts": [
+        [
+            "wezterm-gui.exe",
+            "WezTerm"
+        ]
+    ],
+    "uninstaller": {
+        "script": "if ($cmd -eq 'uninstall') { reg import \"$dir\\uninstall-context.reg\" *> $null }"
+    }
+}

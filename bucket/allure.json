@@ -1,0 +1,20 @@
+{
+    "version": "2.46.2",
+    "description": "A flexible lightweight multi-language test report tool",
+    "homepage": "https://allurereport.org/",
+    "license": "Apache-2.0",
+    "url": "https://gh-proxy.org/https://github.com/allure-framework/allure2/releases/download/2.46.2/allure-2.46.2.zip",
+    "hash": "43da085ce226c239c886d2818e4eec7be2a9a09ac0f3f42a6b092cdb27be696e",
+    "extract_dir": "allure-2.46.2",
+    "bin": "bin\\allure.bat",
+    "env_set": {
+        "ALLURE_HOME": "$dir"
+    },
+    "checkver": {
+        "github": "https://github.com/allure-framework/allure2"
+    },
+    "autoupdate": {
+        "url": "https://gh-proxy.org/https://github.com/allure-framework/allure2/releases/download/$version/allure-$version.zip",
+        "extract_dir": "allure-$version"
+    }
+}

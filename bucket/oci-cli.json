@@ -1,0 +1,25 @@
+{
+    "version": "3.96.2",
+    "description": "Command line interface for Oracle Cloud Infrastructure",
+    "homepage": "https://cloud.oracle.com/cloud-infrastructure",
+    "license": "UPL-1.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/oracle/oci-cli/releases/download/v3.96.2/oci-cli-3.96.2-Windows-Server-Installer.msi",
+            "hash": "0b4e93c33a9bb3b8631de7bc79fdee337b0b5759b96adcab75f5e6a0960e0bca"
+        }
+    },
+    "bin": "oci.exe",
+    "checkver": {
+        "github": "https://api.github.com/repos/oracle/oci-cli/releases",
+        "jsonpath": "$[?(@.prerelease == false)].assets[?(@.name =~ /^oci-cli-[\\d.]+-Windows-Server-Installer\\.msi$/)].browser_download_url",
+        "regex": "download/v([\\d.]+)/"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/oracle/oci-cli/releases/download/v$version/oci-cli-$version-Windows-Server-Installer.msi"
+            }
+        }
+    }
+}

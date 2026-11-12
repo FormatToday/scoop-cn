@@ -1,0 +1,33 @@
+{
+    "version": "0.231.0",
+    "description": "A simple CLI tool for creating clusters on EKS - Amazon’s new managed Kubernetes service for EC2.",
+    "homepage": "https://eksctl.io",
+    "license": "Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/eksctl-io/eksctl/releases/download/v0.231.0/eksctl_Windows_amd64.zip",
+            "hash": "ab46806ecab964e1b383c411cea51199cec07fbe28074bf1f099a2e1a24c99e3"
+        },
+        "arm64": {
+            "url": "https://gh-proxy.org/https://github.com/eksctl-io/eksctl/releases/download/v0.231.0/eksctl_Windows_arm64.zip",
+            "hash": "1cdba24089625b2dc2adb34dbe5c5b9ea57799be24365d98a54b6a563f0f02e6"
+        }
+    },
+    "bin": "eksctl.exe",
+    "checkver": {
+        "github": "https://github.com/eksctl-io/eksctl"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/eksctl-io/eksctl/releases/download/v$version/eksctl_Windows_amd64.zip"
+            },
+            "arm64": {
+                "url": "https://gh-proxy.org/https://github.com/eksctl-io/eksctl/releases/download/v$version/eksctl_Windows_arm64.zip"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/eksctl_checksums.txt"
+        }
+    }
+}

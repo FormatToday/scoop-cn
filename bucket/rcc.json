@@ -1,0 +1,27 @@
+{
+    "version": "21.4.2",
+    "description": "Allows you to create, manage, and distribute Python-based self-contained automation packages.",
+    "homepage": "https://robocorp.com/docs/rcc/overview",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://sema4.ai/cdn/downloads/legal/Sema4ai-EULA-v1.0.pdf"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://cdn.sema4.ai/rcc/releases/v21.4.2/windows64/rcc.exe",
+            "hash": "64563146d6ec9bf079e2b08a30300b731975abe727ce2cd2093f407b993e0347"
+        }
+    },
+    "bin": "rcc.exe",
+    "checkver": {
+        "url": "https://cdn.sema4.ai/rcc/releases/latest/version.txt",
+        "regex": "^v?(\\d+(?:\\.\\d+)+)$"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://cdn.sema4.ai/rcc/releases/v$version/windows64/rcc.exe"
+            }
+        }
+    }
+}

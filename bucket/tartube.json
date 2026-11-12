@@ -1,0 +1,33 @@
+{
+    "version": "2.5.253",
+    "description": "GUI front-end for youtube-dl, partly based on youtube-dl-gui.",
+    "homepage": "https://github.com/axcore/tartube",
+    "license": "GPL-2.0-or-later,Unlicense,LGPL-2.1-or-later",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/axcore/tartube/releases/download/v2.5.253/tartube-2.5.253-64bit-mswin-portable.zip",
+            "hash": "bf7ccc2f39201cefee5aa13004fa39857fd99c56d3426a419b35de752d02bf7c",
+            "shortcuts": [
+                [
+                    "tartube_portable_64bit.bat",
+                    "Tartube",
+                    "",
+                    "tartube_icon.ico"
+                ]
+            ]
+        }
+    },
+    "extract_dir": "tartube",
+    "persist": [
+        "home\\user\\tartube\\settings.json",
+        "mingw64\\bin"
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/axcore/tartube/releases/download/v$version/tartube-$version-64bit-mswin-portable.zip"
+            }
+        }
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "version": "2.1.2.5",
+    "description": "An universal 2D editor",
+    "homepage": "https://pixieditor.net/",
+    "license": "LGPL-3.0",
+    "suggest": {
+        ".NET Desktop Runtime 8.0": "windowsdesktop-runtime-8.0"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/PixiEditor/PixiEditor/releases/download/2.1.2.5/PixiEditor.2.1.2.5.x64-win.zip",
+            "hash": "0cc3751b4236f76da205ef66de9f599c0747d3c466cd0b78021b66f593002c40"
+        }
+    },
+    "extract_dir": "PixiEditor",
+    "shortcuts": [
+        [
+            "PixiEditor.exe",
+            "PixiEditor"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/PixiEditor/PixiEditor"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/PixiEditor/PixiEditor/releases/download/$version/PixiEditor.$version.x64-win.zip"
+            }
+        }
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "version": "26.1.0.471",
+    "homepage": "https://irzyxa.blogspot.com/",
+    "description": "An advanced Windows volume control, which can be used as a complete replacement for the standard Windows volume control.",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://github.com/irzyxa/Volume2/blob/master/License.txt"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/irzyxa/Volume2/releases/download/26.1.0.471/Volume2_26_1_0_471_x64.zip",
+            "hash": "be37c031c248d7e75df52b4f6f13877df2ef1df5a5750df21284aa720ba7519f"
+        }
+    },
+    "extract_dir": "Volume2",
+    "pre_install": [
+        "'ColorSchemes.ini', 'Schedules.ini', 'Config.ini' | ForEach-Object {",
+        "    if (!(Test-Path \"$persist_dir\\$_\")) {New-Item \"$dir\\$_\" | Out-Null}",
+        "}"
+    ],
+    "bin": "Volume2.exe",
+    "shortcuts": [
+        [
+            "Volume2.exe",
+            "Volume²"
+        ]
+    ],
+    "persist": [
+        "ColorSchemes.ini",
+        "Schedules.ini",
+        "Config.ini"
+    ],
+    "checkver": {
+        "github": "https://github.com/irzyxa/Volume2"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/irzyxa/Volume2/releases/download/$version/Volume2_$underscoreVersion_x64.zip"
+            }
+        }
+    }
+}

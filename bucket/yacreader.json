@@ -1,0 +1,47 @@
+{
+    "version": "10.5.0.261109511",
+    "description": "A comic reader and manager",
+    "homepage": "https://www.yacreader.com",
+    "license": "GPL-3.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/YACReader/yacreader/releases/download/10.5.0/YACReader-v10.5.0.261109511-winx64-7z-qt6.exe",
+            "hash": "af58472dfa2849ff55956b83f75ed03214dcda4ddd2f928500aa95df7096aac4"
+        },
+        "arm64": {
+            "url": "https://gh-proxy.org/https://github.com/YACReader/yacreader/releases/download/10.5.0/YACReader-v10.5.0.261109511-winarm64-7z-qt6.exe",
+            "hash": "b6930d09a4b0a0bfe482560831e261eb664517e04fa5cd1306af947521e6df38"
+        }
+    },
+    "innosetup": true,
+    "bin": [
+        "YACReader.exe",
+        "YACReaderLibrary.exe",
+        "YACReaderLibraryServer.exe"
+    ],
+    "shortcuts": [
+        [
+            "YACReader.exe",
+            "YACReader"
+        ],
+        [
+            "YACReaderLibrary.exe",
+            "YACReader Library"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/YACReader/yacreader/releases/latest",
+        "jsonpath": "$.assets[*].browser_download_url",
+        "regex": "YACReader-v([\\d.]+)-winx64-7z"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/YACReader/yacreader/releases/download/$matchHead/YACReader-v$version-winx64-7z-qt6.exe"
+            },
+            "arm64": {
+                "url": "https://gh-proxy.org/https://github.com/YACReader/yacreader/releases/download/$matchHead/YACReader-v$version-winarm64-7z-qt6.exe"
+            }
+        }
+    }
+}

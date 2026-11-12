@@ -1,0 +1,28 @@
+{
+    "version": "2.7.4428",
+    "description": "OnBoard Memory Manager (OMM) is a utility for pro gamers to quickly view, customize, and fine-tune the onboard memory of a compatible Logitech G mouse.",
+    "homepage": "https://support.logi.com/hc/en-us/articles/360059641133-Onboard-Memory-Manager",
+    "license": "Freeware",
+    "url": "https://download01.logi.com/web/ftp/pub/techsupport/gaming/OnboardMemoryManager_2.7.4428.exe#/OnboardMemoryManager.exe",
+    "hash": "4dfa89c46df2da173ecf12021b6f82be56c5d69f8d30182346bd753eb3bed5c1",
+    "shortcuts": [
+        [
+            "OnboardMemoryManager.exe",
+            "Onboard Memory Manager"
+        ]
+    ],
+    "bin": [
+        [
+            "OnboardMemoryManager.exe",
+            "omm"
+        ]
+    ],
+    "checkver": {
+        "url": "https://support.logi.com/api/v2/help_center/en-us/articles.json?label_names=webcontent=productdownload,websoftware=d3e2d42a-2b53-11eb-bf13-a5ea3d8273f5&per_page=1",
+        "jsonpath": "$.articles[0].body",
+        "regex": ">([\\d.]+)<"
+    },
+    "autoupdate": {
+        "url": "https://download01.logi.com/web/ftp/pub/techsupport/gaming/OnboardMemoryManager_$version.exe#/OnboardMemoryManager.exe"
+    }
+}

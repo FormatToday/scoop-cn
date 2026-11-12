@@ -1,0 +1,26 @@
+{
+    "version": "2.3.1",
+    "description": "Resize and move windows like in KDE on Windows with Win+Mouse!",
+    "homepage": "https://github.com/alvesvaren/resizer2",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/alvesvaren/resizer2/releases/download/v2.3.1/resizer2-portable.exe#/resizer2.exe",
+            "hash": "ec7bfbc4974c120f6ff9d8d13c74f91a2d5d041581d289079d0db0e9c656d8be"
+        }
+    },
+    "shortcuts": [
+        [
+            "resizer2.exe",
+            "resizer2"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/alvesvaren/resizer2/releases/download/v$version/resizer2-portable.exe#/resizer2.exe"
+            }
+        }
+    }
+}

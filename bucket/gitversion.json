@@ -1,0 +1,30 @@
+{
+    "version": "6.8.2",
+    "description": "Easy Semantic Versioning for projects using Git.",
+    "homepage": "https://gitversion.net/docs/",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/GitTools/GitVersion/releases/download/6.8.2/gitversion-win-x64-6.8.2.zip",
+            "hash": "73219908a616847bd4049680dff389fc3623d4fbe8585e92198a5572da63f796"
+        },
+        "arm64": {
+            "url": "https://gh-proxy.org/https://github.com/GitTools/GitVersion/releases/download/6.8.2/gitversion-win-arm64-6.8.2.zip",
+            "hash": "13d95502e3888055df077ed4383ed2e010ec659a3a0f0b3db726e9d7a8fa6724"
+        }
+    },
+    "bin": "gitversion.exe",
+    "checkver": {
+        "github": "https://github.com/GitTools/GitVersion"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/GitTools/GitVersion/releases/download/$version/gitversion-win-x64-$version.zip"
+            },
+            "arm64": {
+                "url": "https://gh-proxy.org/https://github.com/GitTools/GitVersion/releases/download/$version/gitversion-win-arm64-$version.zip"
+            }
+        }
+    }
+}

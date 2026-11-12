@@ -1,0 +1,39 @@
+{
+    "version": "5.6.12",
+    "description": "Opens required browser based on configuration",
+    "homepage": "https://www.aloneguid.uk/projects/bt/",
+    "license": "Freeware",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/aloneguid/bt/releases/download/5.6.12/bt.zip",
+            "hash": "c631113cb854b96019f5cd266d63a3fe98b1d0eb7023f80ef97e44a3aafd412c"
+        }
+    },
+    "pre_install": [
+        "# Portable",
+        "New-Item \"$dir\\.portable\" -ItemType File | Out-Null",
+        "if (!(Test-Path \"$persist_dir\\config.ini\")) { New-Item \"$dir\\config.ini\" -ItemType File | Out-Null }",
+        "if (!(Test-Path \"$persist_dir\\hit_log.csv\")) { New-Item \"$dir\\hit_log.csv\" -ItemType File | Out-Null }"
+    ],
+    "bin": "bt.exe",
+    "shortcuts": [
+        [
+            "bt.exe",
+            "Browser Tamer"
+        ]
+    ],
+    "persist": [
+        "config.ini",
+        "hit_log.csv"
+    ],
+    "checkver": {
+        "github": "https://github.com/aloneguid/bt"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/aloneguid/bt/releases/download/$version/bt.zip"
+            }
+        }
+    }
+}

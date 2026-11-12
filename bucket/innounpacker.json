@@ -1,0 +1,22 @@
+{
+    "version": "2.2.13",
+    "description": "GUI for Inno Setup Unpacker (innounp)",
+    "homepage": "https://www.rathlev-home.de/tools/prog-e.html#unpack",
+    "license": "Freeware",
+    "url": "https://www.rathlev-home.de/tools/download/innounpacker.zip",
+    "hash": "4f83dc55e33b9019734b1ff1c1148503215dcaeb1c40d61da42062069f7b35e4",
+    "bin": [
+        "innounp.exe",
+        "InnoUnpack.exe"
+    ],
+    "shortcuts": [
+        [
+            "InnoUnpack.exe",
+            "InnoUnpacker"
+        ]
+    ],
+    "checkver": "Windows InnoUnpacker (\\d+(?:\\.\\d+)+)",
+    "autoupdate": {
+        "url": "https://www.rathlev-home.de/tools/download/innounpacker.zip"
+    }
+}

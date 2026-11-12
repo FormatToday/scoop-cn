@@ -1,0 +1,33 @@
+{
+    "version": "0.5.3",
+    "description": "CLI for the open source password manager for teams",
+    "homepage": "https://www.passbolt.com/",
+    "license": "MIT License",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/passbolt/go-passbolt-cli/releases/download/v0.5.3/go-passbolt-cli_0.5.3_windows_amd64.zip",
+            "hash": "ec6cae4ac23ec71d8b0404a8887f751a57229b2d743b425099bde3ded6fe36eb"
+        },
+        "arm64": {
+            "url": "https://gh-proxy.org/https://github.com/passbolt/go-passbolt-cli/releases/download/v0.5.3/go-passbolt-cli_0.5.3_windows_arm64.zip",
+            "hash": "93457e4234508c400196ab642ff163b4a833f0c234658f9ad8ac2f5cb9e86cdf"
+        }
+    },
+    "bin": "passbolt.exe",
+    "checkver": {
+        "github": "https://github.com/passbolt/go-passbolt-cli"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/passbolt/go-passbolt-cli/releases/download/v$version/go-passbolt-cli_$version_windows_amd64.zip"
+            },
+            "arm64": {
+                "url": "https://gh-proxy.org/https://github.com/passbolt/go-passbolt-cli/releases/download/v$version/go-passbolt-cli_$version_windows_arm64.zip"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/checksums.txt"
+        }
+    }
+}

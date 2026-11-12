@@ -1,0 +1,27 @@
+{
+    "version": "2.62",
+    "description": "Light-weight and easy-to-use password manager",
+    "homepage": "https://keepass.info",
+    "license": "GPL-2.0-or-later",
+    "url": "https://downloads.sourceforge.net/project/keepass/KeePass%202.x/2.62/KeePass-2.62-Setup.exe",
+    "hash": "sha1:3b0595e69e3dadb1763a65e5bec717e087bde96e",
+    "innosetup": true,
+    "bin": "KeePass.exe",
+    "shortcuts": [
+        [
+            "KeePass.exe",
+            "KeePass"
+        ]
+    ],
+    "persist": [
+        "Plugins",
+        "Languages"
+    ],
+    "checkver": {
+        "url": "https://keepass.info/update/version2x.txt",
+        "regex": "KeePass:([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://downloads.sourceforge.net/project/keepass/KeePass%20$majorVersion.x/$version/KeePass-$version-Setup.exe"
+    }
+}

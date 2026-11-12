@@ -1,0 +1,30 @@
+{
+    "version": "0.11.1",
+    "description": "A simple Jellyfin frontend built on top of Flutter.",
+    "homepage": "https://github.com/DonutWare/Fladder",
+    "license": "GPL-3.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/DonutWare/Fladder/releases/download/v0.11.1/Fladder-Windows-0.11.1.zip",
+            "hash": "c1180beb1ecabe8c79b60adcb23d02c55043e4593490892f965b776910ff6b41"
+        }
+    },
+    "shortcuts": [
+        [
+            "fladder.exe",
+            "Fladder"
+        ]
+    ],
+    "persist": [
+        "data",
+        ".config"
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/DonutWare/Fladder/releases/download/v$version/Fladder-Windows-$version.zip"
+            }
+        }
+    }
+}

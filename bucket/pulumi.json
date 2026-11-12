@@ -1,0 +1,46 @@
+{
+    "version": "3.274.1",
+    "description": "Create, deploy, and manage infrastructure on any cloud using any language.",
+    "homepage": "https://www.pulumi.com",
+    "license": "Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://get.pulumi.com/releases/sdk/pulumi-v3.274.1-windows-x64.zip",
+            "hash": "sha512:cc44faa5b02d7dcad7d1fa10cd83ac19e265de82f24a7af2c07d4f803dbe6ae7dad85dc38970b7968b678f059468aa9cc9d93f951710c893815768b223f1fddb"
+        },
+        "arm64": {
+            "url": "https://get.pulumi.com/releases/sdk/pulumi-v3.274.1-windows-x64.zip",
+            "hash": "sha512:cc44faa5b02d7dcad7d1fa10cd83ac19e265de82f24a7af2c07d4f803dbe6ae7dad85dc38970b7968b678f059468aa9cc9d93f951710c893815768b223f1fddb"
+        }
+    },
+    "extract_dir": "Pulumi\\bin",
+    "bin": [
+        "pulumi.exe",
+        "pulumi-language-dotnet.exe",
+        "pulumi-language-go.exe",
+        "pulumi-language-nodejs.exe",
+        "pulumi-language-python-exec",
+        "pulumi-language-python.exe",
+        "pulumi-language-yaml.exe",
+        "pulumi-resource-pulumi-nodejs.cmd",
+        "pulumi-resource-pulumi-python.cmd",
+        "pulumi-watch.exe"
+    ],
+    "checkver": {
+        "url": "https://www.pulumi.com/docs/get-started/install/versions",
+        "regex": "<strong>([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://get.pulumi.com/releases/sdk/pulumi-v$version-windows-x64.zip"
+            },
+            "arm64": {
+                "url": "https://get.pulumi.com/releases/sdk/pulumi-v$version-windows-x64.zip"
+            }
+        },
+        "hash": {
+            "url": "https://gh-proxy.org/https://github.com/pulumi/pulumi/releases/download/v$version/SHA512SUMS"
+        }
+    }
+}

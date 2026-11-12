@@ -1,0 +1,51 @@
+{
+    "version": "5.18.0",
+    "description": "An open source voxel game-creation platform with easy modding and game creation (formerly Minetest)",
+    "homepage": "https://www.luanti.org/",
+    "license": "LGPL-2.1-or-later",
+    "architecture": {
+        "32bit": {
+            "url": "https://gh-proxy.org/https://github.com/minetest/minetest/releases/download/5.18.0/luanti-5.18.0-win32.zip",
+            "hash": "1cbe4a380561f221eb1c1b8765d179f3f9e01dcacc94c7dd13d86581227af375",
+            "extract_dir": "luanti-5.18.0-win32"
+        },
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/minetest/minetest/releases/download/5.18.0/luanti-5.18.0-win64.zip",
+            "hash": "bebce52b58555d8208bf16767d0717788479fef23c35ec8d7bf287774d641835",
+            "extract_dir": "luanti-5.18.0-win64"
+        }
+    },
+    "post_install": [
+        "if(!(Test-Path \"$dir\\config\\minetest.conf\")) {",
+        "New-Item -ErrorAction Ignore -Type file \"$dir\\config\\minetest.conf\" | Out-Null",
+        "}"
+    ],
+    "shortcuts": [
+        [
+            "bin\\luanti.exe",
+            "Luanti",
+            "--config ..\\config\\minetest.conf"
+        ]
+    ],
+    "persist": [
+        "config",
+        "mods",
+        "screenshots",
+        "worlds"
+    ],
+    "checkver": {
+        "github": "https://github.com/minetest/minetest"
+    },
+    "autoupdate": {
+        "architecture": {
+            "32bit": {
+                "url": "https://gh-proxy.org/https://github.com/minetest/minetest/releases/download/$version/luanti-$version-win32.zip",
+                "extract_dir": "luanti-$version-win32"
+            },
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/minetest/minetest/releases/download/$version/luanti-$version-win64.zip",
+                "extract_dir": "luanti-$version-win64"
+            }
+        }
+    }
+}

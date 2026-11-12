@@ -1,0 +1,44 @@
+{
+    "version": "0.5.1",
+    "homepage": "https://github.com/nats-io/natscli",
+    "description": "The NATS Command Line Interface.",
+    "license": "Apache-2.0",
+    "architecture": {
+        "32bit": {
+            "url": "https://gh-proxy.org/https://github.com/nats-io/natscli/releases/download/v0.5.1/nats-0.5.1-windows-386.zip",
+            "hash": "aac6f81533e6ec82d74b4b10dc94a6a9ad5fc0a9b7763d9eab634daa97a9ea3b",
+            "extract_dir": "nats-0.5.1-windows-386"
+        },
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/nats-io/natscli/releases/download/v0.5.1/nats-0.5.1-windows-amd64.zip",
+            "hash": "32bf9afbb1ee47b2ee0b869cce5440715c8f6d1ae70fe30e098ddf7b7fa1c894",
+            "extract_dir": "nats-0.5.1-windows-amd64"
+        },
+        "arm64": {
+            "url": "https://gh-proxy.org/https://github.com/nats-io/natscli/releases/download/v0.5.1/nats-0.5.1-windows-arm64.zip",
+            "hash": "510aba5f0a9038ce7bf9ca06849727139a626705052f830ccb2c28c4eeb4065f",
+            "extract_dir": "nats-0.5.1-windows-arm64"
+        }
+    },
+    "bin": "nats.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "32bit": {
+                "url": "https://gh-proxy.org/https://github.com/nats-io/natscli/releases/download/v$version/nats-$version-windows-386.zip",
+                "extract_dir": "nats-$version-windows-386"
+            },
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/nats-io/natscli/releases/download/v$version/nats-$version-windows-amd64.zip",
+                "extract_dir": "nats-$version-windows-amd64"
+            },
+            "arm64": {
+                "url": "https://gh-proxy.org/https://github.com/nats-io/natscli/releases/download/v$version/nats-$version-windows-arm64.zip",
+                "extract_dir": "nats-$version-windows-arm64"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/SHA256SUMS"
+        }
+    }
+}

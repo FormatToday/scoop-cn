@@ -1,0 +1,48 @@
+{
+    "version": "5.2",
+    "description": "Image and photo editor",
+    "homepage": "https://www.getpaint.net",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://www.getpaint.net/license.html"
+    },
+    "notes": "Windows 7 SP1 and Windows 8.1 are no longer supported.",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/paintdotnet/release/releases/download/v5.2/paint.net.5.2.portable.x64.zip",
+            "hash": "2689a4fe58f91605d210c4481f16fb503b6f6ad4edd7f397251c8d9e7de8928b"
+        },
+        "arm64": {
+            "url": "https://gh-proxy.org/https://github.com/paintdotnet/release/releases/download/v5.2/paint.net.5.2.portable.arm64.zip",
+            "hash": "23f77e3340f4220c90834709e324dbb60cc6061d97726c87a07d2b9cdfe89696"
+        }
+    },
+    "pre_install": "if(!(Test-Path \"$persist_dir\\PaintDotNet.AppSettings.json\")) {New-Item \"$dir\\PaintDotNet.AppSettings.json\" -ItemType File | Out-Null}",
+    "bin": "paintdotnet.exe",
+    "shortcuts": [
+        [
+            "PaintDotNet.exe",
+            "Paint.NET"
+        ]
+    ],
+    "persist": [
+        "Effects",
+        "FileTypes",
+        "Shapes",
+        "UserFiles",
+        "PaintDotNet.AppSettings.json"
+    ],
+    "checkver": {
+        "github": "https://github.com/paintdotnet/release/"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/paintdotnet/release/releases/download/v$version/paint.net.$version.portable.x64.zip"
+            },
+            "arm64": {
+                "url": "https://gh-proxy.org/https://github.com/paintdotnet/release/releases/download/v$version/paint.net.$version.portable.arm64.zip"
+            }
+        }
+    }
+}

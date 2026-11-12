@@ -1,0 +1,26 @@
+{
+    "version": "0.2.20",
+    "description": "Neovim client library and GUI, in Qt5",
+    "homepage": "https://github.com/equalsraf/neovim-qt",
+    "license": "ISC",
+    "suggest": {
+        "neovim": "neovim"
+    },
+    "url": "https://gh-proxy.org/https://github.com/equalsraf/neovim-qt/releases/download/v0.2.20/neovim-qt.zip",
+    "hash": "3fc2da4306b6292141a808e3a716f5975ad9a767d220afc19c3176e311cbef0d",
+    "bin": "bin\\nvim-qt.exe",
+    "shortcuts": [
+        [
+            "bin\\nvim-qt.exe",
+            "Neovim Qt"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/equalsraf/neovim-qt/releases",
+        "jsonpath": "$[*].tag_name",
+        "regex": "\"v([\\d.]+)\""
+    },
+    "autoupdate": {
+        "url": "https://gh-proxy.org/https://github.com/equalsraf/neovim-qt/releases/download/v$version/neovim-qt.zip"
+    }
+}

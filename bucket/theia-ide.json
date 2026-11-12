@@ -1,0 +1,64 @@
+{
+    "version": "1.76.1",
+    "description": "A modern and open IDE for cloud and desktop, built on the Theia platform (Formerly \"Theia Blueprint\").",
+    "homepage": "https://theia-ide.org/#theiaide",
+    "license": "EPL-2.0, GPL-2.0, MIT",
+    "notes": [
+        "Add 'Open with Theia IDE' to directory context menu by running:",
+        "reg import \"$dir\\install-context.reg\""
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://www.eclipse.org/downloads/download.php?mirror_id=1&file=/theia/ide/1.76.1/windows/TheiaIDESetup-1.76.1.exe#/dl.7z",
+            "hash": "sha512:274ca9d04c71137e3dea43742bbaa0dd4e2de7c5ff7728d116ec1d49811d84dccd6178ae58e3fdaf1e2858ca1b5a589991c18f7b3a68ffbf10ad81229d133459",
+            "pre_install": [
+                "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
+                "Remove-Item \"$dir\\`$*\", \"$dir\\unins*\" -Force -Recurse -ErrorAction Ignore"
+            ]
+        }
+    },
+    "post_install": [
+        "$exepath = \"$dir\\TheiaIDE.exe\".Replace('\\', '\\\\')",
+        "'install-context', 'uninstall-context' | ForEach-Object {",
+        "    if (Test-Path \"$bucketsdir\\main\\scripts\\theia-ide\\$_.reg\") {",
+        "        $content = Get-Content \"$bucketsdir\\main\\scripts\\theia-ide\\$_.reg\" -Encoding UTF8",
+        "        $content = $content.Replace('$theiaide', $exepath)",
+        "        if ($global) {",
+        "            $content = $content.Replace('HKEY_CURRENT_USER', 'HKEY_LOCAL_MACHINE')",
+        "        }",
+        "        $content | Set-Content -Path \"$dir\\$_.reg\" -Encoding Unicode",
+        "    }",
+        "}"
+    ],
+    "bin": "TheiaIDE.exe",
+    "shortcuts": [
+        [
+            "TheiaIDE.exe",
+            "TheiaIDE"
+        ]
+    ],
+    "uninstaller": {
+        "script": [
+            "if ($cmd -eq 'uninstall') {",
+            "    if (Test-Path \"$dir\\uninstall-context.reg\") {",
+            "        reg import \"$dir\\uninstall-context.reg\" *> $null",
+            "    }",
+            "}"
+        ]
+    },
+    "checkver": {
+        "url": "https://download.eclipse.org/theia/ide/latest/windows/latest.yml",
+        "regex": "version: ([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://www.eclipse.org/downloads/download.php?mirror_id=1&file=/theia/ide/$version/windows/TheiaIDESetup-$version.exe#/dl.7z",
+                "hash": {
+                    "url": "https://download.eclipse.org/theia/ide/latest/windows/latest.yml",
+                    "regex": "sha512: $base64"
+                }
+            }
+        }
+    }
+}

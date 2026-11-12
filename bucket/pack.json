@@ -1,0 +1,23 @@
+{
+    "version": "0.40.10",
+    "description": "Buildpack CLI",
+    "homepage": "https://buildpacks.io",
+    "license": "Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/buildpacks/pack/releases/download/v0.40.10/pack-v0.40.10-windows.zip",
+            "hash": "d30e591cbcc45f11738da5032c7617c773a2a520476c15f1adf63f3f2d9f8d11"
+        }
+    },
+    "bin": "pack.exe",
+    "checkver": {
+        "github": "https://github.com/buildpacks/pack"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/buildpacks/pack/releases/download/v$version/pack-v$version-windows.zip"
+            }
+        }
+    }
+}

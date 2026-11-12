@@ -1,0 +1,47 @@
+{
+    "version": "3.8-08539",
+    "description": "Private Internet Access - Desktop VPN Client for Windows/macOS/Linux",
+    "homepage": "https://github.com/pia-foss/desktop",
+    "license": "Freeware",
+    "architecture": {
+        "64bit": {
+            "url": "https://privateinternetaccess-storage.s3.amazonaws.com/pub/pia_desktop/builds/pia-windows-x64-3.8-08539.exe#/dl.7z",
+            "hash": "30448eee4f7e5c093d770bfbda822bb1e5f896468778358a8f4b7db63616213f"
+        },
+        "arm64": {
+            "url": "https://privateinternetaccess-storage.s3.amazonaws.com/pub/pia_desktop/builds/pia-windows-arm64-3.8-08539.exe#/dl.7z",
+            "hash": "2155dbca43a8be48c339ef470bbff4e97cb65dccf90e2aadfe650f5c86792453"
+        }
+    },
+    "bin": [
+        "openvpn_updown.bat",
+        "pia-hnsd.exe",
+        "pia-openvpn.exe",
+        "pia-service.exe",
+        "pia-ss-local.exe",
+        "pia-unbound.exe",
+        "pia-wgservice.exe",
+        "pia-winsvcstub.exe",
+        "piactl.exe"
+    ],
+    "shortcuts": [
+        [
+            "pia-client.exe",
+            "PIA-client"
+        ]
+    ],
+    "checkver": {
+        "url": "https://github.com/pia-foss/desktop/releases",
+        "regex": "/pia_desktop/builds/pia-windows-x64-([\\d.-]+)\\.exe"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://privateinternetaccess-storage.s3.amazonaws.com/pub/pia_desktop/builds/pia-windows-x64-$version.exe#/dl.7z"
+            },
+            "arm64": {
+                "url": "https://privateinternetaccess-storage.s3.amazonaws.com/pub/pia_desktop/builds/pia-windows-arm64-$version.exe#/dl.7z"
+            }
+        }
+    }
+}

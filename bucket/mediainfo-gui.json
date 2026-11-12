@@ -1,0 +1,34 @@
+{
+    "version": "26.10",
+    "description": "MediaInfo is a convenient unified display of the most relevant technical and tag data for video and audio files.",
+    "homepage": "https://mediaarea.net/en/MediaInfo",
+    "license": "BSD-2-Clause",
+    "architecture": {
+        "64bit": {
+            "url": "https://mediaarea.net/download/binary/mediainfo-gui/26.10/MediaInfo_GUI_26.10_Windows_x64_WithoutInstaller.7z",
+            "hash": "c2b19ce49fce7b7f60ca0611ab693cfc11f84025b4cd0b5f7eaa9905b73ec4dc"
+        },
+        "32bit": {
+            "url": "https://mediaarea.net/download/binary/mediainfo-gui/26.10/MediaInfo_GUI_26.10_Windows_i386_WithoutInstaller.7z",
+            "hash": "f8f3a37264cecf7c34be7457a747616f7832bc73ca0a33c98be900228d58a3f0"
+        }
+    },
+    "shortcuts": [
+        [
+            "MediaInfo.exe",
+            "MediaInfo"
+        ]
+    ],
+    "persist": "Plugin",
+    "checkver": "version ([\\d.]+)",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://mediaarea.net/download/binary/mediainfo-gui/$version/MediaInfo_GUI_$version_Windows_x64_WithoutInstaller.7z"
+            },
+            "32bit": {
+                "url": "https://mediaarea.net/download/binary/mediainfo-gui/$version/MediaInfo_GUI_$version_Windows_i386_WithoutInstaller.7z"
+            }
+        }
+    }
+}

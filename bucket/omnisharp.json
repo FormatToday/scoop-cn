@@ -1,0 +1,38 @@
+{
+    "version": "2.0.0",
+    "description": "A .NET development platform based on roslyn workspaces",
+    "homepage": "https://www.omnisharp.net",
+    "license": "MIT",
+    "notes": "For omnisharp-net6, please install 'versions/omnisharp-net6",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/OmniSharp/omnisharp-roslyn/releases/download/v2.0.0/omnisharp-win-x64.zip",
+            "hash": "05e961233b4b620f46e6bd46d762122e3008f49b01e6fd31c8d7a70e917f7bfb"
+        },
+        "32bit": {
+            "url": "https://gh-proxy.org/https://github.com/OmniSharp/omnisharp-roslyn/releases/download/v2.0.0/omnisharp-win-x86.zip",
+            "hash": "04fe6be9b60b4b3c1682dbd1c9ae92c0d97aca20b8dc4d66e5796339784a43dc"
+        },
+        "arm64": {
+            "url": "https://gh-proxy.org/https://github.com/OmniSharp/omnisharp-roslyn/releases/download/v2.0.0/omnisharp-win-arm64.zip",
+            "hash": "90bdcb071aa62ca68e01e4b7a92deb8ae5d35921c79980e670a07a68318849f1"
+        }
+    },
+    "bin": "omnisharp.exe",
+    "checkver": {
+        "github": "https://github.com/OmniSharp/omnisharp-roslyn"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/OmniSharp/omnisharp-roslyn/releases/download/v$version/omnisharp-win-x64.zip"
+            },
+            "32bit": {
+                "url": "https://gh-proxy.org/https://github.com/OmniSharp/omnisharp-roslyn/releases/download/v$version/omnisharp-win-x86.zip"
+            },
+            "arm64": {
+                "url": "https://gh-proxy.org/https://github.com/OmniSharp/omnisharp-roslyn/releases/download/v$version/omnisharp-win-arm64.zip"
+            }
+        }
+    }
+}

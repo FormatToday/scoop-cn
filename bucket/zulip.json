@@ -1,0 +1,33 @@
+{
+    "version": "5.14.2",
+    "description": "Desktop client for Zulip, an open source team chat application",
+    "homepage": "https://zulip.com",
+    "license": "Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/zulip/zulip-desktop/releases/download/v5.14.2/zulip-5.14.2-x64.nsis.7z",
+            "hash": "sha512:cbc4e9d1bad746faed4426bff5a9ce21bfd10036815b8f9f751156722d3671684a99064ffca3d56809d3a77d5d50142274a01811521be5ccc72135a934343db1"
+        }
+    },
+    "bin": "Zulip.exe",
+    "shortcuts": [
+        [
+            "Zulip.exe",
+            "Zulip"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/zulip/zulip-desktop"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/zulip/zulip-desktop/releases/download/v$version/zulip-$version-x64.nsis.7z",
+                "hash": {
+                    "url": "$baseurl/latest.yml",
+                    "regex": "(?sm)x64.*?$base64"
+                }
+            }
+        }
+    }
+}

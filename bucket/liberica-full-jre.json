@@ -1,0 +1,43 @@
+{
+    "description": "BellSoft Liberica is a 100% open-source Java implementation",
+    "homepage": "https://bell-sw.com/java",
+    "version": "27.0.1.0.3-5",
+    "license": "GPL-2.0-only WITH Classpath-exception-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/bell-sw/Liberica/releases/download/27.0.1.0.3%2B5/bellsoft-jre27.0.1.0.3%2B5-windows-amd64-full.zip",
+            "hash": "sha1:d925dbdb26a056ab2cd92484e22966748b56e861"
+        },
+        "arm64": {
+            "url": "https://gh-proxy.org/https://github.com/bell-sw/Liberica/releases/download/27.0.1.0.3%2B5/bellsoft-jre27.0.1.0.3%2B5-windows-aarch64-full.zip",
+            "hash": "sha1:21c4430e04531c15e190a3e9fb018bd2ddf293cd"
+        }
+    },
+    "extract_dir": "jre-27.0.1.0.3-full",
+    "env_add_path": "bin",
+    "env_set": {
+        "JAVA_HOME": "$dir"
+    },
+    "checkver": {
+        "url": "https://api.bell-sw.com/v1/liberica/releases?bundle-type=jre-full&version-modifier=latest&release-type=all&os=windows&arch=x86&installation-type=archive&package-type=zip&output=json&fields=version",
+        "jsonpath": "$[*].version",
+        "regex": "(?<major>[\\d.]+)(?:\\+)(?<build>[\\d]+)",
+        "replace": "${major}-${build}",
+        "reverse": true
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/bell-sw/Liberica/releases/download/$matchMajor%2B$matchBuild/bellsoft-jre$matchMajor%2B$matchBuild-windows-amd64-full.zip"
+            },
+            "arm64": {
+                "url": "https://gh-proxy.org/https://github.com/bell-sw/Liberica/releases/download/$matchMajor%2B$matchBuild/bellsoft-jre$matchMajor%2B$matchBuild-windows-aarch64-full.zip"
+            }
+        },
+        "hash": {
+            "url": "https://api.bell-sw.com/v1/liberica/releases/$basename",
+            "jsonpath": "$.sha1"
+        },
+        "extract_dir": "jre-$matchMajor-full"
+    }
+}

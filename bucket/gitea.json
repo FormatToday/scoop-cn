@@ -1,0 +1,59 @@
+{
+    "version": "28.3.0",
+    "description": "A painless self-hosted Git service",
+    "homepage": "https://gitea.io/",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://dl.gitea.com/gitea/28.3.0/gitea-28.3.0-windows-amd64.exe.xz",
+            "hash": "0e8ec8c6ca826c6e1e3875214061653b3fdb620b227d8550dd36865a08b31b79"
+        },
+        "arm64": {
+            "url": "https://dl.gitea.com/gitea/28.3.0/gitea-28.3.0-windows-arm64.exe.xz",
+            "hash": "1bfc3ad35eb668ad67e1c0782dd304b3d30cf0f1cc89b1efcb4d12bc8eea615b"
+        }
+    },
+    "installer": {
+        "script": [
+            "Get-Item \"$dir\\gitea*.exe\" | Rename-Item -NewName 'gitea.exe'",
+            "if (!(Test-Path \"$persist_dir\\custom\\conf\")) {",
+            "   New-Item \"$persist_dir\\custom\\conf\" -ItemType Directory | Out-Null",
+            "}",
+            "if (!(Test-Path \"$persist_dir\\custom\\conf\\app.ini\")) {",
+            "   @(",
+            "       '[database]'",
+            "       'DB_TYPE = sqlite3'",
+            "       \"PATH = $persist_dir/data/gitea.db\"",
+            "       '[repository]'",
+            "       \"ROOT = $persist_dir/repositories\"",
+            "       '[log]'",
+            "       \"ROOT_PATH = $persist_dir/log\"",
+            "   ) -replace '\\\\', '/' | Set-Content \"$persist_dir\\custom\\conf\\app.ini\" -Encoding ASCII",
+            "}"
+        ]
+    },
+    "bin": "gitea.exe",
+    "persist": [
+        "custom",
+        "repositories",
+        "log",
+        "data"
+    ],
+    "checkver": {
+        "url": "https://dl.gitea.com/gitea/version.json",
+        "jsonpath": "$.latest.version"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://dl.gitea.com/gitea/$version/gitea-$version-windows-amd64.exe.xz"
+            },
+            "arm64": {
+                "url": "https://dl.gitea.com/gitea/$version/gitea-$version-windows-arm64.exe.xz"
+            }
+        },
+        "hash": {
+            "url": "$url.sha256"
+        }
+    }
+}

@@ -1,0 +1,37 @@
+{
+    "version": "3.5.1",
+    "description": "A cross platform desktop reading app, based on the Readium Desktop toolkit",
+    "homepage": "https://github.com/edrlab/thorium-reader",
+    "license": "BSD-3-Clause",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/edrlab/thorium-reader/releases/download/v3.5.1/Thorium-3.5.1-x64.exe#/dl.7z",
+            "hash": "ad33003c0648b8f8f91cb9368b457701f23b1ed9443b01c94934f756f7ed98fd"
+        },
+        "arm64": {
+            "url": "https://gh-proxy.org/https://github.com/edrlab/thorium-reader/releases/download/v3.5.1/Thorium-3.5.1-arm64.exe#/dl.7z",
+            "hash": "e5d6aad57490dd68fc117cc02f172a6d86cf6777f91689dd710594b0c0fb1d8f"
+        }
+    },
+    "pre_install": [
+        "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-*.7z\" \"$dir\"",
+        "Remove-Item \"$dir\\`$*\", \"$dir\\Uninstall*\" -Force -Recurse"
+    ],
+    "shortcuts": [
+        [
+            "Thorium.exe",
+            "Thorium"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/edrlab/thorium-reader/releases/download/v$version/Thorium-$version-x64.exe#/dl.7z"
+            },
+            "arm64": {
+                "url": "https://gh-proxy.org/https://github.com/edrlab/thorium-reader/releases/download/v$version/Thorium-$version-arm64.exe#/dl.7z"
+            }
+        }
+    }
+}

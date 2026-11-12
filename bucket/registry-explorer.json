@@ -1,0 +1,37 @@
+{
+    "version": "2026.10.2",
+    "description": "A registry viewer with advanced search capabilities, multi-hive support, and the ability to access locked registry files.",
+    "homepage": "https://ericzimmerman.github.io",
+    "license": "MIT",
+    "suggest": {
+        ".NET Desktop Runtime 9.0": "windowsdesktop-runtime-9.0"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://download.ericzimmermanstools.com/net/RegistryExplorer.zip",
+            "hash": "444fcb97bc12fcef499347c4ee9706b1de00da6d64be8cf1120671358d0a2523"
+        }
+    },
+    "extract_dir": "RegistryExplorer",
+    "shortcuts": [
+        [
+            "RegistryExplorer.exe",
+            "Registry Explorer"
+        ]
+    ],
+    "persist": [
+        "Settings",
+        "Bookmarks\\User"
+    ],
+    "checkver": {
+        "url": "https://gh-proxy.org/https://raw.githubusercontent.com/EricZimmerman/ericzimmerman.github.io/HEAD/docs/index.md",
+        "regex": "Registry Explorer[^[]+\\[([\\d.]+)[^)]+/(?<path>[^/]+)/RegistryExplorer"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://download.ericzimmermanstools.com/$matchPath/RegistryExplorer.zip"
+            }
+        }
+    }
+}

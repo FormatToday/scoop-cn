@@ -1,0 +1,41 @@
+{
+    "version": "28.0.0.0",
+    "description": "Video thumbnails creator",
+    "homepage": "http://www.suu-design.com/projects_vtm.html",
+    "license": "Proprietary",
+    "architecture": {
+        "64bit": {
+            "url": "http://www.suu-design.com/Files/VTM/3563398284/VideoThumbnailsMaker_64bit_Setup.zip",
+            "hash": "86c63d48a986005f1f280d7d03424b63cd775b3af93f5f79f228cd7c3371bd0c"
+        },
+        "32bit": {
+            "url": "http://www.suu-design.com/Files/VTM/3563398284/VideoThumbnailsMaker_32bit_Setup.zip",
+            "hash": "0a9ac99e6004e41c7c4eda02d8551b6674916a7fd02d9259e10d384c07b0013c"
+        }
+    },
+    "pre_install": [
+        "Expand-7zipArchive \"$dir\\VideoThumbnailsMaker*_Setup.exe\" -Removal",
+        "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninstall.exe\" -Force -Recurse"
+    ],
+    "bin": "VideoThumbnailsMaker.exe",
+    "shortcuts": [
+        [
+            "VideoThumbnailsMaker.exe",
+            "Video Thumbnails Maker"
+        ]
+    ],
+    "checkver": {
+        "url": "http://www.suu-design.com/downloads.html",
+        "regex": "(?sm)v([\\d.]+).*?/(?<fileid64>\\d+)/VideoThumbnailsMaker_64bit_Setup\\.zip.*?/(?<fileid32>\\d+)/VideoThumbnailsMaker_32"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "http://www.suu-design.com/Files/VTM/$matchFileid64/VideoThumbnailsMaker_64bit_Setup.zip"
+            },
+            "32bit": {
+                "url": "http://www.suu-design.com/Files/VTM/$matchFileid32/VideoThumbnailsMaker_32bit_Setup.zip"
+            }
+        }
+    }
+}

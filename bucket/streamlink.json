@@ -1,0 +1,51 @@
+{
+    "version": "8.6.3-1",
+    "description": "A command-line utility that pipes video streams from various services into a video player.",
+    "homepage": "https://streamlink.github.io/",
+    "license": "BSD-2-Clause",
+    "notes": "You will find your config file here: '$dir\\config'. To customise it, read the docs here: https://streamlink.github.io/cli/config.html#syntax",
+    "suggest": {
+        "ffmpeg": "ffmpeg",
+        "VLC player": "vlc",
+        "mpv player": "mpv"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/streamlink/windows-builds/releases/download/8.6.3-1/streamlink-8.6.3-1-py315-x86_64.zip",
+            "hash": "3b1f1470d4b135080a8107ca2917379ca3ff5acadbcdc215568b79eea1450497",
+            "extract_dir": "streamlink-8.6.3-1-py315-x86_64"
+        }
+    },
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\config\")) {",
+        "    if (Test-Path \"$env:APPDATA\\streamlink\\config\") {",
+        "        info 'Copying existing ''config'' from ''%APPDATA%\\streamlink\\config'''",
+        "        Copy-Item \"$env:APPDATA\\streamlink\\config\" \"$dir\\config\"",
+        "    } else {",
+        "        New-Item \"$dir\\config\" | Out-Null",
+        "    }",
+        "}"
+    ],
+    "bin": [
+        [
+            "bin\\streamlink.exe",
+            "streamlink",
+            "--ffmpeg-ffmpeg \"$dir\\ffmpeg\\ffmpeg.exe\" --config \"$dir\\config\""
+        ],
+        "bin\\streamlinkw.exe"
+    ],
+    "persist": "config",
+    "checkver": {
+        "github": "https://api.github.com/repos/streamlink/windows-builds/releases/latest",
+        "jsonpath": "$.assets[*].browser_download_url",
+        "regex": "streamlink-([\\d.\\-]+)-py(?<py>\\d+)-x86_64\\.zip"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/streamlink/windows-builds/releases/download/$version/streamlink-$version-py$matchPy-x86_64.zip",
+                "extract_dir": "streamlink-$version-py$matchPy-x86_64"
+            }
+        }
+    }
+}

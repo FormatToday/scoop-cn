@@ -1,0 +1,39 @@
+{
+    "version": "1.1.4",
+    "description": "A free and open-source multi-platform parametric 3D modeler.",
+    "homepage": "https://www.freecad.org",
+    "license": {
+        "identifier": "LGPL-2.1-or-later",
+        "url": "https://github.com/FreeCAD/FreeCAD/blob/HEAD/LICENSE"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/FreeCAD/FreeCAD/releases/download/1.1.4/FreeCAD_1.1.4-Windows-x86_64-py311.7z",
+            "hash": "4828741fc91ee37fafcdb97a1abacb18b04ba451ac4372d9ff7a7349b36f4d6d"
+        }
+    },
+    "pre_install": "pushd $dir ; mv */* . ; rm FreeCAD_* ; popd",
+    "bin": "bin\\FreeCADCmd.exe",
+    "shortcuts": [
+        [
+            "bin\\FreeCAD.exe",
+            "FreeCAD"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/FreeCAD/FreeCAD/releases/latest",
+        "jsonpath": "$.assets[?(@.name =~ /Win.+\\.7z$/i)].browser_download_url",
+        "regex": "(?i)download/(?<tag>[^/]+)/(?<name>FreeCAD[^\\d]([0-9a-f.-]+)(?:-conda)?-Win.+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/FreeCAD/FreeCAD/releases/download/$matchTag/$matchName"
+            }
+        },
+        "hash": {
+            "url": "$url-SHA256.txt",
+            "regex": "(?s)$basename.*?$sha256"
+        }
+    }
+}

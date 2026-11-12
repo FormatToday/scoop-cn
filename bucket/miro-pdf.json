@@ -1,0 +1,31 @@
+{
+    "version": "0.12.0",
+    "description": "A native pdf viewer with configurable keybindings.",
+    "homepage": "https://github.com/vincent-uden/miro",
+    "license": "AGPL-3.0-only",
+    "notes": "For configuration guide, please refer to: https://github.com/vincent-uden/miro#configuration",
+    "suggest": {
+        "vcredist": "vcredist2022"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/vincent-uden/miro/releases/download/v0.12.0/miro-pdf.exe",
+            "hash": "a3e1fffcb268c80540c8dbaeaaf0ccdbe113cd718d6a634bd6218c01a4d7c4c2"
+        }
+    },
+    "bin": "miro-pdf.exe",
+    "shortcuts": [
+        [
+            "miro-pdf.exe",
+            "Miro PDF"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/vincent-uden/miro/releases/download/v$version/miro-pdf.exe"
+            }
+        }
+    }
+}

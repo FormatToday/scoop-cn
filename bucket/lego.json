@@ -1,0 +1,40 @@
+{
+    "version": "5.6.0",
+    "description": "Let's Encrypt/ACME client and library written in Go",
+    "homepage": "https://go-acme.github.io/lego/",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/go-acme/lego/releases/download/v5.6.0/lego_v5.6.0_windows_amd64.zip",
+            "hash": "9c4e5f77996ef2ebbcb1ea270fa7e94190b531057e02a645b124b38f66c12755"
+        },
+        "32bit": {
+            "url": "https://gh-proxy.org/https://github.com/go-acme/lego/releases/download/v5.6.0/lego_v5.6.0_windows_386.zip",
+            "hash": "fd99ac670363dce42b0ed0d6c5e5bc17d7c40239e3edfff7b568d6644aae1024"
+        },
+        "arm64": {
+            "url": "https://gh-proxy.org/https://github.com/go-acme/lego/releases/download/v5.6.0/lego_v5.6.0_windows_arm64.zip",
+            "hash": "fc17b5786d58a3291a20e38ccf9e2b0d3f701e203efbc92d8aa63f92f543d3fb"
+        }
+    },
+    "bin": "lego.exe",
+    "checkver": {
+        "github": "https://github.com/go-acme/lego"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/go-acme/lego/releases/download/v$version/lego_v$version_windows_amd64.zip"
+            },
+            "32bit": {
+                "url": "https://gh-proxy.org/https://github.com/go-acme/lego/releases/download/v$version/lego_v$version_windows_386.zip"
+            },
+            "arm64": {
+                "url": "https://gh-proxy.org/https://github.com/go-acme/lego/releases/download/v$version/lego_v$version_windows_arm64.zip"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/lego_$version_checksums.txt"
+        }
+    }
+}

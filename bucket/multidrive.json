@@ -1,0 +1,36 @@
+{
+    "version": "1.5.0",
+    "description": "Free disk backup, clone, and wipe utility with CLI support",
+    "homepage": "https://multidrive.io",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://multidrive.io/terms"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/atola-technology/multidrive/releases/download/v1.5.0/MultiDrive_1.5.zip",
+            "hash": "62dfbf7937c40b4bdfb67875e1008100ffd264eca983d886e6b8a5dd97eda661"
+        }
+    },
+    "extract_dir": "MultiDrive",
+    "bin": "mdcli.exe",
+    "shortcuts": [
+        [
+            "MultiDrive.exe",
+            "MultiDrive"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/atola-technology/multidrive"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/atola-technology/multidrive/releases/download/v$version/MultiDrive_$majorVersion.$minorVersion.zip"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/SHA256SUMS.txt"
+        }
+    }
+}

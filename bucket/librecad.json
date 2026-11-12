@@ -1,0 +1,71 @@
+{
+    "version": "2.2.1.6",
+    "description": "Cross-platform 2D CAD program.",
+    "homepage": "https://librecad.org",
+    "license": {
+        "identifier": "GPL-2.0-only",
+        "url": "https://github.com/LibreCAD/LibreCAD/blob/HEAD/LICENSE"
+    },
+    "notes": [
+        "To register file associations, please execute the following command:",
+        "reg import \"$dir\\install-associations.reg\""
+    ],
+    "suggest": {
+        "vcredist": "vcredist2022"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/LibreCAD/LibreCAD/releases/download/v2.2.1.6/LibreCAD-v2.2.1.6-win64-msvc.exe#/dl.7z",
+            "hash": "0cd876d0e3fbfcdcdb85e5019080aca243908f4ad5c3b3c93a55ee9ba154f95b"
+        },
+        "32bit": {
+            "url": "https://gh-proxy.org/https://github.com/LibreCAD/LibreCAD/releases/download/v2.2.1.6/LibreCAD-v2.2.1.6-msvc.exe#/dl.7z",
+            "hash": "d55588f6bbe59e2512ef0f1681246cfff302b0ee78d9dc69b709f51fc917c207"
+        }
+    },
+    "pre_install": [
+        "'$*', 'Uninst*', 'vc_redist*' | ForEach-Object {",
+        "    Remove-Item -Path \"$dir\\$_\" -Recurse -Force -ErrorAction SilentlyContinue",
+        "}"
+    ],
+    "post_install": [
+        "$librecad_dir = $dir -replace '\\\\', '\\\\'",
+        "Get-ChildItem -Path \"$bucketsdir\\main\\scripts\\$app\" -Filter '*.reg' -File | ForEach-Object {",
+        "    $content = Get-Content -Path $_.FullName -Encoding utf8",
+        "    if ($global) { $content = $content -replace 'HKEY_CURRENT_USER', 'HKEY_LOCAL_MACHINE' }",
+        "    $content -replace '{{librecad_dir}}', $librecad_dir | Set-Content -Path \"$dir\\$($_.Name)\" -Encoding unicode",
+        "}"
+    ],
+    "bin": "LibreCAD.exe",
+    "shortcuts": [
+        [
+            "LibreCAD.exe",
+            "LibreCAD"
+        ]
+    ],
+    "uninstaller": {
+        "script": [
+            "if ($cmd -eq 'uninstall') {",
+            "    Get-ChildItem -Path $dir -Filter 'un*.reg' -File | ForEach-Object {",
+            "        $registry_file = '\"{0}\"' -f $_.FullName",
+            "        Start-Process -FilePath 'reg.exe' -ArgumentList @('import', $registry_file) -WindowStyle Hidden -Wait",
+            "    }",
+            "}"
+        ]
+    },
+    "checkver": {
+        "github": "https://api.github.com/repos/LibreCAD/LibreCAD/releases/latest",
+        "jsonpath": "$.assets[?(@.name =~ /win/i)].browser_download_url",
+        "regex": "(?i)download/(?<tag>v?([\\d.]+))/LibreCAD-(?<string>v?[\\d.-]+(?:[+-]g\\w+)?)?-win"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/LibreCAD/LibreCAD/releases/download/$matchTag/LibreCAD-$matchString-win64-msvc.exe#/dl.7z"
+            },
+            "32bit": {
+                "url": "https://gh-proxy.org/https://github.com/LibreCAD/LibreCAD/releases/download/$matchTag/LibreCAD-$matchString-msvc.exe#/dl.7z"
+            }
+        }
+    }
+}

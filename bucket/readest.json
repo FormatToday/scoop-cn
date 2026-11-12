@@ -1,0 +1,47 @@
+{
+    "version": "0.12.20",
+    "description": "An open-source ebook reader designed for immersive and deep reading experiences",
+    "homepage": "https://readest.com/",
+    "license": {
+        "identifier": "AGPL-3.0-or-later",
+        "url": "https://github.com/readest/readest/blob/main/LICENSE"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/readest/readest/releases/download/v0.12.20/Readest_0.12.20_x64-portable.exe#/Readest.exe",
+            "hash": "aef79804bcbb629e880f3ea2b6b32c6cc033e9dfd27304423523d09999325c36"
+        },
+        "arm64": {
+            "url": "https://gh-proxy.org/https://github.com/readest/readest/releases/download/v0.12.20/Readest_0.12.20_arm64-portable.exe#/Readest.exe",
+            "hash": "6f131b84ee29ff56d635ed0546d141ccb317c8476ad0786b36b617f9d9c7405b"
+        }
+    },
+    "pre_install": [
+        "if (-not (Test-Path \"$persist_dir\\settings.json\")) {",
+        "    Set-Content -Path \"$dir\\settings.json\" -Value '{\"autoCheckUpdates\":false}' -Encoding ASCII",
+        "}"
+    ],
+    "shortcuts": [
+        [
+            "Readest.exe",
+            "Readest"
+        ]
+    ],
+    "persist": [
+        "Readest",
+        "settings.json"
+    ],
+    "checkver": {
+        "github": "https://github.com/readest/readest"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/readest/readest/releases/download/v$version/Readest_$version_x64-portable.exe#/Readest.exe"
+            },
+            "arm64": {
+                "url": "https://gh-proxy.org/https://github.com/readest/readest/releases/download/v$version/Readest_$version_arm64-portable.exe#/Readest.exe"
+            }
+        }
+    }
+}

@@ -1,0 +1,68 @@
+{
+    "version": "3.1.6-7.3",
+    "description": "An extension for PHP 7.3 to assist with debugging and development.",
+    "homepage": "https://xdebug.org/",
+    "license": {
+        "identifier": "Xdebug-1.01",
+        "url": "https://xdebug.org/license.php"
+    },
+    "notes": [
+        "Xdebug is already enabled if PHP 7.3 was installed through scoop!",
+        "Otherwise add '$dir\\php_xdebug.dll' to your php.ini"
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://xdebug.org/files/php_xdebug-3.1.6-7.3-vc15-x86_64.dll#/php_xdebug.dll",
+            "hash": "679ed2942f2b006d42fd4cf76474fcd2cd86a654fdeaa632d440e0288b00f9fc"
+        },
+        "32bit": {
+            "url": "https://xdebug.org/files/php_xdebug-3.1.6-7.3-vc15.dll#/php_xdebug.dll",
+            "hash": "c655126df664351c84b69e394340d84b9b546d0a162fedd354f4a440754351c1"
+        }
+    },
+    "post_install": [
+        "$config = @(",
+        "    \"zend_extension=$dir\\php_xdebug.dll\",",
+        "    \"[xdebug]\",",
+        "    \"xdebug.mode=develop,debug\",",
+        "    \"xdebug.client_port=9003\",",
+        "    \"xdebug.start_with_request=trigger   # If you always want to use debug, set the value to 'yes'\"",
+        ") -join \"`n\"",
+        "$php = $app -Split '-' | Select-Object -First 1",
+        "$configUpdated = $false",
+        "foreach ($phpGlobal in @($false, $true)) {",
+        "    if (installed $php $phpGlobal) {",
+        "        $configPath = \"$(persistdir $php $phpGlobal)\\cli\\conf.d\\xdebug.ini\"",
+        "        if(-not (Test-Path -Path $configPath)) {",
+        "            $configUpdated = $true",
+        "            ensure (Split-Path $configPath -Parent) | Out-Null",
+        "            Write-Host \"Enabling extension $configPath\"",
+        "            Add-Content -Value $config -Path $configPath",
+        "        }",
+        "        break",
+        "    }",
+        "}",
+        "if(-not $configUpdated) {",
+        "    Write-Host -ForegroundColor Yellow \"You may need to manually enable php_xdebug.dll. Add the following:`n\"",
+        "    Write-Host -ForegroundColor Cyan \"$config`n`n\"",
+        "}"
+    ],
+    "checkver": {
+        "url": "https://xdebug.org/download/historical",
+        "regex": "php_xdebug-([\\d.]+-7.3)-vc15-x86_64.dll"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://xdebug.org/files/php_xdebug-$version-vc15-x86_64.dll#/php_xdebug.dll"
+            },
+            "32bit": {
+                "url": "https://xdebug.org/files/php_xdebug-$version-vc15.dll#/php_xdebug.dll"
+            }
+        },
+        "hash": {
+            "url": "https://xdebug.org/download/historical",
+            "regex": "([a-fA-F0-9]{64}).+?$basename"
+        }
+    }
+}

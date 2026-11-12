@@ -1,0 +1,54 @@
+{
+    "version": "4.6.0",
+    "description": "A malware samples pattern matching tool.",
+    "homepage": "https://virustotal.github.io/yara/",
+    "license": "BSD-3-Clause",
+    "suggest": {
+        "vcredist": "vcredist"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/VirusTotal/yara/releases/download/v4.6.0/yara-4.6.0-2443-win64.zip",
+            "hash": "5e7124f173ed442458429ac0f79a4db2c024cc183c595737d477a7575d81e6dc",
+            "bin": [
+                [
+                    "yara64.exe",
+                    "yara"
+                ],
+                [
+                    "yarac64.exe",
+                    "yarac"
+                ]
+            ]
+        },
+        "32bit": {
+            "url": "https://gh-proxy.org/https://github.com/VirusTotal/yara/releases/download/v4.6.0/yara-4.6.0-2443-win32.zip",
+            "hash": "aa43639d542ca45c9d0c2f589bdf8ecd1c2399c8b0d052c4631354d198a45c52",
+            "bin": [
+                [
+                    "yara32.exe",
+                    "yara"
+                ],
+                [
+                    "yarac32.exe",
+                    "yarac"
+                ]
+            ]
+        }
+    },
+    "checkver": {
+        "github": "https://api.github.com/repos/VirusTotal/yara/releases",
+        "jsonpath": "$..browser_download_url",
+        "regex": "yara-(?<version>\\d+(?:\\.\\d+)+)-(?<build>\\d+)-win(?:32|64)\\.zip"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/VirusTotal/yara/releases/download/v$version/yara-$version-$matchBuild-win64.zip"
+            },
+            "32bit": {
+                "url": "https://gh-proxy.org/https://github.com/VirusTotal/yara/releases/download/v$version/yara-$version-$matchBuild-win32.zip"
+            }
+        }
+    }
+}

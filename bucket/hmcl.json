@@ -1,0 +1,39 @@
+{
+    "homepage": "https://hmcl.huangyuhui.net",
+    "description": "A powered Minecraft launcher that supports a lot of features.",
+    "license": "GPL-3.0-only",
+    "version": "3.16.4",
+    "url": "https://gh-proxy.org/https://github.com/HMCL-dev/HMCL/releases/download/v3.16.4/HMCL-3.16.4.exe#/hmcl.exe",
+    "hash": "632c2d8873f5a11dd2ffd8418564174995c6a248de5206668c6be114e943e372",
+    "bin": "hmcl.exe",
+    "shortcuts": [
+        [
+            "hmcl.exe",
+            "HMCL"
+        ]
+    ],
+    "suggest": {
+        "JDK": [
+            "oraclejdk",
+            "openjdk"
+        ]
+    },
+    "pre_install": [
+        "function ensureFile([String] $name) {",
+        "    if (!(Test-Path \"$persist_dir\\$name\") -and !(Test-Path \"$dir\\$name\")) {",
+        "        Add-Content -Path \"$dir\\$name\" -Value $null",
+        "    }",
+        "}",
+        "ensureFile 'hmcl.json'"
+    ],
+    "persist": [
+        "hmcl.json",
+        ".minecraft"
+    ],
+    "checkver": {
+        "github": "https://github.com/HMCL-dev/HMCL"
+    },
+    "autoupdate": {
+        "url": "https://gh-proxy.org/https://github.com/HMCL-dev/HMCL/releases/download/v$version/HMCL-$version.exe#/hmcl.exe"
+    }
+}

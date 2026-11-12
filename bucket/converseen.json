@@ -1,0 +1,25 @@
+{
+    "version": "0.15.2.9",
+    "description": "Converseen is a batch image converter and resizer",
+    "homepage": "https://github.com/Faster3ck/Converseen",
+    "license": "GPL-3.0-or-later",
+    "url": "https://gh-proxy.org/https://github.com/Faster3ck/Converseen/releases/download/v0.15.2.9/converseen-0.15.2.9-1-win32-portable.zip",
+    "hash": "238d11723ef3856122d989d2b2db8fadc94c39908c374def0da994a38668cf5c",
+    "extract_dir": "converseen-0.15.2.9-1-win32-portable",
+    "shortcuts": [
+        [
+            "converseen.exe",
+            "Converseen"
+        ]
+    ],
+    "persist": "settings",
+    "checkver": {
+        "github": "https://api.github.com/repos/Faster3ck/Converseen/releases/latest",
+        "jsonpath": "$.assets[*].browser_download_url",
+        "regex": "converseen-(?<version>[\\d\\.+]+)-(?<build>\\d+)-win32-portable.zip"
+    },
+    "autoupdate": {
+        "url": "https://gh-proxy.org/https://github.com/Faster3ck/Converseen/releases/download/v$version/converseen-$version-$matchBuild-win32-portable.zip",
+        "extract_dir": "converseen-$version-$matchBuild-win32-portable"
+    }
+}

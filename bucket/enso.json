@@ -1,0 +1,31 @@
+{
+    "version": "1.4",
+    "description": "A feature-rich descendant of Enso Community Edition",
+    "homepage": "https://github.com/GChristensen/enso-portable",
+    "license": "Unknown",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/GChristensen/enso-portable/releases/download/v1.4/enso-open-source-1.4-x86_64.exe#/dl.7z",
+            "hash": "7d29b0f893122e3ee416ff432d585849f5cb5dc93537b4f5ad305a68eabd8a47"
+        }
+    },
+    "pre_install": "Remove-Item \"$dir\\`$*\" -Recurse",
+    "bin": [
+        [
+            "run-enso.exe",
+            "enso"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/GChristensen/enso-portable/releases",
+        "jsonpath": "$[?(@.prerelease == false)].assets[?(@.name =~ /(?<!beta.+)exe$/i)].browser_download_url",
+        "regex": "(?i)download/(?<tag>[^/-]+)/enso-open-source-([\\w.]+)-x86_64"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/GChristensen/enso-portable/releases/download/v$version/enso-open-source-$version-x86_64.exe#/dl.7z"
+            }
+        }
+    }
+}

@@ -1,0 +1,45 @@
+{
+    "version": "b12317",
+    "description": "Inference of LLaMA model in pure C/C++ (Vulkan version)",
+    "homepage": "https://github.com/ggml-org/llama.cpp",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/ggml-org/llama.cpp/releases/download/b12317/llama-b12317-bin-win-vulkan-x64.zip",
+            "hash": "968a487604622f4194d0451d77a92b6a7cff1c29338e88841dd38472c81013ca"
+        }
+    },
+    "bin": [
+        "llama-batched-bench.exe",
+        "llama-bench.exe",
+        "llama-cli.exe",
+        "llama-completion.exe",
+        "llama-fit-params.exe",
+        "llama-gemma3-cli.exe",
+        "llama-gguf-split.exe",
+        "llama-imatrix.exe",
+        "llama-llava-cli.exe",
+        "llama-minicpmv-cli.exe",
+        "llama-mtmd-cli.exe",
+        "llama-perplexity.exe",
+        "llama-quantize.exe",
+        "llama-qwen2vl-cli.exe",
+        "llama-server.exe",
+        "llama-tokenize.exe",
+        "llama-tts.exe",
+        "llama.exe"
+    ],
+    "persist": "models",
+    "checkver": {
+        "github": "https://api.github.com/repos/ggml-org/llama.cpp/releases",
+        "jsonpath": "$[*].tag_name",
+        "regex": "\"(b[\\d]+)\""
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/ggml-org/llama.cpp/releases/download/$version/llama-$version-bin-win-vulkan-x64.zip"
+            }
+        }
+    }
+}

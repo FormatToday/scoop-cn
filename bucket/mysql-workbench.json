@@ -1,0 +1,27 @@
+{
+    "version": "26.10.0",
+    "description": "Integrated tools environment for database design, modeling, development, administration, and migration.",
+    "homepage": "https://dev.mysql.com/downloads/workbench/",
+    "license": "GPL-2.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://cdn.mysql.com//Downloads/MySQLGUITools/mysql-workbench-26.10.0-winx64.msi",
+            "hash": "399e325b2492827eba3772fc5f0535a618503630d89864bbc265869c2557def9"
+        }
+    },
+    "extract_dir": "MySQL\\MySQL Workbench",
+    "shortcuts": [
+        [
+            "MySQL Workbench.exe",
+            "MySQL Workbench"
+        ]
+    ],
+    "checkver": "MySQL Workbench (\\d+(?:\\.\\d+)+)",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://cdn.mysql.com//Downloads/MySQLGUITools/mysql-workbench-$version-winx64.msi"
+            }
+        }
+    }
+}

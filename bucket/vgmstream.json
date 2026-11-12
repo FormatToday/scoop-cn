@@ -1,0 +1,35 @@
+{
+    "version": "r2168",
+    "description": "vgmstream command line interface",
+    "homepage": "https://vgmstream.org",
+    "license": {
+        "identifier": "VGMStream Team",
+        "url": "https://gh-proxy.org/https://raw.githubusercontent.com/vgmstream/vgmstream/master/COPYING"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/vgmstream/vgmstream/releases/download/r2168/vgmstream-win64.zip",
+            "hash": "692d45070852a35c1fa42726aa3c9de528e44eec925d37d99b1074256b99a229"
+        },
+        "32bit": {
+            "url": "https://gh-proxy.org/https://github.com/vgmstream/vgmstream/releases/download/r2168/vgmstream-win.zip",
+            "hash": "06860bd568861d002fa0d3d7910e0a6edc3f642f29184e3b56e5e5ef463d7580"
+        }
+    },
+    "bin": "vgmstream-cli.exe",
+    "checkver": {
+        "github": "https://api.github.com/repos/vgmstream/vgmstream/releases/latest",
+        "jsonpath": "$..browser_download_url",
+        "regex": "download/(r\\d+)/vgmstream-win"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/vgmstream/vgmstream/releases/download/$version/vgmstream-win64.zip"
+            },
+            "32bit": {
+                "url": "https://gh-proxy.org/https://github.com/vgmstream/vgmstream/releases/download/$version/vgmstream-win.zip"
+            }
+        }
+    }
+}

@@ -1,0 +1,34 @@
+{
+    "version": "1.44.0",
+    "description": "Deep clean, uninstall apps, optimize, analyze disk, and monitor Windows from the terminal.",
+    "homepage": "https://github.com/tw93/Mole/tree/windows",
+    "license": "GPL-3.0-or-later",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/tw93/Mole/releases/download/V1.44.0-windows/mole-1.44.0-x64.zip",
+            "hash": "e1548c25b3716dbbe9b1e04abd838e9e92dbcd480afe73ee0d8e5f3c579c7c89"
+        }
+    },
+    "bin": [
+        "mo.exe",
+        [
+            "mo.exe",
+            "mole"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/tw93/Mole/releases?per_page=100",
+        "jsonpath": "$[?(@.prerelease == false)].tag_name",
+        "regex": "\"V([\\d.]+)-windows\""
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/tw93/Mole/releases/download/V$version-windows/mole-$version-x64.zip"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/SHA256SUMS.txt"
+        }
+    }
+}

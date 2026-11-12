@@ -1,0 +1,31 @@
+{
+    "version": "2.3.1",
+    "description": "A GUI app for installing Equicord, a Discord client mod forked from Vencord",
+    "homepage": "https://equicord.org/",
+    "license": "GPL-3.0-only",
+    "suggest": {
+        "discord": "discord"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/Equicord/Equilotl/releases/download/v2.3.1/Equilotl.exe",
+            "hash": "da184da71a8d8686074c2ff2d3142934142d06a4ce9c5ecbdfe146d1d81047bc"
+        }
+    },
+    "shortcuts": [
+        [
+            "Equilotl.exe",
+            "Equicord Installer"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/Equicord/Equilotl"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/Equicord/Equilotl/releases/download/v$version/Equilotl.exe"
+            }
+        }
+    }
+}

@@ -1,0 +1,34 @@
+{
+    "version": "3.3",
+    "description": "Parametric 2D/3D CAD tool",
+    "homepage": "https://github.com/solvespace/solvespace",
+    "license": "GPL-3.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/solvespace/solvespace/releases/download/v3.3/solvespace_x64.exe#/solvespace.exe",
+            "hash": "b41fbc1d68ee289ae5ba6f064890ac9becca67bb42a1360aa2d6cda9d82befad"
+        },
+        "32bit": {
+            "url": "https://gh-proxy.org/https://github.com/solvespace/solvespace/releases/download/v3.3/solvespace_x86.exe#/solvespace.exe",
+            "hash": "b48f24c641a13199e12c9879ccb833f0de028e92851b4a30cfc6f377aa3814e2"
+        }
+    },
+    "bin": "solvespace.exe",
+    "shortcuts": [
+        [
+            "solvespace.exe",
+            "SolveSpace"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/solvespace/solvespace/releases/download/v$version/solvespace_x64.exe#/solvespace.exe"
+            },
+            "32bit": {
+                "url": "https://gh-proxy.org/https://github.com/solvespace/solvespace/releases/download/v$version/solvespace_x86.exe#/solvespace.exe"
+            }
+        }
+    }
+}

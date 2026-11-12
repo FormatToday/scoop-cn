@@ -1,0 +1,32 @@
+{
+    "version": "5.11.0",
+    "description": "A tool and editor to create ArchiMate models",
+    "homepage": "https://www.archimatetool.com",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/archimatetool/archi.io/releases/download/5_11/Archi-Win64-5.11.0.zip",
+            "hash": "f2af825759f5c4d81953fe2084a19cafdb770d3d45e2f1b88071dcb7317b8988"
+        }
+    },
+    "extract_dir": "Archi",
+    "bin": "archi.exe",
+    "shortcuts": [
+        [
+            "archi.exe",
+            "Archi"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/archimatetool/archi.io/releases",
+        "jsonpath": "$[*].assets[*].browser_download_url",
+        "regex": "download/(?<tag>[^/]+)/Archi-Win64-(?<version>[\\d.]+)\\.zip"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/archimatetool/archi.io/releases/download/$matchTag/Archi-Win64-$version.zip"
+            }
+        }
+    }
+}

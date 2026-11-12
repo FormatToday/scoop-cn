@@ -1,0 +1,47 @@
+{
+    "version": "0.85",
+    "description": "A Telnet-only client that is not included in putty all-in-one archive/installer",
+    "homepage": "https://www.chiark.greenend.org.uk/~sgtatham/putty/",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://the.earth.li/~sgtatham/putty/latest/w64/puttytel.exe",
+            "hash": "sha512:a7b662f19b0d30e45ce7bc4b5904a86b6c13f45d07b1ecfac48aab12a050a39dc75078ca43dd58b1cddc3e52a3692c5815a2ea0e0037fb5f4be1f9fdd4929339"
+        },
+        "32bit": {
+            "url": "https://the.earth.li/~sgtatham/putty/latest/w32/puttytel.exe",
+            "hash": "sha512:725c557f15e9db523bdad97f23fc8bf2e231d231044da41cb6967915f3159d7062b460eefb4eb4adc28888534b866838f1c19e946adac2bc8d5553a105257c3c"
+        },
+        "arm64": {
+            "url": "https://the.earth.li/~sgtatham/putty/latest/wa64/puttytel.exe",
+            "hash": "sha512:1a76470fe2c7cbc53babfebe8649593aef07d95a692ebbc1f0a1d05c0a7533abb8d7d6ebd6ce552757752167bdc660fcf873e8571b5cf526bbffb1bf16d5741e"
+        }
+    },
+    "bin": "puttytel.exe",
+    "checkver": "The latest version is ([\\d.]+)\\.",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://the.earth.li/~sgtatham/putty/latest/w64/puttytel.exe",
+                "hash": {
+                    "url": "https://the.earth.li/~sgtatham/putty/latest/sha512sums",
+                    "regex": "$sha512\\s+w64/puttytel.exe"
+                }
+            },
+            "32bit": {
+                "url": "https://the.earth.li/~sgtatham/putty/latest/w32/puttytel.exe",
+                "hash": {
+                    "url": "https://the.earth.li/~sgtatham/putty/latest/sha512sums",
+                    "regex": "$sha512\\s+w32/puttytel.exe"
+                }
+            },
+            "arm64": {
+                "url": "https://the.earth.li/~sgtatham/putty/latest/wa64/puttytel.exe",
+                "hash": {
+                    "url": "https://the.earth.li/~sgtatham/putty/latest/sha512sums",
+                    "regex": "$sha512\\s+wa64/puttytel.exe"
+                }
+            }
+        }
+    }
+}

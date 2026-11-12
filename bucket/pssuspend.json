@@ -1,0 +1,41 @@
+{
+    "version": "1.1",
+    "description": "See what files are opened remotely.",
+    "homepage": "https://learn.microsoft.com/sysinternals/downloads/pssuspend",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://learn.microsoft.com/sysinternals/license-terms"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://live.sysinternals.com/pssuspend64.exe#/pssuspend.exe",
+            "hash": "09f76ced3e479fbfbbddb7cbe002c32011eda9f8cb7d60d8a3aa04b51cff3ffa"
+        },
+        "32bit": {
+            "url": "https://live.sysinternals.com/pssuspend.exe",
+            "hash": "797862e5c331c4f600a80b51b92d14c02235a24da699244cabe7654e9ad1cd48"
+        },
+        "arm64": {
+            "url": "https://live.sysinternals.com/ARM64/pssuspend64a.exe#/pssuspend.exe",
+            "hash": "ce73c4d1e7115097783591c43c6dd80fd29de6874f8a8d352e083ac0f61305b2"
+        }
+    },
+    "bin": "pssuspend.exe",
+    "checkver": {
+        "url": "https://gh-proxy.org/https://raw.githubusercontent.com/MicrosoftDocs/sysinternals/main/sysinternals/downloads/pssuspend.md",
+        "regex": "#.*?v([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://live.sysinternals.com/pssuspend64.exe#/pssuspend.exe"
+            },
+            "32bit": {
+                "url": "https://live.sysinternals.com/pssuspend.exe"
+            },
+            "arm64": {
+                "url": "https://live.sysinternals.com/ARM64/pssuspend64a.exe#/pssuspend.exe"
+            }
+        }
+    }
+}

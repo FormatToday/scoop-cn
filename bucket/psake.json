@@ -1,0 +1,22 @@
+{
+    "version": "5.0.4",
+    "description": "A build automation tool, now with less XML.",
+    "homepage": "https://psake.dev",
+    "license": "MIT",
+    "notes": [
+        "Standalone runner `psake.ps1` has been removed, use `Import-Module psake; Invoke-psake` instead.",
+        "For more information, visit https://github.com/psake/psake/blob/main/CHANGELOG.md#removed"
+    ],
+    "url": "https://cdn.powershellgallery.com/packages/psake.5.0.4.nupkg",
+    "hash": "729b6161fa19e62ac0154c777eae76098ceb0b69292aedb3ce70e2e283ea319e",
+    "psmodule": {
+        "name": "psake"
+    },
+    "checkver": {
+        "url": "https://www.powershellgallery.com/packages/psake",
+        "regex": "<h2>([\\d.]+)</h2>"
+    },
+    "autoupdate": {
+        "url": "https://cdn.powershellgallery.com/packages/psake.$version.nupkg"
+    }
+}

@@ -1,0 +1,36 @@
+{
+    "version": "0.8.0",
+    "description": "Wraps kubectl with colorful output",
+    "homepage": "https://kubecolor.github.io",
+    "license": "MIT",
+    "suggest": {
+        "kubectl": "kubectl"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/kubecolor/kubecolor/releases/download/v0.8.0/kubecolor_0.8.0_windows_amd64.zip",
+            "hash": "64e1b12fc56662bf4bb67a760a396b0d7306c30774a52714e26c9ac075cef20b"
+        },
+        "arm64": {
+            "url": "https://gh-proxy.org/https://github.com/kubecolor/kubecolor/releases/download/v0.8.0/kubecolor_0.8.0_windows_arm64.zip",
+            "hash": "f702c67dea523461619cbf5e61e413d62a2f4416f019dcc234433c32a332187a"
+        }
+    },
+    "bin": "kubecolor.exe",
+    "checkver": {
+        "github": "https://github.com/kubecolor/kubecolor"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/kubecolor/kubecolor/releases/download/v$version/kubecolor_$version_windows_amd64.zip"
+            },
+            "arm64": {
+                "url": "https://gh-proxy.org/https://github.com/kubecolor/kubecolor/releases/download/v$version/kubecolor_$version_windows_arm64.zip"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/checksums.txt"
+        }
+    }
+}

@@ -1,0 +1,50 @@
+{
+    "version": "1.118.0",
+    "description": "Batch photo resizer and image converter to crop, convert, compress, resize images.",
+    "homepage": "https://www.xnview.com/en/xnconvert/",
+    "license": "Freeware",
+    "suggest": {
+        "vcredist": "vcredist2022"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://download.xnview.com/versions/XnConvert/XnConvert-1.118.0-win-x64.zip",
+            "hash": "a9706021970374ba787b0ed4418c5f2a535b2fc46e729c00a89e198cd3c3c90e"
+        }
+    },
+    "extract_dir": "XnConvert",
+    "pre_install": [
+        "if (Test-Path \"$persist_dir\\xnconvert.ini\") {",
+        "    Copy-Item \"$persist_dir\\xnconvert.ini\" \"$dir\"",
+        "} else {",
+        "    Set-Content \"$dir\\xnconvert.ini\" '[Start]', 'updater=0' -Encoding Ascii",
+        "}"
+    ],
+    "shortcuts": [
+        [
+            "xnconvert.exe",
+            "XnConvert"
+        ]
+    ],
+    "uninstaller": {
+        "script": [
+            "ensure \"$persist_dir\" | Out-Null",
+            "Copy-Item \"$dir\\xnconvert.ini\" \"$persist_dir\" -ErrorAction SilentlyContinue -Force"
+        ]
+    },
+    "checkver": {
+        "url": "https://download.xnview.com/versions/XnConvert/",
+        "regex": "XnConvert-([\\d.]+)-win-x64\\.zip"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://download.xnview.com/versions/XnConvert/XnConvert-$version-win-x64.zip"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/XnConvert-CHECKSUMS.txt",
+            "regex": "$sha256\\s+$basename"
+        }
+    }
+}

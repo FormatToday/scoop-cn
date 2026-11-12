@@ -1,0 +1,34 @@
+{
+    "version": "21.0.0-rc1",
+    "description": "IDE for development with the Qt framework",
+    "homepage": "https://doc.qt.io/qtcreator/index.html",
+    "license": "GPL-3.0-only",
+    "suggest": {
+        "vcredist": "vcredist2022"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/qt-creator/qt-creator/releases/download/v21.0.0-rc1/qtcreator-windows-x64-msvc-21.0.0-rc1.7z",
+            "hash": "d84290d70a02a42122952532f09c93b800b8c714587be78ad3f76501305ee530"
+        }
+    },
+    "bin": "bin\\qtcreator.exe",
+    "shortcuts": [
+        [
+            "bin\\qtcreator.exe",
+            "Qt Creator"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/qt-creator/qt-creator/releases/latest",
+        "jsonpath": "$.tag_name",
+        "regex": "v([\\w.-]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/qt-creator/qt-creator/releases/download/v$version/qtcreator-windows-x64-msvc-$version.7z"
+            }
+        }
+    }
+}

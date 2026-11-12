@@ -1,0 +1,32 @@
+{
+    "version": "3.24.1",
+    "description": "A visual diff and merge tool",
+    "homepage": "https://meldmerge.org/",
+    "license": "GPL-2.0-or-later",
+    "architecture": {
+        "64bit": {
+            "url": "https://gitlab.gnome.org/api/v4/projects/GNOME%2Fmeld/packages/generic/meld/3.24.1/meld-3.24.1.exe#/dl.7z",
+            "hash": "96ada1d7a9e40b9ceca868d5d25d5fd5bda8a7abbfa5bb58c8c20d70654f10e0"
+        }
+    },
+    "pre_install": "Remove-Item \"$dir\\`$*\", \"$dir\\uninstall*\" -Force -Recurse -ErrorAction Ignore",
+    "bin": "meld.exe",
+    "shortcuts": [
+        [
+            "meld.exe",
+            "Meld"
+        ]
+    ],
+    "checkver": {
+        "url": "https://gitlab.gnome.org/api/v4/projects/GNOME%2Fmeld/releases/permalink/latest",
+        "jsonpath": "$.tag_name",
+        "regex": "([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gitlab.gnome.org/api/v4/projects/GNOME%2Fmeld/packages/generic/meld/$version/meld-$version.exe#/dl.7z"
+            }
+        }
+    }
+}

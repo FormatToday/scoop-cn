@@ -1,0 +1,65 @@
+{
+    "version": "2026.3-263.7307.258",
+    "description": "Cross-Platform IDE for .NET by JetBrains.",
+    "homepage": "https://www.jetbrains.com/rider/",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "https://www.jetbrains.com/store/license.html"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://download.jetbrains.com/rider/JetBrains.Rider-2026.3.win.zip",
+            "hash": "cf865415a2d83d3aad9ace02cddbb11f1285d4e0a28b03cbdaa46338a0097196"
+        },
+        "arm64": {
+            "url": "https://download.jetbrains.com/rider/JetBrains.Rider-2026.3-aarch64.win.zip",
+            "hash": "91dd608b828c9007aea18aee03a06e69e002b1182b52c7c51e845b0380d3314d"
+        }
+    },
+    "extract_to": "IDE",
+    "pre_install": [
+        "Get-ChildItem \"$persist_dir\\IDE\\bin\\rider64.exe.vmoptions\" -ErrorAction SilentlyContinue | Copy-Item -Destination \"$dir\\IDE\\bin\"",
+        "Get-ChildItem \"$persist_dir\\IDE\\bin\\jetbrains_client64.exe.vmoptions\" -ErrorAction SilentlyContinue | Copy-Item -Destination \"$dir\\IDE\\bin\""
+    ],
+    "installer": {
+        "script": "& \"$bucketsdir\\main\\scripts\\jetbrains\\portable.ps1\" \"$dir\" \"$persist_dir\""
+    },
+    "bin": [
+        [
+            "IDE\\bin\\rider64.exe",
+            "rider"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "IDE\\bin\\rider64.exe",
+            "JetBrains\\Rider"
+        ]
+    ],
+    "persist": [
+        "IDE\\bin\\idea.properties",
+        "profile"
+    ],
+    "pre_uninstall": [
+        "Get-ChildItem \"$dir\\IDE\\bin\\rider64.exe.vmoptions\" -ErrorAction SilentlyContinue | Copy-Item -Destination \"$persist_dir\\IDE\\bin\"",
+        "Get-ChildItem \"$dir\\IDE\\bin\\jetbrains_client64.exe.vmoptions\" -ErrorAction SilentlyContinue | Copy-Item -Destination \"$persist_dir\\IDE\\bin\""
+    ],
+    "checkver": {
+        "url": "https://data.services.jetbrains.com/products/releases?code=RD&latest=true&platform=zip&type=release",
+        "regex": "version\":\"(?<ver>[\\d.]+)\".*\"build\":\"(?<build>[\\d.]+)\"",
+        "replace": "${ver}-${build}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://download.jetbrains.com/rider/JetBrains.Rider-$matchVer.win.zip"
+            },
+            "arm64": {
+                "url": "https://download.jetbrains.com/rider/JetBrains.Rider-$matchVer-aarch64.win.zip"
+            }
+        },
+        "hash": {
+            "url": "$url.sha256"
+        }
+    }
+}

@@ -1,0 +1,33 @@
+{
+    "version": "2026-09",
+    "description": "Eclipse IDE for Embedded C and C++ Developers",
+    "homepage": "https://www.eclipse.org",
+    "license": "EPL-1.0",
+    "architecture": {
+        "64bit": {
+            "url": "http://download.eclipse.org/technology/epp/downloads/release/2026-09/R/eclipse-embedcpp-2026-09-R-win32-x86_64.zip",
+            "hash": "sha512:93fd63a258867cb4fcbebac7ec8ea8bc7f4e22bbc3c89d4b5975e8b1491b1cdbef130395656010d9e668c6390451aba23e90a0e5803da536a5f7a804fee09483"
+        }
+    },
+    "extract_dir": "eclipse",
+    "shortcuts": [
+        [
+            "eclipse.exe",
+            "Eclipse IDE for Embedded C and C++ Developers"
+        ]
+    ],
+    "checkver": {
+        "url": "https://www.eclipse.org/downloads/packages/",
+        "regex": "\"/downloads/packages/release/([\\d-]+)/r\""
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "http://download.eclipse.org/technology/epp/downloads/release/$version/R/eclipse-embedcpp-$version-R-win32-x86_64.zip"
+            }
+        },
+        "hash": {
+            "url": "$url.sha512"
+        }
+    }
+}

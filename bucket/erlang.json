@@ -1,0 +1,46 @@
+{
+    "version": "29.1.2",
+    "description": "A programming language used to build massively scalable soft real-time systems with requirements on high availability.",
+    "homepage": "https://www.erlang.org",
+    "license": "Apache-2.0",
+    "suggest": {
+        "vcredist": "vcredist2022"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/erlang/otp/releases/download/OTP-29.1.2/otp_win64_29.1.2.exe#/dl.7z",
+            "hash": "38297ee6fa8cafbc016cb187ebda30f7bdae85618415d9dbbbe413e9b9e27a4e"
+        }
+    },
+    "installer": {
+        "file": "Install.exe",
+        "args": "-sasl"
+    },
+    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\vcredist*\" -Force -Recurse",
+    "bin": [
+        "bin\\erl.exe",
+        "bin\\erlc.exe",
+        "bin\\escript.exe",
+        "bin\\werl.exe"
+    ],
+    "shortcuts": [
+        [
+            "bin\\werl.exe",
+            "Erlang"
+        ]
+    ],
+    "env_set": {
+        "ERLANG_HOME": "$dir"
+    },
+    "checkver": {
+        "url": "https://www.erlang.org/downloads",
+        "regex": "https://github\\.com/erlang/otp/releases/download/OTP-([\\d.]+)/otp_win64_\\1\\.exe"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/erlang/otp/releases/download/OTP-$version/otp_win64_$version.exe#/dl.7z"
+            }
+        }
+    }
+}

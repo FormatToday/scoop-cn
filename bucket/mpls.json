@@ -1,0 +1,31 @@
+{
+    "version": "0.23.0",
+    "description": "Markdown Preview Language Server",
+    "homepage": "https://github.com/mhersson/mpls",
+    "license": "Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/mhersson/mpls/releases/download/v0.23.0/mpls_0.23.0_windows_amd64.zip",
+            "hash": "522292b04773a8141e4ad533df3a8a83ed0eaa528ab944110a1f72732443ef91"
+        },
+        "arm64": {
+            "url": "https://gh-proxy.org/https://github.com/mhersson/mpls/releases/download/v0.23.0/mpls_0.23.0_windows_arm64.zip",
+            "hash": "d2ca69e1ad1a5198d6c573e7a1b16e5a2ff03b37923c3dbbdd473cfea4c07c66"
+        }
+    },
+    "bin": "mpls.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/mhersson/mpls/releases/download/v$version/mpls_$version_windows_amd64.zip"
+            },
+            "arm64": {
+                "url": "https://gh-proxy.org/https://github.com/mhersson/mpls/releases/download/v$version/mpls_$version_windows_arm64.zip"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/mpls_$version_checksums.txt"
+        }
+    }
+}

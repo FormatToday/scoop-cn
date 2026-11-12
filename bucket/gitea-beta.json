@@ -1,0 +1,46 @@
+{
+    "version": "28.3.0",
+    "description": "Git with a cup of tea, painless self-hosted git service. (beta channel)",
+    "homepage": "https://gitea.io/",
+    "license": "MIT",
+    "notes": "Run 'gitea web -c \"$persist_dir\\custom\\conf\\app.ini\"' to start the webserver",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/go-gitea/gitea/releases/download/v28.3.0/gitea-28.3.0-windows-amd64.exe#/gitea.exe",
+            "hash": "4003c068ef0a7d8145ef8c85b8aab052bf1bbf9226f2d0058572f013e096ee06"
+        },
+        "arm64": {
+            "url": "https://gh-proxy.org/https://github.com/go-gitea/gitea/releases/download/v28.3.0/gitea-28.3.0-windows-arm64.exe#/gitea.exe",
+            "hash": "0890fc8848e8cfa38d77a2275b8c770143087e93ae1036ef44970b203822988c"
+        }
+    },
+    "post_install": [
+        "echo 'Creating $persist_dir\\custom\\conf.app.ini'",
+        "if(!(test-path \"$persist_dir\\custom\\conf\")) { mkdir \"$persist_dir\\custom\\conf\" > $null }",
+        "if(!(test-path \"$persist_dir\\custom\\conf\\app.ini\")) {",
+        "    $gitea = \"[database]`nPATH = $persist_dir/data/gitea.db\"",
+        "    $gitea += \"`n[repository]`nROOT = $persist_dir/repositories\"",
+        "    $gitea += \"`n[log]`nROOT_PATH = $persist_dir/log\"",
+        "    echo $gitea | % {$_.replace(\"\\\",\"/\") } | out-file -encoding oem \"$persist_dir\\custom\\conf\\app.ini\"",
+        "}"
+    ],
+    "bin": "gitea.exe",
+    "checkver": {
+        "github": "https://api.github.com/repos/go-gitea/gitea/releases",
+        "jsonpath": "$[0].tag_name",
+        "regex": "^v([\\d.]+(-\\w+)?)$"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/go-gitea/gitea/releases/download/v$version/gitea-$version-windows-amd64.exe#/gitea.exe"
+            },
+            "arm64": {
+                "url": "https://gh-proxy.org/https://github.com/go-gitea/gitea/releases/download/v$version/gitea-$version-windows-arm64.exe#/gitea.exe"
+            }
+        },
+        "hash": {
+            "url": "$url.sha256"
+        }
+    }
+}

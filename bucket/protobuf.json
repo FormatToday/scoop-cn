@@ -1,0 +1,28 @@
+{
+    "version": "36.2",
+    "description": "Protocol compiler used to compile .proto files.",
+    "homepage": "https://github.com/protocolbuffers/protobuf",
+    "license": "BSD-3-Clause",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/protocolbuffers/protobuf/releases/download/v36.2/protoc-36.2-win64.zip",
+            "hash": "f0c128dc0d8492eceece83bb459a4c0e316764b929ffbf1aa416357fd644edd3"
+        },
+        "32bit": {
+            "url": "https://gh-proxy.org/https://github.com/protocolbuffers/protobuf/releases/download/v36.2/protoc-36.2-win32.zip",
+            "hash": "031777688173e6414cfaead74da4c16d7cf2da490bca4e0d0c2458008587f105"
+        }
+    },
+    "bin": "bin\\protoc.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/protocolbuffers/protobuf/releases/download/v$version/protoc-$version-win64.zip"
+            },
+            "32bit": {
+                "url": "https://gh-proxy.org/https://github.com/protocolbuffers/protobuf/releases/download/v$version/protoc-$version-win32.zip"
+            }
+        }
+    }
+}

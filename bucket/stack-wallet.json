@@ -1,0 +1,38 @@
+{
+    "version": "2.7.5",
+    "description": "An open source, non-custodial, and private multi-currency crypto wallet.",
+    "homepage": "https://stackwallet.com/",
+    "license": {
+        "identifier": "GPL-3.0-only",
+        "url": "https://github.com/cypherstack/stack_wallet/blob/main/LICENSE"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/cypherstack/stack_wallet/releases/download/build_325/stack_wallet-v2.7.5-windows.zip",
+            "hash": "f0fec08a211424964e2cd8e497e0343204cc1aa123897eacd7ad215086dff4c8"
+        }
+    },
+    "extract_dir": "Release",
+    "shortcuts": [
+        [
+            "stack_wallet.exe",
+            "Stack Wallet"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/cypherstack/stack_wallet/releases/latest",
+        "jsonpath": "$.assets[*].browser_download_url",
+        "regex": "/download/(?<tag>[^/]+)/stack_wallet-v(?<version>[\\d.]+)-windows\\.zip"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/cypherstack/stack_wallet/releases/download/$matchTag/stack_wallet-v$version-windows.zip",
+                "hash": {
+                    "url": "https://github.com/cypherstack/stack_wallet/releases/tag/$matchTag",
+                    "find": "$basename\\s+$sha256"
+                }
+            }
+        }
+    }
+}

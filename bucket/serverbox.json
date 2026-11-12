@@ -1,0 +1,24 @@
+{
+    "version": "1.0.1925",
+    "description": "ServerBox - server status & toolbox",
+    "homepage": "https://serverbox.lpkt.cn/",
+    "license": "AGPL-3.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/lollipopkit/flutter_server_box/releases/download/v1.0.1925/ServerBox_v1.0.1925_windows_amd64.zip",
+            "hash": "6171a6a871b01eb40b93c7206b29f7f052396c4f58394290fd26dbc5212d20a3"
+        }
+    },
+    "shortcuts": [
+        [
+            "ServerBox.exe",
+            "ServerBox"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/lollipopkit/flutter_server_box"
+    },
+    "autoupdate": {
+        "url": "https://gh-proxy.org/https://github.com/lollipopkit/flutter_server_box/releases/download/v$version/ServerBox_v$version_windows_amd64.zip"
+    }
+}

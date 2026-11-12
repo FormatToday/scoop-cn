@@ -1,0 +1,30 @@
+{
+    "version": "6.6.8",
+    "description": "Improved AudioBookConverter based on freeipodsoftware release (mp3 to m4b converter).",
+    "homepage": "https://www.recoupler.com/products/audiobookconverter",
+    "license": "GPL-2.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/yermak/AudioBookConverter/releases/download/version_6.6.8/AudioBookConverter-Portable-6.6.8.zip",
+            "hash": "fc333346d5ad35e6b6cf12be23ffdb00ef7bada48b287f8e702cb49e7d996dad"
+        }
+    },
+    "extract_dir": "AudioBookConverter",
+    "shortcuts": [
+        [
+            "AudioBookConverter.exe",
+            "AudioBookConverter"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/yermak/AudioBookConverter",
+        "regex": "^version_([\\d.]+)$"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/yermak/AudioBookConverter/releases/download/version_$version/AudioBookConverter-Portable-$version.zip"
+            }
+        }
+    }
+}

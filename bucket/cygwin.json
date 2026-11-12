@@ -1,0 +1,83 @@
+{
+    "version": "2.941",
+    "description": "A large collection of GNU and Open Source tools which provide functionality similar to a Linux distribution on Windows.",
+    "homepage": "https://cygwin.com",
+    "license": {
+        "identifier": "GPL-3.0-or-later,X11,Public Domain",
+        "url": "https://cygwin.com/faq.html#faq.what.free"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://cygwin.com/setup/setup-2.941.x86_64.exe#/cygwin-setup.exe",
+            "hash": "sha512:9bbbd4de497842446af58af875590ace5d8fa3c557cd7e27328569dfa68e58213da1cc1a6fb7102d4f0f01be38e0b92c6fa74f61b6eb7351a0481ca4bd9e8781"
+        },
+        "32bit": {
+            "url": "https://cygwin.com/setup/setup-2.941.x86.exe#/cygwin-setup.exe",
+            "hash": "sha512:d64a0c99369e6284855bd7747e5d6697b470ac96cfb509480d183c5b1e8dc5a61a5962adf72bd70f4ba94a7e2b03875e7d0d1e8d4247ee4e3f1f43b8d59262a9"
+        }
+    },
+    "installer": {
+        "script": [
+            "'root', 'packages' | Foreach-Object { ensure \"$persist_dir\\$_\" | Out-Null }",
+            "$install_args = @(",
+            "    '--site', 'https://mirrors.tuna.tsinghua.edu.cn/cygwin/'",
+            "    '--no-admin', '--no-shortcuts', '--quiet-mode', '--upgrade-also'",
+            "    '--local-package-dir', \"$persist_dir\\packages\", '--root', \"$persist_dir\\root\"",
+            ")",
+            "Start-Process -FilePath \"$dir\\cygwin-setup.exe\" -ArgumentList $install_args -WindowStyle 'Hidden' -Wait",
+            "persist_data @{ persist = @('root', 'packages') } $original_dir $persist_dir",
+            "persist_permission @{ persist = @('root', 'packages') } $global"
+        ]
+    },
+    "bin": [
+        [
+            "cygwin-setup.exe",
+            "cygwin-setup",
+            "--no-admin --no-shortcuts --no-version-check --local-package-dir \"$persist_dir\\packages\" --root \"$persist_dir\\root\""
+        ],
+        [
+            "root\\bin\\bash.exe",
+            "cygwin",
+            "--login -i"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "root\\Cygwin.bat",
+            "Cygwin\\Cygwin",
+            "",
+            "root\\Cygwin-Terminal.ico"
+        ],
+        [
+            "cygwin-setup.exe",
+            "Cygwin\\Cygwin Setup",
+            "--no-admin --no-shortcuts --no-version-check --local-package-dir \"$persist_dir\\packages\" --root \"$persist_dir\\root\""
+        ],
+        [
+            "root\\bin\\mintty.exe",
+            "Cygwin\\Cygwin Terminal",
+            "-i /Cygwin-Terminal.ico -",
+            "root\\Cygwin-Terminal.ico"
+        ]
+    ],
+    "uninstaller": {
+        "script": "unlink_persist_data @{ persist = @('root', 'packages') } $dir"
+    },
+    "checkver": {
+        "url": "https://cygwin.com/setup/?C=M;O=D",
+        "regex": "setup-([\\d.]+)\\.x86_64"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://cygwin.com/setup/setup-$version.x86_64.exe#/cygwin-setup.exe"
+            },
+            "32bit": {
+                "url": "https://cygwin.com/setup/setup-$version.x86.exe#/cygwin-setup.exe"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/sha512.sum"
+        }
+    }
+}

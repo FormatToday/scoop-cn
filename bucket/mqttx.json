@@ -1,0 +1,56 @@
+{
+    "version": "1.13.3",
+    "description": "MQTT 5.0 Desktop Client",
+    "homepage": "https://mqttx.app",
+    "license": {
+        "identifier": "Apache-2.0",
+        "url": "https://github.com/emqx/MQTTX/blob/main/LICENSE"
+    },
+    "notes": [
+        "ARM64 architecture has been temporarily removed from the manifest due to compatibility issues observed on Windows 11 ARM devices.",
+        "For more details, see the upstream discussion: https://github.com/emqx/MQTTX/issues/1803#issuecomment-2962059492",
+        "Once the upstream provides a stable ARM64 version, support for this architecture will be re-added to the manifest."
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/emqx/MQTTX/releases/download/v1.13.3/MQTTX-Setup-1.13.3-x64.exe#/dl.7z",
+            "hash": "sha512:99fc6d96a6a4067d29b6b6ca636844ca16be0df467a38a75d211b855f17f2ebdb3fad35a2b23942cb590d6a567d26cf3c430cafe822f56c2c59d4f579a71473e"
+        },
+        "32bit": {
+            "url": "https://gh-proxy.org/https://github.com/emqx/MQTTX/releases/download/v1.13.3/MQTTX-Setup-1.13.3-ia32.exe#/dl.7z",
+            "hash": "sha512:e2df9ee5b8983f664235a8878cf45545fdda8c241c2c2f14ca4c8ef75b559014695b873377015f6e0b2d3cf510ccdaf1f6e72ead8105ee15427623fc9d0d9bde"
+        }
+    },
+    "pre_install": [
+        "Get-ChildItem -Path \"$dir\\`$PLUGINSDIR\\app*.7z\" | Rename-Item -NewName 'app.7z'",
+        "Expand-7zipArchive -Path \"$dir\\`$PLUGINSDIR\\app.7z\" -DestinationPath  \"$dir\"",
+        "Remove-Item -Path \"$dir\\`$*\", \"$dir\\Uninst*\" -Recurse -Force -ErrorAction SilentlyContinue"
+    ],
+    "shortcuts": [
+        [
+            "MQTTX.exe",
+            "MQTT X"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/emqx/MQTTX"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/emqx/MQTTX/releases/download/v$version/MQTTX-Setup-$version-x64.exe#/dl.7z",
+                "hash": {
+                    "url": "$baseurl/latest.yml",
+                    "regex": "(?sm)x64.*?sha512:\\s+$base64"
+                }
+            },
+            "32bit": {
+                "url": "https://gh-proxy.org/https://github.com/emqx/MQTTX/releases/download/v$version/MQTTX-Setup-$version-ia32.exe#/dl.7z",
+                "hash": {
+                    "url": "$baseurl/latest.yml",
+                    "regex": "(?sm)ia32.*?sha512:\\s+$base64"
+                }
+            }
+        }
+    }
+}

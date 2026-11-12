@@ -1,0 +1,39 @@
+{
+    "version": "2.6.2",
+    "description": "Software synthesizer based on the SoundFont 2 specifications.",
+    "homepage": "https://www.fluidsynth.org",
+    "license": {
+        "identifier": "LGPL-2.1-only",
+        "url": "https://github.com/FluidSynth/fluidsynth/blob/master/LICENSE"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/FluidSynth/fluidsynth/releases/download/v2.6.2/fluidsynth-v2.6.2-win10-x64-cpp11.zip",
+            "hash": "808295345d43c9c428f3fa87d29fbf97a9926f356df95559ff2689f3bd4072d7",
+            "extract_dir": "fluidsynth-v2.6.2-win10-x64-cpp11"
+        },
+        "32bit": {
+            "url": "https://gh-proxy.org/https://github.com/FluidSynth/fluidsynth/releases/download/v2.6.2/fluidsynth-v2.6.2-win10-x86-cpp11.zip",
+            "hash": "2a0f610a58f7cb1699c7faea597850e48ac8332d1873e4bcc9e9b3b308e01f2e",
+            "extract_dir": "fluidsynth-v2.6.2-win10-x86-cpp11"
+        }
+    },
+    "env_add_path": "bin",
+    "checkver": {
+        "github": "https://api.github.com/repos/FluidSynth/fluidsynth/releases",
+        "jsonpath": "$..assets[?(@.name =~ /win(?!.+glib).+\\.zip$/i)].browser_download_url",
+        "regex": "(?i)download/(?<tag>v?([\\d.]+))/(?<prefix>[^\"]+)-x(?:64|86)(?<suffix>-[^\"]+)?\\.zip"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/FluidSynth/fluidsynth/releases/download/$matchTag/$matchPrefix-x64$matchSuffix.zip",
+                "extract_dir": "$matchPrefix-x64$matchSuffix"
+            },
+            "32bit": {
+                "url": "https://gh-proxy.org/https://github.com/FluidSynth/fluidsynth/releases/download/$matchTag/$matchPrefix-x86$matchSuffix.zip",
+                "extract_dir": "$matchPrefix-x86$matchSuffix"
+            }
+        }
+    }
+}

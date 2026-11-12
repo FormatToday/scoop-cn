@@ -1,0 +1,51 @@
+{
+    "version": "4.0.5",
+    "description": "Utility for copying files.",
+    "homepage": "https://www.codesector.com/teracopy",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://support.codesector.com/articles/8789959-end-user-license-agreement"
+    },
+    "url": "https://codesector.com/files/teracopy4.0.5.exe",
+    "hash": "22f050b51c80a344cbdaf368c7f6a9266efca4d95b5109d606466906a421ff7e",
+    "pre_install": "if (-not (is_admin)) { abort \"`n[ERROR] $app requires admin rights to $cmd\" }",
+    "installer": {
+        "script": [
+            "$install_args = @('/exenoupdates', '/exenoui', '/quiet', '/norestart')",
+            "Start-Process -FilePath \"$dir\\$fname\" -ArgumentList $install_args -WindowStyle Hidden -Wait",
+            "Remove-Item -Path \"$dir\\$fname\" -Force -ErrorAction SilentlyContinue"
+        ]
+    },
+    "pre_uninstall": "if (-not (is_admin)) { abort \"`n[ERROR] $app requires admin rights to $cmd\" }",
+    "uninstaller": {
+        "script": [
+            "$registry_path = 'HKLM:\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\*'",
+            "$product_id = Get-ItemProperty -Path $registry_path | Where-Object { $_.DisplayName -like '*TeraCopy*' } |",
+            "        Select-Object -ExpandProperty PSChildName -First 1",
+            "if (-not $product_id) { abort \"`nUninstallation Failed: Could not locate the product identity for TeraCopy.\" }",
+            "$removal_args = @('/x', $product_id, '/qn', '/norestart')",
+            "$removal_status = Invoke-ExternalCommand -FilePath 'msiexec.exe' -ArgumentList $removal_args -LogPath \"$dir\\uninstall.log\"",
+            "if(-not $removal_status) { abort \"`nUninstallation Failed: Process did not complete.`nReference Log: '$dir\\uninstall.log'.\" }",
+            "Remove-Item -Path \"$dir\\*.log\" -Force -ErrorAction SilentlyContinue"
+        ]
+    },
+    "checkver": {
+        "github": "https://api.github.com/repos/microsoft/winget-pkgs/contents/manifests/c/CodeSector/TeraCopy",
+        "script": [
+            "$release = $page | ConvertFrom-Json -ErrorAction Stop",
+            "$latest_version = $release | Where-Object { $_.type -eq 'dir' } |",
+            "        Sort-Object -Property { [version]$_.name } -Descending | Select-Object -ExpandProperty name -First 1",
+            "$version_info = @{ result = $latest_version } | ConvertTo-Json -Compress",
+            "Write-Output $version_info"
+        ],
+        "jsonpath": "$.result",
+        "regex": "([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://codesector.com/files/teracopy$version.exe",
+        "hash": {
+            "url": "https://gh-proxy.org/https://raw.githubusercontent.com/microsoft/winget-pkgs/HEAD/manifests/c/CodeSector/TeraCopy/$version/CodeSector.TeraCopy.installer.yaml",
+            "regex": "(?s)$basename.+?$sha256"
+        }
+    }
+}

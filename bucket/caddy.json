@@ -1,0 +1,33 @@
+{
+    "version": "2.11.9",
+    "description": "HTTP/2 web server with automatic HTTPS",
+    "homepage": "https://caddyserver.com",
+    "license": "Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/caddyserver/caddy/releases/download/v2.11.9/caddy_2.11.9_windows_amd64.zip",
+            "hash": "sha512:98753d5d42650383d00619ac70917a217141f9e92314185bf6c1b8b439cfcfdf8393da0ebb4675c8cb3b23d29a19aabe99dc5aca64fa1bfc3a1ba22509b06871"
+        },
+        "arm64": {
+            "url": "https://gh-proxy.org/https://github.com/caddyserver/caddy/releases/download/v2.11.9/caddy_2.11.9_windows_arm64.zip",
+            "hash": "sha512:db5993910787c83ddb4b42b39c01d987b929f25bbf3b9a497090f2722ec96d140203c17ae8bbaceef2528195c31ebe8a52e043d25448e453b8e98153670eb9c8"
+        }
+    },
+    "bin": "caddy.exe",
+    "checkver": {
+        "github": "https://github.com/caddyserver/caddy"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/caddyserver/caddy/releases/download/v$version/caddy_$version_windows_amd64.zip"
+            },
+            "arm64": {
+                "url": "https://gh-proxy.org/https://github.com/caddyserver/caddy/releases/download/v$version/caddy_$version_windows_arm64.zip"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/caddy_$version_checksums.txt"
+        }
+    }
+}

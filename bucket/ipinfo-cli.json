@@ -1,0 +1,43 @@
+{
+    "version": "3.3.4",
+    "description": "This is the official CLI for the IPinfo.io IP address API",
+    "license": "Apache-2.0",
+    "homepage": "https://ipinfo.io/",
+    "architecture": {
+        "32bit": {
+            "url": "https://gh-proxy.org/https://github.com/ipinfo/cli/releases/download/ipinfo-3.3.4/ipinfo_3.3.4_windows_386.zip",
+            "hash": "8e4537b64473c0e84afedea9aee3da03b23faa52922b0399d1811a45cf4352f6"
+        },
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/ipinfo/cli/releases/download/ipinfo-3.3.4/ipinfo_3.3.4_windows_amd64.zip",
+            "hash": "42f97562f6d0a4014b91e2d5ee7903e3fc1aa3b50b7a3268d9bf484882d1082a"
+        },
+        "arm64": {
+            "url": "https://gh-proxy.org/https://github.com/ipinfo/cli/releases/download/ipinfo-3.3.4/ipinfo_3.3.4_windows_arm64.zip",
+            "hash": "42d19156d08aef8903c552c6e7253d02ddddb8bcd81193a593d2ac3af2f710da"
+        }
+    },
+    "pre_install": [
+        "$exe_path = (Get-ChildItem -Path \"$original_dir\\*\" -Include \"*.exe\" -File)[0].FullName",
+        "Rename-Item -Path \"${exe_path}\" -NewName \"ipinfo.exe\" -Force"
+    ],
+    "bin": "ipinfo.exe",
+    "checkver": {
+        "github": "https://api.github.com/repos/ipinfo/cli/releases",
+        "jsonpath": "$[?(@.prerelease == false)].tag_name",
+        "regex": "\"ipinfo-(?<version>[\\d.]+)\""
+    },
+    "autoupdate": {
+        "architecture": {
+            "32bit": {
+                "url": "https://gh-proxy.org/https://github.com/ipinfo/cli/releases/download/ipinfo-$version/ipinfo_$version_windows_386.zip"
+            },
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/ipinfo/cli/releases/download/ipinfo-$version/ipinfo_$version_windows_amd64.zip"
+            },
+            "arm64": {
+                "url": "https://gh-proxy.org/https://github.com/ipinfo/cli/releases/download/ipinfo-$version/ipinfo_$version_windows_arm64.zip"
+            }
+        }
+    }
+}

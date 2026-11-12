@@ -1,0 +1,37 @@
+{
+    "version": "9.0.8",
+    "description": "Fast, resumable download accelerator and streaming video downloader.",
+    "homepage": "https://xtremedownloadmanager.com/",
+    "license": "GPL-3.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/subhra74/xdm/releases/download/9.0.8/xdm-9.0.8-x64.msi",
+            "hash": "5481f89dbb32798c4f0689f997827ee52a16e7d4a4c45194ce0643dbff0c7b98"
+        },
+        "arm64": {
+            "url": "https://gh-proxy.org/https://github.com/subhra74/xdm/releases/download/9.0.8/xdm-9.0.8-arm64.msi",
+            "hash": "26299d4c2485395e7ae746f1345063ad550cd0886611addc2d71926e8141e28c"
+        }
+    },
+    "extract_dir": "PFiles64\\XDM",
+    "bin": "xdm-app.exe",
+    "shortcuts": [
+        [
+            "xdm-app.exe",
+            "Xtreme Download Manager"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/subhra74/xdm"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/subhra74/xdm/releases/download/$version/xdm-$version-x64.msi"
+            },
+            "arm64": {
+                "url": "https://gh-proxy.org/https://github.com/subhra74/xdm/releases/download/$version/xdm-$version-arm64.msi"
+            }
+        }
+    }
+}

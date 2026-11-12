@@ -1,0 +1,34 @@
+{
+    "version": "3.1.0",
+    "description": "Maintained aria2 fork with extensive bug fixes and modernized architecture.",
+    "homepage": "https://github.com/AnInsomniacy/aria2-next",
+    "license": "GPL-2.0-or-later",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/AnInsomniacy/aria2-next/releases/download/v3.1.0/aria2-next-3.1.0-windows-x86_64.exe#/aria2-next.exe",
+            "hash": "12bbd48dfd2c86f55419bf92b196dd3aedd6983116b5ce10c85d27a5a76c2baa"
+        },
+        "arm64": {
+            "url": "https://gh-proxy.org/https://github.com/AnInsomniacy/aria2-next/releases/download/v3.1.0/aria2-next-3.1.0-windows-arm64.exe#/aria2-next.exe",
+            "hash": "4e3b653c0c5b9f7213d55dfde4329b49cf9fa310bd7c6d75f9ae92d8a7dd4c9f"
+        }
+    },
+    "bin": [
+        "aria2-next.exe",
+        [
+            "aria2-next.exe",
+            "aria2c"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/AnInsomniacy/aria2-next/releases/download/v$version/aria2-next-$version-windows-x86_64.exe#/aria2-next.exe"
+            },
+            "arm64": {
+                "url": "https://gh-proxy.org/https://github.com/AnInsomniacy/aria2-next/releases/download/v$version/aria2-next-$version-windows-arm64.exe#/aria2-next.exe"
+            }
+        }
+    }
+}

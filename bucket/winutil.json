@@ -1,0 +1,29 @@
+{
+    "version": "26.10.28",
+    "description": "Chris Titus Tech's Windows Utility - Install Programs, Tweaks, Fixes, and Updates.",
+    "homepage": "https://github.com/ChrisTitusTech/winutil",
+    "license": "MIT",
+    "notes": "Open from CMD or PowerShell with `gsudo winutil`.",
+    "suggest": {
+        "gsudo": "gsudo"
+    },
+    "url": "https://gh-proxy.org/https://github.com/ChrisTitusTech/winutil/releases/download/26.10.28/winutil.ps1",
+    "hash": "d0444cb266953d927e5cee71455f4f1a6da2d5b3cfd7e440dceb4e6b1cbf4f7f",
+    "bin": "winutil.ps1",
+    "post_uninstall": [
+        "if ($purge) {",
+        "    $Directories = [string[]](",
+        "        [System.IO.Path]::Combine($env:LOCALAPPDATA, 'winutil')",
+        "    )",
+        "    $Directories.ForEach{",
+        "        if ([System.IO.Directory]::Exists($_)) {",
+        "            $null = [System.IO.Directory]::Delete($_, $true)",
+        "        }",
+        "    }",
+        "}"
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://gh-proxy.org/https://github.com/ChrisTitusTech/winutil/releases/download/$version/winutil.ps1"
+    }
+}

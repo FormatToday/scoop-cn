@@ -1,0 +1,38 @@
+{
+    "version": "1.2.4",
+    "description": "2D sprite editor designed for pixel art",
+    "homepage": "https://orama-interactive.itch.io/pixelorama",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/Orama-Interactive/Pixelorama/releases/download/v1.2.4/Pixelorama-Windows-64bit.zip",
+            "hash": "8ce63c264338b88fd36527f8edb3b7f6bba614d92451efc406ef7ce45b41da85",
+            "extract_dir": "Pixelorama-Windows-64bit"
+        },
+        "32bit": {
+            "url": "https://gh-proxy.org/https://github.com/Orama-Interactive/Pixelorama/releases/download/v1.2.4/Pixelorama-Windows-32bit.zip",
+            "hash": "1a771a222515a71804837b586de05469c8ad40866c563e99f152bd0bdc036c47",
+            "extract_dir": "Pixelorama-Windows-32bit"
+        }
+    },
+    "bin": "Pixelorama.exe",
+    "shortcuts": [
+        [
+            "Pixelorama.exe",
+            "Pixelorama"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/Orama-Interactive/Pixelorama"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/Orama-Interactive/Pixelorama/releases/download/v$version/Pixelorama-Windows-64bit.zip"
+            },
+            "32bit": {
+                "url": "https://gh-proxy.org/https://github.com/Orama-Interactive/Pixelorama/releases/download/v$version/Pixelorama-Windows-32bit.zip"
+            }
+        }
+    }
+}

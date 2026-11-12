@@ -1,0 +1,63 @@
+{
+    "version": "4.8-beta3",
+    "description": "A feature-packed, cross-platform game engine to create 2D and 3D games from a unified interface.",
+    "homepage": "https://godotengine.org/",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/godotengine/godot-builds/releases/download/4.8-beta3/Godot_v4.8-beta3_mono_win64.zip",
+            "hash": "sha512:d48ed5b9d88019c8ae75bfa9b3a38f5585ccbcad9e81397a98e24c9887e110ce1b412b796dbb0c0477f5ec6430d5b08c7aa6b1859d81c6bc2cfbd9b140dc2974",
+            "extract_dir": "Godot_v4.8-beta3_mono_win64"
+        },
+        "32bit": {
+            "url": "https://gh-proxy.org/https://github.com/godotengine/godot-builds/releases/download/4.8-beta3/Godot_v4.8-beta3_mono_win32.zip",
+            "hash": "sha512:71e9dd6d80f770cae74c2e05bd9d40d2867bbd37359623f29093669390faf33847c5fdb20cfc0c8a95a1e433353fcdc18cdf306f97659c87ee3a98e6670f85c8",
+            "extract_dir": "Godot_v4.8-beta3_mono_win32"
+        },
+        "arm64": {
+            "url": "https://gh-proxy.org/https://github.com/godotengine/godot-builds/releases/download/4.8-beta3/Godot_v4.8-beta3_mono_windows_arm64.zip",
+            "hash": "sha512:6c55e3bebe25072f6722d51a38cf68f42d517ed0fd1e4e35138cf8982890f78d0c2331a117c43cfd73202389c6a85af0b8bc03a24e300638ee1105012b58e68c",
+            "extract_dir": "Godot_v4.8-beta3_mono_windows_arm64"
+        }
+    },
+    "pre_install": [
+        "Get-Item \"$dir\\Godot_*_console.exe\" | Rename-Item -NewName 'godot-mono.console.exe'",
+        "Get-Item \"$dir\\Godot_*.exe\" | Rename-Item -NewName 'godot-mono.exe'"
+    ],
+    "bin": [
+        [
+            "godot-mono.console.exe",
+            "godot-mono"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "godot-mono.exe",
+            "Godot Engine (Mono)"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/godotengine/godot-builds/tags",
+        "jsonpath": "$[?(@.name =~ /^[\\d.]+-beta\\d+$/)].name",
+        "regex": "\"(\\d+(?:\\.\\d+)+-beta\\d+)\""
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/godotengine/godot-builds/releases/download/$version/Godot_v$version_mono_win64.zip",
+                "extract_dir": "Godot_v$version_mono_win64"
+            },
+            "32bit": {
+                "url": "https://gh-proxy.org/https://github.com/godotengine/godot-builds/releases/download/$version/Godot_v$version_mono_win32.zip",
+                "extract_dir": "Godot_v$version_mono_win32"
+            },
+            "arm64": {
+                "url": "https://gh-proxy.org/https://github.com/godotengine/godot-builds/releases/download/$version/Godot_v$version_mono_windows_arm64.zip",
+                "extract_dir": "Godot_v$version_mono_windows_arm64"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/SHA512-SUMS.txt"
+        }
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "version": "1.84.8",
+    "homepage": "https://github.com/CollapseLauncher/Collapse",
+    "description": "An advanced open-source launcher for miHoYo games",
+    "license": "MIT",
+    "url": "https://gh-proxy.org/https://github.com/CollapseLauncher/Collapse/releases/download/CL-v1.84.8/CL-1.84.8_Portable.7z",
+    "hash": "0aeb4d58b55afbd87c12c32ea998aaaa627c25c081ab83ee472f71320c16c349",
+    "shortcuts": [
+        [
+            "CollapseLauncher.exe",
+            "Collapse Launcher"
+        ]
+    ],
+    "checkver": {
+        "url": "https://api.github.com/repos/CollapseLauncher/Collapse/releases",
+        "jsonpath": "$[?(@.prerelease == false)].tag_name",
+        "regex": "CL-v(?<version>[\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://gh-proxy.org/https://github.com/CollapseLauncher/Collapse/releases/download/CL-v$matchVersion/CL-$matchVersion_Portable.7z"
+    }
+}

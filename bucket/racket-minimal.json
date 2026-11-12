@@ -1,0 +1,45 @@
+{
+    "version": "9.3",
+    "description": "Minimal Racket installation, without DrRacket/docs",
+    "homepage": "https://racket-lang.org",
+    "license": "LGPL-3.0-or-later",
+    "architecture": {
+        "64bit": {
+            "url": "https://mirror.racket-lang.org/installers/9.3/racket-minimal-9.3-x86_64-win32.exe#/dl.7z",
+            "hash": "7f8212273192bcfd412c6cc16e7312b0a681d0ec547c52e71b40b4fc0257f210"
+        },
+        "32bit": {
+            "url": "https://mirror.racket-lang.org/installers/9.3/racket-minimal-9.3-i386-win32.exe#/dl.7z",
+            "hash": "7a25e443df0c484d3ec7231de9fa901906db08a6bf72a765a6eb4302cf8c0582"
+        },
+        "arm64": {
+            "url": "https://mirror.racket-lang.org/installers/9.3/racket-minimal-9.3-arm64-win32.exe#/dl.7z",
+            "hash": "38e86cb8597191d14fbfbbac35b457188a55318bdccb862a1ba3b7cc2a402e1d"
+        }
+    },
+    "bin": [
+        "racket.exe",
+        "raco.exe"
+    ],
+    "checkver": {
+        "url": "https://download.racket-lang.org/",
+        "regex": "Version ([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://mirror.racket-lang.org/installers/$version/racket-minimal-$version-x86_64-win32.exe#/dl.7z"
+            },
+            "32bit": {
+                "url": "https://mirror.racket-lang.org/installers/$version/racket-minimal-$version-i386-win32.exe#/dl.7z"
+            },
+            "arm64": {
+                "url": "https://mirror.racket-lang.org/installers/$version/racket-minimal-$version-arm64-win32.exe#/dl.7z"
+            }
+        },
+        "hash": {
+            "url": "https://download.racket-lang.org/releases/$version/",
+            "regex": "$basenameNoExt.*?$sha256"
+        }
+    }
+}

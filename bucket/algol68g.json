@@ -1,0 +1,23 @@
+{
+    "version": "3.14.0",
+    "description": "Algol 68 compiler-interpreter",
+    "homepage": "https://algol68genie.nl/en/algol-68-genie/",
+    "license": "GPL-3.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://algol68genie.nl/algol68g-3.14.0.win64.zip",
+            "hash": "dd3e283d963cac05f9920ff4ed78ad119786ae0d6cd26e587c037b3982bb2852"
+        }
+    },
+    "extract_dir": "algol68g-3.14.0",
+    "bin": "bin/a68g.exe",
+    "checkver": "algol68g-([\\d.]+)\\.win64\\.zip",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://algol68genie.nl/algol68g-$version.win64.zip"
+            }
+        },
+        "extract_dir": "algol68g-$version"
+    }
+}

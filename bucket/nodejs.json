@@ -1,0 +1,50 @@
+{
+    "version": "26.13.1",
+    "description": "An asynchronous event driven JavaScript runtime designed to build scalable network applications.",
+    "homepage": "https://nodejs.org",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://mirrors.ustc.edu.cn/node/v26.13.1/node-v26.13.1-win-x64.7z",
+            "hash": "472fddfebb740170c2ae7cd4faed5ee86c543c3a70ad2ebf8a9f01399d208472",
+            "extract_dir": "node-v26.13.1-win-x64"
+        },
+        "arm64": {
+            "url": "https://mirrors.ustc.edu.cn/node/v26.13.1/node-v26.13.1-win-arm64.7z",
+            "hash": "db5ee0348e945b2e6d7721bcc5f3c1138eb15e5f484d74a8f4b3d37f7506b00a",
+            "extract_dir": "node-v26.13.1-win-arm64"
+        }
+    },
+    "persist": [
+        "bin",
+        "cache"
+    ],
+    "env_add_path": [
+        "bin",
+        "."
+    ],
+    "post_install": [
+        "# Set npm prefix to install modules inside bin and npm cache so they persist",
+        "Set-Content -Value \"prefix=$persist_dir\\bin`ncache=$persist_dir\\cache\" -Path \"$dir\\node_modules\\npm\\npmrc\""
+    ],
+    "checkver": {
+        "url": "https://mirrors.ustc.edu.cn/node/index.json",
+        "jsonpath": "$[?(@.version =~ /^v(\\d+(?:\\.\\d+)+)$/)].version",
+        "regex": "\"v(\\d+(?:\\.\\d+)+)\""
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://mirrors.ustc.edu.cn/node/v$version/node-v$version-win-x64.7z",
+                "extract_dir": "node-v$version-win-x64"
+            },
+            "arm64": {
+                "url": "https://mirrors.ustc.edu.cn/node/v$version/node-v$version-win-arm64.7z",
+                "extract_dir": "node-v$version-win-arm64"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/SHASUMS256.txt.asc"
+        }
+    }
+}

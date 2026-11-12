@@ -1,0 +1,22 @@
+{
+    "version": "1.29.380",
+    "description": "A PowerShell Module for the Windows Package Manager Client.",
+    "homepage": "https://learn.microsoft.com/windows/package-manager/",
+    "license": "MIT",
+    "suggest": {
+        "WinGet": "winget"
+    },
+    "url": "https://cdn.powershellgallery.com/packages/microsoft.winget.client.1.29.380.nupkg",
+    "hash": "3469e5747eb6b100e51fed3f2057386b5ba60bc8955a6669b5c2eb562e316619",
+    "pre_install": "Remove-Item \"$dir\\_rels\", \"$dir\\package\", \"$dir\\*Content*.xml\" -Recurse",
+    "psmodule": {
+        "name": "Microsoft.WinGet.Client"
+    },
+    "checkver": {
+        "url": "https://www.powershellgallery.com/packages/Microsoft.WinGet.Client",
+        "regex": "<h2>([\\d.]+)</h2>"
+    },
+    "autoupdate": {
+        "url": "https://cdn.powershellgallery.com/packages/microsoft.winget.client.$version.nupkg"
+    }
+}

@@ -1,0 +1,49 @@
+{
+    "description": "BellSoft Liberica is a 100% open-source Java implementation",
+    "homepage": "https://bell-sw.com/java",
+    "version": "21.0.12.1-1",
+    "license": "GPL-2.0-only WITH Classpath-exception-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/bell-sw/Liberica/releases/download/21.0.12.1%2B1/bellsoft-jdk21.0.12.1%2B1-windows-amd64-full.zip",
+            "hash": "sha1:563bff0eb35d3ddf81f429a5d4fb1dc15a2e62ee"
+        },
+        "32bit": {
+            "url": "https://gh-proxy.org/https://github.com/bell-sw/Liberica/releases/download/21.0.12.1%2B1/bellsoft-jdk21.0.12.1%2B1-windows-i586-full.zip",
+            "hash": "sha1:36eb0af8aff902987329ca8b4928d31d01b96d22"
+        },
+        "arm64": {
+            "url": "https://gh-proxy.org/https://github.com/bell-sw/Liberica/releases/download/21.0.12.1%2B1/bellsoft-jdk21.0.12.1%2B1-windows-aarch64-full.zip",
+            "hash": "sha1:96fb19b10424cae4136a9dfa380d9d40a22450c2"
+        }
+    },
+    "extract_dir": "jdk-21.0.12.1-full",
+    "env_add_path": "bin",
+    "env_set": {
+        "JAVA_HOME": "$dir"
+    },
+    "checkver": {
+        "url": "https://api.bell-sw.com/v1/liberica/releases?version-feature=21&bundle-type=jdk-full&version-modifier=latest&release-type=all&os=windows&arch=x86&installation-type=archive&package-type=zip&output=json&fields=version",
+        "jsonpath": "$[*].version",
+        "regex": "(?<major>[\\d.]+)(?:\\+)(?<build>[\\d]+)",
+        "replace": "${major}-${build}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/bell-sw/Liberica/releases/download/$matchMajor%2B$matchBuild/bellsoft-jdk$matchMajor%2B$matchBuild-windows-amd64-full.zip"
+            },
+            "32bit": {
+                "url": "https://gh-proxy.org/https://github.com/bell-sw/Liberica/releases/download/$matchMajor%2B$matchBuild/bellsoft-jdk$matchMajor%2B$matchBuild-windows-i586-full.zip"
+            },
+            "arm64": {
+                "url": "https://gh-proxy.org/https://github.com/bell-sw/Liberica/releases/download/$matchMajor%2B$matchBuild/bellsoft-jdk$matchMajor%2B$matchBuild-windows-aarch64-full.zip"
+            }
+        },
+        "hash": {
+            "url": "https://api.bell-sw.com/v1/liberica/releases/$basename",
+            "jsonpath": "$.sha1"
+        },
+        "extract_dir": "jdk-$matchMajor-full"
+    }
+}

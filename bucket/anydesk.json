@@ -1,0 +1,31 @@
+{
+    "version": "9.8.3",
+    "description": "A Remote Desktop Software That Actually Works",
+    "homepage": "https://anydesk.com/",
+    "license": {
+        "identifier": "Shareware",
+        "url": "https://anydesk.com/terms"
+    },
+    "url": "https://download.anydesk.com/AnyDesk.exe",
+    "hash": "979a295b6a68881c9ae7a70c7ba117c26316ecdf9d6afa9dd66b048225df5de9",
+    "bin": "AnyDesk.exe",
+    "shortcuts": [
+        [
+            "AnyDesk.exe",
+            "AnyDesk"
+        ]
+    ],
+    "checkver": {
+        "script": [
+            "$dl_url = 'https://download.anydesk.com/AnyDesk.exe'",
+            "$dl_path = cache_path 'AnyDesk' 'unknown' $dl_url",
+            "Invoke-WebRequest -Uri $dl_url -OutFile $dl_path",
+            "$ver = (Get-Item -Path $dl_path).VersionInfo.FileVersion",
+            "Write-Output $ver"
+        ],
+        "regex": "(\\d+(?:\\.\\d)+)"
+    },
+    "autoupdate": {
+        "url": "https://download.anydesk.com/AnyDesk.exe"
+    }
+}

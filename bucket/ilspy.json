@@ -1,0 +1,41 @@
+{
+    "version": "11.2.0.10050",
+    "description": ".NET assembly browser and decompiler.",
+    "homepage": "http://ilspy.net",
+    "license": "MIT",
+    "suggest": {
+        ".NET Desktop Runtime 10.0": "windowsdesktop-runtime-10.0"
+    },
+    "architecture": {
+        "arm64": {
+            "url": "https://gh-proxy.org/https://github.com/icsharpcode/ILSpy/releases/download/v11.2/ILSpy_windows_11.2.0.10050-arm64.zip",
+            "hash": "b668e18e47bbe5319c5a78c5aa606b1d57f317440cee556ecbb95f8f14f35b2e"
+        },
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/icsharpcode/ILSpy/releases/download/v11.2/ILSpy_windows_11.2.0.10050-x64.zip",
+            "hash": "828cf2796e35ffb2f3b56e9736a4c8a711520dde3f781a7bf47cb460c17db980"
+        }
+    },
+    "bin": "ILSpy.exe",
+    "shortcuts": [
+        [
+            "ILSpy.exe",
+            "ILSpy"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/icsharpcode/ILSpy/releases",
+        "jsonpath": "$..assets[?(@.browser_download_url =~ /ILSpy_windows_(?:[\\d.]+)-x64\\.zip$/i)].browser_download_url",
+        "regex": "download/v(?<tag>[\\d.]+)/ILSpy_windows_([\\d.]+)-x64\\.zip"
+    },
+    "autoupdate": {
+        "architecture": {
+            "arm64": {
+                "url": "https://gh-proxy.org/https://github.com/icsharpcode/ILSpy/releases/download/v$matchTag/ILSpy_windows_$version-arm64.zip"
+            },
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/icsharpcode/ILSpy/releases/download/v$matchTag/ILSpy_windows_$version-x64.zip"
+            }
+        }
+    }
+}

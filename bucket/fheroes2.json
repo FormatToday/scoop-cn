@@ -1,0 +1,46 @@
+{
+    "version": "1.1.18",
+    "description": "Recreation of the Heroes of Might and Magic II game engine",
+    "homepage": "https://github.com/ihhub/fheroes2",
+    "license": "GPL-2.0-only",
+    "notes": [
+        "",
+        "The installation guide can be found here: https://github.com/ihhub/fheroes2/blob/master/docs/INSTALL.md#windows",
+        "",
+        "Basically, you copy the data from the full version of the game to the persisted folders.",
+        ""
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/ihhub/fheroes2/releases/download/1.1.18/fheroes2_windows_x64_SDL2.zip",
+            "hash": "34cda1c1c21bcd668d13460943a4bf8eb94df7396f7f20806f807800b4de71e2"
+        },
+        "32bit": {
+            "url": "https://gh-proxy.org/https://github.com/ihhub/fheroes2/releases/download/1.1.18/fheroes2_windows_x86_SDL2.zip",
+            "hash": "5a9b85926f2b2ea0f1cf4f4f788b4bf82dcb72b01be7d60a54726e152bdea375"
+        }
+    },
+    "shortcuts": [
+        [
+            "fheroes2.exe",
+            "fheroes2"
+        ]
+    ],
+    "persist": [
+        "anim",
+        "data",
+        "maps",
+        "music"
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/ihhub/fheroes2/releases/download/$version/fheroes2_windows_x64_SDL2.zip"
+            },
+            "32bit": {
+                "url": "https://gh-proxy.org/https://github.com/ihhub/fheroes2/releases/download/$version/fheroes2_windows_x86_SDL2.zip"
+            }
+        }
+    }
+}

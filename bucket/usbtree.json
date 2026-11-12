@@ -1,0 +1,27 @@
+{
+    "version": "0.1.2",
+    "description": "A cross-platform TUI for inspecting USB devices.",
+    "homepage": "https://gnomeria.github.io/usbtree",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/gnomeria/usbtree/releases/download/v0.1.2/usbtree_0.1.2_windows-amd64.zip",
+            "hash": "4486bebb89b7c1465189f4e2f82269bbc8ee3bc215737a8201f9beb40d9dcba0"
+        }
+    },
+    "bin": "usbtree.exe",
+    "checkver": {
+        "github": "https://github.com/gnomeria/usbtree"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/gnomeria/usbtree/releases/download/v$version/usbtree_$version_windows-amd64.zip"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/checksums.txt",
+            "regex": "$sha256\\s+$basename"
+        }
+    }
+}

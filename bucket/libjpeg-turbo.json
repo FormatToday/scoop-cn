@@ -1,0 +1,48 @@
+{
+    "version": "3.2.1",
+    "description": "A JPEG image codec that uses SIMD instructions",
+    "homepage": "https://libjpeg-turbo.org/",
+    "license": "IJG,BSD-3-Clause,Zlib",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/3.2.1/libjpeg-turbo-3.2.1-vc-x64.exe#/dl.7z",
+            "hash": "1f05bc3ed1585e6b12a8b0c24c8c5f07b1f6d90d01b4b709b331bedc9d6e5838"
+        },
+        "arm64": {
+            "url": "https://gh-proxy.org/https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/3.2.1/libjpeg-turbo-3.2.1-vc-arm64.exe#dl.7z",
+            "hash": "a4587f5409b930ee9b5516a897c59c6c68627d96b8f06270d51c0f2a6c68a29c"
+        },
+        "32bit": {
+            "url": "https://gh-proxy.org/https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/3.2.1/libjpeg-turbo-3.2.1-vc-x86.exe#/dl.7z",
+            "hash": "f29ae467e08ca0ff9447f67e91dcbbb7231c8007a268004c503fb0f3f485b5f4"
+        }
+    },
+    "pre_install": "'PLUGINS', 'SYS' | ForEach-Object { Remove-Item -Recurse \"$dir/`$$_`DIR\" }",
+    "bin": [
+        "bin/cjpeg.exe",
+        "bin/djpeg.exe",
+        "bin/jpegtran.exe",
+        "bin/rdjpgcom.exe",
+        "bin/tjbench.exe",
+        "bin/wrjpgcom.exe"
+    ],
+    "env_set": {
+        "TurboJPEG_ROOT": "$dir"
+    },
+    "checkver": {
+        "github": "https://github.com/libjpeg-turbo/libjpeg-turbo"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/$version/libjpeg-turbo-$version-vc-x64.exe#/dl.7z"
+            },
+            "arm64": {
+                "url": "https://gh-proxy.org/https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/$version/libjpeg-turbo-$version-vc-arm64.exe#dl.7z"
+            },
+            "32bit": {
+                "url": "https://gh-proxy.org/https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/$version/libjpeg-turbo-$version-vc-x86.exe#/dl.7z"
+            }
+        }
+    }
+}

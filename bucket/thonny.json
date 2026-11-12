@@ -1,0 +1,34 @@
+{
+    "version": "5.0.1",
+    "description": "Python IDE for beginners",
+    "homepage": "https://thonny.org",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/thonny/thonny/releases/download/v5.0.1/thonny-5.0.1-windows-portable-x64.zip",
+            "hash": "031f2df02ca1e849cb677f5f2597e23e5826e8aab9bcaa96e05170667155ae9f"
+        }
+    },
+    "shortcuts": [
+        [
+            "thonny.exe",
+            "Thonny"
+        ]
+    ],
+    "env_set": {
+        "THONNY_USER_DIR": "$persist_dir\\user_data"
+    },
+    "persist": "user_data",
+    "checkver": {
+        "github": "https://api.github.com/repos/thonny/thonny/releases",
+        "jsonpath": "$[*].assets[*].browser_download_url",
+        "regex": "thonny-([\\d.]+)-windows-portable(?:-x64)?\\.zip"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/thonny/thonny/releases/download/v$version/thonny-$version-windows-portable-x64.zip"
+            }
+        }
+    }
+}

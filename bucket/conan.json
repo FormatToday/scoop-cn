@@ -1,0 +1,37 @@
+{
+    "version": "2.34.0",
+    "description": "The open-source, decentralized C/C++ package manager",
+    "homepage": "https://conan.io",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/conan-io/conan/releases/download/2.34.0/conan-2.34.0-windows-x86_64.zip",
+            "hash": "4e8c75dfb5f9913fe3eec6c0c982986f13041eae6e8c3b116268489b21951232"
+        },
+        "32bit": {
+            "url": "https://gh-proxy.org/https://github.com/conan-io/conan/releases/download/2.34.0/conan-2.34.0-windows-i686.zip",
+            "hash": "e452cf9db22b16940a8ea472d606ae0a60fb0b60bd542b9351352911663baa69"
+        },
+        "arm64": {
+            "url": "https://gh-proxy.org/https://github.com/conan-io/conan/releases/download/2.34.0/conan-2.34.0-windows-arm64.zip",
+            "hash": "4d55a8aec484eba2d1f005cd23347c28353b620cd601ed15fa3f39a1b3a2d9d7"
+        }
+    },
+    "bin": "conan.exe",
+    "checkver": {
+        "github": "https://github.com/conan-io/conan"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/conan-io/conan/releases/download/$version/conan-$version-windows-x86_64.zip"
+            },
+            "32bit": {
+                "url": "https://gh-proxy.org/https://github.com/conan-io/conan/releases/download/$version/conan-$version-windows-i686.zip"
+            },
+            "arm64": {
+                "url": "https://gh-proxy.org/https://github.com/conan-io/conan/releases/download/$version/conan-$version-windows-arm64.zip"
+            }
+        }
+    }
+}

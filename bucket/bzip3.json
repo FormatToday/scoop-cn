@@ -1,0 +1,28 @@
+{
+    "version": "1.5.5",
+    "description": "A better and stronger spiritual successor to BZip2",
+    "homepage": "https://github.com/kspalaiologos/bzip3",
+    "license": "LGPLv3",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/kspalaiologos/bzip3/releases/download/1.5.5/bzip3-x86_64.exe#/bzip3.exe",
+            "hash": "46bda47809c2d10aa13bcd4dc52ecbf85e24d81bd07891c322a18d372e4307ce"
+        },
+        "32bit": {
+            "url": "https://gh-proxy.org/https://github.com/kspalaiologos/bzip3/releases/download/1.5.5/bzip3-i686.exe#/bzip3.exe",
+            "hash": "60039c71d80047b39e88dc2bbcdb45851576eccad174a6158e3a35ba8fb82b70"
+        }
+    },
+    "bin": "bzip3.exe",
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/kspalaiologos/bzip3/releases/download/$version/bzip3-x86_64.exe#/bzip3.exe"
+            },
+            "32bit": {
+                "url": "https://gh-proxy.org/https://github.com/kspalaiologos/bzip3/releases/download/$version/bzip3-i686.exe#/bzip3.exe"
+            }
+        }
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "version": "0.5.1665",
+    "description": "Native TypeScript compiler — compiles .ts directly to native executables via LLVM.",
+    "homepage": "https://www.perryts.com",
+    "license": "MIT",
+    "notes": [
+        "Perry shells out to clang for the IR -> object step. The 'main/llvm'",
+        "dependency installs the official MSVC-default LLVM, which Perry needs",
+        "for Windows-native object emission. If you have multiple clangs on PATH,",
+        "set PERRY_LLVM_CLANG to the full path of an MSVC-default clang.exe.",
+        "",
+        "Verify with: perry doctor",
+        "First compile: perry compile hello.ts -o hello.exe"
+    ],
+    "depends": "llvm",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/PerryTS/perry/releases/download/v0.5.1665/perry-windows-x86_64.zip",
+            "hash": "0677ab51c2851ccfb47afcb2b41b0dcdd24e5af0387b44748820931829481298"
+        },
+        "arm64": {
+            "url": "https://gh-proxy.org/https://github.com/PerryTS/perry/releases/download/v0.5.1665/perry-windows-aarch64.zip",
+            "hash": "1b9ccbf24c7cf42e8a44744a6866176f393d5a74b64b3470958d7861cdca3d8b"
+        }
+    },
+    "bin": "perry.exe",
+    "checkver": {
+        "github": "https://github.com/PerryTS/perry"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/PerryTS/perry/releases/download/v$version/perry-windows-x86_64.zip"
+            },
+            "arm64": {
+                "url": "https://gh-proxy.org/https://github.com/PerryTS/perry/releases/download/v$version/perry-windows-aarch64.zip"
+            }
+        },
+        "hash": {
+            "url": "$url.sha256"
+        }
+    }
+}

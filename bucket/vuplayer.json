@@ -1,0 +1,34 @@
+{
+    "version": "4.25",
+    "description": "An open-source multi-format audio player.",
+    "homepage": "https://github.com/jfchapman/VUPlayer",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://gh-proxy.org/https://github.com/jfchapman/VUPlayer/releases/download/v4.25/VUPlayer4_64bit.zip",
+            "hash": "2717e610f5b03880d45a5de4137c5e06979b2a714735e1bf3d8cdab0eb5d19f3"
+        },
+        "32bit": {
+            "url": "https://gh-proxy.org/https://github.com/jfchapman/VUPlayer/releases/download/v4.25/VUPlayer4_32bit.zip",
+            "hash": "e466f1f9582640d14875c9c6c47cdcdfb1e0d628f165352fe0e4e0592e5c6eb6"
+        }
+    },
+    "bin": "VUPlayer.exe",
+    "shortcuts": [
+        [
+            "VUPlayer.exe",
+            "VUPlayer"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://gh-proxy.org/https://github.com/jfchapman/VUPlayer/releases/download/v$version/VUPlayer$majorVersion_64bit.zip"
+            },
+            "32bit": {
+                "url": "https://gh-proxy.org/https://github.com/jfchapman/VUPlayer/releases/download/v$version/VUPlayer$majorVersion_32bit.zip"
+            }
+        }
+    }
+}
