@@ -1,20 +1,20 @@
 {
-    "version": "5.76.0",
+    "version": "5.77.0",
     "description": "The command line interface for Railway. Use it to connect your code to Railways infrastructure.",
     "homepage": "https://railway.com",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://gh-proxy.org/https://github.com/railwayapp/cli/releases/download/v5.76.0/railway-v5.76.0-x86_64-pc-windows-msvc.zip",
-            "hash": "be8fa8be4c957cd0d92e0e610e8819cf87d9205b55f6660fa6836eab015721b3"
+            "url": "https://gh-proxy.org/https://github.com/railwayapp/cli/releases/download/v5.77.0/railway-v5.77.0-x86_64-pc-windows-msvc.zip",
+            "hash": "fffe4f95d1000f77d61eb2be431cca4c09c29024b739248e63f7fa7492665228"
         },
         "32bit": {
-            "url": "https://gh-proxy.org/https://github.com/railwayapp/cli/releases/download/v5.76.0/railway-v5.76.0-i686-pc-windows-msvc.zip",
-            "hash": "7fbdab9950d42090c998242844035bce979a46a9b97d0c97a77b91df2b6c5342"
+            "url": "https://gh-proxy.org/https://github.com/railwayapp/cli/releases/download/v5.77.0/railway-v5.77.0-i686-pc-windows-msvc.zip",
+            "hash": "2db203053ad7f2b80b212ee4d59aed245642bae496349deb038474b2042f2c51"
         },
         "arm64": {
-            "url": "https://gh-proxy.org/https://github.com/railwayapp/cli/releases/download/v5.76.0/railway-v5.76.0-aarch64-pc-windows-msvc.zip",
-            "hash": "db201ef9d147bc56860fd81a372d796ec58121d5e34fd4a9372862834897bae4"
+            "url": "https://gh-proxy.org/https://github.com/railwayapp/cli/releases/download/v5.77.0/railway-v5.77.0-aarch64-pc-windows-msvc.zip",
+            "hash": "711618a5181103145b53c8f48f9711a9d50ada698f9b89a17bc2ae30a2bebe77"
         }
     },
     "bin": "railway.exe",

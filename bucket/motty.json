@@ -1,16 +1,16 @@
 {
-    "version": "0.4.38",
+    "version": "0.4.41",
     "description": "SSH client with terminal, SFTP, port forwarding and an AI assistant",
     "homepage": "https://motty.page",
     "license": "Apache-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://gh-proxy.org/https://github.com/t8y2/motty/releases/download/v0.4.38/motty-0.4.38-windows-amd64.zip",
-            "hash": "e2d69b9e6e9070ac013df5f8118d3022215b772d2486576255df147fb6db5722"
+            "url": "https://gh-proxy.org/https://github.com/t8y2/motty/releases/download/v0.4.41/motty-0.4.41-windows-amd64.zip",
+            "hash": "14e29a00b1edd3f0a66c1e5ce3265b3b1d74b7f58512b25bcfdcc2183685da04"
         },
         "arm64": {
-            "url": "https://gh-proxy.org/https://github.com/t8y2/motty/releases/download/v0.4.38/motty-0.4.38-windows-arm64.zip",
-            "hash": "ae309080a85a19fdd05a9f800a127f9610f1efac331ba63b85dc6d0fe5aeb7f1"
+            "url": "https://gh-proxy.org/https://github.com/t8y2/motty/releases/download/v0.4.41/motty-0.4.41-windows-arm64.zip",
+            "hash": "11691d77003699f33bf0050294edb97a375f8d59b23cac3ad509ee8e3069ece5"
         }
     },
     "bin": "motty.exe",
